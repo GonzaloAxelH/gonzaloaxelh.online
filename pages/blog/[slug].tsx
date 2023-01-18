@@ -26,7 +26,7 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-
+//Xd
 export async function getStaticProps(context: any) {
   const { slug } = context.params;
   const { content, idPage, article } = await useGetArticle(slug);
