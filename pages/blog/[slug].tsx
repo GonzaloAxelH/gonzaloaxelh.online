@@ -5,6 +5,9 @@ import slugify from "slugify";
 const BlogSlug = (props: any) => {
   return (
     <React.Fragment>
+      {/*
+      
+      */}
       <ContentBlock article={props.article} content={props.content} />
     </React.Fragment>
   );
@@ -26,7 +29,7 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-//Xd
+//X
 export async function getStaticProps(context: any) {
   const { slug } = context.params;
   const { content, idPage, article } = await useGetArticle(slug);

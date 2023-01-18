@@ -24,12 +24,12 @@ const ContentBlock = ({ block }: any) => {
         </p>
       );
     case "heading_1":
-      return <h2>{value.rich_text}</h2>;
+      return <h2>Usinfg a QUery</h2>;
     case "heading_2":
       return <h3>Using a Query</h3>;
     case "heading_3":
-      return <h3>Using a Query</h3>;
-    case "bulleted_list_item":
+      return <h4>Using a Query</h4>;
+
     case "numbered_list_item":
       return <></>;
     case "to_do":

@@ -13,12 +13,8 @@ interface Props {
   content: any;
 }
 const ContentArticle: FC<Props> = ({ article, content }) => {
-  console.log(article);
-  let title = article.properties.Name?.title[0].plain_text;
-
-  let tags = article.properties.Tags.multi_select;
-  let publishedDate = article.created_time;
-  let coverImage = article.cover.external.url;
+  let title = article?.properties?.Name?.title[0]?.plain_text;
+  let coverImage = article?.cover?.external?.url;
   return (
     <div
       id="content"
@@ -94,13 +90,13 @@ const ContentArticle: FC<Props> = ({ article, content }) => {
                       href="https://ohio.clbthemes.com/category/digital/"
                       rel="category tag"
                     >
-                      {article.properties.Category.select.name}
+                      {article?.properties?.Category?.select?.name || ""}
                     </a>
                   </div>
                   <span className="post-meta-estimate">9 min read </span>
                 </div>
 
-                <h1 className="title">{title}</h1>
+                <h1 className="title">{title || ""}</h1>
 
                 <PostMeta />
               </div>
@@ -135,7 +131,7 @@ const ContentArticle: FC<Props> = ({ article, content }) => {
                       id="post-17953"
                       className="post-17953 post type-post status-publish format-standard has-post-thumbnail hentry category-digital category-marketing tag-blog tag-creative tag-portfolio tag-theme tag-wordpress"
                     >
-                      {content.map((block: any, index: number) => {
+                      {content?.map((block: any, index: number) => {
                         return <ContentBlock key={index} block={block} />;
                       })}
                       <TagsBlog />
