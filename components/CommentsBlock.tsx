@@ -22,7 +22,7 @@ const CommentsBlock = ({ idArticle }: any) => {
     comment: "",
     emailUser: session?.user?.email || "",
     idBlog: idArticle,
-    dateCreated: new Date,
+    dateCreated: new Date(Date.now()).toISOString(),
     alias: "",
   });
   const { comment: commentString } = newComment;
@@ -72,7 +72,7 @@ const CommentsBlock = ({ idArticle }: any) => {
         {
           ...newComment,
           user: session?.user,
-          dateCreated: new Date,
+          dateCreated: new Date(Date.now()).toISOString(),
           emailUser: session?.user?.email,
         },
         id
@@ -99,7 +99,7 @@ const CommentsBlock = ({ idArticle }: any) => {
         ...newComment,
         user: session?.user,
 
-        dateCreated: new Date,
+        dateCreated: new Date(Date.now()).toISOString(),
         emailUser: session?.user?.email,
       });
 
@@ -165,11 +165,7 @@ const CommentsBlock = ({ idArticle }: any) => {
                                 <span className="says">says:</span>
                               </div>
                               <div className="comment-metadata">
-                                <time>
-                                
-                                  {comment.dateCreated}
-                                    
-                                </time>
+                                <time>{moment(comment.dateCreated).fromNow()}</time>
                               </div>
                               <em className="comment-awaiting-moderation"></em>
                             </footer>
@@ -279,8 +275,9 @@ const CommentsBlock = ({ idArticle }: any) => {
                                         </div>
                                         <div className="comment-metadata">
                                           <time>
-                                            {reply.dateCreated}
-                                              
+                                            {moment(
+                                              reply.dateCreated
+                                            ).fromNow()}
                                           </time>
                                         </div>
                                         <em
