@@ -18,11 +18,12 @@ const BlogSlug = (props: any) => {
         className="site-content"
         data-mobile-menu-resolution={768}
       >
-        <ContentArticle article={props.article} content={props.content} />
-        <AuthorContainer
+        <ContentArticle
+          article={props.article}
+          content={props.content}
           author={props.article.properties["Created by"]?.created_by}
-          summary={summaryAuthor}
         />
+       
 
         <RecentPosts />
         <CommentsBlock idArticle={props.article.id} />

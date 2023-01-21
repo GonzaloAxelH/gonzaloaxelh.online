@@ -110,7 +110,8 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                       <img
                         alt="Colabrio"
                         src={
-                          "https://lh3.googleusercontent.com/a-/AOh14Ghcuuh2CEnfSuLEcxfXjGNLE49oAKH0dRAfqVsy=s100"
+                          "https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
+                          
                         }
                         className="avatar avatar-96 photo"
                         height={96}

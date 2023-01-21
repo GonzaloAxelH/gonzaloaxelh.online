@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { auth } from "@/settings/firebase";
-import { provider } from "@/settings/firebase";
 
+import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
 
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
 import {
   addComment,
   addSubComment,
   deleteSubComment,
   getComments,
 } from "@/services/firebase";
+
+import moment from "moment";
+moment.locale("es");
 //@ts-ignore
 const CommentsBlock = ({ idArticle }: any) => {
   const { data: session } = useSession();
@@ -20,6 +22,7 @@ const CommentsBlock = ({ idArticle }: any) => {
     comment: "",
     emailUser: session?.user?.email || "",
     idBlog: idArticle,
+    dateCreated: new Date,
     alias: "",
   });
   const { comment: commentString } = newComment;
@@ -42,25 +45,25 @@ const CommentsBlock = ({ idArticle }: any) => {
   useEffect(() => {
     loadCommentsByArticle();
     console.log(session);
-  }, [change, setChange, setOpenReply,openReply]);
+  }, [change, setChange, setOpenReply, openReply]);
 
   const loadCommentsByArticle = async () => {
     const comments = await getComments(idArticle);
     setAllComments(comments);
   };
   const handleReply = async (id: any) => {
-     await addResponseComment(id);
-  setOpenReply({ 
+    await addResponseComment(id);
+    setOpenReply({
       ...openReply,
       id: "",
     });
-     setNewComment({
-       ...newComment,
-       comment: "",
-     });
-    
-      alert("SUB - Comment success");
-  }
+    setNewComment({
+      ...newComment,
+      comment: "",
+    });
+
+    alert("SUB - Comment success");
+  };
   const addResponseComment = async (id: any) => {
     if (commentString === "") {
       alert("coloca algo en los comentarios !!");
@@ -69,6 +72,7 @@ const CommentsBlock = ({ idArticle }: any) => {
         {
           ...newComment,
           user: session?.user,
+          dateCreated: new Date,
           emailUser: session?.user?.email,
         },
         id
@@ -94,6 +98,8 @@ const CommentsBlock = ({ idArticle }: any) => {
       await addComment({
         ...newComment,
         user: session?.user,
+
+        dateCreated: new Date,
         emailUser: session?.user?.email,
       });
 
@@ -129,9 +135,9 @@ const CommentsBlock = ({ idArticle }: any) => {
                           >
                             <footer className="comment-meta">
                               <div className="comment-author vcard">
-                                <img
+                                <Image
                                   alt={comment?.user.name}
-                                  src={comment?.user?.image}
+                                  src={comment.user.image}
                                   className="avatar avatar-60 photo"
                                   height={60}
                                   width={60}
@@ -152,18 +158,18 @@ const CommentsBlock = ({ idArticle }: any) => {
                                         fontSize: "13px",
                                       }}
                                     >
-                                      <a href="#">@{comment.emailUser}</a>
+                                      <a href="#"></a>
                                     </span>
                                   </a>
                                 </b>{" "}
                                 <span className="says">says:</span>
                               </div>
                               <div className="comment-metadata">
-                                <a href="#">
-                                  <time dateTime="2023-01-21T00:49:36+00:00">
-                                    January 21, 2023 at 12:49 am
-                                  </time>
-                                </a>
+                                <time>
+                                
+                                  {comment.dateCreated}
+                                    
+                                </time>
                               </div>
                               <em className="comment-awaiting-moderation"></em>
                             </footer>
@@ -251,10 +257,9 @@ const CommentsBlock = ({ idArticle }: any) => {
                                     >
                                       <footer className="comment-meta">
                                         <div className="comment-author vcard">
-                                          <img
-                                            alt="aa"
+                                          <Image
+                                            alt={reply.user.name}
                                             src={reply.user.image}
-                                            
                                             className="avatar avatar-60 photo"
                                             height={60}
                                             width={60}
@@ -273,11 +278,10 @@ const CommentsBlock = ({ idArticle }: any) => {
                                           <span className="says">says:</span>
                                         </div>
                                         <div className="comment-metadata">
-                                          <a href="#">
-                                            <time dateTime="2023-01-21T00:49:54+00:00">
-                                              January 21, 2023 at 12:49 am
-                                            </time>
-                                          </a>
+                                          <time>
+                                            {reply.dateCreated}
+                                              
+                                          </time>
                                         </div>
                                         <em
                                           className="comment-awaiting-moderation"
