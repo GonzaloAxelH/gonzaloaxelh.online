@@ -63,7 +63,11 @@ const CommentsBlock = ({ idArticle }: any) => {
   };
 
   const addComm = async () => {
-    await addComment(newComment);
+    await addComment({
+      ...newComment,
+      user: session?.user,
+      emailUser: session?.user?.email
+    });
     alert("Comment success");
   };
   return (
