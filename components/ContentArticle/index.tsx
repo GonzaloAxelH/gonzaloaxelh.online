@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import AuthorContainer from "../AuthorContainer";
 import NextPost from "../NextPost";
@@ -8,17 +8,27 @@ import CommentsBlock from "../CommentsBlock";
 import PostMeta from "./PostMeta";
 import BreadcrumbHolder from "../BreadcrumbHolder";
 import ContentBlock from "./ContentBlock";
+import { getComments } from "@/services/firebase";
 interface Props {
   article: any;
   content: any;
+  author:any
 }
 
-const ContentArticle: FC<Props> = ({ article, content }) => {
+const ContentArticle: FC<Props> = ({ article, content, author }) => {
   let title = article?.properties?.Name?.title[0]?.plain_text;
   let tags = article?.properties.Tags?.multi_select;
   let category = article?.properties?.Category?.select?.name;
   let coverImage = article?.cover?.external?.url;
-
+  const [countCom,setCountCom] = useState(0)
+  const loadNumberCommments = async () => {
+    const countComments = await getComments(article.id)
+    setCountCom(countComments.length || 0)
+  }
+  useEffect(() => {
+    
+    loadNumberCommments()
+  },[])
   return (
     <div className="-layout1">
       <div className="page-headline without-cap -left subheader_excluded headline-with-parallax">
@@ -84,36 +94,24 @@ const ContentArticle: FC<Props> = ({ article, content }) => {
             <div className="animated-holder">
               <div className="headline-meta">
                 <div className="category-holder ">
-                  <a
-                    className="category"
-                    href="#"
-                    rel="category tag"
-                  >
+                  <a className="category" href="#" rel="category tag">
                     {" "}
-                    Digital
+                    {category}
                   </a>{" "}
-                  <a
-                    className="category"
-                    href="#"
-                    rel="category tag"
-                  >
-                    {" "}
-                    Marketing
-                  </a>
                 </div>
                 <span className="post-meta-estimate">9 min read </span>
               </div>
 
-              <h1 className="title">
-                The Highly Contemporary UI/UX Design from a Silicon Valley.
-              </h1>
+              <h1 className="title">{title}</h1>
               <div className="post-meta-holder">
                 <ul className="meta-holder -unlist">
                   <li className="meta-item">
                     <div className="avatar -small">
                       <img
                         alt="Colabrio"
-                        src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=96&d=mm&r=g"
+                        src={
+                          "https://lh3.googleusercontent.com/a-/AOh14Ghcuuh2CEnfSuLEcxfXjGNLE49oAKH0dRAfqVsy=s100"
+                        }
                         className="avatar avatar-96 photo"
                         height={96}
                         width={96}
@@ -123,15 +121,24 @@ const ContentArticle: FC<Props> = ({ article, content }) => {
                   </li>
                   <li className="meta-item">
                     <span className="prefix">Author</span>
-                    <span className="author">Colabrio</span>
+                    <span className="author">
+                      {author?.name || "Gonzalo  Valdez"}
+                    </span>
                   </li>
                   <li className="meta-item">
                     <span className="prefix">Published</span>
-                    August 4, 2020
+                    {new Date(article.created_time).toLocaleDateString(
+                      "es-PE",
+                      {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      }
+                    )}
                   </li>
                   <li className="meta-item">
-                    <span className="prefix">2 comments </span>
-                    <a href="#comments">
+                    <span className="prefix">{countCom} comments </span>
+                    <a href="#commentsXD">
                       <span className="date">Join the Conversation</span>
                     </a>
                   </li>

@@ -13,7 +13,7 @@ const Footer = () => {
               >
                 <div className="branding">
                   <div className="logo">
-                    <a className="-unlink" href="https://ohio.clbthemes.com/">
+                    <a className="-unlink" href="#">
                       <img
                         src="https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
                         className="light-scheme-logo svg-logo"
@@ -86,7 +86,7 @@ const Footer = () => {
                   Looking for a job opportunity?
                   <br className="vc_hidden-xs" />
                   <b>
-                    <a href="https://ohio.clbthemes.com/standard/#">
+                    <a href="#">
                       See open positions
                     </a>
                   </b>
@@ -101,7 +101,7 @@ const Footer = () => {
                 className="widget widget_ohio_widget_subscribe"
               >
                 <h3 className="title widget-title">
-                  Sign up for the newsletter
+                  Sign up for the newsletter (beta)
                 </h3>
                 <div className="subscribe-widget contact-form">
                   <div
@@ -115,7 +115,7 @@ const Footer = () => {
                       <ul />
                     </div>
                     <form
-                      action="https://ohio.clbthemes.com/standard/#wpcf7-f17852-o1"
+                      action="#"
                       method="post"
                       className="wpcf7-form init"
                       aria-label="Contact form"
