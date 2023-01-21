@@ -86,7 +86,7 @@ const ContentArticle: FC<Props> = ({ article, content }) => {
                 <div className="category-holder ">
                   <a
                     className="category"
-                    href="https://ohio.clbthemes.com/category/digital/"
+                    href="#"
                     rel="category tag"
                   >
                     {" "}
@@ -94,7 +94,7 @@ const ContentArticle: FC<Props> = ({ article, content }) => {
                   </a>{" "}
                   <a
                     className="category"
-                    href="https://ohio.clbthemes.com/category/marketing/"
+                    href="#"
                     rel="category tag"
                   >
                     {" "}

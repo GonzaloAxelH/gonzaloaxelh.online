@@ -32,7 +32,7 @@ const Header = () => {
             <div className="branding">
               <a
                 className="branding-title titles-typo -undash"
-                href="https://ohio.clbthemes.com/"
+                href="#"
                 rel="home"
               >
                 <div className="logo" style={{ display: "none" }}>
@@ -172,7 +172,7 @@ const Header = () => {
                         className="mega-menu-item nav-item menu-item-depth-0 version"
                       >
                         <a
-                          href="https://docs.clbthemes.com/ohio/release-notes/"
+                          href="#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <p>Home</p>
@@ -183,7 +183,7 @@ const Header = () => {
                         className="mega-menu-item nav-item menu-item-depth-0 version"
                       >
                         <a
-                          href="https://docs.clbthemes.com/ohio/release-notes/"
+                          href="#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <p>About</p>
@@ -194,7 +194,7 @@ const Header = () => {
                         className="mega-menu-item nav-item menu-item-depth-0 version"
                       >
                         <a
-                          href="https://docs.clbthemes.com/ohio/release-notes/"
+                          href="#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <p>Blog</p>
@@ -205,7 +205,7 @@ const Header = () => {
                         className="mega-menu-item nav-item menu-item-depth-0 version"
                       >
                         <a
-                          href="https://docs.clbthemes.com/ohio/release-notes/"
+                          href="#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <p>Tutorials</p>
@@ -216,7 +216,7 @@ const Header = () => {
                         className="mega-menu-item nav-item menu-item-depth-0 version"
                       >
                         <a
-                          href="https://docs.clbthemes.com/ohio/release-notes/"
+                          href="#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <p>Community</p>
@@ -253,7 +253,7 @@ const Header = () => {
                     <option
                       className="active"
                       selected={true}
-                      value="https://ohio.clbthemes.com/standard/"
+                      value="#"
                     >
                       Eng
                     </option>
@@ -303,7 +303,7 @@ const Header = () => {
                   <option
                     className="active"
                     selected={true}
-                    value="https://ohio.clbthemes.com/standard/"
+                    value="#"
                   >
                     Eng
                   </option>
@@ -312,7 +312,7 @@ const Header = () => {
               <li className="icon-button-holder">
                 <a
                   className="icon-button favorites-global wishlist"
-                  href="https://ohio.clbthemes.com/wishlist/?wishlist-action=user"
+                  href="#"
                 >
                   <i className="icon">
                     <svg

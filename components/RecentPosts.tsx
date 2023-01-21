@@ -13,7 +13,7 @@ const RecentPosts = () => {
               data-tilt-perspective={6000}
             >
               <a
-                href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                href="#"
                 data-cursor-class="cursor-link"
               >
                 <figure className="image-holder">
@@ -66,7 +66,7 @@ const RecentPosts = () => {
                   <h4 className="title">
                     <a
                       className="-unlink"
-                      href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                      href="#"
                     >
                       Creativo Para Jóvenes: a Designer’s UI/UX Complete
                       Checklist.
@@ -76,13 +76,13 @@ const RecentPosts = () => {
                 <div className="category-holder -with-tag">
                   <a
                     className="tag -unlink"
-                    href="https://ohio.clbthemes.com/category/digital/"
+                    href="#"
                   >
                     Digital
                   </a>
                   <a
                     className="tag -unlink"
-                    href="https://ohio.clbthemes.com/category/marketing/"
+                    href="#"
                   >
                     Marketing
                   </a>
@@ -97,7 +97,7 @@ const RecentPosts = () => {
               data-tilt-perspective={6000}
             >
               <a
-                href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                href="#"
                 data-cursor-class="cursor-link"
               >
                 <figure className="image-holder">
@@ -149,7 +149,7 @@ const RecentPosts = () => {
                   <h4 className="title">
                     <a
                       className="-unlink"
-                      href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                      href="#"
                     >
                       Definitive Guide to Make a Daily More Productive Working
                       Flow.
@@ -159,13 +159,13 @@ const RecentPosts = () => {
                 <div className="category-holder -with-tag">
                   <a
                     className="tag -unlink"
-                    href="https://ohio.clbthemes.com/category/digital/"
+                    href="#"
                   >
                     Digital
                   </a>
                   <a
                     className="tag -unlink"
-                    href="https://ohio.clbthemes.com/category/marketing/"
+                    href="#"
                   >
                     Marketing
                   </a>
@@ -180,7 +180,7 @@ const RecentPosts = () => {
               data-tilt-perspective={6000}
             >
               <a
-                href="https://ohio.clbthemes.com/the-high-quality-architecture-solutions-from-a-silicon-valley/"
+                href="#"
                 data-cursor-class="cursor-link"
               >
                 <figure className="image-holder">
@@ -231,7 +231,7 @@ const RecentPosts = () => {
                   <h4 className="title">
                     <a
                       className="-unlink"
-                      href="https://ohio.clbthemes.com/the-high-quality-architecture-solutions-from-a-silicon-valley/"
+                      href="#"
                     >
                       The High-Quality Architecture Solutions from a Silicon
                       Valley.
@@ -241,13 +241,13 @@ const RecentPosts = () => {
                 <div className="category-holder -with-tag">
                   <a
                     className="tag -unlink"
-                    href="https://ohio.clbthemes.com/category/digital/"
+                    href="#"
                   >
                     Digital
                   </a>
                   <a
                     className="tag -unlink"
-                    href="https://ohio.clbthemes.com/category/marketing/"
+                    href="#"
                   >
                     Marketing
                   </a>

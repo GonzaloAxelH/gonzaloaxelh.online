@@ -9,7 +9,8 @@ import React from "react";
 import slugify from "slugify";
 const BlogSlug = (props: any) => {
     let summaryAuthor =
-      props.article.properties?.SummaryAuthor?.rich_text[0]?.plain_text || "Summary";
+    props.article.properties?.SummaryAuthor?.rich_text[0]?.plain_text || "Summary";
+  console.log(props.article)
   return (
     <Container>
       <div
@@ -22,9 +23,9 @@ const BlogSlug = (props: any) => {
           author={props.article.properties["Created by"]?.created_by}
           summary={summaryAuthor}
         />
-        
+
         <RecentPosts />
-        <CommentsBlock />
+        <CommentsBlock idArticle={props.article.id} />
       </div>
     </Container>
   );
