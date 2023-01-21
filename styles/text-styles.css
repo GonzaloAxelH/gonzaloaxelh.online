@@ -1,0 +1,67 @@
+.p-h1 {
+  font-size: 35px;
+}
+.p-h2 {
+  font-size: 30px;
+}
+.p-h3 {
+  font-size: 25px;
+}
+.p-bold {
+  font-weight: bold;
+}
+.p-italic {
+  font-style: italic;
+}
+.p-code {
+  font-family: menlo, monaco, consolas, "Lucida Console", monospace;
+  font-size: 0.95em;
+  color: #635d6f;
+  background-color: rgba(150, 144, 162, 0.08);
+  padding: 3px 6px;
+  word-break: normal;
+  -webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.p-linethrough {
+  text-decoration: line-through;
+}
+.p-underline {
+  text-decoration: underline;
+}
+.p-a-link {
+  color: red;
+}
+
+.p-li-list {
+  margin-top: 1rem;
+}
+
+
+
+
+.hesaader{
+   background-image:
+    linear-gradient(to bottom, rgba(5, 5, 5, 0.54), rgba(0, 0, 0, 0.13)),
+    url('../public/images/blur-bg.png');
+}
+
+
+
+.p-bold.dark {
+}
+
+.p-italic.dark {
+}
+
+.p-code.dark {
+}
+
+.p-strikethrough.dark {
+}
+
+.p-underline.dark {
+}
+
+.p-a-link.dark {
+}

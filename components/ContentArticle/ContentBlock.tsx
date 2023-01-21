@@ -1,6 +1,7 @@
 import React from "react";
 import CodeBlock from "./CodeBlock";
-
+import Text from "./Text";
+import Image from "next/image";
 const ContentBlock = ({ block }: any) => {
   const { type, id } = block;
   const value = block[type];
@@ -9,29 +10,32 @@ const ContentBlock = ({ block }: any) => {
     case "paragraph":
       return (
         <p>
-          From the business, until be once yet pouring got it
-          <a
-            href="https://1.envato.market/5Q25j"
-            data-type="URL"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            duckthemed phase
-          </a>
-          in the creative concepts must involved. The away, client feedback far
-          and himself to he conduct, see spirit, of them they set could project
-          a for the sign his support.
+          <Text texts={value.rich_text} />
         </p>
       );
     case "heading_1":
-      return <h2>Usinfg a QUery</h2>;
+      return (
+        <h1 className="p-h1">
+          <Text texts={value.rich_text} />
+        </h1>
+      );
     case "heading_2":
-      return <h3>Using a Query</h3>;
+      return (
+        <h2 className="p-h2">
+          <Text texts={value.rich_text} />
+        </h2>
+      );
     case "heading_3":
-      return <h4>Using a Query</h4>;
+      return (
+        <h3 className="p-h3">
+          <Text texts={value.rich_text} />
+        </h3>
+      );
 
     case "numbered_list_item":
-      return <></>;
+    case "bulleted_list_item":
+    
+      return <li className="p-li-list">{value.rich_text[0]?.plain_text || ""}</li>;
     case "to_do":
       return <></>;
     case "toggle":
@@ -40,18 +44,33 @@ const ContentBlock = ({ block }: any) => {
       return <></>;
     case "image":
       const src =
-        value.type === "external" ? value.external?.url : value.file?.url;
+        value.type === "external" ? value.external?.url : value.file?.url ;
       const caption =
-        value.caption.length >= 1 ? value.caption[0].plain_text : "";
+        value.caption?.length >= 1 ? value.caption[0]?.plain_text : "";
 
       return (
-        <figure className="wp-block-image size-full">
-          <img
-            decoding="async"
-            src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio.clbthemes.com/oh__img5.jpg"
-            alt=""
+        <figure className="wp-block-image size-full" style={{textAlign:"center"}}>
+          <Image
             className="wp-image-20557"
+            quality={100}
+            src={src}
+            blurDataURL={src}
+            placeholder="blur"
+            width={1200}
+            height={500}
+            fill={false}
+            alt={
+              caption
+                ? caption
+                : "A visual depiction of what is being written about"
+            }
+            priority
           />
+          <span style={{fontSize:"12px",fontStyle:"italic",margin:"auto",width:"100%"}}> 
+            { caption
+                ? caption
+                : "A visual depiction of what is being written about"}
+          </span>
         </figure>
       );
     case "code":
@@ -64,18 +83,16 @@ const ContentBlock = ({ block }: any) => {
 
     case "callout":
       return (
-        <blockquote className="wp-block-quote">
-          <p>
-            Getting practice furnished the where pouring the of emphasis as
-            return encourage a then that times, the doing would in object we
-            young been in the in the to their line helplessly or name to in of,
-            and all and to more my way and opinion.
-          </p>
-          <p />
-        </blockquote>
+        <div style={{ margin: "1rem 0" }}>
+          <blockquote className="wp-block-quote">
+            {value?.icon && <span>{value.icon?.emoji}</span>}
+            <p> {value.rich_text[0]?.plain_text}</p>
+            <p />
+          </blockquote>
+        </div>
       );
     case "embed":
-      const codePenEmbedKey = value.url?.slice(value.url?.lastIndexOf("/") + 1);
+      const codePenEmbedKey = value.url?.slice(value?.url?.lastIndexOf("/") + 1);
       return <></>;
     case "table_of_contents":
       return <div>TOC</div>;

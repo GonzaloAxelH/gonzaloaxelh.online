@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ElementsbarLeft = () => {
+  const [theme, setTheme] = useState(true);
+
+  useEffect(() => {
+    let body: any = document.getElementById("body_next");
+    if (theme === false) {
+      body.classList.remove("light-scheme");
+      body.classList.add("dark-scheme");
+    } else {
+      body.classList.remove("dark-scheme");
+      body.classList.add("light-scheme");
+    }
+    return () => {};
+  });
   return (
     <ul className="elements-bar left -unlist">
       <li>
@@ -14,8 +27,17 @@ const ElementsbarLeft = () => {
         </a>
       </li>
       <li>
-        <div className="color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile">
-          <div className="color-switcher-item dark">
+        <div
+          className={`color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile ${
+            !theme ? "dark" : " "
+          }`}
+        >
+          <div
+            className="color-switcher-item dark"
+            style={{
+              minWidth: theme ? "auto" : "61.4062px",
+            }}
+          >
             <div className="color-switcher-item-state">
               <span className="caption">Dark</span>
               <svg
@@ -31,7 +53,9 @@ const ElementsbarLeft = () => {
           </div>
           <div
             className="color-switcher-item light"
-            style={{ minWidth: "63.6094px" }}
+            style={{
+              minWidth: theme ? "63.6094px" : "auto",
+            }}
           >
             <div className="color-switcher-item-state">
               <span className="caption">Light</span>
@@ -48,7 +72,11 @@ const ElementsbarLeft = () => {
           </div>
           <div
             className="color-switcher-toddler"
-            style={{ width: "63.6094px" }}
+            style={{
+              minWidth: theme ? "63.6094px" : "61.4062px",
+              transform: theme ? "translateX(0px)" : "translateX(-45px)",
+            }}
+            onClick={() => setTheme(!theme)}
           >
             <div className="color-switcher-toddler-wrap">
               <div className="color-switcher-toddler-item dark">

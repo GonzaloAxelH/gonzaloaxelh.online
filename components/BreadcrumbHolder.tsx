@@ -1,6 +1,6 @@
 import React from "react";
 
-const BreadcrumbHolder = () => {
+const BreadcrumbHolder = ({ category, title }: any) => {
   return (
     <div className="page-container" style={{ paddingLeft: "0" }}>
       <div className="breadcrumb-holder">
@@ -17,7 +17,7 @@ const BreadcrumbHolder = () => {
               itemType="http://schema.org/ListItem"
             >
               <a itemProp="item" href="https://ohio.clbthemes.com/">
-                <span itemProp="name">Home</span>
+                <span itemProp="name">Blog</span>
               </a>
               <svg
                 className="default"
@@ -41,7 +41,7 @@ const BreadcrumbHolder = () => {
                 itemProp="item"
                 href="https://ohio.clbthemes.com/category/digital/"
               >
-                <span itemProp="name">Digital</span>
+                <span itemProp="name">{category}</span>
               </a>
               <svg
                 className="default"
@@ -62,7 +62,7 @@ const BreadcrumbHolder = () => {
               itemType="http://schema.org/ListItem"
             >
               <span itemProp="name" className="active">
-                The Highly Contemporary UI/UX Design from a Silicon Valley.
+                {title}
               </span>
               <meta itemProp="position" content="3" />
             </li>

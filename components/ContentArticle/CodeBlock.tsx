@@ -24,7 +24,11 @@ const calculateLinesToHighlight = (meta: any) => {
   };
 };
 
-const style = { borderRadius: "1rem" };
+const style = {
+  borderRadius: "12px",
+  padding: "0.6rem",
+  background: "#1E1C22",
+};
 
 const CodeBlock = ({ code, language, metastring }: any) => {
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
@@ -32,7 +36,22 @@ const CodeBlock = ({ code, language, metastring }: any) => {
   return (
     //@ts-ignore
     <div style={style}>
-      <SyntaxHighlighter children={code} language={language} style={theme} />
+      <span
+        style={{
+          color: "#ebdbb2",
+          background: "#1E1C22",
+          padding: "10px",
+          fontWeight: "bold",
+        }}
+      >
+        {language}
+      </span>
+      <SyntaxHighlighter
+        customStyle={{ backgroundColor: "#1E1C22" }}
+        children={code}
+        language={language}
+        style={theme}
+      />
     </div>
   );
 };

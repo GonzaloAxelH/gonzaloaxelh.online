@@ -1,6 +1,17 @@
 import React from "react";
 
-const PostMeta = () => {
+const PostMeta = ({ author, publishedDate, lastEditedAt }: any) => {
+  const publishedOn = new Date(publishedDate).toLocaleDateString("es-PE", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  //
+  const modifiedDate = new Date(lastEditedAt).toLocaleDateString("es-PE", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
     <div className="post-meta-holder">
       <ul className="meta-holder -unlist">
@@ -8,7 +19,7 @@ const PostMeta = () => {
           <div className="avatar -small">
             <img
               alt="Colabrio"
-              src="https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
+              src={author?.avatar_url}
               className="avatar avatar-96 photo"
               height={96}
               width={96}
@@ -18,15 +29,15 @@ const PostMeta = () => {
         </li>
         <li className="meta-item">
           <span className="prefix">Author</span>
-          <span className="author">Colabrio</span>
+          <span className="author">{author.name}</span>
         </li>
         <li className="meta-item">
           <span className="prefix">Published</span>
-          August 4, 2020
+          {publishedOn}
         </li>
         <li className="meta-item">
-          <span className="prefix"> 2 comments </span>
-          <a href="https://ohio.clbthemes.com/standard/#comments">
+          <span className="prefix"> 0 comments </span>
+          <a href="#comments">
             <span className="date">Join the Conversation</span>
           </a>
         </li>

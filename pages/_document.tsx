@@ -6,7 +6,9 @@ import HamburgerNav from "@/components/HamburgerNav";
 import Header from "@/components/Header";
 import Notification from "@/components/Notification";
 import SearchPopup from "@/components/SearchPopup";
+import Layout from "@/components/hocs/Layout";
 import { Html, Head, Main, NextScript } from "next/document";
+import { useState } from "react";
 // dark-scheme
 export default function Document() {
   return (
@@ -17,25 +19,20 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body
-        className="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded"
-        cz-shortcut-listen="true"
-      >
-        <div id="page" className="site">
-          <ElementsbarLeft />
-          <ElementsbarRight />
 
-          <Header />
-          <HamburgerNav />
-          <SearchPopup />
-          <Main />
-          <NextScript />
-          <Footer />
+      <Layout>
+        <Header />
+        <HamburgerNav />
+        <SearchPopup />
+        <Main />
+        <NextScript />
+        <Footer />
+        {/*
 
-          <Notification />
-          <SearchBtn />
-        </div>
-      </body>
+        <Notification />
+*/}
+        <SearchBtn />
+      </Layout>
     </Html>
   );
 }

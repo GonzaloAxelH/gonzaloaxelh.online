@@ -37,7 +37,7 @@ const RecentPosts = () => {
                         <div className="avatar -small">
                           <img
                             alt="Colabrio"
-                            src="./The Highly Contemporary UI_UX Design from a Silicon Valley. – Ohio Theme_files/4058fe7404c4f9d88d5d2d6db42320f8(2).png"
+                            src="https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
                             srcSet="
                                   https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=100&d=mm&r=g 2x
                                 "
@@ -120,7 +120,7 @@ const RecentPosts = () => {
                         <div className="avatar -small">
                           <img
                             alt="Colabrio"
-                            src="./The Highly Contemporary UI_UX Design from a Silicon Valley. – Ohio Theme_files/4058fe7404c4f9d88d5d2d6db42320f8(2).png"
+                            src="https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
                             srcSet="
                                   https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=100&d=mm&r=g 2x
                                 "
@@ -134,7 +134,7 @@ const RecentPosts = () => {
                       </li>
                       <li className="meta-item">
                         <span className="prefix">Posted by</span>
-                        <span className="author">Colabrio</span>
+                        <span className="author">Gonzalo Valdez</span>
                       </li>
                     </ul>
                   </div>
@@ -201,8 +201,8 @@ const RecentPosts = () => {
                       <li className="meta-item">
                         <div className="avatar -small">
                           <img
-                            alt="Colabrio"
-                            src="./The Highly Contemporary UI_UX Design from a Silicon Valley. – Ohio Theme_files/4058fe7404c4f9d88d5d2d6db42320f8(2).png"
+                            alt="Gonzalo"
+                            src="https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
                             srcSet="
                                   https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=100&d=mm&r=g 2x
                                 "
