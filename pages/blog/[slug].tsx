@@ -5,11 +5,13 @@ import RecentPosts from "@/components/RecentPosts";
 import Container from "@/components/hocs/Container";
 
 import { useGetArticle, useGetArticles} from "@/hooks/useGetArticles";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import slugify from "slugify";
 const BlogSlug = (props: any) => {
-    
-    
+    const [renderComments,seRenderComments] = useState(false)
+  useEffect(() => {
+      seRenderComments(true)
+    })
   return (
     <Container>
       <div
@@ -22,9 +24,10 @@ const BlogSlug = (props: any) => {
           content={props.content}
           author={props.article.properties["Created by"]?.created_by}
         />
-    
+
         <RecentPosts recentArticles={props.recentArticles} />
-        <CommentsBlock idArticle={props.article.id} />
+
+        <CommentsBlock idArticle={props.article.id} renderComments={renderComments} />
       </div>
     </Container>
   );

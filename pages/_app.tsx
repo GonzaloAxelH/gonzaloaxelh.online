@@ -1,5 +1,5 @@
-import "@/styles/globals.css";
-import "@/styles/sidebar-content.css";
+
+import "@/styles/sass/globals.scss";
 import "@/styles/content-sidebar.css";
 import "@/styles/woocommerce.css";
 import "@/styles/text-styles.css";

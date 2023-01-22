@@ -39,29 +39,3 @@
 
 
 
-
-.hesaader{
-   background-image:
-    linear-gradient(to bottom, rgba(5, 5, 5, 0.54), rgba(0, 0, 0, 0.13)),
-    url('../public/images/blur-bg.png');
-}
-
-
-
-.p-bold.dark {
-}
-
-.p-italic.dark {
-}
-
-.p-code.dark {
-}
-
-.p-strikethrough.dark {
-}
-
-.p-underline.dark {
-}
-
-.p-a-link.dark {
-}

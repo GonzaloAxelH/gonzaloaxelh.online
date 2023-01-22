@@ -3782,8 +3782,9 @@ const Header = ({setIsOpenSidebar}:any) => {
               <li className="icon-button-holder">
                 <a
                   className="icon-button favorites-global wishlist"
-                  href="https://ohio.clbthemes.com/wishlist/?wishlist-action=user"
+                  href="#"
                 >
+                <span style={{padding:"0.4em"}}>1</span>
                   <i className="icon">
                     <svg
                       className="default"
@@ -3800,21 +3801,7 @@ const Header = ({setIsOpenSidebar}:any) => {
               </li>
               <li className="icon-button-holder">
                 <div className="cart-button ">
-                  <span className="cart-button-total">
-                    <a
-                      className="cart-customlocation -unlink"
-                      href="https://ohio.clbthemes.com/cart/"
-                    >
-                      <span className="woocommerce-Price-amount amount">
-                        <bdi>
-                          <span className="woocommerce-Price-currencySymbol">
-                            $
-                          </span>
-                          0.00
-                        </bdi>
-                      </span>
-                    </a>
-                  </span>
+                  
                   <span className="holder">
                     <button className="icon-button cart" aria-label="cart">
                       <i className="icon">

@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
 
-
 import {
   addComment,
   addSubComment,
@@ -15,11 +14,12 @@ import moment from "moment";
 import { UIContext } from "@/context/UIContext";
 moment.locale("es");
 //@ts-ignore
-const CommentsBlock = ({ idArticle }: any) => {
-  const [loaderBtn,setLoaderBtn] = useState(false)
-  const { showNotification, setShowNotification } = useContext(UIContext);
+const CommentsBlock = ({ idArticle, renderComments }: any) => {
   const { data: session } = useSession();
-  const [change, setChange] = useState(false);
+  console.log(session)
+  const [loaderBtn, setLoaderBtn] = useState(false);
+  const {setShowNotification } = useContext(UIContext);
+  const [change, setChange] = useState(true);
   const [newComment, setNewComment] = useState<any>({
     user: session?.user || {},
     comment: "",
@@ -35,42 +35,25 @@ const CommentsBlock = ({ idArticle }: any) => {
     id: "",
   });
   let { open, id } = openReply;
-  const GoogleSignIn = (e: any) => {
-    e.preventDefault();
-    if (!session) {
-      signIn();
-    } else {
-      addComm();
-      
-    }
-  };
-
+ 
   useEffect(() => {
     loadCommentsByArticle();
-    
   }, [change, setChange, setOpenReply, openReply]);
 
+  useEffect(() => {
+    setChange(!change);
+  }, [idArticle]);
+ 
   const loadCommentsByArticle = async () => {
     const comments = await getComments(idArticle);
     setAllComments(comments);
   };
-  const handleReply = async (id: any) => {
-    await addResponseComment(id);
-    setOpenReply({
-      ...openReply,
-      id: "",
-    });
-    setNewComment({
-      ...newComment,
-      comment: "",
-    });
-
-  };
+  
   const addResponseComment = async (id: any) => {
     if (commentString === "") {
       alert("coloca algo en los comentarios !!");
     } else {
-                  setLoaderBtn(true);
+      setLoaderBtn(true);
       await addSubComment(
         {
           ...newComment,
@@ -80,46 +63,42 @@ const CommentsBlock = ({ idArticle }: any) => {
         },
         id
       );
-                  setLoaderBtn(false);
+      setLoaderBtn(false);
       setShowNotification({
         show: true,
         message: "Respuesta al comentario  subida con exito",
       });
-            setChange(false);
+       setOpenReply({
+         ...openReply,
+         id: "",
+       });
+             setNewComment({ ...newComment, comment: "" });
+            setChange(!change);
     }
   };
 
-  const deleteReplyComment = async (comment: any) => {
-    let comm = {
-      idUser: "89a3080c-d8bc-4010-8f61-ba33f21aefc8",
-      emailUser: "test@gmail.com",
-      comment: comment,
-    };
-    await deleteSubComment(comm, "qEDnTm9qk4uLi0vnGIQn");
-  };
+
 
   const addComm = async () => {
     if (commentString === "") {
       alert("coloca algo en los comentarios !!");
     } else {
-      setLoaderBtn(true)
+      setLoaderBtn(true);
       await addComment({
         ...newComment,
         user: session?.user,
-        
+
         dateCreated: new Date(Date.now()).toISOString(),
         emailUser: session?.user?.email,
       });
-            setLoaderBtn(false);
-            
-       setShowNotification({
-         show: true,
-         message: "Comentario subido con exito",
-       });
-
+      setLoaderBtn(false);
+      setShowNotification({
+        show: true,
+        message: "Comentario subido con exito",
+      });
       setNewComment({ ...newComment, comment: "" });
-
-      setChange(false);
+      
+      setChange(!change);
     }
   };
   return (
@@ -190,6 +169,7 @@ const CommentsBlock = ({ idArticle }: any) => {
                             </div>
                             <div className="reply">
                               <a
+                                style={{ padding: "1em" }}
                                 onClick={() =>
                                   setOpenReply({ ...openReply, id: comment.id })
                                 }
@@ -201,59 +181,44 @@ const CommentsBlock = ({ idArticle }: any) => {
 
                               {id === comment.id && (
                                 <>
-                                  <p className="comment-form-comment">
-                                    <label htmlFor="comment">
-                                      Comment{" "}
-                                      <span className="required">*</span>
-                                    </label>
-                                    <textarea
-                                      id="comment"
-                                      name="comment"
-                                      cols={45}
-                                      rows={8}
-                                      maxLength={65525}
-                                      required
-                                      defaultValue={commentString}
-                                      onChange={(e: any) =>
-                                        setNewComment({
-                                          ...newComment,
-                                          comment: e.target.value,
-                                        })
-                                      }
-                                    />
-                                  </p>
-                                  <button
-                                    onClick={() => handleReply(comment.id)}
-                                    name="submit"
-                                    type="submit"
-                                    id="submit"
-                                    className="submit"
-                                    disabled={loaderBtn || commentString === ""}
-                                  >
-                                    {loaderBtn && (
-                                      <span className="loader"></span>
-                                    )}
-                                    {session ? (
-                                      <>
-                                        <span>
-                                          Response with{" "}
-                                          <i>{session.user?.name}</i>
-                                        </span>
-                                      </>
-                                    ) : (
-                                      <>
-                                        <span style={{ marginRight: "10px" }}>
-                                          Sign In and Post Comment{" "}
-                                        </span>
-                                        <img
-                                          src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
-                                          alt=""
-                                          width={30}
-                                          height={30}
+                                  {session && (
+                                    <>
+                                      <p className="comment-form-comment">
+                                        <label htmlFor="comment">
+                                        
+                                        
+                                        </label>
+                                        <textarea
+                                          id="comment"
+                                          name="comment"
+                                          cols={45}
+                                          rows={8}
+                                          maxLength={65525}
+                                          required
+                                          defaultValue={commentString}
+                                          onChange={(e: any) =>
+                                            setNewComment({
+                                              ...newComment,
+                                              comment: e.target.value,
+                                            })
+                                          }
                                         />
-                                      </>
-                                    )}
-                                  </button>
+                                      </p>
+                                    </>
+                                  )}
+                                  <span style={{ display: "flex" }}>
+                                    <ButtonGoogleSignIn />
+
+                                    <ButtonPostComment
+                                      handleClick={() =>
+                                        addResponseComment(comment.id)
+                                      }
+                                      label="Response with "
+                                      loader={loaderBtn}
+                                      commentString={commentString}
+                                    />
+                                    <ButtonSigOut />
+                                  </span>
                                 </>
                               )}
                             </div>
@@ -326,10 +291,9 @@ const CommentsBlock = ({ idArticle }: any) => {
                 </ul>
 
                 <div id="respond" className="comment-respond">
-                  <h4 id="reply-title" className="heading-md">
-                    Commenta algo{" "}
+                  {session && <h4 id="reply-title" className="heading-md">
+                    Comentar{" "}
                     <button
-                      onClick={() => setChange(!change)}
                       className="icon-button"
                       aria-controls="site-navigation"
                       aria-expanded="false"
@@ -365,81 +329,55 @@ const CommentsBlock = ({ idArticle }: any) => {
                         </svg>
                       </i>
                     </button>
-                  </h4>
-                  {change && (
+                  </h4>}
+                  
                     <form
-                      onSubmit={GoogleSignIn}
+                      onSubmit={(e)=> e.preventDefault()}
                       id="commentform"
                       className="comment-form"
                       noValidate
                     >
-                      <p className="comment-notes">
-                        <span id="email-notes">
-                          Coloca tu comentario 
-                        </span>
+                      
+
+                    {session &&  <>
+                    <p className="comment-notes">
+                        <span id="email-notes">Coloca tu comentario</span>
                         <span className="required-field-message">
                           <span className="required"></span>
                         </span>
-                      </p>
-
-                      <p className="comment-form-comment">
-                        <label htmlFor="comment">
-                          Comment <span className="required">*</span>
-                        </label>
-                        <textarea
-                          id="comment"
-                          name="comment"
-                          cols={45}
-                          rows={8}
-                          maxLength={65525}
-                          required
-                          value={commentString}
-                          defaultValue={commentString}
-                          onChange={(e: any) =>
-                            setNewComment({
-                              ...newComment,
-                              comment: e.target.value,
-                            })
-                          }
-                        />
-                      </p>
+                      </p><p className="comment-form-comment">
+                      <label htmlFor="comment">
+                        Comment <span className="required">*</span>
+                      </label>
+                      <textarea
+                        id="comment"
+                        name="comment"
+                        cols={45}
+                        rows={8}
+                        maxLength={65525}
+                        required
+                        value={commentString}
+                        defaultValue={commentString}
+                        onChange={(e: any) =>
+                          setNewComment({
+                            ...newComment,
+                            comment: e.target.value,
+                          })
+                        }
+                      />
+                    </p>
+                    </>
+                    }
                       <input
                         name="wpml_language_code"
                         type="hidden"
                         defaultValue="en"
                       />
                       <p className="form-submit">
-                        <span>
-                          <button
-                            
-                            name="submit"
-                            type="submit"
-                            id="submit"
-                            className="submit"
-                            disabled={loaderBtn || commentString === ""}
-                          >
-                                                              {loaderBtn && <span className="loader"></span>}
-                            {session ? (
-                              <>
-                                <span>
-                                  Post with <i>{session.user?.name}</i>
-                                </span>
-                              </>
-                            ) : (
-                              <>
-                                <span style={{ marginRight: "10px" }}>
-                                  Sign In and Post Comment{" "}
-                                  </span>
-                                  
-                                <img
-                                  src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
-                                  alt=""
-                                  width={30}
-                                  height={30}
-                                />
-                              </>
-                            )}
-                          </button>
+                        <span style={{ display: "flex" }}>
+                          <ButtonGoogleSignIn/>
+                          <ButtonPostComment handleClick={() => addComm()} loader={loaderBtn} commentString={commentString} />
+                          <ButtonSigOut/>
                         </span>
                         <input
                           type="hidden"
@@ -455,7 +393,7 @@ const CommentsBlock = ({ idArticle }: any) => {
                         />
                       </p>
                     </form>
-                  )}
+                
                 </div>
               </div>
             </div>
@@ -467,3 +405,93 @@ const CommentsBlock = ({ idArticle }: any) => {
 };
 
 export default CommentsBlock;
+
+const ButtonPostComment = ({
+  handleClick,
+  loader,
+  commentString,
+  label = "Post with ",
+}: any) => {
+  const { data: session } = useSession();
+  if (!session) {
+    return null;
+  }
+  return (
+    <button
+      name="submit"
+      style={{
+        borderRadius: "8px",
+        marginLeft: "8px",
+        cursor: "pointer",
+      }}
+      id="submit"
+      type="submit"
+      className="submit"
+      onClick={handleClick}
+      disabled={loader || commentString === ""}
+    >
+      {loader && <span className="loader"></span>}
+
+      <span>
+        {label} <i>{session?.user?.name}</i>
+      </span>
+    </button>
+  );
+};
+
+
+const ButtonSigOut = () => {
+  const { data: session } = useSession();
+  if (!session) {
+      return null
+  }
+  return (
+    <button
+      name="submit"
+      style={{
+        borderRadius: "8px",
+        marginLeft: "8px",
+        cursor: "pointer",
+      }}
+      id="submit"
+      type="submit"
+      className="submit"
+      onClick={() => signOut()}
+    >
+      <span style={{ marginRight: "10px" }}>Sign Out </span>
+
+     
+    </button>
+  );
+};
+
+const ButtonGoogleSignIn = () => {
+    const { data: session } = useSession();
+    
+  if (session) {
+    return null;
+  }
+  return (
+    <button
+      name="submit"
+      style={{
+        borderRadius: "8px",
+        marginLeft: "8px",
+        cursor: "pointer",
+      }}
+      id="submit"
+      type="submit"
+      className="submit"
+      onClick={() => signIn()}
+    >
+      <span style={{ marginRight: "10px" }}>Sign In for Post Comment </span>
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+        alt=""
+        width={30}
+        height={30}
+      />
+    </button>
+  );
+};

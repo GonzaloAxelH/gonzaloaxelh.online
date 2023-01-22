@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -10,6 +11,9 @@ const nextConfig = {
       "themeforest.img.customer.envatousercontent.com",
       "lh3.googleusercontent.com",
     ],
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles_/sass")],
   },
 };
 

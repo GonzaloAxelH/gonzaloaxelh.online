@@ -1,14 +1,6 @@
-import ElementsbarLeft from "@/components/ElementsbarLeft";
-import ElementsbarRight from "@/components/ElementsbarRight";
-import SearchBtn from "@/components/FloatElements/SearchBtn";
-import Footer from "@/components/Footer";
-import HamburgerNav from "@/components/HamburgerNav";
-import Header from "@/components/Header";
-import Notification from "@/components/Notification";
-import SearchPopup from "@/components/SearchPopup";
+
 import { Html, Head, Main, NextScript } from "next/document";
-import { useState } from "react";
-// dark-scheme
+
 export default function Document() {
   return (
     <Html lang="en">
@@ -18,14 +10,17 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
+      <body
+        id="body_next"
+        className={`body post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded`}
+        cz-shortcut-listen="true"
+      >
         <Main />
         <script
           src="https://kit.fontawesome.com/625cb85847.js"
           crossOrigin="anonymous"
         ></script>
         <NextScript />
-      
       </body>
     </Html>
   );
