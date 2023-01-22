@@ -6,7 +6,6 @@ import HamburgerNav from "@/components/HamburgerNav";
 import Header from "@/components/Header";
 import Notification from "@/components/Notification";
 import SearchPopup from "@/components/SearchPopup";
-import Layout from "@/components/hocs/Layout";
 import { Html, Head, Main, NextScript } from "next/document";
 import { useState } from "react";
 // dark-scheme
@@ -19,20 +18,15 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Layout>
-        <Header />
-        <HamburgerNav />
-        <SearchPopup />
+      <body>
         <Main />
+        <script
+          src="https://kit.fontawesome.com/625cb85847.js"
+          crossOrigin="anonymous"
+        ></script>
         <NextScript />
-        <Footer />
-        {/*
-
-        <Notification />
-*/}
-        <SearchBtn />
-      </Layout>
+      
+      </body>
     </Html>
   );
 }

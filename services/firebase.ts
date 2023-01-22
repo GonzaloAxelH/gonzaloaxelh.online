@@ -19,7 +19,7 @@ export const getComments = async (idblog:string) => {
 
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
+    
     allAomments.push({
       ...doc.data(),
       id: doc.id,

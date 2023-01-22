@@ -6,6 +6,7 @@ const BreadcrumbHolder = ({ category, title }: any) => {
       <div className="breadcrumb-holder">
         <nav aria-label="breadcrumb">
           <ol
+            style={{padding:"0"}}
             className="breadcrumb -unlist"
             itemScope
             itemType="http://schema.org/BreadcrumbList"

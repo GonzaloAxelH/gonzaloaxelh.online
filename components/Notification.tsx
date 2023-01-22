@@ -1,16 +1,35 @@
+import { UIContext } from "@/context/UIContext";
 import React from "react";
+import { useEffect } from "react";
+import { useContext } from "react";
 
 const Notification = () => {
+  const { showNotification, setShowNotification } = useContext(UIContext);
+
+  setTimeout(() => {
+    setShowNotification({
+      show: false,
+      message: "",
+    });
+  }, 5000);
+
+  if (!showNotification.show) {
+    return null;
+  }
   return (
-    <div className="notification">
+    <div className="notification" style={{transition:"0.4s all"}} >
       <div className="alert -small -fixed">
-        <p className="alert-message -unspace">
-          This website stores cookies on your computer.
-          <a target="_blank" href="https://ohio.clbthemes.com/standard/#">
-            Cookies Policy
-          </a>
-        </p>
-        <button className="icon-button -small" aria-label="close">
+        <p className="alert-message -unspace">{showNotification?.message}</p>
+        <button
+          className="icon-button -small"
+          onClick={() =>
+            setShowNotification({
+              show: false,
+              message: "",
+            })
+          }
+          aria-label="close"
+        >
           <i className="icon">
             <svg
               className="default"

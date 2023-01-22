@@ -49,16 +49,19 @@ const ContentBlock = ({ block }: any) => {
         value.caption?.length >= 1 ? value.caption[0]?.plain_text : "";
 
       return (
-        <figure className="wp-block-image size-full" style={{textAlign:"center"}}>
+        <figure
+          className="wp-block-image size-full image-holder"
+          style={{ textAlign: "center",position:"relative",height:"300px",borderRadius:"10px" }}
+        >
           <Image
             className="wp-image-20557"
             quality={100}
             src={src}
             blurDataURL={src}
+            objectFit="contain"
             placeholder="blur"
-            width={1200}
-            height={500}
-            fill={false}
+            
+            fill={true}
             alt={
               caption
                 ? caption
@@ -66,11 +69,18 @@ const ContentBlock = ({ block }: any) => {
             }
             priority
           />
-          <span style={{fontSize:"12px",fontStyle:"italic",margin:"auto",width:"100%"}}> 
-            { caption
-                ? caption
-                : "A visual depiction of what is being written about"}
-          </span>
+          <p
+            style={{
+              fontSize: "12px",
+              fontStyle: "italic",
+              margin: "auto",
+              width: "100%",
+            }}
+          >
+            {caption
+              ? caption
+              : "A visual depiction of what is being written about"}
+          </p>
         </figure>
       );
     case "code":

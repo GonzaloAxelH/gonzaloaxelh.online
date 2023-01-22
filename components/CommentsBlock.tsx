@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -12,9 +12,12 @@ import {
 } from "@/services/firebase";
 
 import moment from "moment";
+import { UIContext } from "@/context/UIContext";
 moment.locale("es");
 //@ts-ignore
 const CommentsBlock = ({ idArticle }: any) => {
+  const [loaderBtn,setLoaderBtn] = useState(false)
+  const { showNotification, setShowNotification } = useContext(UIContext);
   const { data: session } = useSession();
   const [change, setChange] = useState(false);
   const [newComment, setNewComment] = useState<any>({
@@ -38,13 +41,13 @@ const CommentsBlock = ({ idArticle }: any) => {
       signIn();
     } else {
       addComm();
-      setChange(false);
+      
     }
   };
 
   useEffect(() => {
     loadCommentsByArticle();
-    console.log(session);
+    
   }, [change, setChange, setOpenReply, openReply]);
 
   const loadCommentsByArticle = async () => {
@@ -62,12 +65,12 @@ const CommentsBlock = ({ idArticle }: any) => {
       comment: "",
     });
 
-    alert("SUB - Comment success");
   };
   const addResponseComment = async (id: any) => {
     if (commentString === "") {
       alert("coloca algo en los comentarios !!");
     } else {
+                  setLoaderBtn(true);
       await addSubComment(
         {
           ...newComment,
@@ -77,6 +80,12 @@ const CommentsBlock = ({ idArticle }: any) => {
         },
         id
       );
+                  setLoaderBtn(false);
+      setShowNotification({
+        show: true,
+        message: "Respuesta al comentario  subida con exito",
+      });
+            setChange(false);
     }
   };
 
@@ -93,19 +102,24 @@ const CommentsBlock = ({ idArticle }: any) => {
     if (commentString === "") {
       alert("coloca algo en los comentarios !!");
     } else {
-      setChange(false);
-
+      setLoaderBtn(true)
       await addComment({
         ...newComment,
         user: session?.user,
-
+        
         dateCreated: new Date(Date.now()).toISOString(),
         emailUser: session?.user?.email,
       });
+            setLoaderBtn(false);
+            
+       setShowNotification({
+         show: true,
+         message: "Comentario subido con exito",
+       });
 
       setNewComment({ ...newComment, comment: "" });
 
-      alert("Comment success");
+      setChange(false);
     }
   };
   return (
@@ -165,7 +179,9 @@ const CommentsBlock = ({ idArticle }: any) => {
                                 <span className="says">says:</span>
                               </div>
                               <div className="comment-metadata">
-                                <time>{moment(comment.dateCreated).fromNow()}</time>
+                                <time>
+                                  {moment(comment.dateCreated).fromNow()}
+                                </time>
                               </div>
                               <em className="comment-awaiting-moderation"></em>
                             </footer>
@@ -212,7 +228,11 @@ const CommentsBlock = ({ idArticle }: any) => {
                                     type="submit"
                                     id="submit"
                                     className="submit"
+                                    disabled={loaderBtn || commentString === ""}
                                   >
+                                    {loaderBtn && (
+                                      <span className="loader"></span>
+                                    )}
                                     {session ? (
                                       <>
                                         <span>
@@ -293,9 +313,7 @@ const CommentsBlock = ({ idArticle }: any) => {
                                           rel="nofollow"
                                           className="comment-reply-link"
                                           href="#"
-                                        >
-                                          Reply (aun no funciona)
-                                        </a>
+                                        ></a>
                                       </div>
                                     </article>
                                   </li>
@@ -357,8 +375,7 @@ const CommentsBlock = ({ idArticle }: any) => {
                     >
                       <p className="comment-notes">
                         <span id="email-notes">
-                          Coloca tu comentario (si es hate requerda que tengo tu
-                          correo XD)
+                          Coloca tu comentario 
                         </span>
                         <span className="required-field-message">
                           <span className="required"></span>
@@ -394,11 +411,14 @@ const CommentsBlock = ({ idArticle }: any) => {
                       <p className="form-submit">
                         <span>
                           <button
+                            
                             name="submit"
                             type="submit"
                             id="submit"
                             className="submit"
+                            disabled={loaderBtn || commentString === ""}
                           >
+                                                              {loaderBtn && <span className="loader"></span>}
                             {session ? (
                               <>
                                 <span>
@@ -409,7 +429,8 @@ const CommentsBlock = ({ idArticle }: any) => {
                               <>
                                 <span style={{ marginRight: "10px" }}>
                                   Sign In and Post Comment{" "}
-                                </span>
+                                  </span>
+                                  
                                 <img
                                   src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
                                   alt=""

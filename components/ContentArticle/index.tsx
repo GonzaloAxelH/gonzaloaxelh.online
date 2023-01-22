@@ -89,7 +89,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
           />
           <div className="parallax-content" />
         </div>
-        <div className="holder">
+        <div className="holder" style={{paddingBottom:"2em"}}>
           <div className="page-container">
             <div className="animated-holder">
               <div className="headline-meta">
@@ -111,8 +111,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                         alt="Colabrio"
                         src={
                           "https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
-                          
-                        }
+                          }
                         className="avatar avatar-96 photo"
                         height={96}
                         width={96}
