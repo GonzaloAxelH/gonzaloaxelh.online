@@ -32,21 +32,23 @@ const Header = ({setIsOpenSidebar}:any) => {
               </button>
             </div>
             <div className="branding">
-              <a
-                className="branding-title titles-typo -undash"
-                href="/"
-                rel="home"
-              >
-                <div
-                  className="logo"
-                  style={{
-                    fontSize: "25px",
-                    fontFamily: " 'Righteous', cursive",
-                  }}
-                >
-                  Gonzalo's
-                </div>
-              </a>
+              <div className="logo">
+                <a className="-unlink" href="#">
+                  <img
+                  
+                    src="/logo.png"
+                    className="light-scheme-logo svg-logo"
+                    alt="Gonzalo Logo"
+                  />
+                  <img
+                  
+                                        src="/logo.png"
+                                        
+                    className="dark-scheme-logo svg-logo"
+                    alt="Gonzalo Logo"
+                  />
+                </a>
+              </div>
             </div>
           </div>
           <div className="right-part right">
@@ -3587,7 +3589,6 @@ const Header = ({setIsOpenSidebar}:any) => {
             <ul className="menu-optional -unlist">
               <li>
                 <a
-                  
                   href="#"
                   onClick={() => signIn()}
                   className="button -small btn-optional"

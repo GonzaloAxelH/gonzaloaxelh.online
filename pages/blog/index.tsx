@@ -75,7 +75,7 @@ const index = ({ recentArticles }: any) => {
             <div className="page-container">
               <div className="animated-holder">
                 <div className="headline-meta" />
-                <h1 className="title">Classic</h1>
+                <h1 className="title">Blog</h1>
                 <div className="post-meta-holder">
                   <div className="builder-switcher">
                     <a className="active" href="../classic/">
@@ -184,8 +184,11 @@ const index = ({ recentArticles }: any) => {
                                       data-lazy-scope="posts"
                                     >
                                       <div className="blog-item card -layout1 ">
-                                        <a
-                                          href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                        <Link
+                                          href={`/blog/${slugify(
+                                            article?.properties?.Name?.title[0]
+                                              ?.plain_text
+                                          ).toLowerCase()}`}
                                           data-cursor-class="cursor-link"
                                         >
                                           <figure
@@ -226,47 +229,58 @@ const index = ({ recentArticles }: any) => {
                                                     Posted by
                                                   </span>
                                                   <span className="author">
-                                                    Colabrio
+                                                    Gonzalo Axel
                                                   </span>
                                                 </li>
                                               </ul>
                                             </div>
                                           </figure>
-                                        </a>
+                                        </Link>
                                         <div className="card-details -left">
                                           <div className="headline-meta -small-t">
                                             <div className="date">
-                                              August 5, 2020
+                                              {new Date(
+                                                article.created_time
+                                              ).toLocaleDateString("es-PE", {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric",
+                                              })}
                                             </div>
                                             <span className="post-meta-estimate">
-                                              9 min read{" "}
+                                              {
+                                                article.properties.Category
+                                                  .select.name
+                                              }{" "}
                                             </span>
                                           </div>
+
                                           <div className="heading title">
                                             <h4 className="title">
                                               <a
                                                 className="-unlink"
                                                 href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                                               >
-                                                Creativo Para Jóvenes: a
-                                                Designer’s UI/UX Complete
-                                                Checklist.{" "}
+                                                {
+                                                  article?.properties?.Name
+                                                    ?.title[0]?.plain_text
+                                                }{" "}
                                               </a>
                                             </h4>
                                           </div>
                                           <div className="category-holder -with-tag">
-                                            <a
-                                              className="tag -unlink"
-                                              href="https://ohio.clbthemes.com/category/digital/"
-                                            >
-                                              Digital
-                                            </a>
-                                            <a
-                                              className="tag -unlink"
-                                              href="https://ohio.clbthemes.com/category/marketing/"
-                                            >
-                                              Marketing
-                                            </a>
+                                            {article?.properties?.Tags.multi_select.map(
+                                              (el: any) => {
+                                                return (
+                                                  <a
+                                                    className="tag -unlink"
+                                                    href="#"
+                                                  >
+                                                    {el.name}
+                                                  </a>
+                                                );
+                                              }
+                                            )}
                                           </div>
                                         </div>
                                       </div>

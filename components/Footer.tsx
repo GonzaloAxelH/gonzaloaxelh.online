@@ -15,14 +15,16 @@ const Footer = () => {
                   <div className="logo">
                     <a className="-unlink" href="#">
                       <img
+                        style={{ borderRadius: "50%" }}
                         src="https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
                         className="light-scheme-logo svg-logo"
-                        alt="Ohio Theme"
+                        alt="Gonzalo Logo"
                       />
                       <img
+                        style={{ borderRadius: "50%" }}
                         src="https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
                         className="dark-scheme-logo svg-logo"
-                        alt="Ohio Theme"
+                        alt="Gonzalo Logo"
                       />
                     </a>
                   </div>
@@ -86,9 +88,7 @@ const Footer = () => {
                   Looking for a job opportunity?
                   <br className="vc_hidden-xs" />
                   <b>
-                    <a href="#">
-                      See open positions
-                    </a>
+                    <a href="#">See open positions</a>
                   </b>
                 </div>
               </li>
@@ -223,7 +223,7 @@ const Footer = () => {
                 <div className="-left">
                   © 2022-2023
                   <a href="/" target="_blank">
-                    Gonzalo Axel 
+                    Gonzalo Axel
                   </a>
                   . All rights reserved |
                   <a target="_blank" href="/5Q25j">
