@@ -115,7 +115,7 @@ const index = ({ recentArticles }: any) => {
                   >
                     <path d="M0 14.5697L1.36504 16L9 8L1.36504 0L0 1.4303L6.26992 8L0 14.5697V14.5697Z" />
                   </svg>
-                  <meta itemProp="position" content={1} />
+                  <meta itemProp="position" content="" />
                 </li>
                 <li
                   className="breadcrumb-item"
@@ -136,7 +136,7 @@ const index = ({ recentArticles }: any) => {
                   >
                     <path d="M0 14.5697L1.36504 16L9 8L1.36504 0L0 1.4303L6.26992 8L0 14.5697V14.5697Z" />
                   </svg>
-                  <meta itemProp="position" content={2} />
+                  <meta itemProp="position" content="" />
                 </li>
                 <li
                   className="breadcrumb-item"
@@ -147,7 +147,7 @@ const index = ({ recentArticles }: any) => {
                   <span itemProp="name" className="active">
                     Classic
                   </span>
-                  <meta itemProp="position" content={3} />
+                  <meta itemProp="position" content=""/>
                 </li>
               </ol>
             </nav>
