@@ -135,39 +135,49 @@ const index = ({ recentArticles }: any) => {
                                           data-cursor-class="cursor-link"
                                         >
                                           <figure
-                      className="image-holder"
-                      style={{ height: "390px", position: "relative" }}
-                    >
-                      <Image
-                        src={article?.cover?.external?.url}
-                        sizes="(max-width: 882px) 100vw, 882px"
-                        fill
-                        alt=""
-                      />
-                      <div className="overlay-details -fade-up">
-                        <ul className="meta-holder -unlist">
-                          <li className="meta-item">
-                            <div className="avatar -small">
-                              <Image
-                                alt="Colabrio"
-                                src={
-                                  "https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
-                                }
-                                className="avatar avatar-50 photo author-avatar"
-                                height={50}
-                                width={50}
-                                loading="lazy"
-                                decoding="async"
-                              />
-                            </div>
-                          </li>
-                          <li className="meta-item">
-                            <span className="prefix">Posted by</span>
-                            <span className="author">Gonzalo Axel</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </figure>
+                                            className="image-holder"
+                                            style={{
+                                              height: "390px",
+                                              position: "relative",
+                                            }}
+                                          >
+                                            <Image
+                                              src={
+                                                article?.cover?.external?.url
+                                              }
+                                              sizes="(max-width: 882px) 100vw, 882px"
+                                              fill
+                                              objectFit="contain"
+                                              alt=""
+                                            />
+                                            <div className="overlay-details -fade-up">
+                                              <ul className="meta-holder -unlist">
+                                                <li className="meta-item">
+                                                  <div className="avatar -small">
+                                                    <Image
+                                                      alt="Colabrio"
+                                                      src={
+                                                        "https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
+                                                      }
+                                                      className="avatar avatar-50 photo author-avatar"
+                                                      height={50}
+                                                      width={50}
+                                                      loading="lazy"
+                                                      decoding="async"
+                                                    />
+                                                  </div>
+                                                </li>
+                                                <li className="meta-item">
+                                                  <span className="prefix">
+                                                    Posted by
+                                                  </span>
+                                                  <span className="author">
+                                                    Gonzalo Axel
+                                                  </span>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </figure>
                                         </Link>
                                         <div className="card-details -left">
                                           <div className="headline-meta -small-t">
@@ -213,23 +223,20 @@ const index = ({ recentArticles }: any) => {
                                                   >
                                                     {el.name}
                                                   </a>
-                                                )
+                                                );
                                               }
                                             )}
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                  )
+                                  );
                                 })}
                               </div>
-                             
-                            
                             </div>
                           </div>
                         </div>
                       </div>
-                      
                     </section>
                   </div>
                 </article>

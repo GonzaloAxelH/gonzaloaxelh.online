@@ -1,3 +1,4 @@
+import { signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
 
 const Header = ({setIsOpenSidebar}:any) => {
@@ -5,7 +6,7 @@ const Header = ({setIsOpenSidebar}:any) => {
   return (
     <header
       id="masthead"
-      className="header header-3 both-types"
+      className="header header-3 both-types -sticky showed"
       data-header-fixed="true"
       data-fixed-initial-offset={150}
     >
@@ -21,7 +22,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                 <i className="icon" />
               </button>
             </div>
-            <div onClick={()=> setIsOpenSidebar(true)} className="mobile-hamburger -left">
+            <div className="mobile-hamburger -left">
               <button
                 className="icon-button hamburger"
                 aria-controls="site-navigation"
@@ -33,48 +34,17 @@ const Header = ({setIsOpenSidebar}:any) => {
             <div className="branding">
               <a
                 className="branding-title titles-typo -undash"
-                href="https://ohio.clbthemes.com/"
+                href="/"
                 rel="home"
               >
-                <div className="logo">
-                  <img
-                    src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/LitFhpPB-OhioLogo.svg"
-                    className="main-logo light-scheme-logo svg-logo"
-                    alt="Ohio Theme"
-                  />
-                  <img
-                    src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/Lb11lpeY-OhioLogoInverse.svg"
-                    className="dark-scheme-logo svg-logo"
-                    alt="Ohio Theme"
-                  />
-                </div>
-                <div className="logo-sticky">
-                  <img
-                    src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/LitFhpPB-OhioLogo.svg"
-                    className="main-logo light-scheme-logo svg-logo"
-                    alt="Ohio Theme"
-                  />
-                  <img
-                    src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/Lb11lpeY-OhioLogoInverse.svg"
-                    className="dark-scheme-logo svg-logo"
-                    alt="Ohio Theme"
-                  />
-                </div>
-                <div className="logo-dynamic">
-                  <span className="dark hidden">
-                    <img
-                      src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/LitFhpPB-OhioLogo.svg"
-                      className="svg-logo"
-                      alt="Ohio Theme"
-                    />
-                  </span>
-                  <span className="light hidden">
-                    <img
-                      src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/Lb11lpeY-OhioLogoInverse.svg"
-                      className="svg-logo"
-                      alt="Ohio Theme"
-                    />
-                  </span>
+                <div
+                  className="logo"
+                  style={{
+                    fontSize: "25px",
+                    fontFamily: " 'Righteous', cursive",
+                  }}
+                >
+                  Gonzalo's
                 </div>
               </a>
             </div>
@@ -82,16 +52,13 @@ const Header = ({setIsOpenSidebar}:any) => {
           <div className="right-part right">
             <nav
               id="site-navigation"
-              className="nav -visible"
+              className="nav unhidden visible"
               data-mobile-menu-second-click-link
             >
               <div className="mobile-overlay menu-mobile-overlay">
                 <div className="overlay" />
                 <div className="close-bar">
-                  <button
-                    className="icon-button -overlay-button"
-                    aria-label="close"
-                  >
+                  <button className="icon-button" aria-label="close">
                     <i className="icon">
                       <svg
                         className="default"
@@ -125,7 +92,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                     </i>
                   </button>
                   <button
-                    className="icon-button -overlay-button search-global fixed dynamic-typo btn-round-light vc_hidden-sm vc_hidden-xs"
+                    className="icon-button search-global fixed dynamic-typo btn-round-light vc_hidden-sm vc_hidden-xs light-typo"
                     data-nav-search="true"
                   >
                     <i className="icon">
@@ -169,8 +136,8 @@ const Header = ({setIsOpenSidebar}:any) => {
                   <div id="mega-menu-wrap" className="nav-container">
                     <ul id="menu-primary" className="menu">
                       <li
-                        id="nav-menu-item-17446-63cc2efd9fb68"
-                        className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
+                        id="nav-menu-item-17446-618102e0a7915"
+                        className="mega-menu-item nav-item menu-item-depth-0 current-menu-ancestor has-submenu"
                       >
                         <a
                           href="#"
@@ -204,12 +171,15 @@ const Header = ({setIsOpenSidebar}:any) => {
                         </a>
                         <ul
                           className="menu-depth-1 sub-menu sub-menu-wide"
-                          style={{ left: "75.432px" }}
-                          data-sub-menu-height="251.5314"
+                          style={{
+                            backgroundPosition: "center center",
+                            backgroundRepeat: "no-repeat",
+                            left: "-344.656px",
+                          }}
                         >
                           <li
-                            id="nav-menu-item-17451-63cc2efd9fc0d"
-                            className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
+                            id="nav-menu-item-17451-618102e0a79cf"
+                            className="mega-menu-item sub-nav-item menu-item-depth-1 current-menu-ancestor current-menu-parent has-submenu "
                           >
                             <a
                               href="#"
@@ -241,104 +211,101 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-17414-63cc2efd9fc71"
+                                id="nav-menu-item-17414-618102e0a7a47"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/accordion-shortcode/"
+                                  href="../accordion-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Accordion</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17415-63cc2efd9fcce"
-                                className="mega-menu-item sub-nav-item menu-item-depth-2 "
+                                id="nav-menu-item-17415-618102e0a7aa3"
+                                className="mega-menu-item sub-nav-item menu-item-depth-2 current-menu-item "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/banner-shortcode/"
+                                  href="../banner-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Banner</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17416-63cc2efd9fd3c"
+                                id="nav-menu-item-17416-618102e0a7b01"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog-posts-shortcode/"
+                                  href="../blog-posts-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Blog Posts</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17417-63cc2efd9fd95"
+                                id="nav-menu-item-17417-618102e0a7b59"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/button-shortcode/"
+                                  href="../button-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Button</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17418-63cc2efd9fded"
+                                id="nav-menu-item-17418-618102e0a7bce"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/call-to-action-shortcode/"
+                                  href="../call-to-action-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Call to Action</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17419-63cc2efd9fe45"
+                                id="nav-menu-item-17419-618102e0a7c21"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/carousel-shortcode/"
+                                  href="../carousel-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Carousel</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17466-63cc2efd9fe9b"
+                                id="nav-menu-item-17466-618102e0a7c72"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/circle-progress-shortcode/"
+                                  href="../circle-progress-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Circle Progress</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17420-63cc2efd9fef2"
+                                id="nav-menu-item-17420-618102e0a7cc4"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/clients-logo-shortcode/"
+                                  href="../clients-logo-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Clients Logo</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17467-63cc2efd9ff4a"
+                                id="nav-menu-item-17467-618102e0a7d18"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/compare-shortcode/"
+                                  href="../compare-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Compare</span>
@@ -347,7 +314,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17452-63cc2efd9ffa5"
+                            id="nav-menu-item-17452-618102e0a7d70"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -380,104 +347,101 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-17421-63cc2efd9fffe"
+                                id="nav-menu-item-17421-618102e0a7dc6"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-form-shortcode/"
+                                  href="../contact-form-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Contact Form</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17422-63cc2efda0056"
+                                id="nav-menu-item-17422-618102e0a7e30"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/countdown-shortcode/"
+                                  href="../countdown-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Countdown</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17423-63cc2efda00c9"
+                                id="nav-menu-item-17423-618102e0a7e84"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/counter-shortcode/"
+                                  href="../counter-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Counter</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17444-63cc2efda0120"
+                                id="nav-menu-item-17444-618102e0a7ed8"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/dynamic-text-shortcode/"
+                                  href="../dynamic-text-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Dynamic Text</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17424-63cc2efda017f"
+                                id="nav-menu-item-17424-618102e0a7f2a"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/fullscreen-slider-shortcode/"
+                                  href="../fullscreen-slider-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fullscreen Slider</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17425-63cc2efda01d5"
+                                id="nav-menu-item-17425-618102e0a7f7a"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/gallery-shortcode/"
+                                  href="../gallery-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17426-63cc2efda022b"
+                                id="nav-menu-item-17426-618102e0a7fca"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/google-map-shortcode/"
+                                  href="../google-map-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Google Map</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17427-63cc2efda0280"
+                                id="nav-menu-item-17427-618102e0a801c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/heading-shortcode/"
+                                  href="../heading-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Heading</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19102-63cc2efda02d6"
+                                id="nav-menu-item-19102-618102e0a806b"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/horizontal-accordion-shortcode/"
+                                  href="../horizontal-accordion-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Horizontal Accordion</span>
@@ -486,7 +450,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17448-63cc2efda032f"
+                            id="nav-menu-item-17448-618102e0a80c1"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -519,104 +483,101 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-17428-63cc2efda0389"
+                                id="nav-menu-item-17428-618102e0a8116"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/icon-box-shortcode/"
+                                  href="../icon-box-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Icon Box</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17429-63cc2efda03e0"
+                                id="nav-menu-item-17429-618102e0a8177"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/instagram-feed-shortcode/"
+                                  href="../instagram-feed-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Instagram Feed</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17430-63cc2efda0436"
+                                id="nav-menu-item-17430-618102e0a81d8"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/message-shortcode/"
+                                  href="../message-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Message</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17431-63cc2efda048d"
+                                id="nav-menu-item-17431-618102e0a8227"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/parallax-shortcode/"
+                                  href="../parallax-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Parallax</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17432-63cc2efda04e2"
+                                id="nav-menu-item-17432-618102e0a8276"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio-projects-shortcode/"
+                                  href="../portfolio-projects-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Portfolio Projects</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17433-63cc2efda0539"
+                                id="nav-menu-item-17433-618102e0a82ca"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/pricing-list-shortcode/"
+                                  href="../pricing-list-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Pricing List</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17434-63cc2efda0590"
+                                id="nav-menu-item-17434-618102e0a8319"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/pricing-table-shortcode/"
+                                  href="../pricing-table-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Pricing Table</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17435-63cc2efda05e6"
+                                id="nav-menu-item-17435-618102e0a836b"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/process-shortcode/"
+                                  href="../process-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Process</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17436-63cc2efda063b"
+                                id="nav-menu-item-17436-618102e0a83ba"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/progress-bar-shortcode/"
+                                  href="../progress-bar-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Progress Bar</span>
@@ -625,7 +586,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17450-63cc2efda0694"
+                            id="nav-menu-item-17450-618102e0a840e"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -658,104 +619,101 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-19367-63cc2efda06ed"
+                                id="nav-menu-item-19367-618102e0a846d"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/services-table-shortcode/"
+                                  href="../services-table-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Services Table</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19580-63cc2efda0743"
+                                id="nav-menu-item-19580-618102e0a84bf"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop-category-shortcode/"
+                                  href="../shop-category-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Shop Category</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17437-63cc2efda07a4"
+                                id="nav-menu-item-17437-618102e0a850e"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/social-networks-shortcode/"
+                                  href="../social-networks-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Social Networks</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17440-63cc2efda07f6"
+                                id="nav-menu-item-17440-618102e0a855f"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/subscribe-form-shortcode/"
+                                  href="../subscribe-form-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Subscribe Form</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17441-63cc2efda0848"
+                                id="nav-menu-item-17441-618102e0a85af"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/tabs-shortcode/"
+                                  href="../tabs-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Tabs</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-216758-63cc2efda089c"
+                                id="nav-menu-item-216758-618102e0a85fd"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/team-group-shortcode/"
+                                  href="../team-group-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Team Group</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17442-63cc2efda08ef"
+                                id="nav-menu-item-17442-618102e0a864c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/team-member-shortcode/"
+                                  href="../team-member-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Team Member</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17443-63cc2efda0942"
+                                id="nav-menu-item-17443-618102e0a869e"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/testimonial-shortcode/"
+                                  href="../testimonial-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Testimonial</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17445-63cc2efda0996"
+                                id="nav-menu-item-17445-618102e0a86ed"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/video-shortcode/"
+                                  href="../video-shortcode/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Video</span>
@@ -764,7 +722,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-20844-63cc2efda09ed"
+                            id="nav-menu-item-20844-618102e0a874e"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -797,91 +755,88 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="282.2967"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-20843-63cc2efda0a53"
+                                id="nav-menu-item-20843-618102e0a87a5"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v1/"
+                                  href="../header-v1/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>Standard</span>
+                                  <span>Menu: Standard</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20842-63cc2efda0aa8"
+                                id="nav-menu-item-20842-618102e0a87fa"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v2/"
+                                  href="../header-v2/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>Centered</span>
+                                  <span>Menu: Center</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20841-63cc2efda0afb"
+                                id="nav-menu-item-20841-618102e0a8848"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v3/"
+                                  href="../header-v3/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>With Center Logo</span>
+                                  <span>Menu: Center Logo</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20840-63cc2efda0b4e"
+                                id="nav-menu-item-20840-618102e0a8899"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v4/"
+                                  href="../header-v4/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>With Top Logo</span>
+                                  <span>Menu: Top Logo</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20839-63cc2efda0ba1"
+                                id="nav-menu-item-20839-618102e0a88ea"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v5/"
+                                  href="../header-v5/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>Sidebar Wide</span>
+                                  <span>Sidebar Menu: Wide</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20838-63cc2efda0bf4"
+                                id="nav-menu-item-20838-618102e0a8939"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v6/"
+                                  href="../header-v6/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>Sidebar Top Hamburger</span>
+                                  <span>Sidebar Menu: Narrow</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-217554-63cc2efda0c48"
+                                id="nav-menu-item-217554-618102e0a8998"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v7/"
+                                  href="../header-v7/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>Sidebar Center Hamburger</span>
+                                  <span>Sidebar Menu: Center</span>
                                 </a>
                               </li>
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17447-63cc2efda0c9e"
+                            id="nav-menu-item-17447-618102e0a89ff"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -914,41 +869,38 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="120.98429999999999"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-49263-63cc2efda0cf3"
+                                id="nav-menu-item-49263-618102e0a8a53"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/standard-hamburger/"
+                                  href="../hamburger-menu-standard/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>Standard Hamburger</span>
+                                  <span>Hamburger Menu: Standard</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-49262-63cc2efda0d59"
+                                id="nav-menu-item-49262-618102e0a8aa6"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/centered-hamburger/"
+                                  href="../hamburger-menu-centered/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>Centered Hamburger</span>
+                                  <span>Hamburger Menu: Centered</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-49261-63cc2efda0dba"
+                                id="nav-menu-item-49261-618102e0a8af5"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/creative-hamburger/"
+                                  href="../hamburger-menu-creative/"
                                   className="menu-link -undash sub-menu-link "
                                 >
-                                  <span>Creative Hamburger</span>
+                                  <span>Hamburger Menu: Creative</span>
                                 </a>
                               </li>
                             </ul>
@@ -956,7 +908,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                         </ul>
                       </li>
                       <li
-                        id="nav-menu-item-17471-63cc2efda0e1c"
+                        id="nav-menu-item-17471-61a4e6002d8b1"
                         className="mega-menu-item nav-item menu-item-depth-0 current-menu-ancestor has-submenu"
                       >
                         <a
@@ -991,12 +943,16 @@ const Header = ({setIsOpenSidebar}:any) => {
                         </a>
                         <ul
                           className="menu-depth-1 sub-menu sub-menu-wide"
-                          style={{ left: "75.432px" }}
-                          data-sub-menu-height="251.5314"
+                          style={{
+                            backgroundPosition: "center center",
+                            backgroundRepeat: "no-repeat",
+                            left: "-443.093px",
+                          }}
+                          data-sub-menu-height="2194.609"
                         >
                           <li
-                            id="nav-menu-item-17472-63cc2efda0e7a"
-                            className="mega-menu-item sub-nav-item menu-item-depth-1 current-menu-ancestor current-menu-parent has-submenu "
+                            id="nav-menu-item-17472-61a4e6002d8ec"
+                            className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
                               href="#"
@@ -1030,102 +986,102 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
+                              data-sub-menu-height="328.906"
                             >
                               <li
-                                id="nav-menu-item-17537-63cc2efda0ed3"
-                                className="mega-menu-item sub-nav-item menu-item-depth-2 current-menu-item "
+                                id="nav-menu-item-17537-61a4e6002d925"
+                                className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic/"
+                                  href="/portfolio/classic/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17554-63cc2efda0f26"
+                                id="nav-menu-item-17554-61a4e6002d958"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-contained/"
+                                  href="/portfolio/classic-contained/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Contained</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17812-63cc2efda0f7a"
+                                id="nav-menu-item-17812-61a4e6002d98a"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-metro/"
+                                  href="/portfolio/classic-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Metro</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17553-63cc2efda0fcd"
+                                id="nav-menu-item-17553-61a4e6002d9bd"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal/"
+                                  href="/portfolio/minimal/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17811-63cc2efda1033"
+                                id="nav-menu-item-17811-61a4e6002d9ee"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-metro/"
+                                  href="/portfolio/minimal-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal Metro</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-81838-63cc2efda1097"
+                                id="nav-menu-item-81838-61a4e6002da1f"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/caption-cursor/"
+                                  href="/portfolio/caption-cursor/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Caption Cursor</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-81837-63cc2efda10fa"
+                                id="nav-menu-item-81837-61a4e6002da51"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/caption-cursor-metro/"
+                                  href="/portfolio/caption-cursor-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Caption Cursor Metro</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221781-63cc2efda116e"
+                                id="nav-menu-item-221781-61a4e6002da83"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/sticky-contained/"
+                                  href="/portfolio/sticky-contained/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Sticky Contained</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221788-63cc2efda11cc"
+                                id="nav-menu-item-221788-61a4e6002dab5"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/sticky-metro/"
+                                  href="/portfolio/sticky-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Sticky Metro</span>
@@ -1134,8 +1090,8 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17474-63cc2efda1227"
-                            className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
+                            id="nav-menu-item-17474-61a4e6002daeb"
+                            className="mega-menu-item sub-nav-item menu-item-depth-1 current-menu-ancestor current-menu-parent has-submenu "
                           >
                             <a
                               href="#"
@@ -1169,102 +1125,102 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
+                              data-sub-menu-height="408.71840000000003"
                             >
                               <li
-                                id="nav-menu-item-17594-63cc2efda1280"
+                                id="nav-menu-item-17594-61a4e6002db34"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/horizontal-slider/"
+                                  href="/portfolio/horizontal-slider/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Horizontal Slider</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17801-63cc2efda12d6"
+                                id="nav-menu-item-17801-61a4e6002db69"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/vertical-slider/"
+                                  href="/portfolio/vertical-slider/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Vertical Slider</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17806-63cc2efda132d"
+                                id="nav-menu-item-17806-61a4e6002db9d"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/smooth-scroll-split-screen/"
+                                  href="/portfolio/smooth-scroll-split-screen/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Smooth Scroll Split Screen</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-222956-63cc2efda1387"
-                                className="mega-menu-item sub-nav-item menu-item-depth-2 new"
+                                id="nav-menu-item-222956-61a4e6002dbdf"
+                                className="mega-menu-item sub-nav-item menu-item-depth-2 current-menu-item new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/interactive-links/"
+                                  href="/portfolio/interactive-links/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Interactive Links</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17890-63cc2efda13dd"
+                                id="nav-menu-item-17890-61a4e6002dc12"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/horizontal-carousel/"
+                                  href="/portfolio/horizontal-carousel/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Horizontal Carousel</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-18192-63cc2efda1434"
+                                id="nav-menu-item-18192-61a4e6002dc51"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/onepage-with-smooth-scroll/"
+                                  href="/portfolio/onepage-with-smooth-scroll/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Onepage with Smooth Scroll</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-18197-63cc2efda1489"
+                                id="nav-menu-item-18197-61a4e6002dce8"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/scattered-with-smooth-scroll/"
+                                  href="/portfolio/scattered-with-smooth-scroll/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Scattered with Smooth Scroll</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-18266-63cc2efda14df"
+                                id="nav-menu-item-18266-61a4e6002dd2c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/centered-with-smooth-scroll/"
+                                  href="/portfolio/centered-with-smooth-scroll/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Centered with Smooth Scroll</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-217746-63cc2efda1536"
+                                id="nav-menu-item-217746-61a4e6002ddd7"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/demo6/"
+                                  href="/demo6/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Vertical Interactive Links</span>
@@ -1273,7 +1229,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17473-63cc2efda158f"
+                            id="nav-menu-item-17473-61a4e6002de1b"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -1308,102 +1264,102 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
+                              data-sub-menu-height="368.8122"
                             >
                               <li
-                                id="nav-menu-item-222634-63cc2efda15e7"
+                                id="nav-menu-item-222634-61a4e6002e194"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/worlds-relays/"
+                                  href="/project/worlds-relays/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Details with Left Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19324-63cc2efda163d"
+                                id="nav-menu-item-19324-61a4e6002e1de"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/unicolor-87/"
+                                  href="/project/unicolor-77/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Details with Right Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-222646-63cc2efda1693"
+                                id="nav-menu-item-222646-61a4e6002e219"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/diseno-grafico/"
+                                  href="/project/diseno-grafico/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Details with Bottom Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19319-63cc2efda16ea"
+                                id="nav-menu-item-19319-61a4e6002e615"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/dinamica/"
+                                  href="/project/dinamica/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split Screen Left Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19321-63cc2efda1741"
+                                id="nav-menu-item-19321-61a4e6002e684"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                  href="/project/stickers-pack/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split Screen Right Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-18284-63cc2efda17b4"
+                                id="nav-menu-item-18284-61a4e6002e6e8"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/spacing-it-easier-to-get-things-done/"
+                                  href="/project/spacing-it-easier-to-get-things-done/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Slider with Details</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20952-63cc2efda1815"
+                                id="nav-menu-item-20952-61a4e6002e74b"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/aws-non-profit-cloud-solutions/"
+                                  href="/project/aws-non-profit-cloud-solutions/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Slider with Custom Details</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20663-63cc2efda186a"
+                                id="nav-menu-item-20663-61a4e6002e7aa"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/diseno-deporte/"
+                                  href="/project/diseno-deporte/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Asymmetric with Custom Details</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-81840-63cc2efda18bf"
+                                id="nav-menu-item-81840-61a4e6002e802"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/salon-de-diseno-de-interiores/"
+                                  href="/project/salon-de-diseno-de-interiores/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Slider with Centered Details</span>
@@ -1412,7 +1368,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17477-63cc2efda1915"
+                            id="nav-menu-item-17477-61a4e6002e85f"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -1447,102 +1403,102 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
+                              data-sub-menu-height="308.9529"
                             >
                               <li
-                                id="nav-menu-item-17700-63cc2efda196a"
+                                id="nav-menu-item-17700-61a4e6002e8ba"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/standard-pagination/"
+                                  href="/portfolio/standard-pagination/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17701-63cc2efda19bd"
+                                id="nav-menu-item-17701-61a4e6002e914"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/standard-pagination-outlined/"
+                                  href="/portfolio/standard-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard: Outlined</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-222169-63cc2efda1a11"
+                                id="nav-menu-item-222169-61a4e6002e978"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/standard-pagination-text/"
+                                  href="/portfolio/standard-pagination-text/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard: Text</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17699-63cc2efda1a63"
+                                id="nav-menu-item-17699-61a4e6002e9cd"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/load-more-pagination/"
+                                  href="/portfolio/load-more-pagination/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Load More</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-222165-63cc2efda1ac9"
+                                id="nav-menu-item-222165-61a4e6002ea08"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/load-more-pagination-outlined/"
+                                  href="/portfolio/load-more-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Load More: Outlined</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-222168-63cc2efda1b1e"
+                                id="nav-menu-item-222168-61a4e6002ea3d"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/load-more-pagination-text/"
+                                  href="/portfolio/load-more-pagination-text/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Load More: Text</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17698-63cc2efda1b74"
+                                id="nav-menu-item-17698-61a4e6002ea71"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/lazy-load-pagination/"
+                                  href="/portfolio/lazy-load-pagination/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Lazy Load</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-222167-63cc2efda1bca"
+                                id="nav-menu-item-222167-61a4e6002eaa4"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/lazy-load-pagination-outlined/"
+                                  href="/portfolio/lazy-load-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Lazy Load: Outlined</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-222166-63cc2efda1c20"
+                                id="nav-menu-item-222166-61a4e6002ead7"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/lazy-load-pagination-text/"
+                                  href="/portfolio/lazy-load-pagination-text/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Lazy Load: Text</span>
@@ -1551,8 +1507,8 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17475-63cc2efda1c79"
-                            className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
+                            id="nav-menu-item-17475-63511aea100e3"
+                            className="mega-menu-item sub-nav-item menu-item-depth-1 current-menu-ancestor current-menu-parent has-submenu "
                           >
                             <a
                               href="#"
@@ -1586,91 +1542,91 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="322.6248"
+                              data-sub-menu-height="328.6248"
                             >
                               <li
-                                id="nav-menu-item-17919-63cc2efda1cd1"
+                                id="nav-menu-item-17919-63511aea1013f"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-image-scale/"
+                                  href="/portfolio/classic-image-scale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Scale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17918-63cc2efda1d29"
+                                id="nav-menu-item-17918-63511aea10198"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-image-overlay/"
+                                  href="/portfolio/classic-image-overlay/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Overlay</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17917-63cc2efda1d80"
+                                id="nav-menu-item-17917-63511aea101ef"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-image-greyscale/"
+                                  href="/portfolio/classic-image-greyscale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Greyscale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17916-63cc2efda1dd7"
-                                className="mega-menu-item sub-nav-item menu-item-depth-2 new"
+                                id="nav-menu-item-17916-63511aea10246"
+                                className="mega-menu-item sub-nav-item menu-item-depth-2 current-menu-item new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-image-transition/"
+                                  href="/portfolio/classic-image-transition/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Transition</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17936-63cc2efda1e2d"
+                                id="nav-menu-item-17936-63511aea1029c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-image-scale/"
+                                  href="/portfolio/minimal-image-scale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Scale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17935-63cc2efda1e85"
+                                id="nav-menu-item-17935-63511aea102f3"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-image-overlay/"
+                                  href="/portfolio/minimal-image-overlay/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Overlay</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17934-63cc2efda1edb"
+                                id="nav-menu-item-17934-63511aea1034a"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-image-greyscale/"
+                                  href="/portfolio/minimal-image-greyscale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Greyscale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17933-63cc2efda1f32"
+                                id="nav-menu-item-17933-63511aea103a1"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-image-transition/"
+                                  href="/portfolio/minimal-image-transition/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Transition</span>
@@ -1679,7 +1635,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17476-63cc2efda1f8c"
+                            id="nav-menu-item-17476-61a4e6002ed29"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -1714,91 +1670,91 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="322.6248"
+                              data-sub-menu-height="274.6248"
                             >
                               <li
-                                id="nav-menu-item-17712-63cc2efda1ff9"
+                                id="nav-menu-item-17712-61a4e6002ed6c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/fade-up-effect/"
+                                  href="/portfolio/fade-up-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fade Up Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17715-63cc2efda2051"
+                                id="nav-menu-item-17715-61a4e6002ee1f"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/fade-down-effect/"
+                                  href="/portfolio/fade-down-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fade Down Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17714-63cc2efda20c6"
+                                id="nav-menu-item-17714-61a4e6002ee69"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/fade-left-effect/"
+                                  href="/portfolio/fade-left-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fade Left Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17713-63cc2efda2137"
+                                id="nav-menu-item-17713-61a4e6002eea7"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/fade-right-effect/"
+                                  href="/portfolio/fade-right-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fade Right Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17733-63cc2efda2191"
+                                id="nav-menu-item-17733-61a4e6002eee6"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/flip-up-effect/"
+                                  href="/portfolio/flip-up-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Flip Up Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17732-63cc2efda21ea"
+                                id="nav-menu-item-17732-61a4e6002ef22"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/flip-down-effect/"
+                                  href="/portfolio/flip-down-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Flip Down Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17731-63cc2efda2240"
+                                id="nav-menu-item-17731-61a4e6002ef5d"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/zoom-in-effect/"
+                                  href="/portfolio/zoom-in-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Zoom In Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17730-63cc2efda2297"
+                                id="nav-menu-item-17730-61a4e6002ef98"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/zoom-out-effect/"
+                                  href="/portfolio/zoom-out-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Zoom Out Effect</span>
@@ -1809,11 +1765,11 @@ const Header = ({setIsOpenSidebar}:any) => {
                         </ul>
                       </li>
                       <li
-                        id="nav-menu-item-27-63cc2efda22ff"
+                        id="nav-menu-item-27-6331a9e093df2"
                         className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
                       >
                         <a
-                          href="https://ohio.clbthemes.com/blog/"
+                          href="/blog/"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Blog</span>
@@ -1844,11 +1800,10 @@ const Header = ({setIsOpenSidebar}:any) => {
                         </a>
                         <ul
                           className="menu-depth-1 sub-menu sub-menu-wide"
-                          style={{ left: "75.432px" }}
-                          data-sub-menu-height="251.5314"
+                          style={{ left: "-539.39px" }}
                         >
                           <li
-                            id="nav-menu-item-17478-63cc2efda235c"
+                            id="nav-menu-item-17478-6331a9e093e4f"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -1881,93 +1836,90 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="322.6248"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-17615-63cc2efda23b5"
+                                id="nav-menu-item-17615-6331a9e093ea8"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic/"
+                                  href="/blog/classic/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17737-63cc2efda240c"
+                                id="nav-menu-item-17737-6331a9e093eff"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-contained/"
+                                  href="/blog/classic-contained/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Contained</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17942-63cc2efda2463"
+                                id="nav-menu-item-17942-6331a9e093f56"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-metro/"
+                                  href="/blog/classic-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Metro</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17970-63cc2efda24ba"
+                                id="nav-menu-item-17970-6331a9e093fae"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal/"
+                                  href="/blog/minimal/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17969-63cc2efda2510"
+                                id="nav-menu-item-17969-6331a9e094004"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-metro/"
+                                  href="/blog/minimal-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal Metro</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-18098-63cc2efda2567"
+                                id="nav-menu-item-18098-6331a9e09405a"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/split/"
+                                  href="/blog/split/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-18097-63cc2efda25bd"
+                                id="nav-menu-item-18097-6331a9e0940b0"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/split-contained/"
+                                  href="/blog/split-contained/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split Contained</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221016-63cc2efda2613"
+                                id="nav-menu-item-221016-6331a9e09410b"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/split-metro/"
+                                  href="/blog/split-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split Metro</span>
@@ -1976,7 +1928,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-217606-63cc2efda266f"
+                            id="nav-menu-item-217606-6331a9e094167"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -2009,82 +1961,79 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="282.2967"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-18117-63cc2efda26c9"
+                                id="nav-menu-item-18117-6331a9e0941c9"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/inner/"
+                                  href="/blog/inner/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Inner</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-18118-63cc2efda271f"
+                                id="nav-menu-item-18118-6331a9e094220"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/inner-metro/"
+                                  href="/blog/inner-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Inner Metro</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-217608-63cc2efda2775"
+                                id="nav-menu-item-217608-6331a9e094277"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/compact/"
+                                  href="/blog/compact/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Compact</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-217619-63cc2efda27ca"
+                                id="nav-menu-item-217619-6331a9e0942cd"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/compact-contained/"
+                                  href="/blog/compact-contained/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Compact Contained</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221322-63cc2efda2822"
+                                id="nav-menu-item-221322-6331a9e094324"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/compact-metro/"
+                                  href="/blog/compact-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Compact Metro</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-217607-63cc2efda2879"
+                                id="nav-menu-item-217607-6331a9e09437b"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/simple/"
+                                  href="/blog/simple/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Simple</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-217624-63cc2efda28cf"
+                                id="nav-menu-item-217624-6331a9e0943d2"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/simple-contained/"
+                                  href="/blog/simple-contained/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Simple Contained</span>
@@ -2093,7 +2042,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17479-63cc2efda2929"
+                            id="nav-menu-item-17479-6331a9e09442d"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -2126,60 +2075,57 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="201.6405"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-18307-63cc2efda2981"
+                                id="nav-menu-item-18307-6331a9e094486"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/standard/"
+                                  href="/standard/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20901-63cc2efda29d7"
+                                id="nav-menu-item-20901-6331a9e0944dd"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                  href="/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard: Featured Image</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20902-63cc2efda2a2e"
+                                id="nav-menu-item-20902-6331a9e09454a"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/fullscreen-post/"
+                                  href="/fullscreen-post/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard: Fullscreen</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221072-63cc2efda2a91"
+                                id="nav-menu-item-221072-6331a9e0945a0"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/demo31/booktips-eight-tips-for-service-design-with-expert-users/"
+                                  href="/demo31/booktips-eight-tips-for-service-design-with-expert-users/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221073-63cc2efda2ae8"
+                                id="nav-menu-item-221073-6331a9e09460c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
+                                  href="/demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split: Featured Image</span>
@@ -2188,7 +2134,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17481-63cc2efda2b42"
+                            id="nav-menu-item-17481-6331a9e094693"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -2221,104 +2167,101 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="362.9529"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-17689-63cc2efda2b97"
+                                id="nav-menu-item-17689-6331a9e0946f7"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/standard-pagination/"
+                                  href="/blog/standard-pagination/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221227-63cc2efda2bea"
+                                id="nav-menu-item-221227-6331a9e094751"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/standard-pagination-outlined/"
+                                  href="/blog/standard-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard: Outlined</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221232-63cc2efda2c3d"
+                                id="nav-menu-item-221232-6331a9e0947aa"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/standard-pagination-text/"
+                                  href="/blog/standard-pagination-text/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard: Text</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17648-63cc2efda2c91"
+                                id="nav-menu-item-17648-6331a9e094806"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/load-more-pagination/"
+                                  href="/blog/load-more-pagination/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Load More</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221249-63cc2efda2ce5"
+                                id="nav-menu-item-221249-6331a9e09485c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/load-more-pagination-outlined/"
+                                  href="/blog/load-more-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Load More: Outlined</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221253-63cc2efda2d3b"
+                                id="nav-menu-item-221253-6331a9e0948bf"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/load-more-pagination-text/"
+                                  href="/blog/load-more-pagination-text/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Load More: Text</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17647-63cc2efda2da2"
+                                id="nav-menu-item-17647-6331a9e09491d"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/lazy-load-pagination/"
+                                  href="/blog/lazy-load-pagination/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Lazy Load</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221266-63cc2efda2df9"
+                                id="nav-menu-item-221266-6331a9e094974"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/lazy-load-pagination-outlined/"
+                                  href="/blog/lazy-load-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Lazy Load: Outlined</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-221268-63cc2efda2e4f"
+                                id="nav-menu-item-221268-6331a9e0949ca"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/lazy-load-pagination-text/"
+                                  href="/blog/lazy-load-pagination-text/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Lazy Load: Text</span>
@@ -2327,7 +2270,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17483-63cc2efda2ea7"
+                            id="nav-menu-item-17483-6331a9e094a24"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -2360,93 +2303,90 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="322.6248"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-17995-63cc2efda2eff"
+                                id="nav-menu-item-17995-6331a9e094a7f"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-none/"
+                                  href="/blog/classic-none/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: None</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17994-63cc2efda2f55"
+                                id="nav-menu-item-17994-6331a9e094ad6"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-image-scale/"
+                                  href="/blog/classic-image-scale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Scale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17997-63cc2efda2fbc"
+                                id="nav-menu-item-17997-6331a9e094b34"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-image-overlay/"
+                                  href="/blog/classic-image-overlay/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Overlay</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17996-63cc2efda3012"
+                                id="nav-menu-item-17996-6331a9e094b89"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-image-greyscale/"
+                                  href="/blog/classic-image-greyscale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Greyscale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17991-63cc2efda307d"
+                                id="nav-menu-item-17991-6331a9e094be0"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-none/"
+                                  href="/blog/minimal-none/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: None</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17990-63cc2efda30e7"
+                                id="nav-menu-item-17990-6331a9e094c36"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-image-scale/"
+                                  href="/blog/minimal-image-scale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Scale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17993-63cc2efda3144"
+                                id="nav-menu-item-17993-6331a9e094c8c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-image-overlay/"
+                                  href="/blog/minimal-image-overlay/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Overlay</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17992-63cc2efda3199"
+                                id="nav-menu-item-17992-6331a9e094ce2"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-image-greyscale/"
+                                  href="/blog/minimal-image-greyscale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Greyscale</span>
@@ -2455,7 +2395,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17482-63cc2efda31f3"
+                            id="nav-menu-item-17482-6331a9e094d3b"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -2488,93 +2428,90 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="322.6248"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-17671-63cc2efda324b"
+                                id="nav-menu-item-17671-6331a9e094d92"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/fade-up-effect/"
+                                  href="/blog/fade-up-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fade Up Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17668-63cc2efda32a0"
+                                id="nav-menu-item-17668-6331a9e094de8"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/fade-down-effect/"
+                                  href="/blog/fade-down-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fade Down Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17669-63cc2efda32f7"
+                                id="nav-menu-item-17669-6331a9e094e3e"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/fade-left-effect/"
+                                  href="/blog/fade-left-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fade Left Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17670-63cc2efda334c"
+                                id="nav-menu-item-17670-6331a9e094e95"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/fade-right-effect/"
+                                  href="/blog/fade-right-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Fade Right Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17673-63cc2efda33a1"
+                                id="nav-menu-item-17673-6331a9e094eee"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/flip-up-effect/"
+                                  href="/blog/flip-up-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Flip Up Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17672-63cc2efda33f7"
+                                id="nav-menu-item-17672-6331a9e094f45"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/flip-down-effect/"
+                                  href="/blog/flip-down-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Flip Down Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17675-63cc2efda345b"
+                                id="nav-menu-item-17675-6331a9e094f9b"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/zoom-in-effect/"
+                                  href="/blog/zoom-in-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Zoom In Effect</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17674-63cc2efda34b1"
+                                id="nav-menu-item-17674-6331a9e094ffc"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/zoom-out-effect/"
+                                  href="/blog/zoom-out-effect/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Zoom Out Effect</span>
@@ -2585,11 +2522,11 @@ const Header = ({setIsOpenSidebar}:any) => {
                         </ul>
                       </li>
                       <li
-                        id="nav-menu-item-31-63cc2efda3513"
-                        className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
+                        id="nav-menu-item-31-6331a9e09506a"
+                        className="mega-menu-item nav-item menu-item-depth-0 current-menu-item has-submenu"
                       >
                         <a
-                          href="https://ohio.clbthemes.com/shop/"
+                          href="/shop/"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Shop</span>
@@ -2620,11 +2557,10 @@ const Header = ({setIsOpenSidebar}:any) => {
                         </a>
                         <ul
                           className="menu-depth-1 sub-menu sub-menu-wide"
-                          style={{ left: "75.432px" }}
-                          data-sub-menu-height="251.5314"
+                          style={{ left: "-605.218px" }}
                         >
                           <li
-                            id="nav-menu-item-240994-63cc2efda356b"
+                            id="nav-menu-item-240994-6331a9e0950c7"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -2657,71 +2593,68 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="241.9686"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-241000-63cc2efda35c1"
+                                id="nav-menu-item-241000-6331a9e09511e"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic/"
+                                  href="/shop/classic/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-240999-63cc2efda3615"
+                                id="nav-menu-item-240999-6331a9e095175"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-contained/"
+                                  href="/shop/classic-contained/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Contained</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-240998-63cc2efda3669"
+                                id="nav-menu-item-240998-6331a9e0951cb"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-metro/"
+                                  href="/shop/classic-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Metro</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241652-63cc2efda36bc"
+                                id="nav-menu-item-241652-6331a9e095222"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal/"
+                                  href="/shop/minimal/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241651-63cc2efda3710"
+                                id="nav-menu-item-241651-6331a9e095278"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-contained/"
+                                  href="/shop/minimal-contained/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal Contained</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241650-63cc2efda3776"
+                                id="nav-menu-item-241650-6331a9e0952ce"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-metro/"
+                                  href="/shop/minimal-metro/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal Metro</span>
@@ -2730,7 +2663,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-240995-63cc2efda37cf"
+                            id="nav-menu-item-240995-6331a9e095325"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -2763,93 +2696,90 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="322.6248"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-241003-63cc2efda3828"
+                                id="nav-menu-item-241003-6331a9e09537c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-image-scale/"
+                                  href="/shop/classic-image-scale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Scale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241002-63cc2efda3880"
+                                id="nav-menu-item-241002-6331a9e0953d1"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-image-overlay/"
+                                  href="/shop/classic-image-overlay/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Overlay</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241001-63cc2efda38df"
+                                id="nav-menu-item-241001-6331a9e09542a"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-image-greyscale/"
+                                  href="/shop/classic-image-greyscale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Greyscale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241004-63cc2efda3933"
+                                id="nav-menu-item-241004-6331a9e095481"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-image-transition/"
+                                  href="/shop/classic-image-transition/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic: Image Transition</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241733-63cc2efda3987"
+                                id="nav-menu-item-241733-6331a9e0954f3"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-image-scale/"
+                                  href="/shop/minimal-image-scale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Scale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241732-63cc2efda39da"
+                                id="nav-menu-item-241732-6331a9e095548"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-image-overlay/"
+                                  href="/shop/minimal-image-overlay/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Overlay</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241731-63cc2efda3a2e"
+                                id="nav-menu-item-241731-6331a9e0955ae"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-image-greyscale/"
+                                  href="/shop/minimal-image-greyscale/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Greyscale</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241734-63cc2efda3a82"
+                                id="nav-menu-item-241734-6331a9e095602"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-image-transition/"
+                                  href="/shop/minimal-image-transition/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Minimal: Image Transition</span>
@@ -2858,7 +2788,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-240996-63cc2efda3ad8"
+                            id="nav-menu-item-240996-6331a9e09565b"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -2891,93 +2821,90 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="322.6248"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-241005-63cc2efda3b2f"
+                                id="nav-menu-item-241005-6331a9e0956b3"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-shape-armchair/"
+                                  href="/product/gosta-shape-armchair/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Sticky Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241006-63cc2efda3b95"
+                                id="nav-menu-item-241006-6331a9e095707"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-upholstery-chair/"
+                                  href="/product/gosta-upholstery-chair/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Sticky Gallery Reflected</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241007-63cc2efda3bec"
+                                id="nav-menu-item-241007-6331a9e09575d"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-upholstery-stool/"
+                                  href="/product/gosta-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split Screen</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241008-63cc2efda3d1b"
+                                id="nav-menu-item-241008-6331a9e0957b2"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-shape-armchair/"
+                                  href="/product/johanna-shape-armchair/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Split Screen Reflected</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241009-63cc2efda3d75"
+                                id="nav-menu-item-241009-6331a9e095806"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-upholstery-chair/"
+                                  href="/product/johanna-upholstery-chair/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241010-63cc2efda3dcc"
+                                id="nav-menu-item-241010-6331a9e09585b"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-upholstery-stool/"
+                                  href="/product/johanna-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Gallery Reflected</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241011-63cc2efda3e24"
+                                id="nav-menu-item-241011-6331a9e0958b3"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/modern-upholstery-stool/"
+                                  href="/product/modern-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Grid Gallery</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241012-63cc2efda3e7c"
+                                id="nav-menu-item-241012-6331a9e09590e"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/modern-shape-armchair/"
+                                  href="/product/modern-shape-armchair/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Grid Gallery Reflected</span>
@@ -2986,7 +2913,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-17556-63cc2efda3ed9"
+                            id="nav-menu-item-17556-6331a9e095967"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -3019,23 +2946,20 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="322.6248"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-17558-63cc2efda3f41"
+                                id="nav-menu-item-17558-6331a9e0959d3"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/modern-upholstery-stool/"
+                                  href="/product/modern-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Standard Product</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-43318-63cc2efda3f99"
+                                id="nav-menu-item-43318-6331a9e095a2c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
@@ -3046,7 +2970,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17560-63cc2efda400b"
+                                id="nav-menu-item-17560-6331a9e095a83"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
@@ -3057,7 +2981,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17561-63cc2efda4073"
+                                id="nav-menu-item-17561-6331a9e095ae7"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
@@ -3068,7 +2992,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17562-63cc2efda40cc"
+                                id="nav-menu-item-17562-6331a9e095b3d"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
@@ -3079,18 +3003,18 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241016-63cc2efda4123"
+                                id="nav-menu-item-241016-6331a9e095b93"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-upholstery-stool/"
+                                  href="/product/gosta-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Downloadable Product</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17563-63cc2efda4179"
+                                id="nav-menu-item-17563-6331a9e095bea"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
@@ -3101,7 +3025,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17564-63cc2efda41cf"
+                                id="nav-menu-item-17564-6331a9e095c40"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
@@ -3114,7 +3038,7 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-240997-63cc2efda422a"
+                            id="nav-menu-item-240997-6331a9e095c99"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
@@ -3147,56 +3071,53 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="201.6405"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-241041-63cc2efda4282"
-                                className="mega-menu-item sub-nav-item menu-item-depth-2 "
+                                id="nav-menu-item-241041-6331a9e095cf2"
+                                className="mega-menu-item sub-nav-item menu-item-depth-2 current-menu-item "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/"
+                                  href="/shop/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Shop Layout</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-28-63cc2efda42d8"
+                                id="nav-menu-item-28-6331a9e095d49"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/cart/"
+                                  href="/cart/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Cart</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-29-63cc2efda4330"
+                                id="nav-menu-item-29-6331a9e095da6"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/checkout/"
+                                  href="/checkout/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Checkout</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-30-63cc2efda4387"
+                                id="nav-menu-item-30-6331a9e095dfc"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/my-account/"
+                                  href="/my-account/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>My Account</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-17557-63cc2efda43dd"
+                                id="nav-menu-item-17557-6331a9e095e52"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
@@ -3209,11 +3130,11 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-18267-63cc2efda4438"
-                            className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
+                            id="nav-menu-item-18267-6331a9e095eac"
+                            className="mega-menu-item sub-nav-item menu-item-depth-1 current-menu-item has-submenu "
                           >
                             <a
-                              href="https://ohio.clbthemes.com/shop/"
+                              href="/shop/"
                               className="menu-link -undash sub-menu-link "
                             >
                               <span>Category Layout</span>
@@ -3242,27 +3163,24 @@ const Header = ({setIsOpenSidebar}:any) => {
                                 </i>
                               </div>
                             </a>
-                            <ul
-                              className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="80.6562"
-                            >
+                            <ul className="menu-depth-2 sub-sub-menu">
                               <li
-                                id="nav-menu-item-241039-63cc2efda4490"
+                                id="nav-menu-item-241039-6331a9e095f10"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-category/"
+                                  href="/shop/classic-category/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Classic Category</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-241038-63cc2efda44e8"
+                                id="nav-menu-item-241038-6331a9e095f67"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/offset-category/"
+                                  href="/shop/offset-category/"
                                   className="menu-link -undash sub-menu-link "
                                 >
                                   <span>Offset Category</span>
@@ -3272,27 +3190,13 @@ const Header = ({setIsOpenSidebar}:any) => {
                           </li>
                         </ul>
                       </li>
-                      <li
-                        id="nav-menu-item-18606-63cc2efda454c"
-                        className="mega-menu-item nav-item menu-item-depth-0 has-submenu "
-                      >
+                      <li className="mega-menu-item nav-item menu-item-depth-0 has-submenu ">
                         <a
                           href="#"
-                          className="menu-link -undash main-menu-link item-title"
+                          className="menu-link main-menu-link -undash item-title"
                         >
                           <span>Pages</span>
                           <div className="has-submenu-icon">
-                            <i className="icon menu-plus">
-                              <svg
-                                width={14}
-                                height={14}
-                                viewBox="0 0 14 14"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
-                              </svg>
-                            </i>
                             <i className="menu-chevron">
                               <svg
                                 fill="currentColor"
@@ -3308,15 +3212,15 @@ const Header = ({setIsOpenSidebar}:any) => {
                         </a>
                         <ul
                           className="menu-depth-1 sub-menu"
-                          data-sub-menu-height="125.76570000000001"
+                          data-sub-menu-height="129.65640000000002"
                         >
                           <li
-                            id="nav-menu-item-20920-63cc2efda45a9"
+                            id="nav-menu-item-20920-6059ae52e905c"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about/"
-                              className="menu-link -undash sub-menu-link "
+                              href="../about/"
+                              className="menu-link sub-menu-link -undash"
                             >
                               <span>About</span>
                               <div className="has-submenu-icon">
@@ -3331,98 +3235,87 @@ const Header = ({setIsOpenSidebar}:any) => {
                                     <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
                                   </svg>
                                 </i>
-                                <i className="menu-chevron">
-                                  <svg
-                                    fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width={10}
-                                    height={10}
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
-                                  </svg>
-                                </i>
                               </div>
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="241.9686"
+                              data-sub-menu-height={240}
                             >
                               <li
-                                id="nav-menu-item-19825-63cc2efda4602"
+                                id="nav-menu-item-19825-6059ae52e9096"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver4/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../about-ver4/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>About Us</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19823-63cc2efda4659"
+                                id="nav-menu-item-19823-6059ae52e90c9"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver2/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../about-ver2/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>About Classic</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19826-63cc2efda46af"
+                                id="nav-menu-item-19826-6059ae52e90fb"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver5/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../about-ver5/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Hey, we’re Ohio</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19822-63cc2efda4706"
+                                id="nav-menu-item-19822-6059ae52e912c"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver1/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../about-ver1/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Our Bureau</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-19824-63cc2efda475e"
+                                id="nav-menu-item-19824-6059ae52e915d"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver3/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../about-ver3/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Our Studio</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-81832-63cc2efda47b6"
-                                className="mega-menu-item sub-nav-item menu-item-depth-2 new"
+                                id="nav-menu-item-81832-6059ae52e918e"
+                                className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver6/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../about-ver6/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
-                                  <span>About Creative</span>
+                                  <span className="new">About Creative</span>
                                 </a>
                               </li>
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-20944-63cc2efda480f"
+                            id="nav-menu-item-20944-6059ae52e91c2"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
-                              href="https://ohio.clbthemes.com/contact/"
-                              className="menu-link -undash sub-menu-link "
+                              href="../contact/"
+                              className="menu-link sub-menu-link -undash"
                             >
                               <span>Contact</span>
                               <div className="has-submenu-icon">
@@ -3437,98 +3330,87 @@ const Header = ({setIsOpenSidebar}:any) => {
                                     <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
                                   </svg>
                                 </i>
-                                <i className="menu-chevron">
-                                  <svg
-                                    fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width={10}
-                                    height={10}
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
-                                  </svg>
-                                </i>
                               </div>
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="241.9686"
+                              data-sub-menu-height={240}
                             >
                               <li
-                                id="nav-menu-item-20803-63cc2efda4869"
+                                id="nav-menu-item-20803-6059ae52e91f6"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver4/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../contact-us-ver4/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Contact: Agency</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20802-63cc2efda48c0"
+                                id="nav-menu-item-20802-6059ae52e9228"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver5/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../contact-us-ver5/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Contact: Blocks</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20801-63cc2efda4916"
+                                id="nav-menu-item-20801-6059ae52e925a"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver2/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../contact-us-ver2/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Contact: Classic</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20800-63cc2efda496c"
+                                id="nav-menu-item-20800-6059ae52e9294"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver3/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../contact-us-ver3/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Contact: Corporate</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20799-63cc2efda49c2"
+                                id="nav-menu-item-20799-6059ae52e92d8"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver1/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../contact-us-ver1/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Contact: Simple</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-81831-63cc2efda4a18"
-                                className="mega-menu-item sub-nav-item menu-item-depth-2 new"
+                                id="nav-menu-item-81831-6059ae52e930c"
+                                className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver6/"
-                                  className="menu-link -undash sub-menu-link "
+                                  href="../contact-us-ver6/"
+                                  className="menu-link sub-menu-link -undash"
                                 >
-                                  <span>Contact: Creative</span>
+                                  <span className="new">Contact: Creative</span>
                                 </a>
                               </li>
                             </ul>
                           </li>
                           <li
-                            id="nav-menu-item-20731-63cc2efda4a72"
+                            id="nav-menu-item-20731-6059ae52e9342"
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu "
                           >
                             <a
                               href="#"
-                              className="menu-link -undash sub-menu-link "
+                              className="menu-link sub-menu-link -undash"
                             >
                               <span>Special Pages</span>
                               <div className="has-submenu-icon">
@@ -3543,63 +3425,52 @@ const Header = ({setIsOpenSidebar}:any) => {
                                     <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
                                   </svg>
                                 </i>
-                                <i className="menu-chevron">
-                                  <svg
-                                    fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width={10}
-                                    height={10}
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
-                                  </svg>
-                                </i>
                               </div>
                             </a>
                             <ul
                               className="menu-depth-2 sub-sub-menu"
-                              data-sub-menu-height="161.3124"
+                              data-sub-menu-height={160}
                             >
                               <li
-                                id="nav-menu-item-20733-63cc2efda4aca"
+                                id="nav-menu-item-20733-6059ae52e937b"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
                                   href="/adadad/"
-                                  className="menu-link -undash sub-menu-link "
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>404 Page</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20735-63cc2efda4b20"
+                                id="nav-menu-item-20735-6059ae52e93ac"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
                                   href="/demo30/"
-                                  className="menu-link -undash sub-menu-link "
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Coming Soon</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20734-63cc2efda4b76"
+                                id="nav-menu-item-20734-6059ae52e93dd"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
                                   href="/?s=identity"
-                                  className="menu-link -undash sub-menu-link "
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Search Results</span>
                                 </a>
                               </li>
                               <li
-                                id="nav-menu-item-20732-63cc2efda4bcc"
+                                id="nav-menu-item-20732-6059ae52e940f"
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 "
                               >
                                 <a
                                   href="/my-account/"
-                                  className="menu-link -undash sub-menu-link "
+                                  className="menu-link sub-menu-link -undash"
                                 >
                                   <span>Sign In / Sign Up</span>
                                 </a>
@@ -3608,27 +3479,13 @@ const Header = ({setIsOpenSidebar}:any) => {
                           </li>
                         </ul>
                       </li>
-                      <li
-                        id="nav-menu-item-220972-63cc2efda4c2f"
-                        className="mega-menu-item nav-item menu-item-depth-0 has-submenu "
-                      >
+                      <li className="mega-menu-item nav-item menu-item-depth-0 current-menu-item has-submenu ">
                         <a
-                          href="https://colabrio.ticksy.com/"
+                          href="#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Help</span>
                           <div className="has-submenu-icon">
-                            <i className="icon menu-plus">
-                              <svg
-                                width={14}
-                                height={14}
-                                viewBox="0 0 14 14"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
-                              </svg>
-                            </i>
                             <i className="menu-chevron">
                               <svg
                                 fill="currentColor"
@@ -3642,38 +3499,29 @@ const Header = ({setIsOpenSidebar}:any) => {
                             </i>
                           </div>
                         </a>
-                        <ul
-                          className="menu-depth-1 sub-menu"
-                          data-sub-menu-height="125.76570000000001"
-                        >
-                          <li
-                            id="nav-menu-item-25539-63cc2efda4c88"
-                            className="mega-menu-item sub-nav-item menu-item-depth-1 "
-                          >
+                        <ul className="menu-depth-1 sub-menu">
+                          <li className="mega-menu-item sub-nav-item menu-item-depth-1 ">
                             <a
-                              href="https://docs.clbthemes.com/ohio"
+                              href="/ohio/"
+                              target="_blank"
                               className="menu-link -undash sub-menu-link "
                             >
                               <span>Documentation</span>
                             </a>
                           </li>
-                          <li
-                            id="nav-menu-item-220973-63cc2efda4cde"
-                            className="mega-menu-item sub-nav-item menu-item-depth-1 "
-                          >
+                          <li className="mega-menu-item sub-nav-item menu-item-depth-1 ">
                             <a
                               href="https://colabrio.ticksy.com/"
+                              target="_blank"
                               className="menu-link -undash sub-menu-link "
                             >
                               <span>Help Center</span>
                             </a>
                           </li>
-                          <li
-                            id="nav-menu-item-220974-63cc2efda4d33"
-                            className="mega-menu-item sub-nav-item menu-item-depth-1 "
-                          >
+                          <li className="mega-menu-item sub-nav-item menu-item-depth-1 ">
                             <a
                               href="https://colabrio.ticksy.com/"
+                              target="_blank"
                               className="menu-link -undash sub-menu-link "
                             >
                               <span>Submit a Ticket</span>
@@ -3681,12 +3529,10 @@ const Header = ({setIsOpenSidebar}:any) => {
                           </li>
                         </ul>
                       </li>
-                      <li
-                        id="nav-menu-item-220971-63cc2efda4d93"
-                        className="mega-menu-item nav-item menu-item-depth-0 version"
-                      >
+                      <li className="mega-menu-item nav-item menu-item-depth-0 version">
                         <a
-                          href="https://docs.clbthemes.com/ohio/release-notes/"
+                          target="_blank"
+                          href="/ohio/release-notes/"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Changelog</span>
@@ -3695,72 +3541,43 @@ const Header = ({setIsOpenSidebar}:any) => {
                     </ul>
                   </div>
                   <div className="copyright">
-                    <p>
-                      © 2016-2023{" "}
-                      <a href="http://clbthemes.com" target="_blank">
-                        Colabrio
-                      </a>
-                      . All rights reserved |{" "}
-                      <a target="_blank" href="https://1.envato.market/5Q25j">
-                        <b>Purchase</b>
-                      </a>
-                    </p>
-                    <p>
-                      <a href="http://clbthemes.com" target="_blank">
-                        Security
-                      </a>{" "}
-                      |{" "}
-                      <a href="http://clbthemes.com" target="_blank">
-                        Privacy &amp; Cookie Policy
-                      </a>{" "}
-                      |{" "}
-                      <a href="http://clbthemes.com" target="_blank">
-                        Terms of Service
-                      </a>
-                    </p>
+                    © 2022, Ohio Theme. Made with passion by{" "}
+                    <a href="http://clbthemes.com" target="_blank">
+                      Colabrio
+                    </a>
+                    .<br />
+                    All right reserved.
                   </div>
-                  <select className="lang-dropdown -small">
-                    <option
-                      className="active"
-                      selected={true}
-                      value="https://ohio.clbthemes.com/portfolio/classic/"
-                    >
-                      Eng
-                    </option>{" "}
-                  </select>
                 </div>
-                <div className="social-bar dynamic-typo">
-                  <ul className="social-bar-holder titles-typo -small-t -unlist vc_hidden-md">
+                <div className="social-bar dynamic-typo light-typo">
+                  <ul className="social-bar-holder titles-typo -unlist">
                     <li>Follow Us</li>
                     <li>—</li>
                     <li>
                       <a
-                        href="https://www.facebook.com/colabrio/"
                         target="_blank"
-                        rel="nofollow"
-                        className="-undash facebook"
-                      >
-                        Fb.{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.facebook.com/colabrio/"
-                        target="_blank"
-                        rel="nofollow"
-                        className="-undash behance"
-                      >
-                        Be.{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.facebook.com/colabrio/"
-                        target="_blank"
-                        rel="nofollow"
+                        href=" https://www.facebook.com/colabrio/"
                         className="-undash youtube"
                       >
-                        Yt.{" "}
+                        Yt.
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/colabrio/"
+                        className="-undash behance"
+                      >
+                        Be.
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        target="_blank"
+                        href=" https://www.facebook.com/colabrio/"
+                        className="-undash tiktok"
+                      >
+                        Tk.
                       </a>
                     </li>
                   </ul>
@@ -3768,110 +3585,26 @@ const Header = ({setIsOpenSidebar}:any) => {
               </div>
             </nav>
             <ul className="menu-optional -unlist">
-              <li className="vc_hidden-xs vc_hidden-sm">
-                <select className="lang-dropdown -small">
-                  <option
-                    className="active"
-                    selected={true}
-                    value="https://ohio.clbthemes.com/portfolio/classic/"
-                  >
-                    Eng
-                  </option>{" "}
-                </select>
-              </li>
-              <li className="icon-button-holder">
+              <li>
                 <a
-                  className="icon-button favorites-global wishlist"
+                  
                   href="#"
+                  onClick={() => signIn()}
+                  className="button -small btn-optional"
+                  target="_blank"
                 >
-                <span style={{padding:"0.4em"}}>1</span>
-                  <i className="icon">
-                    <svg
-                      className="default"
-                      width={20}
-                      height={18}
-                      viewBox="0 0 20 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M14.5 0C12.76 0 11.09 0.794551 10 2.05014C8.91 0.794551 7.24 0 5.5 0C2.42 0 0 2.37384 0 5.3951C0 9.103 3.4 12.1243 8.55 16.715L10 18L11.45 16.7052C16.6 12.1243 20 9.103 20 5.3951C20 2.37384 17.58 0 14.5 0ZM10.1 15.2534L10 15.3515L9.9 15.2534C5.14 11.0256 2 8.22997 2 5.3951C2 3.43324 3.5 1.96185 5.5 1.96185C7.04 1.96185 8.54 2.93297 9.07 4.27684H10.94C11.46 2.93297 12.96 1.96185 14.5 1.96185C16.5 1.96185 18 3.43324 18 5.3951C18 8.22997 14.86 11.0256 10.1 15.2534Z" />
-                    </svg>
-                  </i>
+                  Subscribirse al blog
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+                    alt=""
+                    style={{ marginLeft: "8px" }}
+                    width={20}
+                    height={20}
+                  />
                 </a>
               </li>
-              <li className="icon-button-holder">
-                <div className="cart-button ">
-                  
-                  <span className="holder">
-                    <button className="icon-button cart" aria-label="cart">
-                      <i className="icon">
-                        <svg
-                          className="default"
-                          xmlns="http://www.w3.org/2000/svg"
-                          x="0px"
-                          y="0px"
-                          viewBox="0 0 12 16"
-                          xmlSpace="preserve"
-                        >
-                          <path
-                            className="st0"
-                            d="M9,4V3c0-1.7-1.3-3-3-3S3,1.3,3,3v1H0v10c0,1.1,0.9,2,2,2h8c1.1,0,2-0.9,2-2V4H9z M4,3c0-1.1,0.9-2,2-2s2,0.9,2,2v1H4V3z"
-                          />
-                        </svg>
-                      </i>
-                    </button>
-                    <span className="badge">0</span>
-                  </span>
-                  <div className="cart-mini">
-                    <div className="headline">
-                      <h5 className="title">Cart review</h5>
-                      <button
-                        className="icon-button -small clb-close -reset"
-                        aria-label="close"
-                      >
-                        <i className="icon">
-                          <svg
-                            className="default"
-                            width={14}
-                            height={14}
-                            viewBox="0 0 14 14"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" />
-                          </svg>
-                          <svg
-                            className="minimal"
-                            width={16}
-                            height={16}
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M15.7552 0.244806C16.0816 0.571215 16.0816 1.10043 15.7552 1.42684L1.42684 15.7552C1.10043 16.0816 0.571215 16.0816 0.244806 15.7552C-0.0816021 15.4288 -0.0816021 14.8996 0.244806 14.5732L14.5732 0.244806C14.8996 -0.0816019 15.4288 -0.0816019 15.7552 0.244806Z"
-                            />
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M15.7552 15.7552C15.4288 16.0816 14.8996 16.0816 14.5732 15.7552L0.244807 1.42684C-0.0816013 1.10043 -0.0816013 0.571215 0.244807 0.244806C0.571215 -0.0816021 1.10043 -0.0816021 1.42684 0.244806L15.7552 14.5732C16.0816 14.8996 16.0816 15.4288 15.7552 15.7552Z"
-                            />
-                          </svg>
-                        </i>
-                      </button>
-                    </div>
-                    <div className="widget_shopping_cart_content">
-                      <p className="woocommerce-mini-cart__empty-message">
-                        No products in the cart.
-                      </p>
-                    </div>
-                  </div>
-                </div>{" "}
-              </li>
             </ul>
-            <div className="close-menu" style={{ right: "-100%" }} />
+            <div className="close-menu" />
           </div>
         </div>
       </div>
@@ -3880,3 +3613,57 @@ const Header = ({setIsOpenSidebar}:any) => {
 };
 
 export default Header;
+const ButtonSigOut = () => {
+  const { data: session } = useSession();
+  if (!session) {
+    return null;
+  }
+  return (
+    <button
+      name="submit"
+      style={{
+        borderRadius: "8px",
+        marginLeft: "8px",
+        cursor: "pointer",
+      }}
+      id="submit"
+      type="submit"
+      className="submit"
+      onClick={() => signOut()}
+    >
+      <span style={{ marginRight: "10px" }}>Sign Out </span>
+    </button>
+  );
+};
+
+const ButtonGoogleSignIn = () => {
+  const { data: session } = useSession();
+
+  if (session) {
+    return null;
+  }
+  return (
+    <button
+      name="submit"
+      style={{
+        borderRadius: "8px",
+        marginLeft: "8px",
+        cursor: "pointer",
+      }}
+      id="submit"
+      type="submit"
+      className="submit"
+      onClick={() => signIn()}
+    >
+      <span style={{ marginRight: "10px" }}>Sign In for Post Comment </span>
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+        alt=""
+        width={30}
+        height={30}
+      />
+    </button>
+  );
+};
+

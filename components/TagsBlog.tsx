@@ -10,7 +10,7 @@ const TagsBlog = ({ tags }: any) => {
             return (
               <a
                 key={index}
-                href="https://ohio.clbthemes.com/tag/blog/"
+                href="/tag/blog/"
                 rel="tag"
               >
                 {tag?.name}

@@ -11,7 +11,7 @@ const NotFound = () => {
       >
         <div className="page-headline without-cap -left subheader_excluded  headline-with-parallax">
           <a
-            href="https://ohio.clbthemes.com/contact-us-ver5/"
+            href="/contact-us-ver5/"
             className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
           >
             <button
@@ -85,7 +85,7 @@ const NotFound = () => {
             <form
               role="search"
               className="search search-form"
-              action="https://ohio.clbthemes.com/"
+              action="/"
               method="GET"
             >
               <label>

@@ -43,7 +43,7 @@ const SearchPopup = () => {
           role="search"
           method="get"
           className="search search-woocommerce woocommerce-product-search"
-          action="https://ohio.clbthemes.com/shop/"
+          action="/shop/"
         >
           <label>
             <span className="screen-reader-text">Search for</span>

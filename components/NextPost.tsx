@@ -16,7 +16,7 @@ const NextPost = () => {
           <div className="nav-group">
             <a
               className="icon-button prev -unlink"
-              href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+              href="/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
             >
               <i className="icon">
                 <svg
@@ -51,7 +51,7 @@ const NextPost = () => {
             </a>
             <a
               className="icon-button next -unlink"
-              href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+              href="/definitive-guide-to-make-a-daily-more-productive-working-flow/"
             >
               <i className="icon">
                 <svg
@@ -88,7 +88,7 @@ const NextPost = () => {
         </div>
         <a
           className="titles-typo -undash"
-          href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+          href="/definitive-guide-to-make-a-daily-more-productive-working-flow/"
         >
           Definitive Guide to Make a Daily More Productive Working Flow.
         </a>

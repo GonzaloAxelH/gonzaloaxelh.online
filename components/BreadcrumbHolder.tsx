@@ -17,7 +17,7 @@ const BreadcrumbHolder = ({ category, title }: any) => {
               itemScope
               itemType="http://schema.org/ListItem"
             >
-              <a itemProp="item" href="https://ohio.clbthemes.com/">
+              <a itemProp="item" href="/">
                 <span itemProp="name">Blog</span>
               </a>
               <svg
@@ -40,7 +40,7 @@ const BreadcrumbHolder = ({ category, title }: any) => {
             >
               <a
                 itemProp="item"
-                href="https://ohio.clbthemes.com/category/digital/"
+                href="/category/digital/"
               >
                 <span itemProp="name">{category}</span>
               </a>

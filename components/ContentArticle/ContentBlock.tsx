@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import CodeBlock from "./CodeBlock";
 import Text from "./Text";
 import Image from "next/image";
 const ContentBlock = ({ block }: any) => {
   const { type, id } = block;
   const value = block[type];
+  
 
+ 
   switch (type) {
     case "paragraph":
       return (
@@ -50,10 +52,11 @@ const ContentBlock = ({ block }: any) => {
 
       return (
         <figure
-          className="wp-block-image size-full image-holder"
-          style={{ textAlign: "center",position:"relative",height:"300px",borderRadius:"10px" }}
+          className="wp-block-image size-full image-holder image-border-inset"
+          style={{ textAlign: "center",position:"relative",height:"400px",borderRadius:"10px" }}
         >
           <Image
+          
             className="wp-image-20557"
             quality={100}
             src={src}
@@ -69,6 +72,7 @@ const ContentBlock = ({ block }: any) => {
             }
             priority
           />
+          <div className="img_before"></div>
           <p
             style={{
               fontSize: "12px",
@@ -131,7 +135,7 @@ const blockExample = () => {
       <p>
         A
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -140,7 +144,7 @@ const blockExample = () => {
         <dfn>pseudo-class</dfn> is a keyword added to a selector that specifies
         a special state of the selected element(s). For example,
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -152,7 +156,7 @@ const blockExample = () => {
       <p>
         From the business, until be once yet pouring got it
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           data-type="URL"
           target="_blank"
           rel="noreferrer noopener"
@@ -177,7 +181,7 @@ const blockExample = () => {
         pseudo-elements. For example, the following will add a “New!” word to
         list items that do not have a <code>.old</code> class name, using the
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -189,7 +193,7 @@ const blockExample = () => {
         The <code>:not()</code> selector is chainable with more{" "}
         <code>:not()</code> selectors. For example,
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -213,7 +217,7 @@ const blockExample = () => {
         pseudo-elements. For example, the following will add a “New!” word to
         list items that do not have a<code>.old</code> class name, using the
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -239,7 +243,7 @@ const blockExample = () => {
       <p>
         The
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -262,7 +266,7 @@ const blockExample = () => {
           Pseudo-class selector (e.g
           <code>
             <a
-              href="https://1.envato.market/5Q25j"
+              href="/5Q25j"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -272,7 +276,7 @@ const blockExample = () => {
           ,
           <code>
             <a
-              href="https://1.envato.market/5Q25j"
+              href="/5Q25j"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -297,7 +301,7 @@ const blockExample = () => {
         </a>
         and
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -329,7 +333,7 @@ const blockExample = () => {
             <tr>
               <td>
                 <a
-                  href="https://1.envato.market/5Q25j"
+                  href="/5Q25j"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -342,7 +346,7 @@ const blockExample = () => {
             <tr>
               <td>
                 <a
-                  href="https://1.envato.market/5Q25j"
+                  href="/5Q25j"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -355,9 +359,9 @@ const blockExample = () => {
             <tr>
               <td>
                 <a
-                  href="https://1.envato.market/5Q25j"
+                  href="/5Q25j"
                   data-type="URL"
-                  data-id="https://1.envato.market/5Q25j"
+                  data-id="/5Q25j"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -372,7 +376,7 @@ const blockExample = () => {
             <tr>
               <td>
                 <a
-                  href="https://1.envato.market/5Q25j"
+                  href="/5Q25j"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -402,7 +406,7 @@ const blockExample = () => {
         pseudo-elements. For example, the following will add a “New!” word to
         list items that do not have a<code>.old</code> class name, using the
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -421,7 +425,7 @@ const blockExample = () => {
       <p>
         You can see a live demo in the
         <a
-          href="https://1.envato.market/5Q25j"
+          href="/5Q25j"
           target="_blank"
           rel="noreferrer noopener"
         >

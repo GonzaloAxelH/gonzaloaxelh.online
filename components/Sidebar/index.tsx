@@ -70,7 +70,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/about/"
+                  href="/about/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>About</span>
@@ -81,7 +81,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/contact/"
+                  href="/contact/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Contact</span>
@@ -92,7 +92,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/adadad/"
+                  href="/adadad/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>404 Page</span>
@@ -103,7 +103,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/demo30/"
+                  href="/demo30/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Coming Soon</span>
@@ -114,7 +114,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/my-account/"
+                  href="/my-account/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Sing In / Sign Up</span>
@@ -148,7 +148,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/portfolio/minimal-metro/"
+                  href="/portfolio/minimal-metro/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Grid View</span>
@@ -159,7 +159,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/portfolio/onepage-with-smooth-scroll/"
+                  href="/portfolio/onepage-with-smooth-scroll/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Slider</span>
@@ -170,7 +170,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/project/diseno-grafico-para-tu-hermosa-casa/"
+                  href="/project/diseno-grafico-para-tu-hermosa-casa/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Single Project</span>
@@ -183,7 +183,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu showed"
           >
             <a
-              href="https://ohio.clbthemes.com/blog/blog-minimal-metro/"
+              href="/blog/blog-minimal-metro/"
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Blog</span>
@@ -207,7 +207,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/blog/minimal-metro/"
+                  href="/blog/minimal-metro/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Grid View</span>
@@ -218,7 +218,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/standard/"
+                  href="/standard/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Single Post</span>
@@ -231,7 +231,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu showed"
           >
             <a
-              href="https://ohio.clbthemes.com/shop/"
+              href="/shop/"
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Shop</span>
@@ -255,7 +255,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/shop/"
+                  href="/shop/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Grid View</span>
@@ -266,7 +266,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 "
               >
                 <a
-                  href="https://ohio.clbthemes.com/product/gosta-shape-armchair/"
+                  href="/product/gosta-shape-armchair/"
                   className="menu-link -undash sub-menu-link "
                 >
                   <span>Single Product</span>

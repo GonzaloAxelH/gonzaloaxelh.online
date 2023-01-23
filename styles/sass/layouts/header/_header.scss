@@ -1,3 +1,15 @@
+.light-scheme header{
+    
+    background: rgba(255,255,255,0.5) !important;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.dark-scheme header{
+
+background: transparent !important;
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(10px);
+}
 .header {
     background: transparent;
     vertical-align: middle;

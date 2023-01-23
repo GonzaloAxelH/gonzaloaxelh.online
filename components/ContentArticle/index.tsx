@@ -180,7 +180,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
         <BreadcrumbHolder title={title} category={category} />
 
         <div className="page-content">
-          <div id="primary" className="content-area">
+          <div id="primary" className="content-area content-area-single-blog">
             <main
               id="main"
               className="site-main page-offset-bottom"
@@ -196,9 +196,11 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                       className="wp-block-image size-full"
                       style={{
                         textAlign: "center",
+
                       }}
                     >
                       <Image
+                        
                         className="wp-image-20557"
                         quality={100}
                         src={coverImage}

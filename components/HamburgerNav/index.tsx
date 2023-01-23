@@ -45,7 +45,7 @@ const HamburgerNav = () => {
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
           >
             <a
-              href="https://ohio.clbthemes.com/standard/#"
+              href="/standard/#"
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Pages</span>
@@ -83,7 +83,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/about/"
+                  href="/about/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>About</span>
@@ -94,7 +94,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/contact/"
+                  href="/contact/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Contact</span>
@@ -105,7 +105,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/adadad/"
+                  href="/adadad/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>404 Page</span>
@@ -116,7 +116,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/demo30/"
+                  href="/demo30/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Coming Soon</span>
@@ -127,7 +127,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/my-account/"
+                  href="/my-account/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Sign In / Sign Up</span>
@@ -140,7 +140,7 @@ const HamburgerNav = () => {
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
           >
             <a
-              href="https://ohio.clbthemes.com/standard/#"
+              href="/standard/#"
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Projects</span>
@@ -178,7 +178,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/portfolio/minimal-metro/"
+                  href="/portfolio/minimal-metro/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Grid View</span>
@@ -189,7 +189,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/portfolio/onepage-with-smooth-scroll/"
+                  href="/portfolio/onepage-with-smooth-scroll/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Slider</span>
@@ -200,7 +200,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/project/diseno-grafico-para-tu-hermosa-casa/"
+                  href="/project/diseno-grafico-para-tu-hermosa-casa/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Single Project</span>
@@ -213,7 +213,7 @@ const HamburgerNav = () => {
             className="mega-menu-item nav-item menu-item-depth-0 current-menu-ancestor current-menu-parent has-submenu"
           >
             <a
-              href="https://ohio.clbthemes.com/blog/"
+              href="/blog/"
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Blog</span>
@@ -251,7 +251,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/blog/minimal-metro/"
+                  href="/blog/minimal-metro/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Grid View</span>
@@ -262,7 +262,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1 current-menu-item"
               >
                 <a
-                  href="https://ohio.clbthemes.com/standard/"
+                  href="/standard/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Single Post</span>
@@ -275,7 +275,7 @@ const HamburgerNav = () => {
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
           >
             <a
-              href="https://ohio.clbthemes.com/shop/"
+              href="/shop/"
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Shop</span>
@@ -313,7 +313,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/shop/"
+                  href="/shop/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Grid View</span>
@@ -324,7 +324,7 @@ const HamburgerNav = () => {
                 className="mega-menu-item sub-nav-item menu-item-depth-1"
               >
                 <a
-                  href="https://ohio.clbthemes.com/product/gosta-shape-armchair/"
+                  href="/product/gosta-shape-armchair/"
                   className="menu-link -undash sub-menu-link"
                 >
                   <span>Single Product</span>
@@ -337,7 +337,7 @@ const HamburgerNav = () => {
             className="mega-menu-item nav-item menu-item-depth-0"
           >
             <a
-              href="https://1.envato.market/5Q25j"
+              href="/5Q25j"
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Purchase</span>
@@ -351,7 +351,7 @@ const HamburgerNav = () => {
             <option
               className="active"
               selected={true}
-              value="https://ohio.clbthemes.com/standard/"
+              value="/standard/"
             >
               Eng
             </option>

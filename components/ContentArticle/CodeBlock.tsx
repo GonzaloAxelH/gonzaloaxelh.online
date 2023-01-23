@@ -27,11 +27,13 @@ const calculateLinesToHighlight = (meta: any) => {
 const style = {
   borderRadius: "12px",
   padding: "0.6rem",
+  
   background: "#1E1C22",
 };
 
 const CodeBlock = ({ code, language, metastring }: any) => {
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
+  console.log({shouldHighlightLine});
 
   return (
     //@ts-ignore

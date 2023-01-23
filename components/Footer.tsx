@@ -221,25 +221,25 @@ const Footer = () => {
             <div className="vc_col-md-12">
               <div className="holder">
                 <div className="-left">
-                  © 2016-2023
-                  <a href="http://clbthemes.com/" target="_blank">
-                    Colabrio
+                  © 2022-2023
+                  <a href="/" target="_blank">
+                    Gonzalo Axel 
                   </a>
                   . All rights reserved |
-                  <a target="_blank" href="https://1.envato.market/5Q25j">
+                  <a target="_blank" href="/5Q25j">
                     <b>Purchase</b>
                   </a>
                 </div>
                 <div className="-right">
-                  <a href="http://clbthemes.com/" target="_blank">
+                  <a href="/" target="_blank">
                     Security
                   </a>
                   |
-                  <a href="http://clbthemes.com/" target="_blank">
+                  <a href="/" target="_blank">
                     Privacy &amp; Cookie Policy
                   </a>
                   |
-                  <a href="http://clbthemes.com/" target="_blank">
+                  <a href="/" target="_blank">
                     Terms of Service
                   </a>
                 </div>

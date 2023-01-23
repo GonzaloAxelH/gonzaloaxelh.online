@@ -13,10 +13,8 @@ import Notification from "../Notification";
 const Container = ({ children, customAddClases = ""}: any) => {
   const [sidebar, setSidebar] = useState(false);
   return (
-    <div
-     
-    >
-      <div id="page" className="site bg-blur-site">
+   <>
+      <div id="page" className="site">
         <ElementsbarLeft />
         <ElementsbarRight />
         <Header setIsOpenSidebar={(isOpen: boolean) => setSidebar(isOpen)} />
@@ -31,7 +29,8 @@ const Container = ({ children, customAddClases = ""}: any) => {
         <Notification />
         <Footer />
       </div>
-    </div>
+   </>
+   
   );
 };
 
