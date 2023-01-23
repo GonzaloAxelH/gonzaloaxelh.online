@@ -157,6 +157,7 @@
             li {
                 position: relative;
                 padding: 0;
+                
 
                 span {
                     white-space: normal;
@@ -330,10 +331,11 @@
 
                 > li {
                     width: calc(100% / 6);
-
+                    
                     > a {
 
                         &.menu-link {
+                            
                             text-transform: uppercase;
                             opacity: 0.65;
                             font-size: .8em;
@@ -691,6 +693,7 @@
         // All menu items
 
         .mega-menu-item {
+            
             padding: 5px 50px 5px 0px;
             list-style-type: none;
             line-height: 1;

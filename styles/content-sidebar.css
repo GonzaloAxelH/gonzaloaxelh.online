@@ -9,7 +9,7 @@
 .content-area {
 	float: left;
 	
-	width: 84vw;
+	width: 110%;
 }
 .content-area.content-area-single-blog{
 width: 100%;
@@ -38,6 +38,6 @@ figure img{
 }
 .image-border-inset img{
     border-radius: 16px;
- width: 100%;
+		 width: 100%;
     object-fit: contain;
 }

@@ -1,16 +1,16 @@
 .light-scheme header{
     
-    background: rgba(255,255,255,0.5) !important;
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(10px);
+    
+    background: transparent !important;
 }
 .dark-scheme header{
 
-background: transparent !important;
-    backdrop-filter: blur(90px);
-    -webkit-backdrop-filter: blur(10px);
+
+
+    background: transparent !important;
 }
 .header {
+    transition: 0 all !important;
     background: transparent;
     vertical-align: middle;
     left: 0;

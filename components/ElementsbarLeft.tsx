@@ -1,19 +1,31 @@
 import React, { useEffect, useState } from "react";
 
 const ElementsbarLeft = () => {
-  const [theme, setTheme] = useState(true);
-
+  const [theme, setTheme] = useState(false);
   useEffect(() => {
+    
+    setTheme(
+      localStorage.getItem("theme") ? localStorage.getItem("theme") === "light-scheme" : false
+    );
+  },[])
+  useEffect(() => {
+    
     let body: any = document.getElementById("body_next");
     if (theme === false) {
+      localStorage.setItem("theme", "dark-scheme");
+      
       body.classList.remove("light-scheme");
       body.classList.add("dark-scheme");
+      
     } else {
+      localStorage.setItem("theme", "light-scheme");
+      
       body.classList.remove("dark-scheme");
       body.classList.add("light-scheme");
+      
     }
     return () => {};
-  });
+  },[theme]);
   return (
     <ul className="elements-bar left -unlist">
       <li>
