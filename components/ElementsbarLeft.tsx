@@ -2,36 +2,13 @@ import React, { useEffect, useState } from "react";
 
 const ElementsbarLeft = () => {
   const [theme, setTheme] = useState(false);
-  useEffect(() => {
-    
-    setTheme(
-      localStorage.getItem("theme") ? localStorage.getItem("theme") === "light-scheme" : false
-    );
-  },[])
-  useEffect(() => {
-    
-    let body: any = document.getElementById("body_next");
-    if (theme === false) {
-      localStorage.setItem("theme", "dark-scheme");
-      
-      body.classList.remove("light-scheme");
-      body.classList.add("dark-scheme");
-      
-    } else {
-      localStorage.setItem("theme", "light-scheme");
-      
-      body.classList.remove("dark-scheme");
-      body.classList.add("light-scheme");
-      
-    }
-    return () => {};
-  },[theme]);
+  
   return (
     <ul className="elements-bar left -unlist">
       <li>
-        <a className="scroll-top dynamic-typo -undash -small-t vc_hidden-md visible">
+        <a className="scroll-top dynamic-typo -undash -small-t vc_hidden-md">
           <div className="scroll-top-bar">
-            <div className="scroll-track" style={{ width: "27.72%" }} />
+            <div className="scroll-track" style={{ width: "34.5804%" }} />
           </div>
           <div className="scroll-top-holder titles-typo title">
             Scroll to top
@@ -39,17 +16,8 @@ const ElementsbarLeft = () => {
         </a>
       </li>
       <li>
-        <div
-          className={`color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile ${
-            !theme ? "dark" : " "
-          }`}
-        >
-          <div
-            className="color-switcher-item dark"
-            style={{
-              minWidth: theme ? "auto" : "61.4062px",
-            }}
-          >
+        <div className="color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile">
+          <div className="color-switcher-item dark">
             <div className="color-switcher-item-state">
               <span className="caption">Dark</span>
               <svg
@@ -65,9 +33,7 @@ const ElementsbarLeft = () => {
           </div>
           <div
             className="color-switcher-item light"
-            style={{
-              minWidth: theme ? "63.6094px" : "auto",
-            }}
+            style={{ minWidth: "63.6094px" }}
           >
             <div className="color-switcher-item-state">
               <span className="caption">Light</span>
@@ -84,11 +50,7 @@ const ElementsbarLeft = () => {
           </div>
           <div
             className="color-switcher-toddler"
-            style={{
-              minWidth: theme ? "63.6094px" : "61.4062px",
-              transform: theme ? "translateX(0px)" : "translateX(-45px)",
-            }}
-            onClick={() => setTheme(!theme)}
+            style={{ width: "63.6094px" }}
           >
             <div className="color-switcher-toddler-wrap">
               <div className="color-switcher-toddler-item dark">

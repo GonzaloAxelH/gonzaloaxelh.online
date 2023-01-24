@@ -1,9 +1,4 @@
-.vc_custom_1639139965656 {
-    background-image: url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-5/oh__img159-min.png?id=18751) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-}
+
 @keyframes rotate2{
     0% {
         transform: rotate(360deg);
@@ -31,10 +26,8 @@
 
 .light-scheme .gradient,
 .light-scheme .gradient2{
-
-
     filter: blur(50px);
-        background-image: linear-gradient(rgba(132, 255, 210, 0.85), rgb(144, 116, 255));
+    background-image: linear-gradient(rgba(132, 255, 210, 0.85), rgb(144, 116, 255));
 }
 
 .gradient {
@@ -79,18 +72,17 @@
         }
 }
 
-body {
-    
-    position: relative;
-    inset: 0;
-    
-  
-  
-}
 
 .page-headline::before{
     background-color: transparent;
     height: 0;
 }
 
-/* This is just to transition when you change the viewport size. */
+
+
+
+
+body{
+    overflow-x: hidden;
+    max-width: 100vw;
+}

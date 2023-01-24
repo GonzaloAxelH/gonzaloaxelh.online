@@ -1,9 +1,7 @@
 
 import "@/styles/sass/globals.scss";
-import "@/styles/content-sidebar.css";
 import "@/styles/woocommerce.css";
 import "@/styles/text-styles.css";
-//import "@/styles/rtl.css";
 import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
 import { UIProvider } from "@/context/UIContext";
