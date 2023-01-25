@@ -24,6 +24,7 @@ const CommentsBlock = ({ idArticle, renderComments }: any) => {
     user: session?.user || {},
     comment: "",
     emailUser: session?.user?.email || "",
+    nameResponse:null,
     idBlog: idArticle,
     dateCreated: new Date(Date.now()).toISOString(),
     alias: "",
@@ -34,7 +35,13 @@ const CommentsBlock = ({ idArticle, renderComments }: any) => {
     open: false,
     id: "",
   });
+  const [openReplyRes, setOpenReplyRes] = useState({
+    openRes: false,
+    idRes: "",
+  });
   let { open, id } = openReply;
+  let { openRes, idRes } = openReplyRes;
+
  
   useEffect(() => {
     loadCommentsByArticle();
@@ -49,7 +56,7 @@ const CommentsBlock = ({ idArticle, renderComments }: any) => {
     setAllComments(comments);
   };
   
-  const addResponseComment = async (id: any) => {
+  const addResponseComment = async (id: any,type="",nameResponse="") => {
     if (commentString === "") {
       alert("coloca algo en los comentarios !!");
     } else {
@@ -57,6 +64,7 @@ const CommentsBlock = ({ idArticle, renderComments }: any) => {
       await addSubComment(
         {
           ...newComment,
+          nameResponse: type === "re-response" ? `@${nameResponse} ` : null,    
           user: session?.user,
           dateCreated: new Date(Date.now()).toISOString(),
           emailUser: session?.user?.email,
@@ -72,6 +80,10 @@ const CommentsBlock = ({ idArticle, renderComments }: any) => {
          ...openReply,
          id: "",
        });
+      setOpenReplyRes({
+        ...openReplyRes,
+        idRes: "",
+      });
              setNewComment({ ...newComment, comment: "" });
             setChange(!change);
     }
@@ -271,14 +283,65 @@ const CommentsBlock = ({ idArticle, renderComments }: any) => {
                                         ></em>
                                       </footer>
                                       <div className="comment-content">
-                                        {reply.comment}
+                                        <a href="#" style={{fontWeight:"bold",color:"red"}}>{reply?.nameResponse}</a>{reply.comment}
                                       </div>
                                       <div className="reply">
                                         <a
+                                          onClick={() =>
+                                            setOpenReplyRes({
+                                              ...openReplyRes,
+                                              idRes: reply.id,
+                                            })
+                                          }
                                           rel="nofollow"
                                           className="comment-reply-link"
-                                          href="#"
-                                        ></a>
+                                          href="#respo"
+                                        >
+                                          Responder subcomentario
+                                        </a>
+                                        {idRes === reply.id && (
+                                          <>
+                                            {session && (
+                                              <>
+                                                <p className="comment-form-comment">
+                                                  <label htmlFor="comment"></label>
+                                                  <textarea
+                                                    id="comment"
+                                                    name="comment"
+                                                    cols={45}
+                                                    rows={8}
+                                                    maxLength={65525}
+                                                    required
+                                                    defaultValue={commentString}
+                                                    onChange={(e: any) =>
+                                                      setNewComment({
+                                                        ...newComment,
+                                                        comment: e.target.value,
+                                                      })
+                                                    }
+                                                  />
+                                                </p>
+                                              </>
+                                            )}
+                                            <span style={{ display: "flex" }}>
+                                              <ButtonGoogleSignIn />
+
+                                              <ButtonPostComment
+                                                handleClick={() =>
+                                                  addResponseComment(
+                                                    comment.id,
+                                                    "re-response",
+                                                    reply.user.name
+                                                  )
+                                                }
+                                                label="Response with "
+                                                loader={loaderBtn}
+                                                commentString={commentString}
+                                              />
+                                              <ButtonSigOut />
+                                            </span>
+                                          </>
+                                        )}
                                       </div>
                                     </article>
                                   </li>

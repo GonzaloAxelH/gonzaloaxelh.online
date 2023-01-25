@@ -3,8 +3,9 @@ import Container from "@/components/hocs/Container";
 import Link from "next/link";
 import React from "react";
 export default function Home() {
+  let d= ""
   return (
-    <Container>
+    <Container customAddClases="home page-template-default page page-id-152817 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-spacer with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded">
       <div
         id="content"
         className="site-content"

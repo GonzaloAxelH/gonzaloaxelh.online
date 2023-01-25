@@ -33,7 +33,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
     <div className="-layout1">
       <div className="page-headline without-cap -left subheader_excluded headline-with-parallax">
         <a
-          href="#"
+          href="https://ohio.clbthemes.com/about-ver6/"
           className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
         >
           <button
@@ -83,35 +83,44 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
             className="parallax-bg bg-image"
             style={{
               height: "545.469px",
-              transform: "translate3d(0px, -92.6071px, 0px)",
+              transform: "translate3d(0px, -49.9196px, 0px)",
               transition: "transform 0.1s linear 0s",
             }}
           />
           <div className="parallax-content" />
         </div>
-        <div className="holder" style={{paddingBottom:"2em"}}>
+        <div className="holder">
           <div className="page-container">
             <div className="animated-holder">
               <div className="headline-meta">
-                <div className="category-holder ">
-                  <a className="category" href="#" rel="category tag">
-                    {" "}
-                    {category}
-                  </a>{" "}
+                <div className="category-holder">
+                  <a
+                    className="category"
+                    href="https://ohio.clbthemes.com/category/digital/"
+                    rel="category tag"
+                  >
+                    Digital
+                  </a>
+                  <a
+                    className="category"
+                    href="https://ohio.clbthemes.com/category/marketing/"
+                    rel="category tag"
+                  >
+                    Marketing
+                  </a>
                 </div>
                 <span className="post-meta-estimate">9 min read </span>
               </div>
-
-              <h1 className="title">{title}</h1>
+              <h1 className="title">
+                The Highly Contemporary UI/UX Design from a Silicon Valley.
+              </h1>
               <div className="post-meta-holder">
                 <ul className="meta-holder -unlist">
                   <li className="meta-item">
                     <div className="avatar -small">
                       <img
                         alt="Colabrio"
-                        src={
-                          "https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
-                          }
+                        src="./The Highly Contemporary UI_UX Design from a Silicon Valley. – Ohio Theme_files/4058fe7404c4f9d88d5d2d6db42320f8.png"
                         className="avatar avatar-96 photo"
                         height={96}
                         width={96}
@@ -121,24 +130,15 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   </li>
                   <li className="meta-item">
                     <span className="prefix">Author</span>
-                    <span className="author">
-                      {author?.name || "Gonzalo  Valdez"}
-                    </span>
+                    <span className="author">Colabrio</span>
                   </li>
                   <li className="meta-item">
                     <span className="prefix">Published</span>
-                    {new Date(article.created_time).toLocaleDateString(
-                      "es-PE",
-                      {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      }
-                    )}
+                    August 4, 2020
                   </li>
                   <li className="meta-item">
-                    <span className="prefix">{countCom} comments </span>
-                    <a href="#commentsXD">
+                    <span className="prefix"> 2 comments </span>
+                    <a href="https://ohio.clbthemes.com/standard/#comments">
                       <span className="date">Join the Conversation</span>
                     </a>
                   </li>
@@ -148,7 +148,6 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
           </div>
         </div>
       </div>
-
       <div className="page-container post-page-container" id="scroll-content">
         <div className="post-share -sticky-block">
           <div className="share-bar -vertical" data-blog-share="true">
@@ -177,30 +176,90 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
             </div>
           </div>
         </div>
-        <BreadcrumbHolder title={title} category={category} />
-
+        <div className="page-container">
+          <div className="breadcrumb-holder">
+            <nav aria-label="breadcrumb">
+              <ol
+                className="breadcrumb -unlist"
+                itemScope
+                itemType="http://schema.org/BreadcrumbList"
+              >
+                <li
+                  className="breadcrumb-item"
+                  itemProp="itemListElement"
+                  itemScope
+                  itemType="http://schema.org/ListItem"
+                >
+                  <a itemProp="item" href="https://ohio.clbthemes.com/">
+                    <span itemProp="name">Home</span>
+                  </a>
+                  <svg
+                    className="default"
+                    width={5}
+                    height={9}
+                    viewBox="0 0 9 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 14.5697L1.36504 16L9 8L1.36504 0L0 1.4303L6.26992 8L0 14.5697V14.5697Z" />
+                  </svg>
+                  <meta itemProp="position" content={1} />
+                </li>
+                <li
+                  className="breadcrumb-item"
+                  itemProp="itemListElement"
+                  itemScope
+                  itemType="http://schema.org/ListItem"
+                >
+                  <a
+                    itemProp="item"
+                    href="https://ohio.clbthemes.com/category/digital/"
+                  >
+                    <span itemProp="name">Digital</span>
+                  </a>
+                  <svg
+                    className="default"
+                    width={5}
+                    height={9}
+                    viewBox="0 0 9 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 14.5697L1.36504 16L9 8L1.36504 0L0 1.4303L6.26992 8L0 14.5697V14.5697Z" />
+                  </svg>
+                  <meta itemProp="position" content={2} />
+                </li>
+                <li
+                  className="breadcrumb-item"
+                  itemProp="itemListElement"
+                  itemScope
+                  itemType="http://schema.org/ListItem"
+                >
+                  <span itemProp="name" className="active">
+                    The Highly Contemporary UI/UX Design from a Silicon Valley.
+                  </span>
+                  <meta itemProp="position" content={3} />
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
         <div className="page-content">
-          <div id="primary" className="content-area content-area-single-blog">
-            <main
-              id="main"
-              className="site-main page-offset-bottom"
-              style={{ width: "100%" }}
-            >
+          <div id="primary" className="content-area">
+            <main id="main" className="site-main page-offset-bottom">
               <div className="vc_row">
                 <div className="vc_col-lg-12">
                   <article
                     id="post-17953"
-                    className="post-17953 post type-post status-publish format-standard has-post-thumbnail hentry category-digital category-marketing tag-blog tag-creative tag-portfolio tag-theme tag-wordpress"
+                    className="post-63604 page type-page status-publish hentry"
                   >
                     <figure
                       className="wp-block-image size-full"
                       style={{
                         textAlign: "center",
-
                       }}
                     >
                       <Image
-                        
                         className="wp-image-20557"
                         quality={100}
                         src={coverImage}
@@ -229,3 +288,37 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
 };
 
 export default ContentArticle;
+
+/*
+          <BreadcrumbHolder title={title} category={category} />
+ <article
+                      id="post-17953"
+                      
+                      className="post-63604 page type-page status-publish hentry"
+                    >
+                      <figure
+                        className="wp-block-image size-full"
+                        style={{
+                          textAlign: "center",
+                        }}
+                      >
+                        <Image
+                          className="wp-image-20557"
+                          quality={100}
+                          src={coverImage}
+                          blurDataURL={coverImage}
+                          placeholder="blur"
+                          width={1200}
+                          height={500}
+                          fill={false}
+                          alt="XD"
+                          priority
+                        />
+                      </figure>
+                      {content?.map((block: any, index: number) => {
+                        return <ContentBlock key={index} block={block} />;
+                      })}
+                      <TagsBlog tags={tags} />
+                    </article>
+
+*/

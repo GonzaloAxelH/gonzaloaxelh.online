@@ -1,3 +1,11 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+
 .p-h1 {
   font-size: 35px;
 }
@@ -35,6 +43,95 @@
 
 .p-li-list {
   margin-top: 1rem;
+}
+
+
+
+
+
+
+
+@keyframes rotate2{
+    0% {
+        transform: rotate(360deg);
+            transform: translate(104%, 12%);
+    }
+
+    100% {
+                transform: rotate(0deg);
+                    transform: translate(0%, 0%);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        transform: translate(0%,0%);
+    }
+
+    100% {
+        transform: rotate(360deg);
+                transform: translate(54%, 12%);
+    }
+}
+
+
+.gradient,
+.gradient2{
+    filter: blur(50px);
+    background-image: linear-gradient(rgba(158, 82, 57, 0.85), rgb(101, 73, 211));
+    
+    
+    
+}
+
+
+
+
+.gradient {
+    position: absolute;
+    --size: 10px;
+    --speed: 5s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+    width: var(--size);
+    height: var(--size);
+    filter: blur(80px);
+    
+    background-image: linear-gradient(hsl(158, 82, 57, 85%), hsl(252, 82, 57));
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    top: 9rem;
+    right: 9rem;
+}
+
+.gradient2 {
+    position: absolute;
+    --size: 10px;
+    --speed: 5s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+    
+    width: var(--size);
+    height: var(--size);
+    filter: blur(80px);
+    background-image: linear-gradient(hsl(158, 82, 57, 85%), hsl(252, 82, 57));
+    animation: rotate2 var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+
+}
+body{
+  position: relative;
+  
+}
+
+@media (min-width: 720px) {
+    .gradient {
+        --size: 500px;
+    }
+        .gradient2 {
+            --size: 500px;
+        }
 }
 
 

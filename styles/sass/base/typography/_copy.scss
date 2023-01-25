@@ -80,7 +80,16 @@ pre {
 	}
 }
 
-
+code {
+	font-family: $font-code;
+	font-size: $font-size-small;
+	color: $color-grey;
+	background-color: $color-neutral-8;
+    padding: 3px 6px;
+    word-break: normal;
+    
+    @include border-radius($radius-small);
+}
 
 caption {
 	font-size: $font-size-caption;

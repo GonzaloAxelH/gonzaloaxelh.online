@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from "react";
 
 const ElementsbarLeft = () => {
-  const [theme, setTheme] = useState(false);
-  
+  const [theme, setTheme] = useState(true);
+  useEffect(() => {
+    if (theme) {
+      let body = document.getElementById("body_next"); 
+      body?.classList.remove("light-scheme")
+      body?.classList.add("dark-scheme")
+    } else {
+      let body = document.getElementById("body_next"); 
+      body?.classList.remove("dark-scheme");
+      body?.classList.add("light-scheme");
+      }
+  },[theme])
   return (
     <ul className="elements-bar left -unlist">
       <li>
         <a className="scroll-top dynamic-typo -undash -small-t vc_hidden-md">
           <div className="scroll-top-bar">
-            <div className="scroll-track" style={{ width: "34.5804%" }} />
+            <div className="scroll-track" style={{ width: "9.07424%" }} />
           </div>
           <div className="scroll-top-holder titles-typo title">
             Scroll to top
@@ -16,7 +26,9 @@ const ElementsbarLeft = () => {
         </a>
       </li>
       <li>
-        <div className="color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile">
+        <div className="color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile"
+          onClick={()=> setTheme(!theme)}
+        >
           <div className="color-switcher-item dark">
             <div className="color-switcher-item-state">
               <span className="caption">Dark</span>
