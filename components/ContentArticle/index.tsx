@@ -203,7 +203,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   >
                     <path d="M0 14.5697L1.36504 16L9 8L1.36504 0L0 1.4303L6.26992 8L0 14.5697V14.5697Z" />
                   </svg>
-                  <meta itemProp="position" content={1} />
+                  
                 </li>
                 <li
                   className="breadcrumb-item"
@@ -227,7 +227,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   >
                     <path d="M0 14.5697L1.36504 16L9 8L1.36504 0L0 1.4303L6.26992 8L0 14.5697V14.5697Z" />
                   </svg>
-                  <meta itemProp="position" content={2} />
+                  
                 </li>
                 <li
                   className="breadcrumb-item"
@@ -238,7 +238,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   <span itemProp="name" className="active">
                     The Highly Contemporary UI/UX Design from a Silicon Valley.
                   </span>
-                  <meta itemProp="position" content={3} />
+                  
                 </li>
               </ol>
             </nav>
