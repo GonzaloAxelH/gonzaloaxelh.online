@@ -3631,7 +3631,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                   <select className="lang-dropdown -small">
                     <option
                       className="active"
-                      selected="selected"
+                      selected={true}
                       value="https://ohio.clbthemes.com/about-ver6/"
                     >
                       Eng
@@ -3681,7 +3681,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                 <select className="lang-dropdown -small">
                   <option
                     className="active"
-                    selected="selected"
+                    selected={true}
                     value="https://ohio.clbthemes.com/about-ver6/"
                   >
                     Eng
