@@ -10,7 +10,7 @@ const ElementsbarRight = () => {
             <li>—</li>
             <li>
               <a
-                href="https://www.facebook.com/colabrio/"
+                href="/Gonzalo/"
                 target="_blank"
                 rel="nofollow"
                 className="-undash facebook"
@@ -20,7 +20,7 @@ const ElementsbarRight = () => {
             </li>
             <li>
               <a
-                href="https://www.facebook.com/colabrio/"
+                href="/Gonzalo/"
                 target="_blank"
                 rel="nofollow"
                 className="-undash behance"
@@ -30,7 +30,7 @@ const ElementsbarRight = () => {
             </li>
             <li>
               <a
-                href="https://www.facebook.com/colabrio/"
+                href="/Gonzalo/"
                 target="_blank"
                 rel="nofollow"
                 className="-undash youtube"

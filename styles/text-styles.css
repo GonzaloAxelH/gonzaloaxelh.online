@@ -4,8 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+code,pre {
+  background: transparent;
+  font-family:'Fira Code', monospace;
+}
 .p-h1 {
   font-size: 35px;
 }
@@ -76,17 +79,6 @@
 }
 
 
-.gradient,
-.gradient2{
-    filter: blur(50px);
-    background-image: linear-gradient(rgba(158, 82, 57, 0.85), rgb(101, 73, 211));
-    
-    
-    
-}
-
-
-
 
 .gradient {
     position: absolute;
@@ -98,7 +90,7 @@
     height: var(--size);
     filter: blur(80px);
     
-    background-image: linear-gradient(hsl(158, 82, 57, 85%), hsl(252, 82, 57));
+    background-image: linear-gradient(rgba(49, 206, 148, 0.85), rgb(80, 46, 212));
     animation: rotate var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     top: 9rem;
@@ -114,7 +106,7 @@
     width: var(--size);
     height: var(--size);
     filter: blur(80px);
-    background-image: linear-gradient(hsl(158, 82, 57, 85%), hsl(252, 82, 57));
+    background-image: linear-gradient(rgba(54, 224, 162, 0.85rgb(86, 53, 219)57));
     animation: rotate2 var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 
@@ -136,3 +128,277 @@ body{
 
 
 
+
+
+
+
+
+.section{
+  margin: 0;
+  position: relative;
+  display: flex;
+   justify-content: center;
+  transform: scale(1.3) translateY(-4em);
+  background-size: contain;
+  
+}
+@media (max-width:700px) {
+    .section{
+        transform: scale(1.2) translateY(-4em);
+    }
+}
+@media (max-width:600px) {
+    .section{
+        transform: scale(1.1) translateY(-4em);
+    }
+}
+@media (max-width:500px) {
+    .section{
+        transform: scale(1.05) translateY(-4em);
+    }
+}
+@media (max-width:400px) {
+    .section{
+        transform: scale(1) translateY(-4em);
+    }
+}
+.svg{
+  
+  
+  height:500px;
+  width:auto;
+  
+}
+
+/* ---------------------------------------------------
+hero Svg starts here
+--------------------------------------------------- */
+.hero-svg .code{
+  animation: hero1 10s forwards linear infinite;
+  transform-origin:80% 40%;
+}
+
+@keyframes hero1{
+  0%{
+    transform:rotate(30deg);
+    opacity:0;
+  }
+  25%{
+    transform:rotate(-15deg);
+    opacity:1;
+  }
+  50%{
+    transform:rotate(-60deg);
+    opacity:0;
+  }
+  75%{
+    transform:rotate(-15deg);
+    opacity:1;
+  }
+  100%{
+    transform:rotate(30deg);
+    opacity:0;
+  }
+}
+
+.hero-svg .git{
+  animation: hero2 5s forwards linear infinite;
+}
+
+@keyframes hero2{
+  0%{transform:translateX(0px);}
+  25%{transform:translateX(20px);}
+  50%{transform:translateX(0px);}
+  75%{transform:translateX(-20px);}
+  100%{transform:translateX(0px);}
+}
+
+.hero-svg .notes{
+  animation: hero3 5s forwards linear infinite;
+}
+
+@keyframes hero3{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-50px);}
+  100%{transform:translateY(0px);}
+}
+
+.hero-svg .discord .tab{
+  animation: hero4 3s forwards linear infinite;
+}
+
+@keyframes hero4{
+  0%{transform:translateX(0px);}
+  50%{transform:translateX(20px);}
+  100%{transform:translateX(0px);}
+}
+
+.hero-svg .discord .one{
+  animation-delay:0s;
+}
+
+.hero-svg .discord .two{
+  animation-delay:0.5s;
+}
+
+.hero-svg .discord .three{
+  animation-delay:1s;
+}
+
+.hero-svg .gitlab{
+  animation: hero5 2s forwards linear infinite;
+}
+@keyframes hero5{
+  0%{transform:translate(0px, 0px);}
+  50%{transform:translate(5px, 5px);}
+  100%{transform:translate(0px, 0px);}
+}
+/* ---------------------------------------------------
+git Svg starts here
+--------------------------------------------------- */
+.git-svg .box .screen{
+  fill:#3D0576;
+  animation: screen 2s forwards linear infinite;
+}
+@keyframes screen{
+  0%{ fill:#3D0576;}
+  50%{fill:#00000036;}
+  100%{fill:#3D0576;}
+}
+
+.git-svg:hover .path{
+  stroke-dashoffset:100;
+  stroke-dasharray:5;
+  animation: transfer 5s forwards linear infinite;
+}
+
+@keyframes transfer{
+  0%{stroke-dashoffset:100;}
+  100%{stroke-dashoffset:0;}
+}
+
+.git-svg:hover .main{
+  animation:main 5s forwards linear infinite;
+  transform-origin: 30% 60%;
+}
+@keyframes main{
+  0%{ transform:scale(1) translateY(0px);}
+  25%{transform:scale(0.8) translateY(10px);}
+  50%{transform:scale(1) translateY(0px);}
+  75%{transform:scale(0.8) translateY(10px);}
+  100%{transform:scale(1) translateY(0px);}
+}
+
+/* ---------------------------------------------------
+Avalance Svg starts here
+--------------------------------------------------- */
+
+.avalanche-svg:hover .path1{
+  stroke-dashoffset:100;
+  stroke-dasharray:5;
+  animation: transfer 5s forwards linear infinite;
+}
+
+.rocket{
+  animation: float 5s forwards ease infinite;
+}
+@keyframes float{
+  0%{ transform:translateY(0px);}
+  25%{transform:translateY(10px);}
+  50%{transform:translateY(0px);}
+  75%{transform:translateY(10px);}
+  100%{transform:translateY(0px);}
+}
+
+.dot, .dots{
+  animation: blink 2s forwards ease infinite;
+}
+.dots{
+  animation-delay:1s;
+}
+
+.first{
+  animation-delay:1s;
+}
+.second{
+  animation-delay:0.75s;
+}
+.fourth{
+  animation-delay:1.23s;
+}
+
+@keyframes blink{
+  0%{ opacity:0;}
+  50%{ opacity:1;}
+  100%{opacity:0;}
+}
+
+.avalanche-svg:hover .avalanche{
+  animation: float 5s forwards linear infinite;
+}
+.avalanche-svg .rings .top,
+.avalanche-svg .rings .middle,
+.avalanche-svg .rings .bottom{
+  opacity:0;
+}
+.avalanche-svg:hover .rings .top{
+  animation:bounce1 2s forwards ease-in-out infinite;
+}
+.avalanche-svg:hover .rings .middle{
+  animation:bounce1 2s forwards ease-in-out infinite;
+  animation-delay:0.6s;
+}
+
+.avalanche-svg:hover .rings .bottom{
+  animation:bounce1 2s forwards ease-in-out infinite;
+  animation-delay:1.2s;
+}
+@keyframes bounce1{
+  0%{transform:translateY(0px); opacity:0;}
+  50%{transform:translateY(10px);opacity:0;}
+  51%{transform:translateY(0px);opacity:1;}
+  100%{transform:translateY(-30px);opacity:0;}
+}
+
+/* ---------------------------------------------------
+token svg start here
+--------------------------------------------------- */
+
+.token-svg:hover .path{
+  stroke-dashoffset:100;
+  stroke-dasharray:5;
+  animation: transfer 5s forwards linear infinite;
+}
+
+.token-svg .cloud{
+  animation:float 5s forwards ease-in-out infinite;
+}
+.token-svg .top-base{
+  animation:float1 5s forwards ease-in-out infinite;
+  animation-delay:1s;
+}
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-20px);}
+  100%{transform:translateY(0px);}
+}
+@keyframes float1{
+  0%{transform:translateY(5px);}
+  50%{transform:translateY(-5px);}
+  100%{transform:translateY(5px);}
+}
+
+.token-svg:hover .screen{
+  animation:screen 2s forwards linear infinite;
+}
+
+@keyframes screen{
+  0%{opacity:0.2}
+  50%{opacity:0.8}
+  100%{opacity:0.2}
+}
+
+
+.token-svg.token{
+  animation:float 5s forwards ease-in-out infinite;
+}

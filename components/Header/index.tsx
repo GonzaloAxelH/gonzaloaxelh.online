@@ -2,10 +2,11 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
 
 const Header = ({ setIsOpenSidebar }: any) => {
+  const isOpen = true
   return (
     <header
       id="masthead"
-      className="header header-3 both-types -sticky showed"
+      className="header header-3 both-types -sticky showed "
       data-header-fixed="true"
       data-fixed-initial-offset={150}
     >
@@ -14,6 +15,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
           <div className="left-part">
             <div className="desktop-hamburger -left">
               <button
+                onClick={()=> setIsOpenSidebar(true)}
                 className="icon-button hamburger"
                 aria-controls="site-navigation"
                 aria-expanded="false"
@@ -33,7 +35,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
             <div className="branding">
               <a
                 className="branding-title titles-typo -undash"
-                href="https://ohio.clbthemes.com/"
+                href="/"
                 rel="home"
               >
                 <div className="logo" style={{ display: "none" }}>
@@ -82,10 +84,10 @@ const Header = ({ setIsOpenSidebar }: any) => {
           <div className="right-part right">
             <nav
               id="site-navigation"
-              className="nav"
+              className="nav -visible"
               data-mobile-menu-second-click-link
             >
-              <div className="mobile-overlay menu-mobile-overlay">
+              <div className={ `mobile-overlay menu-mobile-overlay ${isOpen ? "visible" :""}`}>
                 <div className="overlay" />
                 <div className="close-bar">
                   <button
@@ -173,7 +175,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                         className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
                       >
                         <a
-                          href="https://ohio.clbthemes.com/about-ver6/#"
+                          href="/about-ver6/#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Elements</span>
@@ -211,7 +213,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Widgets</span>
@@ -246,7 +248,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/accordion-shortcode/"
+                                  href="/accordion-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Accordion</span>
@@ -257,7 +259,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/banner-shortcode/"
+                                  href="/banner-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Banner</span>
@@ -268,7 +270,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog-posts-shortcode/"
+                                  href="/blog-posts-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Blog Posts</span>
@@ -279,7 +281,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/button-shortcode/"
+                                  href="/button-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Button</span>
@@ -290,7 +292,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/call-to-action-shortcode/"
+                                  href="/call-to-action-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Call to Action</span>
@@ -301,7 +303,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/carousel-shortcode/"
+                                  href="/carousel-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Carousel</span>
@@ -312,7 +314,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/circle-progress-shortcode/"
+                                  href="/circle-progress-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Circle Progress</span>
@@ -323,7 +325,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/clients-logo-shortcode/"
+                                  href="/clients-logo-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Clients Logo</span>
@@ -334,7 +336,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/compare-shortcode/"
+                                  href="/compare-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Compare</span>
@@ -347,7 +349,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Widgets</span>
@@ -382,7 +384,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-form-shortcode/"
+                                  href="/contact-form-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Contact Form</span>
@@ -393,7 +395,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/countdown-shortcode/"
+                                  href="/countdown-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Countdown</span>
@@ -404,7 +406,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/counter-shortcode/"
+                                  href="/counter-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Counter</span>
@@ -415,7 +417,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/dynamic-text-shortcode/"
+                                  href="/dynamic-text-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Dynamic Text</span>
@@ -426,7 +428,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/fullscreen-slider-shortcode/"
+                                  href="/fullscreen-slider-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fullscreen Slider</span>
@@ -437,7 +439,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/gallery-shortcode/"
+                                  href="/gallery-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Gallery</span>
@@ -448,7 +450,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/google-map-shortcode/"
+                                  href="/google-map-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Google Map</span>
@@ -459,7 +461,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/heading-shortcode/"
+                                  href="/heading-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Heading</span>
@@ -470,7 +472,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/horizontal-accordion-shortcode/"
+                                  href="/horizontal-accordion-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Horizontal Accordion</span>
@@ -483,7 +485,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Widgets</span>
@@ -518,7 +520,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/icon-box-shortcode/"
+                                  href="/icon-box-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Icon Box</span>
@@ -529,7 +531,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/instagram-feed-shortcode/"
+                                  href="/instagram-feed-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Instagram Feed</span>
@@ -540,7 +542,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/message-shortcode/"
+                                  href="/message-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Message</span>
@@ -551,7 +553,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/parallax-shortcode/"
+                                  href="/parallax-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Parallax</span>
@@ -562,7 +564,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio-projects-shortcode/"
+                                  href="/portfolio-projects-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Portfolio Projects</span>
@@ -573,7 +575,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/pricing-list-shortcode/"
+                                  href="/pricing-list-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Pricing List</span>
@@ -584,7 +586,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/pricing-table-shortcode/"
+                                  href="/pricing-table-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Pricing Table</span>
@@ -595,7 +597,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/process-shortcode/"
+                                  href="/process-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Process</span>
@@ -606,7 +608,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/progress-bar-shortcode/"
+                                  href="/progress-bar-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Progress Bar</span>
@@ -619,7 +621,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Widgets</span>
@@ -654,7 +656,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/services-table-shortcode/"
+                                  href="/services-table-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Services Table</span>
@@ -665,7 +667,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop-category-shortcode/"
+                                  href="/shop-category-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Shop Category</span>
@@ -676,7 +678,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/social-networks-shortcode/"
+                                  href="/social-networks-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Social Networks</span>
@@ -687,7 +689,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/subscribe-form-shortcode/"
+                                  href="/subscribe-form-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Subscribe Form</span>
@@ -698,7 +700,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/tabs-shortcode/"
+                                  href="/tabs-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Tabs</span>
@@ -709,7 +711,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/team-group-shortcode/"
+                                  href="/team-group-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Team Group</span>
@@ -720,7 +722,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/team-member-shortcode/"
+                                  href="/team-member-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Team Member</span>
@@ -731,7 +733,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/testimonial-shortcode/"
+                                  href="/testimonial-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Testimonial</span>
@@ -742,7 +744,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/video-shortcode/"
+                                  href="/video-shortcode/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Video</span>
@@ -755,7 +757,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Menus</span>
@@ -790,7 +792,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v1/"
+                                  href="/header-v1/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard</span>
@@ -801,7 +803,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v2/"
+                                  href="/header-v2/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Centered</span>
@@ -812,7 +814,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v3/"
+                                  href="/header-v3/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>With Center Logo</span>
@@ -823,7 +825,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v4/"
+                                  href="/header-v4/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>With Top Logo</span>
@@ -834,7 +836,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v5/"
+                                  href="/header-v5/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sidebar Wide</span>
@@ -845,7 +847,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v6/"
+                                  href="/header-v6/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sidebar Top Hamburger</span>
@@ -856,7 +858,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/header-v7/"
+                                  href="/header-v7/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sidebar Center Hamburger</span>
@@ -869,7 +871,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Hamburger Menus</span>
@@ -904,7 +906,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/standard-hamburger/"
+                                  href="/standard-hamburger/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard Hamburger</span>
@@ -915,7 +917,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/centered-hamburger/"
+                                  href="/centered-hamburger/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Centered Hamburger</span>
@@ -926,7 +928,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/creative-hamburger/"
+                                  href="/creative-hamburger/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Creative Hamburger</span>
@@ -941,7 +943,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                         className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
                       >
                         <a
-                          href="https://ohio.clbthemes.com/about-ver6/#"
+                          href="/about-ver6/#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Portfolio</span>
@@ -979,7 +981,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Archive</span>
@@ -1014,7 +1016,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic/"
+                                  href="/portfolio/classic/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic</span>
@@ -1025,7 +1027,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-contained/"
+                                  href="/portfolio/classic-contained/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Contained</span>
@@ -1036,7 +1038,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-metro/"
+                                  href="/portfolio/classic-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Metro</span>
@@ -1047,7 +1049,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal/"
+                                  href="/portfolio/minimal/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal</span>
@@ -1058,7 +1060,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-metro/"
+                                  href="/portfolio/minimal-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal Metro</span>
@@ -1069,7 +1071,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/caption-cursor/"
+                                  href="/portfolio/caption-cursor/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Caption Cursor</span>
@@ -1080,7 +1082,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/caption-cursor-metro/"
+                                  href="/portfolio/caption-cursor-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Caption Cursor Metro</span>
@@ -1091,7 +1093,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/sticky-contained/"
+                                  href="/portfolio/sticky-contained/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sticky Contained</span>
@@ -1102,7 +1104,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/sticky-metro/"
+                                  href="/portfolio/sticky-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sticky Metro</span>
@@ -1115,7 +1117,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Sliders</span>
@@ -1150,7 +1152,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/horizontal-slider/"
+                                  href="/portfolio/horizontal-slider/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Horizontal Slider</span>
@@ -1161,7 +1163,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/vertical-slider/"
+                                  href="/portfolio/vertical-slider/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Vertical Slider</span>
@@ -1172,7 +1174,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/smooth-scroll-split-screen/"
+                                  href="/portfolio/smooth-scroll-split-screen/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Smooth Scroll Split Screen</span>
@@ -1183,7 +1185,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/interactive-links/"
+                                  href="/portfolio/interactive-links/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Interactive Links</span>
@@ -1194,7 +1196,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/horizontal-carousel/"
+                                  href="/portfolio/horizontal-carousel/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Horizontal Carousel</span>
@@ -1205,7 +1207,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/onepage-with-smooth-scroll/"
+                                  href="/portfolio/onepage-with-smooth-scroll/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Onepage with Smooth Scroll</span>
@@ -1216,7 +1218,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/scattered-with-smooth-scroll/"
+                                  href="/portfolio/scattered-with-smooth-scroll/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Scattered with Smooth Scroll</span>
@@ -1227,7 +1229,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/centered-with-smooth-scroll/"
+                                  href="/portfolio/centered-with-smooth-scroll/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Centered with Smooth Scroll</span>
@@ -1238,7 +1240,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/demo6/"
+                                  href="/demo6/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Vertical Interactive Links</span>
@@ -1251,7 +1253,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Single Project</span>
@@ -1286,7 +1288,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/worlds-relays/"
+                                  href="/project/worlds-relays/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Details with Left Gallery</span>
@@ -1297,7 +1299,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/unicolor-87/"
+                                  href="/project/unicolor-87/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Details with Right Gallery</span>
@@ -1308,7 +1310,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/diseno-grafico/"
+                                  href="/project/diseno-grafico/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Details with Bottom Gallery</span>
@@ -1319,7 +1321,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/dinamica/"
+                                  href="/project/dinamica/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split Screen Left Gallery</span>
@@ -1330,7 +1332,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                  href="/project/stickers-pack/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split Screen Right Gallery</span>
@@ -1341,7 +1343,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/spacing-it-easier-to-get-things-done/"
+                                  href="/project/spacing-it-easier-to-get-things-done/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Slider with Details</span>
@@ -1352,7 +1354,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/aws-non-profit-cloud-solutions/"
+                                  href="/project/aws-non-profit-cloud-solutions/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Slider with Custom Details</span>
@@ -1363,7 +1365,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/diseno-deporte/"
+                                  href="/project/diseno-deporte/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Asymmetric with Custom Details</span>
@@ -1374,7 +1376,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/project/salon-de-diseno-de-interiores/"
+                                  href="/project/salon-de-diseno-de-interiores/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Slider with Centered Details</span>
@@ -1387,7 +1389,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Pagination Types</span>
@@ -1422,7 +1424,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/standard-pagination/"
+                                  href="/portfolio/standard-pagination/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard</span>
@@ -1433,7 +1435,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/standard-pagination-outlined/"
+                                  href="/portfolio/standard-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard: Outlined</span>
@@ -1444,7 +1446,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/standard-pagination-text/"
+                                  href="/portfolio/standard-pagination-text/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard: Text</span>
@@ -1455,7 +1457,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/load-more-pagination/"
+                                  href="/portfolio/load-more-pagination/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Load More</span>
@@ -1466,7 +1468,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/load-more-pagination-outlined/"
+                                  href="/portfolio/load-more-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Load More: Outlined</span>
@@ -1477,7 +1479,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/load-more-pagination-text/"
+                                  href="/portfolio/load-more-pagination-text/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Load More: Text</span>
@@ -1488,7 +1490,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/lazy-load-pagination/"
+                                  href="/portfolio/lazy-load-pagination/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Lazy Load</span>
@@ -1499,7 +1501,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/lazy-load-pagination-outlined/"
+                                  href="/portfolio/lazy-load-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Lazy Load: Outlined</span>
@@ -1510,7 +1512,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/lazy-load-pagination-text/"
+                                  href="/portfolio/lazy-load-pagination-text/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Lazy Load: Text</span>
@@ -1523,7 +1525,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Hover Effects</span>
@@ -1558,7 +1560,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-image-scale/"
+                                  href="/portfolio/classic-image-scale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Scale</span>
@@ -1569,7 +1571,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-image-overlay/"
+                                  href="/portfolio/classic-image-overlay/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Overlay</span>
@@ -1580,7 +1582,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-image-greyscale/"
+                                  href="/portfolio/classic-image-greyscale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Greyscale</span>
@@ -1591,7 +1593,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/classic-image-transition/"
+                                  href="/portfolio/classic-image-transition/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Transition</span>
@@ -1602,7 +1604,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-image-scale/"
+                                  href="/portfolio/minimal-image-scale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Scale</span>
@@ -1613,7 +1615,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-image-overlay/"
+                                  href="/portfolio/minimal-image-overlay/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Overlay</span>
@@ -1624,7 +1626,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-image-greyscale/"
+                                  href="/portfolio/minimal-image-greyscale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Greyscale</span>
@@ -1635,7 +1637,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/minimal-image-transition/"
+                                  href="/portfolio/minimal-image-transition/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Transition</span>
@@ -1648,7 +1650,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Appear Effects</span>
@@ -1683,7 +1685,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/fade-up-effect/"
+                                  href="/portfolio/fade-up-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fade Up Effect</span>
@@ -1694,7 +1696,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/fade-down-effect/"
+                                  href="/portfolio/fade-down-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fade Down Effect</span>
@@ -1705,7 +1707,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/fade-left-effect/"
+                                  href="/portfolio/fade-left-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fade Left Effect</span>
@@ -1716,7 +1718,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/fade-right-effect/"
+                                  href="/portfolio/fade-right-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fade Right Effect</span>
@@ -1727,7 +1729,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/flip-up-effect/"
+                                  href="/portfolio/flip-up-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Flip Up Effect</span>
@@ -1738,7 +1740,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/flip-down-effect/"
+                                  href="/portfolio/flip-down-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Flip Down Effect</span>
@@ -1749,7 +1751,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/zoom-in-effect/"
+                                  href="/portfolio/zoom-in-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Zoom In Effect</span>
@@ -1760,7 +1762,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/portfolio/zoom-out-effect/"
+                                  href="/portfolio/zoom-out-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Zoom Out Effect</span>
@@ -1775,7 +1777,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                         className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
                       >
                         <a
-                          href="https://ohio.clbthemes.com/blog/"
+                          href="/blog/"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Blog</span>
@@ -1813,7 +1815,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Archive</span>
@@ -1848,7 +1850,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic/"
+                                  href="/blog/classic/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic</span>
@@ -1859,7 +1861,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-contained/"
+                                  href="/blog/classic-contained/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Contained</span>
@@ -1870,7 +1872,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-metro/"
+                                  href="/blog/classic-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Metro</span>
@@ -1881,7 +1883,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal/"
+                                  href="/blog/minimal/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal</span>
@@ -1892,7 +1894,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-metro/"
+                                  href="/blog/minimal-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal Metro</span>
@@ -1903,7 +1905,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/split/"
+                                  href="/blog/split/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split</span>
@@ -1914,7 +1916,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/split-contained/"
+                                  href="/blog/split-contained/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split Contained</span>
@@ -1925,7 +1927,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/split-metro/"
+                                  href="/blog/split-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split Metro</span>
@@ -1938,7 +1940,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Archive</span>
@@ -1973,7 +1975,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/inner/"
+                                  href="/blog/inner/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Inner</span>
@@ -1984,7 +1986,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/inner-metro/"
+                                  href="/blog/inner-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Inner Metro</span>
@@ -1995,7 +1997,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/compact/"
+                                  href="/blog/compact/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Compact</span>
@@ -2006,7 +2008,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/compact-contained/"
+                                  href="/blog/compact-contained/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Compact Contained</span>
@@ -2017,7 +2019,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/compact-metro/"
+                                  href="/blog/compact-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Compact Metro</span>
@@ -2028,7 +2030,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/simple/"
+                                  href="/blog/simple/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Simple</span>
@@ -2039,7 +2041,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/simple-contained/"
+                                  href="/blog/simple-contained/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Simple Contained</span>
@@ -2052,7 +2054,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Single Post</span>
@@ -2087,7 +2089,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/standard/"
+                                  href="/standard/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard</span>
@@ -2098,7 +2100,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                  href="/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard: Featured Image</span>
@@ -2109,7 +2111,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/fullscreen-post/"
+                                  href="/fullscreen-post/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard: Fullscreen</span>
@@ -2120,7 +2122,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/demo31/booktips-eight-tips-for-service-design-with-expert-users/"
+                                  href="/demo31/booktips-eight-tips-for-service-design-with-expert-users/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split</span>
@@ -2131,7 +2133,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
+                                  href="/demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split: Featured Image</span>
@@ -2144,7 +2146,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Pagination Types</span>
@@ -2179,7 +2181,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/standard-pagination/"
+                                  href="/blog/standard-pagination/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard</span>
@@ -2190,7 +2192,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/standard-pagination-outlined/"
+                                  href="/blog/standard-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard: Outlined</span>
@@ -2201,7 +2203,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/standard-pagination-text/"
+                                  href="/blog/standard-pagination-text/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard: Text</span>
@@ -2212,7 +2214,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/load-more-pagination/"
+                                  href="/blog/load-more-pagination/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Load More</span>
@@ -2223,7 +2225,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/load-more-pagination-outlined/"
+                                  href="/blog/load-more-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Load More: Outlined</span>
@@ -2234,7 +2236,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/load-more-pagination-text/"
+                                  href="/blog/load-more-pagination-text/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Load More: Text</span>
@@ -2245,7 +2247,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/lazy-load-pagination/"
+                                  href="/blog/lazy-load-pagination/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Lazy Load</span>
@@ -2256,7 +2258,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/lazy-load-pagination-outlined/"
+                                  href="/blog/lazy-load-pagination-outlined/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Lazy Load: Outlined</span>
@@ -2267,7 +2269,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/lazy-load-pagination-text/"
+                                  href="/blog/lazy-load-pagination-text/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Lazy Load: Text</span>
@@ -2280,7 +2282,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Hover Effects</span>
@@ -2315,7 +2317,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-none/"
+                                  href="/blog/classic-none/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: None</span>
@@ -2326,7 +2328,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-image-scale/"
+                                  href="/blog/classic-image-scale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Scale</span>
@@ -2337,7 +2339,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-image-overlay/"
+                                  href="/blog/classic-image-overlay/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Overlay</span>
@@ -2348,7 +2350,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/classic-image-greyscale/"
+                                  href="/blog/classic-image-greyscale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Greyscale</span>
@@ -2359,7 +2361,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-none/"
+                                  href="/blog/minimal-none/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: None</span>
@@ -2370,7 +2372,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-image-scale/"
+                                  href="/blog/minimal-image-scale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Scale</span>
@@ -2381,7 +2383,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-image-overlay/"
+                                  href="/blog/minimal-image-overlay/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Overlay</span>
@@ -2392,7 +2394,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/minimal-image-greyscale/"
+                                  href="/blog/minimal-image-greyscale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Greyscale</span>
@@ -2405,7 +2407,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Appear Effects</span>
@@ -2440,7 +2442,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/fade-up-effect/"
+                                  href="/blog/fade-up-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fade Up Effect</span>
@@ -2451,7 +2453,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/fade-down-effect/"
+                                  href="/blog/fade-down-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fade Down Effect</span>
@@ -2462,7 +2464,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/fade-left-effect/"
+                                  href="/blog/fade-left-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fade Left Effect</span>
@@ -2473,7 +2475,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/fade-right-effect/"
+                                  href="/blog/fade-right-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Fade Right Effect</span>
@@ -2484,7 +2486,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/flip-up-effect/"
+                                  href="/blog/flip-up-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Flip Up Effect</span>
@@ -2495,7 +2497,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/flip-down-effect/"
+                                  href="/blog/flip-down-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Flip Down Effect</span>
@@ -2506,7 +2508,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/zoom-in-effect/"
+                                  href="/blog/zoom-in-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Zoom In Effect</span>
@@ -2517,7 +2519,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/blog/zoom-out-effect/"
+                                  href="/blog/zoom-out-effect/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Zoom Out Effect</span>
@@ -2532,7 +2534,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                         className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
                       >
                         <a
-                          href="https://ohio.clbthemes.com/shop/"
+                          href="/shop/"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Shop</span>
@@ -2570,7 +2572,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Archive</span>
@@ -2605,7 +2607,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic/"
+                                  href="/shop/classic/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic</span>
@@ -2616,7 +2618,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-contained/"
+                                  href="/shop/classic-contained/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Contained</span>
@@ -2627,7 +2629,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-metro/"
+                                  href="/shop/classic-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Metro</span>
@@ -2638,7 +2640,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal/"
+                                  href="/shop/minimal/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal</span>
@@ -2649,7 +2651,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-contained/"
+                                  href="/shop/minimal-contained/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal Contained</span>
@@ -2660,7 +2662,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-metro/"
+                                  href="/shop/minimal-metro/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal Metro</span>
@@ -2673,7 +2675,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Hover Effects</span>
@@ -2708,7 +2710,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-image-scale/"
+                                  href="/shop/classic-image-scale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Scale</span>
@@ -2719,7 +2721,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-image-overlay/"
+                                  href="/shop/classic-image-overlay/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Overlay</span>
@@ -2730,7 +2732,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-image-greyscale/"
+                                  href="/shop/classic-image-greyscale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Greyscale</span>
@@ -2741,7 +2743,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-image-transition/"
+                                  href="/shop/classic-image-transition/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic: Image Transition</span>
@@ -2752,7 +2754,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-image-scale/"
+                                  href="/shop/minimal-image-scale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Scale</span>
@@ -2763,7 +2765,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-image-overlay/"
+                                  href="/shop/minimal-image-overlay/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Overlay</span>
@@ -2774,7 +2776,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-image-greyscale/"
+                                  href="/shop/minimal-image-greyscale/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Greyscale</span>
@@ -2785,7 +2787,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/minimal-image-transition/"
+                                  href="/shop/minimal-image-transition/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Minimal: Image Transition</span>
@@ -2798,7 +2800,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Single Product</span>
@@ -2833,7 +2835,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-shape-armchair/"
+                                  href="/product/gosta-shape-armchair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sticky Gallery</span>
@@ -2844,7 +2846,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-upholstery-chair/"
+                                  href="/product/gosta-upholstery-chair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sticky Gallery Reflected</span>
@@ -2855,7 +2857,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-upholstery-stool/"
+                                  href="/product/gosta-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split Screen</span>
@@ -2866,7 +2868,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-shape-armchair/"
+                                  href="/product/johanna-shape-armchair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Split Screen Reflected</span>
@@ -2877,7 +2879,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-upholstery-chair/"
+                                  href="/product/johanna-upholstery-chair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Gallery</span>
@@ -2888,7 +2890,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-upholstery-stool/"
+                                  href="/product/johanna-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Gallery Reflected</span>
@@ -2899,7 +2901,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/modern-upholstery-stool/"
+                                  href="/product/modern-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Grid Gallery</span>
@@ -2910,7 +2912,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/modern-shape-armchair/"
+                                  href="/product/modern-shape-armchair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Grid Gallery Reflected</span>
@@ -2923,7 +2925,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Product Types</span>
@@ -2958,7 +2960,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/modern-upholstery-stool/"
+                                  href="/product/modern-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Standard Product</span>
@@ -2969,7 +2971,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/modern-upholstery-chair/"
+                                  href="/product/modern-upholstery-chair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Grouped Product</span>
@@ -2980,7 +2982,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-shape-armchair/"
+                                  href="/product/gosta-shape-armchair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Variable Product</span>
@@ -2991,7 +2993,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/modern-shape-armchair/"
+                                  href="/product/modern-shape-armchair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Virtual Product</span>
@@ -3002,7 +3004,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-upholstery-stool/"
+                                  href="/product/johanna-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>External/Affiliate Product</span>
@@ -3013,7 +3015,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/gosta-upholstery-stool/"
+                                  href="/product/gosta-upholstery-stool/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Downloadable Product</span>
@@ -3024,7 +3026,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-upholstery-chair/"
+                                  href="/product/johanna-upholstery-chair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>On Sale Product</span>
@@ -3035,7 +3037,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/product/johanna-shape-armchair/"
+                                  href="/product/johanna-shape-armchair/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Out of Stock Product</span>
@@ -3048,7 +3050,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Shop Pages</span>
@@ -3083,7 +3085,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/"
+                                  href="/shop/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Shop Layout</span>
@@ -3094,7 +3096,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/cart/"
+                                  href="/cart/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Cart</span>
@@ -3105,7 +3107,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/checkout/"
+                                  href="/checkout/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Checkout</span>
@@ -3116,7 +3118,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/my-account/"
+                                  href="/my-account/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>My Account</span>
@@ -3127,7 +3129,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/my-account/"
+                                  href="/my-account/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sign In / Sign Up</span>
@@ -3140,7 +3142,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/shop/"
+                              href="/shop/"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Category Layout</span>
@@ -3175,7 +3177,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/classic-category/"
+                                  href="/shop/classic-category/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Classic Category</span>
@@ -3186,7 +3188,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/shop/offset-category/"
+                                  href="/shop/offset-category/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Offset Category</span>
@@ -3201,7 +3203,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                         className="mega-menu-item nav-item menu-item-depth-0 current-menu-ancestor has-submenu"
                       >
                         <a
-                          href="https://ohio.clbthemes.com/about-ver6/#"
+                          href="/about-ver6/#"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Pages</span>
@@ -3236,7 +3238,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 current-menu-ancestor current-menu-parent has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about/"
+                              href="/about/"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>About</span>
@@ -3271,7 +3273,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver4/"
+                                  href="/about-ver4/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>About Us</span>
@@ -3282,7 +3284,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver2/"
+                                  href="/about-ver2/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>About Classic</span>
@@ -3293,7 +3295,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver5/"
+                                  href="/about-ver5/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Hey, we’re Ohio</span>
@@ -3304,7 +3306,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver1/"
+                                  href="/about-ver1/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Our Bureau</span>
@@ -3315,7 +3317,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver3/"
+                                  href="/about-ver3/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Our Studio</span>
@@ -3326,7 +3328,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 current-menu-item new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/about-ver6/"
+                                  href="/about-ver6/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>About Creative</span>
@@ -3339,7 +3341,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/contact/"
+                              href="/contact/"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Contact</span>
@@ -3374,7 +3376,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver4/"
+                                  href="/contact-us-ver4/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Contact: Agency</span>
@@ -3385,7 +3387,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver5/"
+                                  href="/contact-us-ver5/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Contact: Blocks</span>
@@ -3396,7 +3398,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver2/"
+                                  href="/contact-us-ver2/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Contact: Classic</span>
@@ -3407,7 +3409,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver3/"
+                                  href="/contact-us-ver3/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Contact: Corporate</span>
@@ -3418,7 +3420,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver1/"
+                                  href="/contact-us-ver1/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Contact: Simple</span>
@@ -3429,7 +3431,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2 new"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver6/"
+                                  href="/contact-us-ver6/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Contact: Creative</span>
@@ -3442,7 +3444,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1 has-submenu"
                           >
                             <a
-                              href="https://ohio.clbthemes.com/about-ver6/#"
+                              href="/about-ver6/#"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Special Pages</span>
@@ -3477,7 +3479,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/adadad/"
+                                  href="/adadad/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>404 Page</span>
@@ -3488,7 +3490,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/demo30/"
+                                  href="/demo30/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Coming Soon</span>
@@ -3499,7 +3501,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/?s=identity"
+                                  href="/?s=identity"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Search Results</span>
@@ -3510,7 +3512,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                                 className="mega-menu-item sub-nav-item menu-item-depth-2"
                               >
                                 <a
-                                  href="https://ohio.clbthemes.com/my-account/"
+                                  href="/my-account/"
                                   className="menu-link -undash sub-menu-link"
                                 >
                                   <span>Sign In / Sign Up</span>
@@ -3525,7 +3527,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                         className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
                       >
                         <a
-                          href="https://colabrio.ticksy.com/"
+                          href="/"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Help</span>
@@ -3560,7 +3562,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1"
                           >
                             <a
-                              href="https://docs.clbthemes.com/ohio"
+                              href="/ohio"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Documentation</span>
@@ -3571,7 +3573,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1"
                           >
                             <a
-                              href="https://colabrio.ticksy.com/"
+                              href="/"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Help Center</span>
@@ -3582,7 +3584,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                             className="mega-menu-item sub-nav-item menu-item-depth-1"
                           >
                             <a
-                              href="https://colabrio.ticksy.com/"
+                              href="/"
                               className="menu-link -undash sub-menu-link"
                             >
                               <span>Submit a Ticket</span>
@@ -3595,7 +3597,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                         className="mega-menu-item nav-item menu-item-depth-0 version"
                       >
                         <a
-                          href="https://docs.clbthemes.com/ohio/release-notes/"
+                          href="/ohio/release-notes/"
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Changelog</span>
@@ -3606,24 +3608,24 @@ const Header = ({ setIsOpenSidebar }: any) => {
                   <div className="copyright">
                     <p>
                       © 2016-2023
-                      <a href="http://clbthemes.com/" target="_blank">
-                        Colabrio
+                      <a href="#" target="_blank">
+                        Gonzalo
                       </a>
                       . All rights reserved |
-                      <a target="_blank" href="https://1.envato.market/5Q25j">
+                      <a target="_blank" href="#">
                         <b>Purchase</b>
                       </a>
                     </p>
                     <p>
-                      <a href="http://clbthemes.com/" target="_blank">
+                      <a href="#" target="_blank">
                         Security
                       </a>
                       |
-                      <a href="http://clbthemes.com/" target="_blank">
+                      <a href="#" target="_blank">
                         Privacy &amp; Cookie Policy
                       </a>
                       |
-                      <a href="http://clbthemes.com/" target="_blank">
+                      <a href="#" target="_blank">
                         Terms of Service
                       </a>
                     </p>
@@ -3632,7 +3634,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                     <option
                       className="active"
                       selected={true}
-                      value="https://ohio.clbthemes.com/about-ver6/"
+                      value="/about-ver6/"
                     >
                       Eng
                     </option>
@@ -3644,7 +3646,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                     <li>—</li>
                     <li>
                       <a
-                        href="https://www.facebook.com/colabrio/"
+                        href="/Gonzalo/"
                         target="_blank"
                         rel="nofollow"
                         className="-undash facebook"
@@ -3654,7 +3656,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                     </li>
                     <li>
                       <a
-                        href="https://www.facebook.com/colabrio/"
+                        href="/Gonzalo/"
                         target="_blank"
                         rel="nofollow"
                         className="-undash behance"
@@ -3664,7 +3666,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                     </li>
                     <li>
                       <a
-                        href="https://www.facebook.com/colabrio/"
+                        href="/Gonzalo/"
                         target="_blank"
                         rel="nofollow"
                         className="-undash youtube"
@@ -3682,7 +3684,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                   <option
                     className="active"
                     selected={true}
-                    value="https://ohio.clbthemes.com/about-ver6/"
+                    value="/about-ver6/"
                   >
                     Eng
                   </option>
@@ -3691,7 +3693,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
               <li className="icon-button-holder">
                 <a
                   className="icon-button favorites-global wishlist"
-                  href="https://ohio.clbthemes.com/wishlist/?wishlist-action=user"
+                  href="/wishlist/?wishlist-action=user"
                 >
                   <i className="icon">
                     <svg
@@ -3712,37 +3714,23 @@ const Header = ({ setIsOpenSidebar }: any) => {
                   <span className="cart-button-total">
                     <a
                       className="cart-customlocation -unlink"
-                      href="https://ohio.clbthemes.com/cart/"
+                      href="/cart/"
                     >
                       <span className="woocommerce-Price-amount amount">
                         <bdi>
                           <span className="woocommerce-Price-currencySymbol">
-                            $
+                           
                           </span>
-                          0.00
+                         
                         </bdi>
                       </span>
                     </a>
                   </span>
                   <span className="holder">
                     <button className="icon-button cart" aria-label="cart">
-                      <i className="icon">
-                        <svg
-                          className="default"
-                          xmlns="http://www.w3.org/2000/svg"
-                          x="0px"
-                          y="0px"
-                          viewBox="0 0 12 16"
-                          xmlSpace="preserve"
-                        >
-                          <path
-                            className="st0"
-                            d="M9,4V3c0-1.7-1.3-3-3-3S3,1.3,3,3v1H0v10c0,1.1,0.9,2,2,2h8c1.1,0,2-0.9,2-2V4H9z M4,3c0-1.1,0.9-2,2-2s2,0.9,2,2v1H4V3z"
-                          />
-                        </svg>
-                      </i>
+                    
                     </button>
-                    <span className="badge">0</span>
+                    
                   </span>
                   <div className="cart-mini">
                     <div className="headline">

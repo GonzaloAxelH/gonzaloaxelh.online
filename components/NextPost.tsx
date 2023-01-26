@@ -7,7 +7,7 @@ const NextPost = () => {
         className="sticky-nav-thumbnail -fade-up"
         style={{
           backgroundImage:
-            'url("https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/clb_blog_20-min-768x892.jpeg")',
+            'url("/clb_blog_20-min-768x892.jpeg")',
         }}
       />
       <div className="sticky-nav-holder">

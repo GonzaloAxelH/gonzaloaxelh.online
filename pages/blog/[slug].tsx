@@ -8,12 +8,15 @@ import { useGetArticle, useGetArticles} from "@/hooks/useGetArticles";
 import React, { useEffect, useState } from "react";
 import slugify from "slugify";
 const BlogSlug = (props: any) => {
-    const [renderComments,seRenderComments] = useState(false)
+  const [renderComments, seRenderComments] = useState(false)
+  console.log(props.article)
   useEffect(() => {
   
     
-      seRenderComments(true)
-    },[])
+    seRenderComments(true)
+    
+  }, [])
+  const NextPost = props.recentArticles[2];
   return (
     <Container customAddClases="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded">
       <div
@@ -34,11 +37,8 @@ const BlogSlug = (props: any) => {
                 <div className="widget widget_ohio_widget_about_author">
                   <div className="avatar -large">
                     <img
-                      alt="Colabrio"
-                      src="./The Highly Contemporary UI_UX Design from a Silicon Valley. – Ohio Theme_files/4058fe7404c4f9d88d5d2d6db42320f8(1).png"
-                      srcSet="
-                  https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=144&d=mm&r=g 2x
-                "
+                      alt="Gonzalo"
+                      src="/small_logo.png"
                       className="avatar avatar-72 photo"
                       height={72}
                       width={72}
@@ -48,30 +48,26 @@ const BlogSlug = (props: any) => {
                   </div>
                   <div className="content">
                     <div className="details">
-                      <h6>Colabrio</h6>
+                      <h6>Gonzalo</h6>
                       <span className="site" />
                     </div>
-                    <div className="description">
-                      Digital content wrangler | UX enthusiast | Recovering
-                      educator | Shameless nerd &amp; GIF connoisseur | Hockey
-                      fan | Oxford comma or death.
-                    </div>
+                    <div className="description">Programador web</div>
                   </div>
                   <div className="social-networks -contained -small">
                     <a
-                      href="https://www.facebook.com/"
+                      href="/"
                       className="network -unlink"
                     >
                       <i className="fab fa-facebook-f" />
                     </a>
                     <a
-                      href="https://www.facebook.com/"
+                      href="/"
                       className="network -unlink"
                     >
                       <i className="fab fa-instagram" />
                     </a>
                     <a
-                      href="https://www.facebook.com/"
+                      href="/"
                       className="network -unlink"
                     >
                       <i className="fab fa-pinterest" />
@@ -87,8 +83,7 @@ const BlogSlug = (props: any) => {
           <div
             className="sticky-nav-thumbnail -fade-up"
             style={{
-              backgroundImage:
-                'url("https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/clb_blog_20-min-768x892.jpeg")',
+              backgroundImage: `url(${NextPost.cover.external.url})`,
             }}
           />
           <div className="sticky-nav-holder">
@@ -97,7 +92,7 @@ const BlogSlug = (props: any) => {
               <div className="nav-group">
                 <a
                   className="icon-button prev -unlink"
-                  href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                  href="/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                 >
                   <i className="icon">
                     <svg
@@ -132,7 +127,7 @@ const BlogSlug = (props: any) => {
                 </a>
                 <a
                   className="icon-button next -unlink"
-                  href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                  href="/definitive-guide-to-make-a-daily-more-productive-working-flow/"
                 >
                   <i className="icon">
                     <svg
@@ -169,9 +164,9 @@ const BlogSlug = (props: any) => {
             </div>
             <a
               className="titles-typo -undash"
-              href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+              href="/definitive-guide-to-make-a-daily-more-productive-working-flow/"
             >
-              Definitive Guide to Make a Daily More Productive Working Flow.
+              {NextPost.properties.Name.title[0].plain_text}
             </a>
           </div>
         </div>

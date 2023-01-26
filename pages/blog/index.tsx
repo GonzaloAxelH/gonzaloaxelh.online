@@ -5,7 +5,7 @@ import React from "react";
 import slugify from "slugify";
 import Image from "next/image";
 const index = ({ recentArticles }: any) => {
-  console.log(recentArticles);
+  
   return (
     <Container customAddClases="">
       <div
@@ -15,7 +15,7 @@ const index = ({ recentArticles }: any) => {
       >
         <div className="page-headline without-cap -center subheader_excluded  headline-with-parallax">
           <a
-            href="https://ohio.clbthemes.com/portfolio/sticky-metro/"
+            href="/portfolio/sticky-metro/"
             className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
           >
             <button
@@ -102,7 +102,7 @@ const index = ({ recentArticles }: any) => {
                   itemScope
                   itemType="http://schema.org/ListItem"
                 >
-                  <a itemProp="item" href="https://ohio.clbthemes.com/">
+                  <a itemProp="item" href="/">
                     <span itemProp="name">Home</span>
                   </a>
                   <svg
@@ -123,7 +123,7 @@ const index = ({ recentArticles }: any) => {
                   itemScope
                   itemType="http://schema.org/ListItem"
                 >
-                  <a itemProp="item" href="https://ohio.clbthemes.com/blog/">
+                  <a itemProp="item" href="/blog/">
                     <span itemProp="name">Blog</span>
                   </a>
                   <svg
@@ -213,7 +213,7 @@ const index = ({ recentArticles }: any) => {
                                                 <li className="meta-item">
                                                   <div className="avatar -small">
                                                     <img
-                                                      alt="Colabrio"
+                                                      alt="Gonzalo"
                                                       src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
                                                       srcSet="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=100&d=mm&r=g 2x"
                                                       className="avatar avatar-50 photo author-avatar"
@@ -259,7 +259,7 @@ const index = ({ recentArticles }: any) => {
                                             <h4 className="title">
                                               <a
                                                 className="-unlink"
-                                                href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                                href="/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                                               >
                                                 {
                                                   article?.properties?.Name
@@ -298,7 +298,7 @@ const index = ({ recentArticles }: any) => {
                                 <ul className="pagination -small -unlist">
                                   <li className="page-item">
                                     <a
-                                      href="https://ohio.clbthemes.com/blog/classic/"
+                                      href="/blog/classic/"
                                       className="page-link button -unlink -pagination"
                                     >
                                       1
@@ -306,7 +306,7 @@ const index = ({ recentArticles }: any) => {
                                   </li>
                                   <li className="page-item">
                                     <a
-                                      href="https://ohio.clbthemes.com/blog/classic/page/2/"
+                                      href="/blog/classic/page/2/"
                                       className="page-link button -unlink -pagination -flat"
                                     >
                                       2
@@ -314,7 +314,7 @@ const index = ({ recentArticles }: any) => {
                                   </li>
                                   <li className="page-item">
                                     <a
-                                      href="https://ohio.clbthemes.com/blog/classic/page/2/"
+                                      href="/blog/classic/page/2/"
                                       className="page-link button -unlink -pagination -flat"
                                     >
                                       <i className="icon">
@@ -414,7 +414,7 @@ export default index;
                    <li className="meta-item">
                      <div className="avatar -small">
                        <Image
-                         alt="Colabrio"
+                         alt="Gonzalo"
                          src={
                            "https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
                          }

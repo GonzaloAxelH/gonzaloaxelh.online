@@ -18,7 +18,7 @@ const PostMeta = ({ author, publishedDate, lastEditedAt }: any) => {
         <li className="meta-item">
           <div className="avatar -small">
             <img
-              alt="Colabrio"
+              alt="Gonzalo"
               src={author?.avatar_url}
               className="avatar avatar-96 photo"
               height={96}

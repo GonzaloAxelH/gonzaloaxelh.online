@@ -1,9 +1,10 @@
 import ContentBlock from "@/components/ContentArticle";
 import Container from "@/components/hocs/Container";
+import HomeSvg from "@/components/svgs/HomeSvg";
 import Link from "next/link";
 import React from "react";
 export default function Home() {
-  let d= ""
+  let d = "";
   return (
     <Container customAddClases="home page-template-default page page-id-152817 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-spacer with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded">
       <div
@@ -35,7 +36,7 @@ export default function Home() {
                               </div>
                               <div className="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height vc_row-flex">
                                 <div className="wpb_column vc_column_container vc_col-sm-4 vc_col-md-4">
-                                  <div className="vc_column-inner">
+                                  <div className="" style={{ paddingLeft:"10px" }}>
                                     <div className="wpb_wrapper">
                                       <div
                                         className="ohio-widget heading clb__heading -left aos-init aos-animate"
@@ -44,10 +45,13 @@ export default function Home() {
                                         data-aos-duration={350}
                                       >
                                         <div className="subtitle">
-                                          <a href="#">Show me a demo</a>{" "}
+                                          <a href="#">
+                                            I'm Gonzalo, welcome to :
+                                          </a>{" "}
                                         </div>
-                                        <h1 className="title">
-                                          Best sale platform for startups.{" "}
+                                        <h1 className="title" >
+                                          The best blog to develop apps of
+                                          another level.{" "}
                                         </h1>
                                       </div>
                                       <div
@@ -64,10 +68,10 @@ export default function Home() {
                                         data-aos-delay={100}
                                       >
                                         <p>
-                                          Start your 14-day free trial.
+                                          Welcome to the best blog to develop
+                                          apps of another level.
                                           <br />
-                                          Get started with referral marketing
-                                          today:
+                                          
                                         </p>
                                       </div>
                                       <div
@@ -165,6 +169,7 @@ export default function Home() {
                                               </p>
                                             </div>
                                             <div
+                                              style={{ padding: "0" }}
                                               className="wpcf7-response-output"
                                               aria-hidden="true"
                                             />
@@ -200,7 +205,7 @@ export default function Home() {
                                 </div>
                                 <div className="wpb_column vc_column_container vc_col-sm-8 vc_col-md-8 vc_col-has-fill">
                                   <div className="vc_column-inner vc_custom_1639139965656">
-                                    <div className="wpb_wrapper" />
+                                    <HomeSvg />
                                   </div>
                                 </div>
                               </div>

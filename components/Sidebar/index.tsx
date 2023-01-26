@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sidebar = ({ visible, setCloseSidebar }: any) => {
   return (
-    <div className={`clb-popup hamburger-nav ${visible}`}>
+    <div className={`clb-popup hamburger-nav ${visible}`} style={{transition:"all 0.4s"}}>
       <div className="close-bar -right-flex">
         <button
           onClick={() => setCloseSidebar(false)}
@@ -50,19 +50,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
           >
             <a href="#" className="menu-link -undash main-menu-link item-title">
               <span>Pages</span>
-              <div className="has-submenu-icon">
-                <i className="icon menu-plus">
-                  <svg
-                    width={14}
-                    height={14}
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
-                  </svg>
-                </i>
-              </div>
+             
             </a>
             <ul className="menu-depth-1 sub-menu">
               <li
@@ -128,19 +116,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
           >
             <a href="#" className="menu-link -undash main-menu-link item-title">
               <span>Projects</span>
-              <div className="has-submenu-icon">
-                <i className="icon menu-plus">
-                  <svg
-                    width={14}
-                    height={14}
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
-                  </svg>
-                </i>
-              </div>
+              
             </a>
             <ul className="menu-depth-1 sub-menu">
               <li
@@ -187,19 +163,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Blog</span>
-              <div className="has-submenu-icon">
-                <i className="icon menu-plus">
-                  <svg
-                    width={14}
-                    height={14}
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
-                  </svg>
-                </i>
-              </div>
+             
             </a>
             <ul className="menu-depth-1 sub-menu">
               <li
@@ -235,19 +199,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Shop</span>
-              <div className="has-submenu-icon">
-                <i className="icon menu-plus">
-                  <svg
-                    width={14}
-                    height={14}
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
-                  </svg>
-                </i>
-              </div>
+             
             </a>
             <ul className="menu-depth-1 sub-menu">
               <li
@@ -279,7 +231,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             className="mega-menu-item nav-item menu-item-depth-0 showed"
           >
             <a
-              href="https://themeforest.net/user/colabrio/portfolio"
+              href="#"
               className="menu-link -undash main-menu-link item-title"
             >
               <span>Purchase</span>
@@ -291,17 +243,17 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
         <div className="details-column">
           <b>Get In Touch</b>
           <br /> 541 Melville Ave, Palo Alto, CA 94301,
-          <br /> ask@ohio.clbthemes.com
+          <br /> ask@
           <br /> Ph: +1.831.705.5448{" "}
         </div>
         <div className="details-column">
           <b>Work Inquiries</b>
-          <br /> work@ohio.clbthemes.com
+          <br /> work@
           <br /> Ph: +1.831.306.6725{" "}
         </div>
         <div className="details-column social-networks ">
           <a
-            href="https://www.facebook.com/colabrio/"
+            href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink facebook"
@@ -309,7 +261,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             <i className="fab fa-facebook-f" />
           </a>
           <a
-            href="https://www.facebook.com/colabrio/"
+            href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink behance"
@@ -317,7 +269,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             <i className="fab fa-behance" />
           </a>
           <a
-            href="https://www.facebook.com/colabrio/"
+            href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink youtube"

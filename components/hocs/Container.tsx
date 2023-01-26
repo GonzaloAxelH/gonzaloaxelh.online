@@ -9,6 +9,10 @@ import SearchBtn from "../FloatElements/SearchBtn";
 import Footer from "../Footer";
 import Sidebar from "../Sidebar";
 import Notification from "../Notification";
+//@ts-ignore
+
+
+
 
 const Container = ({
   children,
@@ -20,9 +24,8 @@ const Container = ({
       id="body_next"
       className={`${customAddClases} custom-body`}
       cz-shortcut-listen="true"
-      
     >
-      <div id="page" className="site" >
+      <div id="page" className="site">
         <div className="gradient"></div>
         <div className="gradient2"></div>
         <ElementsbarLeft />
@@ -32,9 +35,10 @@ const Container = ({
           setCloseSidebar={(isClose: boolean) => setSidebar(isClose)}
           visible={sidebar ? "visible" : ""}
         />
-        <React.Fragment>{children}</React.Fragment>
-        <HamburgerNav />
+       
         <SearchPopup />
+        <React.Fragment>{children}</React.Fragment>
+
         <SearchBtn />
         <Notification />
         <Footer />

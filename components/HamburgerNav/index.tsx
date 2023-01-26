@@ -362,20 +362,20 @@ const HamburgerNav = () => {
           <br />
           541 Melville Ave, Palo Alto, CA 94301,
           <br />
-          ask@ohio.clbthemes.com
+          ask@
           <br />
           Ph: +1.831.705.5448
         </div>
         <div className="details-column">
           <b>Work Inquiries</b>
           <br />
-          work@ohio.clbthemes.com
+          work@
           <br />
           Ph: +1.831.306.6725
         </div>
         <div className="details-column social-networks">
           <a
-            href="https://www.facebook.com/colabrio/"
+            href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink facebook"
@@ -383,7 +383,7 @@ const HamburgerNav = () => {
             <i className="fab fa-facebook-f" />
           </a>
           <a
-            href="https://www.facebook.com/colabrio/"
+            href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink behance"
@@ -391,7 +391,7 @@ const HamburgerNav = () => {
             <i className="fab fa-behance" />
           </a>
           <a
-            href="https://www.facebook.com/colabrio/"
+            href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink youtube"

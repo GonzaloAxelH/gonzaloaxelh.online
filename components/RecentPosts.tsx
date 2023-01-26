@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 const RecentPosts = ({ recentArticles }: any) => {
-  console.log(recentArticles);
+  
   return (
     <div className="related-posts">
       <div className="page-container">
@@ -37,7 +37,7 @@ const RecentPosts = ({ recentArticles }: any) => {
                           <li className="meta-item">
                             <div className="avatar -small">
                               <Image
-                                alt="Colabrio"
+                                alt="Gonzalo"
                                 src={
                                   "https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
                                 }

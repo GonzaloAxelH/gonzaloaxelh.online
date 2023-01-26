@@ -25,11 +25,20 @@ const ElementsbarLeft = () => {
           </div>
         </a>
       </li>
-      <li>
-        <div className="color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile"
-          onClick={()=> setTheme(!theme)}
+      <li onClick={() => setTheme(!theme)}>
+        <div
+          className={`color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile ${
+            theme ? "dark" : ""
+          }`}
         >
-          <div className="color-switcher-item dark">
+          <div
+            className="color-switcher-item dark"
+            style={{
+              minWidth: theme ? "61.4062px" : "auto",
+              transition: "0.4s all",
+              
+            }}
+          >
             <div className="color-switcher-item-state">
               <span className="caption">Dark</span>
               <svg
@@ -45,7 +54,10 @@ const ElementsbarLeft = () => {
           </div>
           <div
             className="color-switcher-item light"
-            style={{ minWidth: "63.6094px" }}
+            style={{
+              minWidth: theme ? "auto" : "63.6094px",
+              transition: "0.4s all",
+            }}
           >
             <div className="color-switcher-item-state">
               <span className="caption">Light</span>
@@ -62,11 +74,19 @@ const ElementsbarLeft = () => {
           </div>
           <div
             className="color-switcher-toddler"
-            style={{ width: "63.6094px" }}
+            style={{
+              width: theme ? "61.4062px" : "63.6094px",
+              transform: theme ? "translateX(-45.6098px)" : "translateX(0px)",
+              transition: "0.4s all",
+              borderRadius: "50%",
+            }}
           >
-            <div className="color-switcher-toddler-wrap">
-              <div className="color-switcher-toddler-item dark">
-                <div className="color-switcher-item-state">
+            <div className="color-switcher-toddler-wrap" >
+              <div
+                className="color-switcher-toddler-item dark"
+                
+              >
+                <div className="color-switcher-item-state" >
                   <span className="caption">Dark</span>
                   <svg
                     width={18}

@@ -33,7 +33,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
     <div className="-layout1">
       <div className="page-headline without-cap -left subheader_excluded headline-with-parallax">
         <a
-          href="https://ohio.clbthemes.com/about-ver6/"
+          href="/about-ver6/"
           className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
         >
           <button
@@ -96,31 +96,24 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                 <div className="category-holder">
                   <a
                     className="category"
-                    href="https://ohio.clbthemes.com/category/digital/"
+                    href="/category/digital/"
                     rel="category tag"
                   >
-                    Digital
-                  </a>
-                  <a
-                    className="category"
-                    href="https://ohio.clbthemes.com/category/marketing/"
-                    rel="category tag"
-                  >
-                    Marketing
+                    {article.properties.Category.select.name}
                   </a>
                 </div>
                 <span className="post-meta-estimate">9 min read </span>
               </div>
               <h1 className="title">
-                The Highly Contemporary UI/UX Design from a Silicon Valley.
+                {article.properties.Name.title[0].plain_text}
               </h1>
               <div className="post-meta-holder">
                 <ul className="meta-holder -unlist">
                   <li className="meta-item">
                     <div className="avatar -small">
                       <img
-                        alt="Colabrio"
-                        src="./The Highly Contemporary UI_UX Design from a Silicon Valley. – Ohio Theme_files/4058fe7404c4f9d88d5d2d6db42320f8.png"
+                        alt="Gonzalo"
+                        src="/small_logo.png"
                         className="avatar avatar-96 photo"
                         height={96}
                         width={96}
@@ -130,16 +123,23 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   </li>
                   <li className="meta-item">
                     <span className="prefix">Author</span>
-                    <span className="author">Colabrio</span>
+                    <span className="author">Gonzalo Axel</span>
                   </li>
                   <li className="meta-item">
                     <span className="prefix">Published</span>
-                    August 4, 2020
+                    {new Date(article.created_time).toLocaleDateString(
+                      "es-PE",
+                      {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      }
+                    )}
                   </li>
                   <li className="meta-item">
-                    <span className="prefix"> 2 comments </span>
-                    <a href="https://ohio.clbthemes.com/standard/#comments">
-                      <span className="date">Join the Conversation</span>
+                    <span className="prefix"> {countCom} comments </span>
+                    <a href="/standard/#comments">
+                      <span className="date">Unete a la conversacion</span>
                     </a>
                   </li>
                 </ul>
@@ -153,21 +153,21 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
           <div className="share-bar -vertical" data-blog-share="true">
             <div className="social-networks -small">
               <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fohio.clbthemes.com%2Fstandard%2F"
+                href="/sharer/sharer.php?u=https%3A%2F%2F%2Fstandard%2F"
                 target="_blank"
                 className="facebook network"
               >
                 <i className="fab fa-facebook-f" />
               </a>
               <a
-                href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fohio.clbthemes.com%2Fstandard%2F&description=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley."
+                href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2F%2Fstandard%2F&description=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley."
                 target="_blank"
                 className="pinterest network"
               >
                 <i className="fab fa-pinterest" />
               </a>
               <a
-                href="https://twitter.com/intent/tweet?text=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley.,+https%3A%2F%2Fohio.clbthemes.com%2Fstandard%2F"
+                href="/intent/tweet?text=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley.,+https%3A%2F%2F%2Fstandard%2F"
                 target="_blank"
                 className="twitter network"
               >
@@ -190,7 +190,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   itemScope
                   itemType="http://schema.org/ListItem"
                 >
-                  <a itemProp="item" href="https://ohio.clbthemes.com/">
+                  <a itemProp="item" href="/">
                     <span itemProp="name">Home</span>
                   </a>
                   <svg
@@ -203,7 +203,6 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   >
                     <path d="M0 14.5697L1.36504 16L9 8L1.36504 0L0 1.4303L6.26992 8L0 14.5697V14.5697Z" />
                   </svg>
-                  
                 </li>
                 <li
                   className="breadcrumb-item"
@@ -213,7 +212,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                 >
                   <a
                     itemProp="item"
-                    href="https://ohio.clbthemes.com/category/digital/"
+                    href="/category/digital/"
                   >
                     <span itemProp="name">Digital</span>
                   </a>
@@ -227,7 +226,6 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   >
                     <path d="M0 14.5697L1.36504 16L9 8L1.36504 0L0 1.4303L6.26992 8L0 14.5697V14.5697Z" />
                   </svg>
-                  
                 </li>
                 <li
                   className="breadcrumb-item"
@@ -238,7 +236,6 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   <span itemProp="name" className="active">
                     The Highly Contemporary UI/UX Design from a Silicon Valley.
                   </span>
-                  
                 </li>
               </ol>
             </nav>
@@ -260,6 +257,9 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                       }}
                     >
                       <Image
+                        style={{
+                          borderRadius: "1em",
+                        }}
                         className="wp-image-20557"
                         quality={100}
                         src={coverImage}
@@ -288,37 +288,3 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
 };
 
 export default ContentArticle;
-
-/*
-          <BreadcrumbHolder title={title} category={category} />
- <article
-                      id="post-17953"
-                      
-                      className="post-63604 page type-page status-publish hentry"
-                    >
-                      <figure
-                        className="wp-block-image size-full"
-                        style={{
-                          textAlign: "center",
-                        }}
-                      >
-                        <Image
-                          className="wp-image-20557"
-                          quality={100}
-                          src={coverImage}
-                          blurDataURL={coverImage}
-                          placeholder="blur"
-                          width={1200}
-                          height={500}
-                          fill={false}
-                          alt="XD"
-                          priority
-                        />
-                      </figure>
-                      {content?.map((block: any, index: number) => {
-                        return <ContentBlock key={index} block={block} />;
-                      })}
-                      <TagsBlog tags={tags} />
-                    </article>
-
-*/

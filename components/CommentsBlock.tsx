@@ -16,7 +16,7 @@ moment.locale("es");
 //@ts-ignore
 const CommentsBlock = ({ idArticle, renderComments }: any) => {
   const { data: session } = useSession();
-  console.log(session)
+  
   const [loaderBtn, setLoaderBtn] = useState(false);
   const {setShowNotification } = useContext(UIContext);
   const [change, setChange] = useState(true);
@@ -286,19 +286,7 @@ const CommentsBlock = ({ idArticle, renderComments }: any) => {
                                         <a href="#" style={{fontWeight:"bold",color:"red"}}>{reply?.nameResponse}</a>{reply.comment}
                                       </div>
                                       <div className="reply">
-                                        <a
-                                          onClick={() =>
-                                            setOpenReplyRes({
-                                              ...openReplyRes,
-                                              idRes: reply.id,
-                                            })
-                                          }
-                                          rel="nofollow"
-                                          className="comment-reply-link"
-                                          href="#respo"
-                                        >
-                                          Responder subcomentario
-                                        </a>
+                                      
                                         {idRes === reply.id && (
                                           <>
                                             {session && (

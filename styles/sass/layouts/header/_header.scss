@@ -1,5 +1,17 @@
+.dark-scheme .header {
+
+    background-color: rgba(0, 0, 0, 0.50) !important;
+}
+.light-scheme .header {
+
+    background-color: rgba(255, 255, 255, 0.80) !important;
+}
+
 .header {
-    background: transparent !important;
+    
+    -webkit-backdrop-filter:blur(200px);
+    backdrop-filter: blur(200px);
+    
     vertical-align: middle;
     left: 0;
     right: 0;
