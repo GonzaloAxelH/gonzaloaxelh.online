@@ -16,7 +16,7 @@ const ElementsbarLeft = () => {
       }
   },[theme])
   return (
-    <ul className="elements-bar left -unlist">
+    <ul className="elements-bar left -unlist" style={{marginTop:"-2em"}}>
       <li>
         <a className="scroll-top dynamic-typo -undash -small-t vc_hidden-md">
           <div className="scroll-top-bar">

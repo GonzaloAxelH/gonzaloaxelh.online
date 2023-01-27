@@ -4,13 +4,13 @@ import Container from "@/components/hocs/Container";
 import { useGetProyect, useGetProyects } from "@/hooks/useGetProyects";
 import React, { useContext } from "react";
 import slugify from "slugify";
- const settings = {
-   dots: true,
-   infinite: true,
-   speed: 500,
-   slidesToShow: 1,
-   slidesToScroll: 1,
- };
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 import Image from "next/image";
 import { UIContext } from "@/context/UIContext";
 const Proyect = ({ proyects, proyect, content }: any) => {
@@ -36,12 +36,12 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                     <div className="headline-meta">
                       <span className="category-holder">
                         <span className="category">
-                          <a href="https://ohio.clbthemes.com/portfolio-category/branding/">
+                          <a href="#portfolio-category/branding/">
                             Branding
                           </a>
                         </span>
                         <span className="category">
-                          <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                          <a href="#portfolio-category/identity/">
                             Identity
                           </a>
                         </span>
@@ -81,7 +81,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                     <a
                       className="button -text -unlink"
                       target="_blank"
-                      href="https://1.envato.market/5Q25j"
+                      href="#5Q25j"
                     >
                       Open Project
                       <i className="icon -right">
@@ -119,6 +119,211 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 </div>
               </div>
             </div>
+
+            <section className="wpb-content-wrapper">
+              <div className="vc_row wpb_row vc_row-fluid clb__narrow">
+                <div className="wpb_column vc_column_container vc_col-sm-12">
+                  <div className="vc_column-inner">
+                    <div className="wpb_wrapper">
+                     
+                      <div className="vc_empty_space" style={{ height: "4vh" }}>
+                        <span className="vc_empty_space_inner" />
+                      </div>
+                      <div className="vc_row wpb_row vc_inner vc_row-fluid">
+                        <div className="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                          <div className="vc_column-inner vc_custom_1620981555253">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget logo -left"
+                                id="ohio-custom-63d3efd48a645"
+                              >
+                                <img
+                                  src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/4nyY9y6X-LogoSC-min.png"
+                                  
+                                  sizes="(max-width: 268px) 100vw, 268px"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "3vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                          <div className="vc_column-inner vc_custom_1620981562035">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget logo -left"
+                                id="ohio-custom-63d3efd48b011"
+                              >
+                                <img
+                                  src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/uOUzEYjO-LogoSC-2-min.png"
+                                  
+                                  sizes="(max-width: 268px) 100vw, 268px"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "3vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                          <div className="vc_column-inner vc_custom_1620981586976">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget logo -left"
+                                id="ohio-custom-63d3efd48b949"
+                              >
+                                <img
+                                  src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/Atru47Oe-LogoSC-6-min.png"
+                                  
+                                  sizes="(max-width: 268px) 100vw, 268px"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "3vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                          <div className="vc_column-inner vc_custom_1620981593580">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget logo -left"
+                                id="ohio-custom-63d3efd48c169"
+                              >
+                                <img
+                                  src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/VpmdAZwB-LogoSC-8-min.png"
+                                  
+                                  sizes="(max-width: 268px) 100vw, 268px"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "3vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="vc_row wpb_row vc_inner vc_row-fluid">
+                        <div className="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                          <div className="vc_column-inner vc_custom_1620981555253">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget logo -left"
+                                id="ohio-custom-63d3efd48cb3b"
+                              >
+                                <img
+                                  src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/sSg7Wq4e-LogoSC-1-min.png"
+                                  
+                                  sizes="(max-width: 268px) 100vw, 268px"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "3vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                          <div className="vc_column-inner vc_custom_1620981562035">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget logo -left"
+                                id="ohio-custom-63d3efd48d3b5"
+                              >
+                                <img
+                                  src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/WX6iST7Q-LogoSC-3-min.png"
+                                  
+                                  sizes="(max-width: 268px) 100vw, 268px"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "3vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                          <div className="vc_column-inner vc_custom_1620981586976">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget logo -left"
+                                id="ohio-custom-63d3efd48dc22"
+                              >
+                                <img
+                                  src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/u8m8OmB2-LogoSC-7-min.png"
+                                  
+                                  sizes="(max-width: 268px) 100vw, 268px"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "3vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                          <div className="vc_column-inner vc_custom_1620981593580">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget logo -left"
+                                id="ohio-custom-63d3efd48e456"
+                              >
+                                <img
+                                  src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/TRVurYif-LogoSC-9-min.png"
+                                  
+                                  sizes="(max-width: 268px) 100vw, 268px"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                className="vc_empty_space  clb__section_spacer"
+                                style={{ height: "10vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+            </section>
+
             <div className="project-gallery">
               <div className="first-image">
                 <div className="" data-tilt="true" data-tilt-perspective={6000}>
@@ -195,7 +400,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627567340472 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                
+
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -236,7 +441,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               </div>
                               <div className="ohio-widget-holder -right">
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver4/"
+                                  href="#contact-us-ver4/"
                                   target="_blank"
                                   className="ohio-widget button clb__alignment_reset"
                                   id="ohio-custom-63d30e84eb85a"
@@ -331,7 +536,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
           </div>
         </div>
         <a
-          href="https://ohio.clbthemes.com/project/diseno-grafico/"
+          href="#project/diseno-grafico/"
           className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
         >
           <button
@@ -391,7 +596,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565097900 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                
+
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -529,7 +734,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565106697 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                 
+
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -561,84 +766,83 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                     data-compare-after-label="After"
                                     data-compare-position="0.5"
                                     data-compare-orientation="horizontal"
-                                    
                                   >
                                     <ComparisonSlider
-                                defaultValue={50}
-                                itemOne={
-                                  <div className="bg-red-200">
-                                    <Image
-                                      style={{
-                                        borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
-                                        clip: "rect(0px, 590px, 673.719px, 0px)",
-                                        filter: "grayscale(100%)",
+                                      defaultValue={50}
+                                      itemOne={
+                                        <div className="bg-red-200">
+                                          <Image
+                                            style={{
+                                              borderRadius: "12px",
+                                              border: `1px solid ${
+                                                !themeGlobal
+                                                  ? "#DADADA"
+                                                  : "#6E6E6E"
+                                              }`,
+                                              clip: "rect(0px, 590px, 673.719px, 0px)",
+                                              filter: "grayscale(100%)",
+                                            }}
+                                            src={
+                                              proyect.cover?.file?.url ||
+                                              proyect.cover.external.url
+                                            }
+                                            blurDataURL={
+                                              proyect?.cover?.file?.url ||
+                                              proyect.cover.external.url
+                                            }
+                                            width={1200}
+                                            height={684}
+                                            objectFit="fill"
+                                            sizes="(max-width: 2400px) 100vw, 2400px"
+                                            alt="Before"
+                                            className="compare-before"
+                                          />
+                                        </div>
+                                      }
+                                      itemTwo={
+                                        <div className="bg-blue-200">
+                                          <Image
+                                            width={1200}
+                                            height={684}
+                                            style={{
+                                              borderRadius: "12px",
+                                              border: `1px solid ${
+                                                !themeGlobal
+                                                  ? "#DADADA"
+                                                  : "#6E6E6E"
+                                              }`,
+                                              clip: "rect(0px,1180px,673.719px,590px )",
+                                            }}
+                                            src={
+                                              proyect.cover?.file?.url ||
+                                              proyect.cover.external.url
+                                            }
+                                            blurDataURL={
+                                              proyect?.cover?.file?.url ||
+                                              proyect.cover.external.url
+                                            }
+                                            objectFit="fill"
+                                            alt="After"
+                                            className="compare-after"
+                                            sizes="(max-width: 2000px) 100vw, 2000px"
+                                          />
+                                        </div>
+                                      }
+                                      aspectRatio={16 / 9}
+                                      orientation="horizontal"
+                                      handle={({ isFocused }) => {
+                                        return (
+                                          <div className="compare-handle">
+                                            <button className="icon-button">
+                                              <i className="icon" />
+                                            </button>
+                                          </div>
+                                        );
                                       }}
-                                      src={
-                                        proyect.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                      blurDataURL={
-                                        proyect?.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                      width={1200}
-                                      height={684}
-                                      objectFit="fill"
-                                      sizes="(max-width: 2400px) 100vw, 2400px"
-                                      alt="Before"
-                                      className="compare-before"
                                     />
-                                  </div>
-                                }
-                                itemTwo={
-                                  <div className="bg-blue-200">
-                                    <Image
-                                      width={1200}
-                                      height={684}
-                                      style={{
-                                        borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
-                                        clip: "rect(0px,1180px,673.719px,590px )",
-                                      }}
-                                      src={
-                                        proyect.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                      blurDataURL={
-                                        proyect?.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                      objectFit="fill"
-                                      alt="After"
-                                      className="compare-after"
-                                      sizes="(max-width: 2000px) 100vw, 2000px"
-                                    />
-                                  </div>
-                                }
-                                aspectRatio={16 / 9}
-                                orientation="horizontal"
-                                handle={({ isFocused }) => {
-                                  return (
-                                    
-                                      <div className="compare-handle" >
-                                        <button className="icon-button">
-                                          <i className="icon" />
-                                        </button>
-                                      </div>
-                                      
-                                  );
-                                }}
-                              />
                                   </div>
                                 </div>
                               </div>
-
-                              
                             </div>
                           </div>
                         </div>
@@ -659,7 +863,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 data-vc-full-width-init="true"
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565112734 vc_row-has-fill clb__dark_section"
                 style={{
-                  position:"relative",
+                  position: "relative",
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -928,7 +1132,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 data-vc-full-width-init="true"
                 className="vc_row wpb_row vc_row-fluid vc_custom_1626094955550 vc_row-has-fill clb__light_section"
                 style={{
-                  position:"relative",
+                  position: "relative",
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -1020,66 +1224,137 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 data-vc-full-width-init="true"
                 className="vc_row wpb_row vc_row-fluid vc_custom_1626094950195 vc_row-has-fill clb__light_section"
                 style={{
-                  position:"relative",
+                  position: "relative",
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
               >
-
-
-
- <Slider {...settings}>
-          <div>
-          <figure className="wpb_wrapper vc_figure"> <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey"> <Image width={2000} height={1143} className="vc_single_image-img attachment-full" alt="" style={{ borderRadius: "12px", border: `1px solid ${ !themeGlobal ? "#DADADA" : "#6E6E6E" }`, }} src={ proyect.cover?.file?.url || proyect.cover.external.url } blurDataURL={ proyect?.cover?.file?.url || proyect.cover.external.url } objectFit="fill" sizes="(max-width: 2000px) 100vw, 2000px" /> </div> </figure>
-          </div>
-          <div>
-           <figure className="wpb_wrapper vc_figure"> <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey"> <Image width={2000} height={1143} className="vc_single_image-img attachment-full" alt="" style={{ borderRadius: "12px", border: `1px solid ${ !themeGlobal ? "#DADADA" : "#6E6E6E" }`, }} src={ proyect.cover?.file?.url || proyect.cover.external.url } blurDataURL={ proyect?.cover?.file?.url || proyect.cover.external.url } objectFit="fill" sizes="(max-width: 2000px) 100vw, 2000px" /> </div> </figure>
-          </div>
-          <div>
-                       <figure className="wpb_wrapper vc_figure"> <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey"> <Image width={2000} height={1143} className="vc_single_image-img attachment-full" alt="" style={{ borderRadius: "12px", border: `1px solid ${ !themeGlobal ? "#DADADA" : "#6E6E6E" }`, }} src={ proyect.cover?.file?.url || proyect.cover.external.url } blurDataURL={ proyect?.cover?.file?.url || proyect.cover.external.url } objectFit="fill" sizes="(max-width: 2000px) 100vw, 2000px" /> </div> </figure>
-          </div>
-          <div>
-            
-                       <figure className="wpb_wrapper vc_figure"> <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey"> <Image width={2000} height={1143} className="vc_single_image-img attachment-full" alt="" style={{ borderRadius: "12px", border: `1px solid ${ !themeGlobal ? "#DADADA" : "#6E6E6E" }`, }} src={ proyect.cover?.file?.url || proyect.cover.external.url } blurDataURL={ proyect?.cover?.file?.url || proyect.cover.external.url } objectFit="fill" sizes="(max-width: 2000px) 100vw, 2000px" /> </div> </figure>
-          </div>
-        
-        </Slider>
-
-
+                <Slider {...settings}>
+                  <div>
+                    <figure className="wpb_wrapper vc_figure">
+                      {" "}
+                      <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
+                        {" "}
+                        <Image
+                          width={2000}
+                          height={1143}
+                          className="vc_single_image-img attachment-full"
+                          alt=""
+                          style={{
+                            borderRadius: "12px",
+                            border: `1px solid ${
+                              !themeGlobal ? "#DADADA" : "#6E6E6E"
+                            }`,
+                          }}
+                          src={
+                            proyect.cover?.file?.url ||
+                            proyect.cover.external.url
+                          }
+                          blurDataURL={
+                            proyect?.cover?.file?.url ||
+                            proyect.cover.external.url
+                          }
+                          objectFit="fill"
+                          sizes="(max-width: 2000px) 100vw, 2000px"
+                        />{" "}
+                      </div>{" "}
+                    </figure>
+                  </div>
+                  <div>
+                    <figure className="wpb_wrapper vc_figure">
+                      {" "}
+                      <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
+                        {" "}
+                        <Image
+                          width={2000}
+                          height={1143}
+                          className="vc_single_image-img attachment-full"
+                          alt=""
+                          style={{
+                            borderRadius: "12px",
+                            border: `1px solid ${
+                              !themeGlobal ? "#DADADA" : "#6E6E6E"
+                            }`,
+                          }}
+                          src={
+                            proyect.cover?.file?.url ||
+                            proyect.cover.external.url
+                          }
+                          blurDataURL={
+                            proyect?.cover?.file?.url ||
+                            proyect.cover.external.url
+                          }
+                          objectFit="fill"
+                          sizes="(max-width: 2000px) 100vw, 2000px"
+                        />{" "}
+                      </div>{" "}
+                    </figure>
+                  </div>
+                  <div>
+                    <figure className="wpb_wrapper vc_figure">
+                      {" "}
+                      <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
+                        {" "}
+                        <Image
+                          width={2000}
+                          height={1143}
+                          className="vc_single_image-img attachment-full"
+                          alt=""
+                          style={{
+                            borderRadius: "12px",
+                            border: `1px solid ${
+                              !themeGlobal ? "#DADADA" : "#6E6E6E"
+                            }`,
+                          }}
+                          src={
+                            proyect.cover?.file?.url ||
+                            proyect.cover.external.url
+                          }
+                          blurDataURL={
+                            proyect?.cover?.file?.url ||
+                            proyect.cover.external.url
+                          }
+                          objectFit="fill"
+                          sizes="(max-width: 2000px) 100vw, 2000px"
+                        />{" "}
+                      </div>{" "}
+                    </figure>
+                  </div>
+                  <div>
+                    <figure className="wpb_wrapper vc_figure">
+                      {" "}
+                      <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
+                        {" "}
+                        <Image
+                          width={2000}
+                          height={1143}
+                          className="vc_single_image-img attachment-full"
+                          alt=""
+                          style={{
+                            borderRadius: "12px",
+                            border: `1px solid ${
+                              !themeGlobal ? "#DADADA" : "#6E6E6E"
+                            }`,
+                          }}
+                          src={
+                            proyect.cover?.file?.url ||
+                            proyect.cover.external.url
+                          }
+                          blurDataURL={
+                            proyect?.cover?.file?.url ||
+                            proyect.cover.external.url
+                          }
+                          objectFit="fill"
+                          sizes="(max-width: 2000px) 100vw, 2000px"
+                        />{" "}
+                      </div>{" "}
+                    </figure>
+                  </div>
+                </Slider>
               </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
               <div className="vc_row-full-width vc_clearfix" />
-              
+
               <div className="vc_row-full-width vc_clearfix" />
               <div
                 data-vc-full-width="true"
@@ -1087,7 +1362,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565161167 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                         maxWidth: "100vw",
+                  maxWidth: "100vw",
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -1283,7 +1558,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565169892 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  maxWidth:"100vw",
+                  maxWidth: "100vw",
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -1427,7 +1702,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565177504 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  maxWidth:"100vw",
+                  maxWidth: "100vw",
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -1696,8 +1971,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565184542 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  
-                         maxWidth: "100vw",
+
+                  maxWidth: "100vw",
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -1884,7 +2159,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565691232 vc_row-has-fill clb__light_section"
                 style={{
                   position: "relative",
-              
+
                   paddingLeft: "10.5px",
                   paddingRight: "10.5px",
                 }}
@@ -1935,7 +2210,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               </div>
                               <div className="ohio-widget-holder -right">
                                 <a
-                                  href="https://ohio.clbthemes.com/contact-us-ver4/"
+                                  href="#contact-us-ver4/"
                                   target="_blank"
                                   className="ohio-widget button clb__alignment_reset"
                                   id="ohio-custom-63d342af00aad"
@@ -2031,7 +2306,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
           </div>
         </div>
         <a
-          href="https://ohio.clbthemes.com/project/diseno-grafico/"
+          href="#project/diseno-grafico/"
           className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
         >
           <button
@@ -2097,7 +2372,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                           <a
                             rel="nofollow"
                             id="cancel-comment-reply-link"
-                            href="https://ohio.clbthemes.com/project/aws-non-profit-cloud-solutions/#respond"
+                            href="#project/aws-non-profit-cloud-solutions/#respond"
                             style={{ display: "none" }}
                           >
                             Cancel reply
@@ -2105,7 +2380,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                         </small>
                       </h4>
                       <form
-                        action="https://ohio.clbthemes.com/wp-comments-post.php"
+                        action="#wp-comments-post.php"
                         method="post"
                         id="commentform"
                         className="comment-form"

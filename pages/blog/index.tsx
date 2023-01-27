@@ -77,11 +77,34 @@ const index = ({ recentArticles }: any) => {
                 <div className="headline-meta" />
                 <h1 className="title">Blog</h1>
                 <div className="post-meta-holder">
-                  <div className="builder-switcher">
-                    <a className="active" href="../classic/">
+                   <div className="builder-switcher">
+                    <a
+                      className="active"
+                      href="#blog/simple-contained/"
+                    >
                       WPBakery
-                    </a>{" "}
-                    <a href="../classic-elementor/">Elementor</a>
+                    </a>
+                    <a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+<a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+<a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+<a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+<a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+                    <a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+                    <a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
                   </div>
                 </div>
               </div>

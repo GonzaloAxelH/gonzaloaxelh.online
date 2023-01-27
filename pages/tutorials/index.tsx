@@ -11,7 +11,7 @@ const index = () => {
       >
         <div className="page-headline without-cap -center subheader_excluded headline-with-parallax">
           <a
-            href="https://ohio.clbthemes.com/blog/simple/"
+            href="#blog/simple/"
             className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
           >
             <button
@@ -76,11 +76,29 @@ const index = () => {
                   <div className="builder-switcher">
                     <a
                       className="active"
-                      href="https://ohio.clbthemes.com/blog/simple-contained/"
+                      href="#blog/simple-contained/"
                     >
                       WPBakery
                     </a>
-                    <a href="https://ohio.clbthemes.com/blog/simple-contained-elementor/">
+                    <a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+<a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+<a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+<a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+<a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+                    <a href="#blog/simple-contained-elementor/">
+                      Elementor
+                    </a>
+                    <a href="#blog/simple-contained-elementor/">
                       Elementor
                     </a>
                   </div>
@@ -124,7 +142,7 @@ const index = () => {
                                     }}
                                   >
                                     <a
-                                      href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                      href="#creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <figure className="image-holder">
@@ -188,7 +206,7 @@ const index = () => {
                                           <h4 className="title">
                                             <a
                                               className="-unlink"
-                                              href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                              href="#creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                                             >
                                               Creativo Para Jóvenes: a
                                               Designer’s UI/UX Complete
@@ -203,13 +221,13 @@ const index = () => {
                                         <div className="category-holder -with-tag">
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/digital/"
+                                            href="#category/digital/"
                                           >
                                             Digital
                                           </a>
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/marketing/"
+                                            href="#category/marketing/"
                                           >
                                             Marketing
                                           </a>
@@ -218,7 +236,7 @@ const index = () => {
                                       <div className="card-details-item">
                                         <a
                                           className="button -text"
-                                          href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                          href="#creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                                         >
                                           Read More
                                           <i className="icon -right">
@@ -267,7 +285,7 @@ const index = () => {
                                     data-tilt-perspective={6000}
                                   >
                                     <a
-                                      href="https://ohio.clbthemes.com/standard/"
+                                      href="#standard/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <figure className="image-holder">
@@ -330,7 +348,7 @@ const index = () => {
                                           <h4 className="title">
                                             <a
                                               className="-unlink"
-                                              href="https://ohio.clbthemes.com/standard/"
+                                              href="#standard/"
                                             >
                                               The Highly Contemporary UI/UX
                                               Design from a Silicon Valley.
@@ -344,13 +362,13 @@ const index = () => {
                                         <div className="category-holder -with-tag">
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/digital/"
+                                            href="#category/digital/"
                                           >
                                             Digital
                                           </a>
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/marketing/"
+                                            href="#category/marketing/"
                                           >
                                             Marketing
                                           </a>
@@ -359,7 +377,7 @@ const index = () => {
                                       <div className="card-details-item">
                                         <a
                                           className="button -text"
-                                          href="https://ohio.clbthemes.com/standard/"
+                                          href="#standard/"
                                         >
                                           Read More
                                           <i className="icon -right">
@@ -408,7 +426,7 @@ const index = () => {
                                     data-tilt-perspective={6000}
                                   >
                                     <a
-                                      href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                                      href="#definitive-guide-to-make-a-daily-more-productive-working-flow/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <figure className="image-holder">
@@ -471,7 +489,7 @@ const index = () => {
                                           <h4 className="title">
                                             <a
                                               className="-unlink"
-                                              href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                                              href="#definitive-guide-to-make-a-daily-more-productive-working-flow/"
                                             >
                                               Definitive Guide to Make a Daily
                                               More Productive Working Flow.
@@ -485,13 +503,13 @@ const index = () => {
                                         <div className="category-holder -with-tag">
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/digital/"
+                                            href="#category/digital/"
                                           >
                                             Digital
                                           </a>
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/marketing/"
+                                            href="#category/marketing/"
                                           >
                                             Marketing
                                           </a>
@@ -500,7 +518,7 @@ const index = () => {
                                       <div className="card-details-item">
                                         <a
                                           className="button -text"
-                                          href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                                          href="#definitive-guide-to-make-a-daily-more-productive-working-flow/"
                                         >
                                           Read More
                                           <i className="icon -right">
@@ -549,7 +567,7 @@ const index = () => {
                                     data-tilt-perspective={6000}
                                   >
                                     <a
-                                      href="https://ohio.clbthemes.com/organic-food-isnt-much-better-for-your-future-health/"
+                                      href="#organic-food-isnt-much-better-for-your-future-health/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <figure className="image-holder">
@@ -611,7 +629,7 @@ const index = () => {
                                           <h4 className="title">
                                             <a
                                               className="-unlink"
-                                              href="https://ohio.clbthemes.com/organic-food-isnt-much-better-for-your-future-health/"
+                                              href="#organic-food-isnt-much-better-for-your-future-health/"
                                             >
                                               Organic Food Isn’t Much Better For
                                               Your Future Health.
@@ -632,13 +650,13 @@ const index = () => {
                                         <div className="category-holder -with-tag">
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/personal/"
+                                            href="#category/personal/"
                                           >
                                             Personal
                                           </a>
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/stories/"
+                                            href="#category/stories/"
                                           >
                                             Stories
                                           </a>
@@ -647,7 +665,7 @@ const index = () => {
                                       <div className="card-details-item">
                                         <a
                                           className="button -text"
-                                          href="https://ohio.clbthemes.com/organic-food-isnt-much-better-for-your-future-health/"
+                                          href="#organic-food-isnt-much-better-for-your-future-health/"
                                         >
                                           Read More
                                           <i className="icon -right">
@@ -696,7 +714,7 @@ const index = () => {
                                     data-tilt-perspective={6000}
                                   >
                                     <a
-                                      href="https://ohio.clbthemes.com/ways-of-lying-to-yourself-about-your-new-relationship/"
+                                      href="#ways-of-lying-to-yourself-about-your-new-relationship/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <figure className="image-holder">
@@ -758,7 +776,7 @@ const index = () => {
                                           <h4 className="title">
                                             <a
                                               className="-unlink"
-                                              href="https://ohio.clbthemes.com/ways-of-lying-to-yourself-about-your-new-relationship/"
+                                              href="#ways-of-lying-to-yourself-about-your-new-relationship/"
                                             >
                                               Ways of Lying to Yourself About
                                               Your New Relationship.
@@ -772,13 +790,13 @@ const index = () => {
                                         <div className="category-holder -with-tag">
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/personal/"
+                                            href="#category/personal/"
                                           >
                                             Personal
                                           </a>
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/stories/"
+                                            href="#category/stories/"
                                           >
                                             Stories
                                           </a>
@@ -787,7 +805,7 @@ const index = () => {
                                       <div className="card-details-item">
                                         <a
                                           className="button -text"
-                                          href="https://ohio.clbthemes.com/ways-of-lying-to-yourself-about-your-new-relationship/"
+                                          href="#ways-of-lying-to-yourself-about-your-new-relationship/"
                                         >
                                           Read More
                                           <i className="icon -right">
@@ -836,7 +854,7 @@ const index = () => {
                                     data-tilt-perspective={6000}
                                   >
                                     <a
-                                      href="https://ohio.clbthemes.com/the-start-up-ultimate-guide-to-make-your-wordpress-journal/"
+                                      href="#the-start-up-ultimate-guide-to-make-your-wordpress-journal/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <figure className="image-holder">
@@ -899,7 +917,7 @@ const index = () => {
                                           <h4 className="title">
                                             <a
                                               className="-unlink"
-                                              href="https://ohio.clbthemes.com/the-start-up-ultimate-guide-to-make-your-wordpress-journal/"
+                                              href="#the-start-up-ultimate-guide-to-make-your-wordpress-journal/"
                                             >
                                               The Start-Up Ultimate Guide to
                                               Make Your WordPress Journal.
@@ -913,13 +931,13 @@ const index = () => {
                                         <div className="category-holder -with-tag">
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/personal/"
+                                            href="#category/personal/"
                                           >
                                             Personal
                                           </a>
                                           <a
                                             className="tag -unlink"
-                                            href="https://ohio.clbthemes.com/category/stories/"
+                                            href="#category/stories/"
                                           >
                                             Stories
                                           </a>
@@ -928,7 +946,7 @@ const index = () => {
                                       <div className="card-details-item">
                                         <a
                                           className="button -text"
-                                          href="https://ohio.clbthemes.com/the-start-up-ultimate-guide-to-make-your-wordpress-journal/"
+                                          href="#the-start-up-ultimate-guide-to-make-your-wordpress-journal/"
                                         >
                                           Read More
                                           <i className="icon -right">
@@ -974,7 +992,7 @@ const index = () => {
                                 <ul className="pagination -small -unlist">
                                   <li className="page-item">
                                     <a
-                                      href="https://ohio.clbthemes.com/blog/simple-contained/"
+                                      href="#blog/simple-contained/"
                                       className="page-link button -unlink -pagination"
                                     >
                                       1
@@ -982,7 +1000,7 @@ const index = () => {
                                   </li>
                                   <li className="page-item">
                                     <a
-                                      href="https://ohio.clbthemes.com/blog/simple-contained/page/2/"
+                                      href="#blog/simple-contained/page/2/"
                                       className="page-link button -unlink -pagination -flat"
                                     >
                                       2
@@ -990,7 +1008,7 @@ const index = () => {
                                   </li>
                                   <li className="page-item">
                                     <a
-                                      href="https://ohio.clbthemes.com/blog/simple-contained/page/2/"
+                                      href="#blog/simple-contained/page/2/"
                                       className="page-link button -unlink -pagination -flat"
                                     >
                                       <i className="icon">
@@ -1048,7 +1066,7 @@ const index = () => {
 
       <div className="page-headline without-cap -center subheader_excluded headline-with-parallax">
         <a
-          href="https://ohio.clbthemes.com/"
+          href="#"
           className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
         >
           <button
@@ -1113,11 +1131,11 @@ const index = () => {
                 <div className="builder-switcher">
                   <a
                     className="active"
-                    href="https://ohio.clbthemes.com/portfolio-projects-shortcode/portfolio-projects-shortcode/"
+                    href="#portfolio-projects-shortcode/portfolio-projects-shortcode/"
                   >
                     WPBakery
                   </a>
-                  <a href="https://ohio.clbthemes.com/portfolio-projects-shortcode/portfolio-projects-widget/">
+                  <a href="#portfolio-projects-shortcode/portfolio-projects-widget/">
                     Elementor
                   </a>
                 </div>
@@ -1171,11 +1189,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout1"
@@ -1183,7 +1197,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -1197,7 +1211,7 @@ const index = () => {
                                         }}
                                       >
                                         <img
-                                          src="./Portfolio Projects – Ohio Theme_files/ZRJlKIPg-project__01.jpeg"
+                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
                                           alt="Stickers Pack"
                                         />
                                         <div className="overlay-details -top -fade-down">
@@ -1271,18 +1285,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                            <a href="#project/stickers-pack/">
                                               Show project
                                             </a>
                                           </div>
@@ -1295,11 +1309,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1"
@@ -1307,7 +1317,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -1321,7 +1331,9 @@ const index = () => {
                                         }}
                                       >
                                         <img
-                                          src="./Portfolio Projects – Ohio Theme_files/MeKCvxP5-oh__img34.1.jpeg"
+                                        
+                                          
+                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
                                           alt="Gráfico Scenic"
                                         />
                                         <div className="overlay-details -top -fade-down">
@@ -1397,18 +1409,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                            <a href="#project/grafico-scenic/">
                                               Show project
                                             </a>
                                           </div>
@@ -1421,11 +1433,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout1"
@@ -1433,7 +1441,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -1447,7 +1455,9 @@ const index = () => {
                                         }}
                                       >
                                         <img
-                                          src="./Portfolio Projects – Ohio Theme_files/fTwlsI2e-oh__img9.jpeg"
+                                        
+
+                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
                                           alt="Space Campaign"
                                         />
                                         <div className="overlay-details -top -fade-down">
@@ -1523,18 +1533,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                            <a href="#project/space-campaign/">
                                               Show project
                                             </a>
                                           </div>
@@ -1570,11 +1580,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2"
@@ -1585,11 +1591,13 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                        href="#project/stickers-pack/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
-                                          src="./Portfolio Projects – Ohio Theme_files/ZRJlKIPg-project__01.jpeg"
+                                        
+
+                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
                                           alt="Stickers Pack"
                                         />
                                         <div className="overlay" />
@@ -1665,18 +1673,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                              <a href="#project/stickers-pack/">
                                                 Show project
                                               </a>
                                             </div>
@@ -1690,11 +1698,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout2"
@@ -1705,11 +1709,13 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                        href="#project/grafico-scenic/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
-                                          src="./Portfolio Projects – Ohio Theme_files/MeKCvxP5-oh__img34.1.jpeg"
+                                        
+
+                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
                                           alt="Gráfico Scenic"
                                         />
                                         <div className="overlay" />
@@ -1785,18 +1791,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                              <a href="#project/grafico-scenic/">
                                                 Show project
                                               </a>
                                             </div>
@@ -1810,11 +1816,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout2"
@@ -1825,11 +1827,12 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/space-campaign/"
+                                        href="#project/space-campaign/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
-                                          src="./Portfolio Projects – Ohio Theme_files/fTwlsI2e-oh__img9.jpeg"
+                                       
+                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
                                           alt="Space Campaign"
                                         />
                                         <div className="overlay" />
@@ -1905,18 +1908,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                              <a href="#project/space-campaign/">
                                                 Show project
                                               </a>
                                             </div>
@@ -1953,11 +1956,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                
                                 >
                                   <div
                                     className="portfolio-item card -layout11"
@@ -1965,7 +1964,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -1974,7 +1973,8 @@ const index = () => {
                                         data-tilt-perspective={6000}
                                       >
                                         <img
-                                          src="./Portfolio Projects – Ohio Theme_files/ZRJlKIPg-project__01.jpeg"
+
+                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
                                           alt="Stickers Pack"
                                         />
                                         <div className="overlay-details -top -fade-down">
@@ -2065,11 +2065,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout11"
@@ -2077,7 +2073,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -2177,11 +2173,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout11"
@@ -2189,7 +2181,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -2332,11 +2324,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained"
@@ -2346,12 +2334,13 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
                                         <img
-                                          src="./Portfolio Projects – Ohio Theme_files/ZRJlKIPg-project__01.jpeg"
+                                         
+                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
                                           alt="Stickers Pack"
                                         />
                                         <div className="overlay-details -top -fade-down">
@@ -2425,18 +2414,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                            <a href="#project/stickers-pack/">
                                               Show project
                                             </a>
                                           </div>
@@ -2449,11 +2438,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained"
@@ -2463,7 +2448,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -2544,18 +2529,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                            <a href="#project/grafico-scenic/">
                                               Show project
                                             </a>
                                           </div>
@@ -2568,11 +2553,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained"
@@ -2582,7 +2563,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -2663,18 +2644,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                            <a href="#project/space-campaign/">
                                               Show project
                                             </a>
                                           </div>
@@ -2701,10 +2682,7 @@ const index = () => {
                                 data-isotope-grid="true"
                                 data-lazy-container="projects"
                                 data-projects-per-page={3}
-                                style={{
-                                  position: "relative",
-                                  height: "423.453px",
-                                }}
+                                
                               >
                                 <div
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
@@ -2725,7 +2703,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                        href="#project/stickers-pack/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -2805,18 +2783,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                              <a href="#project/stickers-pack/">
                                                 Show project
                                               </a>
                                             </div>
@@ -2830,11 +2808,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout2"
@@ -2845,7 +2819,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                        href="#project/grafico-scenic/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -2925,18 +2899,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                              <a href="#project/grafico-scenic/">
                                                 Show project
                                               </a>
                                             </div>
@@ -2950,11 +2924,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2"
@@ -2965,7 +2935,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/space-campaign/"
+                                        href="#project/space-campaign/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -3045,18 +3015,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                              <a href="#project/space-campaign/">
                                                 Show project
                                               </a>
                                             </div>
@@ -3093,11 +3063,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11"
@@ -3105,7 +3071,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -3205,11 +3171,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout11"
@@ -3217,7 +3179,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -3317,11 +3279,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout11"
@@ -3329,7 +3287,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -3472,11 +3430,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -metro -contained"
@@ -3486,7 +3440,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -3565,18 +3519,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                            <a href="#project/stickers-pack/">
                                               Show project
                                             </a>
                                           </div>
@@ -3589,11 +3543,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -metro -contained"
@@ -3603,7 +3553,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -3684,18 +3634,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                            <a href="#project/grafico-scenic/">
                                               Show project
                                             </a>
                                           </div>
@@ -3708,11 +3658,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -metro -contained"
@@ -3722,7 +3668,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -3803,18 +3749,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                            <a href="#project/space-campaign/">
                                               Show project
                                             </a>
                                           </div>
@@ -3850,11 +3796,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -metro"
@@ -3865,7 +3807,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                        href="#project/stickers-pack/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -3945,18 +3887,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                              <a href="#project/stickers-pack/">
                                                 Show project
                                               </a>
                                             </div>
@@ -3970,11 +3912,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -metro"
@@ -3985,7 +3923,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                        href="#project/grafico-scenic/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -4065,18 +4003,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                              <a href="#project/grafico-scenic/">
                                                 Show project
                                               </a>
                                             </div>
@@ -4090,11 +4028,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -metro"
@@ -4105,7 +4039,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/space-campaign/"
+                                        href="#project/space-campaign/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -4185,18 +4119,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                              <a href="#project/space-campaign/">
                                                 Show project
                                               </a>
                                             </div>
@@ -4233,11 +4167,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -metro"
@@ -4245,7 +4175,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -4345,11 +4275,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -metro"
@@ -4357,7 +4283,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -4457,11 +4383,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -metro"
@@ -4469,7 +4391,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -4612,11 +4534,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-scale"
@@ -4626,7 +4544,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -4705,18 +4623,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                            <a href="#project/stickers-pack/">
                                               Show project
                                             </a>
                                           </div>
@@ -4729,11 +4647,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-scale"
@@ -4743,7 +4657,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -4824,18 +4738,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                            <a href="#project/grafico-scenic/">
                                               Show project
                                             </a>
                                           </div>
@@ -4848,11 +4762,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-scale"
@@ -4862,7 +4772,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -4943,18 +4853,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                            <a href="#project/space-campaign/">
                                               Show project
                                             </a>
                                           </div>
@@ -4990,11 +4900,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-scale"
@@ -5005,7 +4911,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                        href="#project/stickers-pack/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -5085,18 +4991,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                              <a href="#project/stickers-pack/">
                                                 Show project
                                               </a>
                                             </div>
@@ -5110,11 +5016,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-scale"
@@ -5130,7 +5032,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                        href="#project/grafico-scenic/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -5210,18 +5112,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                              <a href="#project/grafico-scenic/">
                                                 Show project
                                               </a>
                                             </div>
@@ -5235,11 +5137,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-scale"
@@ -5250,7 +5148,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/space-campaign/"
+                                        href="#project/space-campaign/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -5330,18 +5228,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                              <a href="#project/space-campaign/">
                                                 Show project
                                               </a>
                                             </div>
@@ -5378,11 +5276,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-scale"
@@ -5390,7 +5284,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -5490,11 +5384,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-scale"
@@ -5502,7 +5392,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -5612,11 +5502,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-scale"
@@ -5624,7 +5510,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -5767,11 +5653,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-overlay"
@@ -5781,7 +5663,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -5860,18 +5742,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                            <a href="#project/stickers-pack/">
                                               Show project
                                             </a>
                                           </div>
@@ -5884,11 +5766,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-overlay"
@@ -5903,7 +5781,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -5984,18 +5862,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                            <a href="#project/grafico-scenic/">
                                               Show project
                                             </a>
                                           </div>
@@ -6008,11 +5886,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-overlay"
@@ -6022,7 +5896,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -6103,18 +5977,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                            <a href="#project/space-campaign/">
                                               Show project
                                             </a>
                                           </div>
@@ -6150,11 +6024,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-overlay"
@@ -6165,7 +6035,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                        href="#project/stickers-pack/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -6245,18 +6115,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                              <a href="#project/stickers-pack/">
                                                 Show project
                                               </a>
                                             </div>
@@ -6270,11 +6140,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                 
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-overlay"
@@ -6285,7 +6151,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                        href="#project/grafico-scenic/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -6365,18 +6231,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                              <a href="#project/grafico-scenic/">
                                                 Show project
                                               </a>
                                             </div>
@@ -6390,11 +6256,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-overlay"
@@ -6405,7 +6267,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/space-campaign/"
+                                        href="#project/space-campaign/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -6485,18 +6347,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                              <a href="#project/space-campaign/">
                                                 Show project
                                               </a>
                                             </div>
@@ -6533,11 +6395,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-overlay"
@@ -6545,7 +6403,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -6645,11 +6503,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-overlay"
@@ -6657,7 +6511,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -6757,11 +6611,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-overlay"
@@ -6769,7 +6619,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -6912,11 +6762,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-greyscale"
@@ -6926,7 +6772,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -7005,18 +6851,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                            <a href="#project/stickers-pack/">
                                               Show project
                                             </a>
                                           </div>
@@ -7029,11 +6875,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-greyscale"
@@ -7048,7 +6890,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -7129,18 +6971,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                            <a href="#project/grafico-scenic/">
                                               Show project
                                             </a>
                                           </div>
@@ -7153,11 +6995,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout1 -contained -img-greyscale"
@@ -7172,7 +7010,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div className="image-holder">
@@ -7253,18 +7091,18 @@ const index = () => {
                                         <div className="show-project">
                                           <div className="category-holder">
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                              <a href="#portfolio-category/identity/">
                                                 Identity
                                               </a>
                                             </span>
                                             <span className="category">
-                                              <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                              <a href="#portfolio-category/mockup/">
                                                 Mockup
                                               </a>
                                             </span>
                                           </div>
                                           <div className="show-project-link -full-w">
-                                            <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                            <a href="#project/space-campaign/">
                                               Show project
                                             </a>
                                           </div>
@@ -7300,11 +7138,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-greyscale"
@@ -7315,7 +7149,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                        href="#project/stickers-pack/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -7395,18 +7229,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/stickers-pack/">
+                                              <a href="#project/stickers-pack/">
                                                 Show project
                                               </a>
                                             </div>
@@ -7420,11 +7254,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-greyscale"
@@ -7440,7 +7270,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                        href="#project/grafico-scenic/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -7520,18 +7350,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/grafico-scenic/">
+                                              <a href="#project/grafico-scenic/">
                                                 Show project
                                               </a>
                                             </div>
@@ -7545,11 +7375,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout2 -img-greyscale"
@@ -7565,7 +7391,7 @@ const index = () => {
                                     <div className="image-holder">
                                       <a
                                         className="-unlink"
-                                        href="https://ohio.clbthemes.com/project/space-campaign/"
+                                        href="#project/space-campaign/"
                                         data-cursor-class="cursor-link"
                                       >
                                         <img
@@ -7645,18 +7471,18 @@ const index = () => {
                                           <div className="show-project">
                                             <div className="category-holder">
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/identity/">
+                                                <a href="#portfolio-category/identity/">
                                                   Identity
                                                 </a>
                                               </span>
                                               <span className="category">
-                                                <a href="https://ohio.clbthemes.com/portfolio-category/mockup/">
+                                                <a href="#portfolio-category/mockup/">
                                                   Mockup
                                                 </a>
                                               </span>
                                             </div>
                                             <div className="show-project-link -full-w">
-                                              <a href="https://ohio.clbthemes.com/project/space-campaign/">
+                                              <a href="#project/space-campaign/">
                                                 Show project
                                               </a>
                                             </div>
@@ -7693,11 +7519,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "0%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-greyscale"
@@ -7705,7 +7527,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/stickers-pack/"
+                                      href="#project/stickers-pack/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -7805,11 +7627,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "33.3333%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-greyscale"
@@ -7817,7 +7635,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/grafico-scenic/"
+                                      href="#project/grafico-scenic/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -7927,11 +7745,7 @@ const index = () => {
                                   className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                   data-lazy-item
                                   data-lazy-scope="projects"
-                                  style={{
-                                    position: "absolute",
-                                    left: "66.6667%",
-                                    top: "0px",
-                                  }}
+                                  
                                 >
                                   <div
                                     className="portfolio-item card -layout11 -img-greyscale"
@@ -7939,7 +7753,7 @@ const index = () => {
                                   >
                                     <a
                                       className="-unlink"
-                                      href="https://ohio.clbthemes.com/project/space-campaign/"
+                                      href="#project/space-campaign/"
                                       data-cursor-class="cursor-link"
                                     >
                                       <div
@@ -8064,6 +7878,7 @@ const index = () => {
           </div>
         </div>
       </div>
+
     </Container>
   );
 };

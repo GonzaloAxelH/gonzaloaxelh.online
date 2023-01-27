@@ -14,7 +14,7 @@ const Tutorial = () => {
             <div className="post-meta -sticky-block">
               <div className="page-headline without-cap -left subheader_excluded">
                 <a
-                  href="https://ohio.clbthemes.com/fullscreen-post/"
+                  href="#fullscreen-post/"
                   className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
                 >
                   <button
@@ -63,14 +63,14 @@ const Tutorial = () => {
                         <div className="category-holder">
                           <a
                             className="category"
-                            href="https://ohio.clbthemes.com/demo31/category/case-study/"
+                            href="#demo31/category/case-study/"
                             rel="category tag"
                           >
                             Case Study
                           </a>
                           <a
                             className="category"
-                            href="https://ohio.clbthemes.com/demo31/category/perspectives/"
+                            href="#demo31/category/perspectives/"
                             rel="category tag"
                           >
                             Perspectives
@@ -106,7 +106,7 @@ const Tutorial = () => {
                           </li>
                           <li className="meta-item">
                             <span className="prefix"> 2 comments </span>
-                            <a href="https://ohio.clbthemes.com/demo31/booktips-eight-tips-for-service-design-with-expert-users/#comments">
+                            <a href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/#comments">
                               <span className="date">
                                 Join the Conversation
                               </span>
@@ -183,7 +183,7 @@ const Tutorial = () => {
                               that do not have a <code>.old</code> class name,
                               using the
                               <a
-                                href="https://1.envato.market/5Q25j"
+                                href="#5Q25j"
                                 target="_blank"
                                 rel="noreferrer noopener"
                               >
@@ -195,7 +195,7 @@ const Tutorial = () => {
                               The <code>:not()</code> selector is chainable with
                               more <code>:not()</code> selectors. For example,
                               <a
-                                href="https://1.envato.market/5Q25j"
+                                href="#5Q25j"
                                 target="_blank"
                                 rel="noreferrer noopener"
                               >
@@ -220,7 +220,7 @@ const Tutorial = () => {
                               list items that do not have a<code>.old</code>{" "}
                               class name, using the
                               <a
-                                href="https://1.envato.market/5Q25j"
+                                href="#5Q25j"
                                 target="_blank"
                                 rel="noreferrer noopener"
                               >
@@ -251,7 +251,7 @@ const Tutorial = () => {
                             <p>
                               The
                               <a
-                                href="https://1.envato.market/5Q25j"
+                                href="#5Q25j"
                                 target="_blank"
                                 rel="noreferrer noopener"
                               >
@@ -276,7 +276,7 @@ const Tutorial = () => {
                                 Pseudo-class selector (e.g
                                 <code>
                                   <a
-                                    href="https://1.envato.market/5Q25j"
+                                    href="#5Q25j"
                                     target="_blank"
                                     rel="noreferrer noopener"
                                   >
@@ -286,7 +286,7 @@ const Tutorial = () => {
                                 ,
                                 <code>
                                   <a
-                                    href="https://1.envato.market/5Q25j"
+                                    href="#5Q25j"
                                     target="_blank"
                                     rel="noreferrer noopener"
                                   >
@@ -311,7 +311,7 @@ const Tutorial = () => {
                               </a>
                               and
                               <a
-                                href="https://1.envato.market/5Q25j"
+                                href="#5Q25j"
                                 target="_blank"
                                 rel="noreferrer noopener"
                               >
@@ -346,7 +346,7 @@ const Tutorial = () => {
                                   <tr>
                                     <td>
                                       <a
-                                        href="https://1.envato.market/5Q25j"
+                                        href="#5Q25j"
                                         target="_blank"
                                         rel="noreferrer noopener"
                                       >
@@ -362,7 +362,7 @@ const Tutorial = () => {
                                   <tr>
                                     <td>
                                       <a
-                                        href="https://1.envato.market/5Q25j"
+                                        href="#5Q25j"
                                         target="_blank"
                                         rel="noreferrer noopener"
                                       >
@@ -375,9 +375,9 @@ const Tutorial = () => {
                                   <tr>
                                     <td>
                                       <a
-                                        href="https://1.envato.market/5Q25j"
+                                        href="#5Q25j"
                                         data-type="URL"
-                                        data-id="https://1.envato.market/5Q25j"
+                                        data-id="#5Q25j"
                                         target="_blank"
                                         rel="noreferrer noopener"
                                       >
@@ -393,7 +393,7 @@ const Tutorial = () => {
                                   <tr>
                                     <td>
                                       <a
-                                        href="https://1.envato.market/5Q25j"
+                                        href="#5Q25j"
                                         target="_blank"
                                         rel="noreferrer noopener"
                                       >
@@ -426,7 +426,7 @@ const Tutorial = () => {
                               list items that do not have a<code>.old</code>{" "}
                               class name, using the
                               <a
-                                href="https://1.envato.market/5Q25j"
+                                href="#5Q25j"
                                 target="_blank"
                                 rel="noreferrer noopener"
                               >
@@ -445,7 +445,7 @@ const Tutorial = () => {
                             <p>
                               You can see a live demo in the
                               <a
-                                href="https://1.envato.market/5Q25j"
+                                href="#5Q25j"
                                 target="_blank"
                                 rel="noreferrer noopener"
                               >
@@ -461,19 +461,19 @@ const Tutorial = () => {
                                   Tagged with:{" "}
                                 </span>
                                 <a
-                                  href="https://ohio.clbthemes.com/demo31/tag/ohio/"
+                                  href="#demo31/tag/ohio/"
                                   rel="tag"
                                 >
                                   Ohio
                                 </a>
                                 <a
-                                  href="https://ohio.clbthemes.com/demo31/tag/theme/"
+                                  href="#demo31/tag/theme/"
                                   rel="tag"
                                 >
                                   Theme
                                 </a>
                                 <a
-                                  href="https://ohio.clbthemes.com/demo31/tag/wordpress/"
+                                  href="#demo31/tag/wordpress/"
                                   rel="tag"
                                 >
                                   WordPress
@@ -513,7 +513,7 @@ const Tutorial = () => {
                     <div className="details">
                       <h6>Colabrio</h6>
                       <span className="site">
-                        https://ohio.clbthemes.com/demo31
+                        #demo31
                       </span>
                     </div>
                     <div className="description">
@@ -542,7 +542,7 @@ const Tutorial = () => {
               <div className="nav-group">
                 <a
                   className="icon-button prev -unlink"
-                  href="https://ohio.clbthemes.com/demo31/exploring-our-new-series-on-overcoming-adversity/"
+                  href="#demo31/exploring-our-new-series-on-overcoming-adversity/"
                 >
                   <i className="icon">
                     <svg
@@ -577,7 +577,7 @@ const Tutorial = () => {
                 </a>
                 <a
                   className="icon-button next -unlink"
-                  href="https://ohio.clbthemes.com/demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
+                  href="#demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
                 >
                   <i className="icon">
                     <svg
@@ -614,7 +614,7 @@ const Tutorial = () => {
             </div>
             <a
               className="titles-typo -undash"
-              href="https://ohio.clbthemes.com/demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
+              href="#demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
             >
               Creativo Para Jóvenes: the designer’s UI/UX checklist.
             </a>
@@ -631,7 +631,7 @@ const Tutorial = () => {
                   data-tilt-perspective={6000}
                 >
                   <a
-                    href="https://ohio.clbthemes.com/demo31/exploring-our-new-series-on-overcoming-adversity/"
+                    href="#demo31/exploring-our-new-series-on-overcoming-adversity/"
                     data-cursor-class="cursor-link"
                   >
                     <figure className="image-holder">
@@ -682,7 +682,7 @@ const Tutorial = () => {
                       <h4 className="title">
                         <a
                           className="-unlink"
-                          href="https://ohio.clbthemes.com/demo31/exploring-our-new-series-on-overcoming-adversity/"
+                          href="#demo31/exploring-our-new-series-on-overcoming-adversity/"
                         >
                           Exploring our new series on overcoming adversity.
                         </a>
@@ -691,13 +691,13 @@ const Tutorial = () => {
                     <div className="category-holder -with-tag">
                       <a
                         className="tag -unlink"
-                        href="https://ohio.clbthemes.com/demo31/category/case-study/"
+                        href="#demo31/category/case-study/"
                       >
                         Case Study
                       </a>
                       <a
                         className="tag -unlink"
-                        href="https://ohio.clbthemes.com/demo31/category/perspectives/"
+                        href="#demo31/category/perspectives/"
                       >
                         Perspectives
                       </a>
@@ -712,7 +712,7 @@ const Tutorial = () => {
                   data-tilt-perspective={6000}
                 >
                   <a
-                    href="https://ohio.clbthemes.com/demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
+                    href="#demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
                     data-cursor-class="cursor-link"
                   >
                     <figure className="image-holder">
@@ -763,7 +763,7 @@ const Tutorial = () => {
                       <h4 className="title">
                         <a
                           className="-unlink"
-                          href="https://ohio.clbthemes.com/demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
+                          href="#demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
                         >
                           Creativo Para Jóvenes: the designer’s UI/UX checklist.
                         </a>
@@ -772,13 +772,13 @@ const Tutorial = () => {
                     <div className="category-holder -with-tag">
                       <a
                         className="tag -unlink"
-                        href="https://ohio.clbthemes.com/demo31/category/case-study/"
+                        href="#demo31/category/case-study/"
                       >
                         Case Study
                       </a>
                       <a
                         className="tag -unlink"
-                        href="https://ohio.clbthemes.com/demo31/category/perspectives/"
+                        href="#demo31/category/perspectives/"
                       >
                         Perspectives
                       </a>
@@ -820,7 +820,7 @@ const Tutorial = () => {
                             />
                             <b className="fn">
                               <a
-                                href="https://ohio.clbthemes.com/demo31"
+                                href="#demo31"
                                 rel="external nofollow ugc"
                                 className="url"
                               >
@@ -831,7 +831,7 @@ const Tutorial = () => {
                           </div>
                           {/* .comment-author */}
                           <div className="comment-metadata">
-                            <a href="https://ohio.clbthemes.com/demo31/booktips-eight-tips-for-service-design-with-expert-users/#comment-2">
+                            <a href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/#comment-2">
                               <time dateTime="2021-10-21T15:00:31+00:00">
                                 October 21, 2021 at 3:00 pm
                               </time>
@@ -853,7 +853,7 @@ const Tutorial = () => {
                           <a
                             rel="nofollow"
                             className="comment-reply-link"
-                            href="https://ohio.clbthemes.com/demo31/booktips-eight-tips-for-service-design-with-expert-users/?replytocom=2#respond"
+                            href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/?replytocom=2#respond"
                             data-commentid={2}
                             data-postid={114}
                             data-belowelement="div-comment-2"
@@ -888,7 +888,7 @@ const Tutorial = () => {
                                 />
                                 <b className="fn">
                                   <a
-                                    href="https://ohio.clbthemes.com/demo31"
+                                    href="#demo31"
                                     rel="external nofollow ugc"
                                     className="url"
                                   >
@@ -899,7 +899,7 @@ const Tutorial = () => {
                               </div>
                               {/* .comment-author */}
                               <div className="comment-metadata">
-                                <a href="https://ohio.clbthemes.com/demo31/booktips-eight-tips-for-service-design-with-expert-users/#comment-4">
+                                <a href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/#comment-4">
                                   <time dateTime="2021-10-21T15:00:46+00:00">
                                     October 21, 2021 at 3:00 pm
                                   </time>
@@ -919,7 +919,7 @@ const Tutorial = () => {
                               <a
                                 rel="nofollow"
                                 className="comment-reply-link"
-                                href="https://ohio.clbthemes.com/demo31/booktips-eight-tips-for-service-design-with-expert-users/?replytocom=4#respond"
+                                href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/?replytocom=4#respond"
                                 data-commentid={4}
                                 data-postid={114}
                                 data-belowelement="div-comment-4"
@@ -946,7 +946,7 @@ const Tutorial = () => {
                         <a
                           rel="nofollow"
                           id="cancel-comment-reply-link"
-                          href="https://ohio.clbthemes.com/demo31/booktips-eight-tips-for-service-design-with-expert-users/#respond"
+                          href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/#respond"
                           style={{ display: "none" }}
                         >
                           Cancel reply
@@ -954,7 +954,7 @@ const Tutorial = () => {
                       </small>
                     </h4>
                     <form
-                      action="https://ohio.clbthemes.com/demo31/wp-comments-post.php"
+                      action="#demo31/wp-comments-post.php"
                       method="post"
                       id="commentform"
                       className="comment-form"

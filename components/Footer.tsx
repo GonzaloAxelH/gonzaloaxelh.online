@@ -203,9 +203,7 @@ const Footer = () => {
                           </span>
                         </p>
                       </div>
-                      <div className="wpcf7-response-output" aria-hidden="true">
-                        Se ha enviado a tu correo un mensaje.
-                      </div>
+                     
                     </form>
                   </div>
                   <div className="hidden" data-button-contact="true" />
