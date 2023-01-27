@@ -3,7 +3,7 @@ import ElementsbarRight from "../ElementsbarRight";
 import ElementsbarLeft from "../ElementsbarLeft";
 import HamburgerNav from "../HamburgerNav";
 import SearchPopup from "../SearchPopup";
-import Particles from "react-tsparticles";
+
 import Header from "../Header";
 import SearchBtn from "../FloatElements/SearchBtn";
 import Footer from "../Footer";
@@ -33,26 +33,7 @@ const Container = ({
         <link rel="icon" href="/small_logo.png" />
       </Head>
       <div id="page" className="site">
-        <Particles
-          params={{
-            particles: {
-              number: {
-                value: 50,
-              },
-              size: {
-                value: 3,
-              },
-            },
-            interactivity: {
-              events: {
-                onhover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-              },
-            },
-          }}
-        />
+       
         {circles ? (
           <>
             <div className="gradient2"></div>
