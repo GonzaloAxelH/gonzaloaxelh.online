@@ -75,10 +75,10 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu showed"
           >
             <Link
-              href="/about"
+              href="/blog"
               className="menu-link -undash main-menu-link item-title"
             >
-              <span>Anout</span>
+              <span>Blog</span>
             </Link>
           </li>
           <li

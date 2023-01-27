@@ -21,6 +21,7 @@ const Container = ({
   const [sidebar, setSidebar] = useState(false);
   return (
     <div
+      style={{ maxWidth: "100vw" }}
       id="body_next"
       className={`${customAddClases} dark-scheme custom-body`}
       cz-shortcut-listen="true"

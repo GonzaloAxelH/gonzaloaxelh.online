@@ -1,18 +1,25 @@
-import Container from '@/components/hocs/Container';
-import { useGetProyect, useGetProyects } from '@/hooks/useGetProyects';
-import React, { useContext } from 'react'
-import slugify from 'slugify';
-
-import Image from "next/image"
-import { UIContext } from '@/context/UIContext';
+import Slider from "react-slick";
+import { ComparisonSlider } from "react-comparison-slider";
+import Container from "@/components/hocs/Container";
+import { useGetProyect, useGetProyects } from "@/hooks/useGetProyects";
+import React, { useContext } from "react";
+import slugify from "slugify";
+ const settings = {
+   dots: true,
+   infinite: true,
+   speed: 500,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+ };
+import Image from "next/image";
+import { UIContext } from "@/context/UIContext";
 const Proyect = ({ proyects, proyect, content }: any) => {
-    console.log(proyect)
+  console.log(proyect);
   let title = proyect.properties.Name.title[0].plain_text;
   let cover = proyect?.cover?.file?.url || proyect.cover.external.url;
-   let description = proyect.properties.Description.rich_text[0].plain_text;
+  let description = proyect.properties.Description.rich_text[0].plain_text;
 
-
-  const { themeGlobal }  = useContext(UIContext)
+  const { themeGlobal } = useContext(UIContext);
   return (
     <Container customAddClases="ohio_portfolio-template-default single single-ohio_portfolio postid-19300 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded dark-scheme">
       <div
@@ -188,12 +195,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627567340472 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -376,7 +380,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 'url("https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/7evLAXa6-oh__img30-1.jpeg")',
             }}
           />
-       
         </div>
 
         <div className="page-container">
@@ -388,12 +391,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565097900 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -474,239 +474,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="ohio-widget clb-gallery"
-                        id="ohio-custom-63d342aedd426"
-                        data-gallery="ohio-custom-63d342aedd423"
-                      >
-                        <div
-                          className="vc_row ohio-masonry masonry"
-                          data-lazy-container="gallery"
-                          style={{ position: "relative", height: "1113.83px" }}
-                        >
-                          <div
-                            className="masonry-block gallery-item card cursor-as-pointer vc_col-lg-6 vc_col-md-6 vc_col-xs-12 -with-overlay -img-scale masonry-brick"
-                            data-gallery-item={0}
-                            data-lazy-item
-                            data-lazy-scope="gallery"
-                            style={{
-                              position: "absolute",
-                              left: "0px",
-                              top: "0px",
-                            }}
-                          >
-                            <div
-                              className="image-holder cursor-plus"
-                              data-cursor-class="cursor-link"
-                            >
-                              <Image
-                                className="gimg hidden-image"
-                                 width={1200}
-                                      height={684}
-                                      style={{
-                                        borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
-                                        clip: "rect(0px,1180px,673.719px,590px )",
-                                      }}
-                                      src={
-                                        proyect.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                      blurDataURL={
-                                        proyect?.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                      objectFit="fill"
-                                alt="Alt"
-                              />
-                              <div className="overlay-details -fade-up">
-                                <div className="heading">
-                                  <h5 className="title">Sistema de Diseño</h5>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="card-details">
-                              <div className="heading">
-                                <h5 className="title">Sistema de Diseño</h5>
-                                <p className="caption -unspace -small-t">
-                                  ƒ/5.6 • 135.0 mm • 1/200 (640) • Flash (off,
-                                  did not fire)
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="masonry-block gallery-item card cursor-as-pointer vc_col-lg-6 vc_col-md-6 vc_col-xs-12 -with-overlay -img-scale masonry-brick"
-                            data-gallery-item={1}
-                            data-lazy-item
-                            data-lazy-scope="gallery"
-                            style={{
-                              position: "absolute",
-                              left: "610px",
-                              top: "0px",
-                            }}
-                          >
-                            <div
-                              className="image-holder cursor-plus"
-                              data-cursor-class="cursor-link"
-                            >
-                              <Image
-                                className="gimg hidden-image"
-                                 style={{
-                                        borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
-                                        clip: "rect(0px,1180px,673.719px,590px )",
-                                      }}
-                                      src={
-                                        proyect.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
- width={1200}
-                                      height={684}
-                                      blurDataURL={
-                                        proyect?.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                      alt=""
-                                      objectFit="fill"
-                              />
-                              <div className="overlay-details -fade-up">
-                                <div className="heading">
-                                  <h5 className="title">
-                                    Sistema de diseño único
-                                  </h5>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="card-details">
-                              <div className="heading">
-                                <h5 className="title">
-                                  Sistema de diseño único
-                                </h5>
-                                <p className="caption -unspace -small-t">
-                                  ƒ/5.6 • 135.0 mm • 1/200 (640) • Flash (off,
-                                  did not fire)
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="masonry-block gallery-item card cursor-as-pointer vc_col-lg-6 vc_col-md-6 vc_col-xs-12 -with-overlay -img-scale masonry-brick"
-                            data-gallery-item={2}
-                            data-lazy-item
-                            data-lazy-scope="gallery"
-                            style={{
-                              position: "absolute",
-                              left: "0px",
-                              top: "710.453px",
-                            }}
-                          >
-                            <div
-                              className="image-holder cursor-plus"
-                              data-cursor-class="cursor-link"
-                            >
-                              <Image
-                                className="gimg hidden-image"
-                                style={{
-                                  borderRadius: "12px",
-                                  border: `1px solid ${
-                                    !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                  }`,
-                                  clip: "rect(0px,1180px,673.719px,590px )",
-                                }}
-                                src={
-                                  proyect.cover?.file?.url ||
-                                  proyect.cover.external.url
-                                }
-                                blurDataURL={
-                                  proyect?.cover?.file?.url ||
-                                  proyect.cover.external.url
-                                }
- width={1200}
-                                      height={684}
-                                objectFit="fill"
-                                alt="Alt"
-                                
-                              />
-                              <div className="overlay-details -fade-up">
-                                <div className="heading">
-                                  <h5 className="title">
-                                    Sistema de diseño único
-                                  </h5>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="card-details">
-                              <div className="heading">
-                                <h5 className="title">
-                                  Sistema de diseño único
-                                </h5>
-                                <p className="caption -unspace -small-t">
-                                  ƒ/5.6 • 135.0 mm • 1/200 (640) • Flash (off,
-                                  did not fire)
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="masonry-block gallery-item card cursor-as-pointer vc_col-lg-6 vc_col-md-6 vc_col-xs-12 -with-overlay -img-scale masonry-brick"
-                            data-gallery-item={3}
-                            data-lazy-item
-                            data-lazy-scope="gallery"
-                            style={{
-                              position: "absolute",
-                              left: "610px",
-                              top: "403.375px",
-                            }}
-                          >
-                            <div
-                              className="image-holder cursor-plus"
-                              data-cursor-class="cursor-link"
-                            >
-                              <Image
-                                className="gimg hidden-image"
-                                 style={{
-                                        borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
-                                        clip: "rect(0px,1180px,673.719px,590px )",
-                                      }}
-                                      src={
-                                        proyect.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                      blurDataURL={
-                                        proyect?.cover?.file?.url ||
-                                        proyect.cover.external.url
-                                      }
-                                 width={1200}
-                                      height={684}
-                                      objectFit="fill"
-                                alt="Alt"
-                              />
-                              <div className="overlay-details -fade-up">
-                                <div className="heading">
-                                  <h5 className="title">Integrá Gráfico</h5>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="card-details">
-                              <div className="heading">
-                                <h5 className="title">Integrá Gráfico</h5>
-                                <p className="caption -unspace -small-t">
-                                  ƒ/5.6 • 135.0 mm • 1/200 (640) • Flash (off,
-                                  did not fire)
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+
                       <div
                         className="ohio-gallery-opened-sc clb-popup clb-gallery-lightbox -with-overlay -img-scale"
                         id="ohio-custom-63d342aedd423"
@@ -761,12 +529,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565106697 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                 
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -782,21 +547,26 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <span className="vc_empty_space_inner" />
                               </div>
+
                               <div
                                 className="ohio-widget compare-wrapper"
                                 id="ohio-custom-63d342aee3824"
                               >
                                 <div className="compare-wrapper compare-horizontal">
                                   <div
-                                    className="compare compare-container"
+                                    className="compare "
                                     data-compare="true"
                                     data-compare-without-overlay="true"
                                     data-compare-before-label="Before"
                                     data-compare-after-label="After"
                                     data-compare-position="0.5"
                                     data-compare-orientation="horizontal"
-                                    style={{ height: "673.719px" }}
+                                    
                                   >
+                                    <ComparisonSlider
+                                defaultValue={50}
+                                itemOne={
+                                  <div className="bg-red-200">
                                     <Image
                                       style={{
                                         borderRadius: "12px",
@@ -804,6 +574,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                           !themeGlobal ? "#DADADA" : "#6E6E6E"
                                         }`,
                                         clip: "rect(0px, 590px, 673.719px, 0px)",
+                                        filter: "grayscale(100%)",
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
@@ -819,10 +590,12 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       sizes="(max-width: 2400px) 100vw, 2400px"
                                       alt="Before"
                                       className="compare-before"
-                                      
                                     />
+                                  </div>
+                                }
+                                itemTwo={
+                                  <div className="bg-blue-200">
                                     <Image
-                                      
                                       width={1200}
                                       height={684}
                                       style={{
@@ -845,17 +618,27 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       className="compare-after"
                                       sizes="(max-width: 2000px) 100vw, 2000px"
                                     />
-                                    <div
-                                      className="compare-handle"
-                                      style={{ left: "590px" }}
-                                    >
-                                      <button className="icon-button">
-                                        <i className="icon" />
-                                      </button>
-                                    </div>
+                                  </div>
+                                }
+                                aspectRatio={16 / 9}
+                                orientation="horizontal"
+                                handle={({ isFocused }) => {
+                                  return (
+                                    
+                                      <div className="compare-handle" >
+                                        <button className="icon-button">
+                                          <i className="icon" />
+                                        </button>
+                                      </div>
+                                      
+                                  );
+                                }}
+                              />
                                   </div>
                                 </div>
                               </div>
+
+                              
                             </div>
                           </div>
                         </div>
@@ -876,13 +659,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 data-vc-full-width-init="true"
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565112734 vc_row-has-fill clb__dark_section"
                 style={{
-                  position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                  position:"relative",
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -1149,13 +928,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 data-vc-full-width-init="true"
                 className="vc_row wpb_row vc_row-fluid vc_custom_1626094955550 vc_row-has-fill clb__light_section"
                 style={{
-                  position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                  position:"relative",
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -1245,531 +1020,66 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 data-vc-full-width-init="true"
                 className="vc_row wpb_row vc_row-fluid vc_custom_1626094950195 vc_row-has-fill clb__light_section"
                 style={{
-                  position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                  position:"relative",
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
-                <div className="wpb_column vc_column_container vc_col-sm-12">
-                  <div className="vc_column-inner">
-                    <div className="wpb_wrapper">
-                      <div className="slider-holder">
-                        <div
-                          className="ohio-widget slider ohio-slider autoheight with-pagination -slider-offset full -nav-inset with-preloader clb-slider visible"
-                          id="ohio-custom-63d342aee858c"
-                          data-ohio-slider='{"loop":true,"navBtn":true,"autoplay":false,"autoplayHoverPause":true,"autoHeight":true,"slidesCount":true,"drag":true,"gap":"40","navContainerClass":"slider-nav","itemsDesktop":"1","itemsTablet":"1","itemsMobile":"1","autoplayTimeout":"5"}'
-                        >
-                          <div
-                            className="clb-slider-outer-stage"
-                            style={{ maxWidth: "1058px", height: "674.484px" }}
-                          >
-                            <div
-                              className="clb-slider-stage"
-                              style={{
-                                transform: "translate(-3660px, 0px)",
-                                transition: "none 0s ease 0s",
-                              }}
-                            >
-                              <div
-                                className="slider-wrap clb-slider-item cloned"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div
-                                className="slider-wrap clb-slider-item cloned"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div
-                                className="slider-wrap clb-slider-item cloned prev-slide"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div
-                                className="slider-wrap clb-slider-item active"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div
-                                className="slider-wrap clb-slider-item next-slide"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div
-                                className="slider-wrap clb-slider-item"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div
-                                className="slider-wrap clb-slider-item cloned"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div
-                                className="slider-wrap clb-slider-item cloned"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div
-                                className="slider-wrap clb-slider-item cloned"
-                                style={{
-                                  minWidth: "1180px",
-                                  marginRight: "40px",
-                                }}
-                              >
-                                <div className="wpb_single_image wpb_content_element vc_align_left">
-                                  <figure className="wpb_wrapper vc_figure">
-                                    <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey">
-                                      <Image
-                                        width={2000}
-                                        height={1143}
-                                        className="vc_single_image-img attachment-full"
-                                        alt=""
-                                        style={{
-                                          borderRadius: "12px",
-                                          border: `1px solid ${
-                                            !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                          }`,
-                                        }}
-                                        src={
-                                          proyect.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        blurDataURL={
-                                          proyect?.cover?.file?.url ||
-                                          proyect.cover.external.url
-                                        }
-                                        objectFit="fill"
-                                        sizes="(max-width: 2000px) 100vw, 2000px"
-                                      />
-                                    </div>
-                                  </figure>
-                                </div>
-                              </div>
-                            </div>
-                            <div />
-                          </div>
-                          <div className="clb-slider-nav-btn">
-                            <div className="prev-btn icon-button" tabIndex={0}>
-                              <i className="icon">
-                                <svg
-                                  className="default"
-                                  width={16}
-                                  height={16}
-                                  viewBox="0 0 16 16"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                </svg>
-                                <svg
-                                  className="minimal"
-                                  width={18}
-                                  height={16}
-                                  viewBox="0 0 18 16"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                  />
-                                  <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                  />
-                                </svg>
-                              </i>
-                            </div>
-                            <div className="next-btn icon-button" tabIndex={0}>
-                              <i className="icon">
-                                <svg
-                                  className="default"
-                                  width={16}
-                                  height={16}
-                                  viewBox="0 0 16 16"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                </svg>
-                                <svg
-                                  className="minimal"
-                                  width={18}
-                                  height={16}
-                                  viewBox="0 0 18 16"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                  />
-                                  <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                  />
-                                </svg>
-                              </i>
-                            </div>
-                          </div>
-                          <div className="clb-slider-count">
-                            <div
-                              className="clb-slider-count-current"
-                              style={{
-                                transform: "translate(0px, -25.5938px)",
-                              }}
-                            >
-                              <div className="clb-slider-count-number">
-                                <span className="clb-slider-pagination-index">
-                                  3
-                                </span>
-                              </div>
-                              <div className="clb-slider-count-number">
-                                <span className="clb-slider-pagination-index">
-                                  1
-                                </span>
-                              </div>
-                              <div className="clb-slider-count-number">
-                                <span className="clb-slider-pagination-index">
-                                  2
-                                </span>
-                              </div>
-                              <div className="clb-slider-count-number">
-                                <span className="clb-slider-pagination-index">
-                                  3
-                                </span>
-                              </div>
-                              <div className="clb-slider-count-number">
-                                <span className="clb-slider-pagination-index">
-                                  1
-                                </span>
-                              </div>
-                            </div>
-                            <div className="clb-slider-count-total">3</div>
-                          </div>
-                        </div>
-                        <svg
-                          className="spinner sk-preloader hidden"
-                          viewBox="0 0 50 50"
-                        >
-                          <circle
-                            className="path"
-                            cx={25}
-                            cy={25}
-                            r={20}
-                            fill="none"
-                            strokeWidth={4}
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        className="vc_empty_space"
-                        style={{ height: "2.2rem" }}
-                      >
-                        <span className="vc_empty_space_inner" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+
+
+ <Slider {...settings}>
+          <div>
+          <figure className="wpb_wrapper vc_figure"> <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey"> <Image width={2000} height={1143} className="vc_single_image-img attachment-full" alt="" style={{ borderRadius: "12px", border: `1px solid ${ !themeGlobal ? "#DADADA" : "#6E6E6E" }`, }} src={ proyect.cover?.file?.url || proyect.cover.external.url } blurDataURL={ proyect?.cover?.file?.url || proyect.cover.external.url } objectFit="fill" sizes="(max-width: 2000px) 100vw, 2000px" /> </div> </figure>
+          </div>
+          <div>
+           <figure className="wpb_wrapper vc_figure"> <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey"> <Image width={2000} height={1143} className="vc_single_image-img attachment-full" alt="" style={{ borderRadius: "12px", border: `1px solid ${ !themeGlobal ? "#DADADA" : "#6E6E6E" }`, }} src={ proyect.cover?.file?.url || proyect.cover.external.url } blurDataURL={ proyect?.cover?.file?.url || proyect.cover.external.url } objectFit="fill" sizes="(max-width: 2000px) 100vw, 2000px" /> </div> </figure>
+          </div>
+          <div>
+                       <figure className="wpb_wrapper vc_figure"> <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey"> <Image width={2000} height={1143} className="vc_single_image-img attachment-full" alt="" style={{ borderRadius: "12px", border: `1px solid ${ !themeGlobal ? "#DADADA" : "#6E6E6E" }`, }} src={ proyect.cover?.file?.url || proyect.cover.external.url } blurDataURL={ proyect?.cover?.file?.url || proyect.cover.external.url } objectFit="fill" sizes="(max-width: 2000px) 100vw, 2000px" /> </div> </figure>
+          </div>
+          <div>
+            
+                       <figure className="wpb_wrapper vc_figure"> <div className="vc_single_image-wrapper vc_box_rounded vc_box_border_grey"> <Image width={2000} height={1143} className="vc_single_image-img attachment-full" alt="" style={{ borderRadius: "12px", border: `1px solid ${ !themeGlobal ? "#DADADA" : "#6E6E6E" }`, }} src={ proyect.cover?.file?.url || proyect.cover.external.url } blurDataURL={ proyect?.cover?.file?.url || proyect.cover.external.url } objectFit="fill" sizes="(max-width: 2000px) 100vw, 2000px" /> </div> </figure>
+          </div>
+        
+        </Slider>
+
+
               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <div className="vc_row-full-width vc_clearfix" />
-              <div
-                data-vc-full-width="true"
-                data-vc-full-width-init="true"
-                data-vc-stretch-content="true"
-                className="vc_row wpb_row vc_row-fluid vc_row-no-padding clb__dark_section"
-                style={{
-                  position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                }}
-              >
-                <div className="wpb_column vc_column_container vc_col-sm-12">
-                  <div className="vc_column-inner">
-                    <div className="wpb_wrapper full-height">
-                      <div
-                        className="ohio-widget parallax"
-                        id="ohio-custom-63d342aeeb3e6"
-                        data-parallax-bg="vertical"
-                        data-parallax-speed="0.9"
-                      >
-                        <div
-                          className="parallax-bg"
-                          style={{
-                            height: "630.094px",
-                            transform: "translate3d(0px, -80.8093px, 0px)",
-                          }}
-                        />
-                        <div className="parallax-content">
-                          <div
-                            className="vc_empty_space"
-                            style={{ height: "70vh" }}
-                          >
-                            <span className="vc_empty_space_inner" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
               <div className="vc_row-full-width vc_clearfix" />
               <div
                 data-vc-full-width="true"
@@ -1777,12 +1087,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565161167 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                         maxWidth: "100vw",
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -1976,12 +1283,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565169892 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                  maxWidth:"100vw",
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-5">
@@ -2123,12 +1427,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565177504 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                  maxWidth:"100vw",
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -2395,12 +1696,10 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565184542 vc_row-has-fill clb__dark_section"
                 style={{
                   position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+                  
+                         maxWidth: "100vw",
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -2585,12 +1884,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 className="vc_row wpb_row vc_row-fluid vc_custom_1627565691232 vc_row-has-fill clb__light_section"
                 style={{
                   position: "relative",
-                  left: "-64.5px",
-                  boxSizing: "border-box",
-                  width: "1349px",
-                  maxWidth: "1349px",
-                  paddingLeft: "64.5px",
-                  paddingRight: "64.5px",
+              
+                  paddingLeft: "10.5px",
+                  paddingRight: "10.5px",
                 }}
               >
                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -2784,7 +2080,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 'url("https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/oh__img7-1920x1233.jpeg")',
             }}
           />
-       
         </div>
         <div className="portfolio-comments clb__light_section">
           <div className="comments-container">
@@ -2931,8 +2226,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
       </div>
     </Container>
   );
-}
-
+};
 
 export async function getStaticPaths() {
   let articles = await useGetProyects();
@@ -2958,7 +2252,7 @@ export async function getStaticProps(context: any) {
     // Passed to the page component as props
     props: {
       content,
-      proyect:article,
+      proyect: article,
       slug,
       proyects: proyects.slice(0, 3),
     },
@@ -2966,5 +2260,4 @@ export async function getStaticProps(context: any) {
   };
 }
 
-
-export default Proyect
+export default Proyect;

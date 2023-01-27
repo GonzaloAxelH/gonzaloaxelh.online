@@ -6,6 +6,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
   const isOpen = true
   return (
     <header
+      style={{maxWidth:"100vw"}}
       id="masthead"
       className="header header-3 both-types -sticky showed "
       data-header-fixed="true"
@@ -944,10 +945,10 @@ const Header = ({ setIsOpenSidebar }: any) => {
                         className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
                       >
                         <Link 
-                          href="/about"
+                          href="/blog"
                           className="menu-link -undash main-menu-link item-title"
                         >
-                          <span>Abut</span>
+                          <span>Blog</span>
                           <div className="has-submenu-icon">
                             <i className="icon menu-plus">
                               <svg
