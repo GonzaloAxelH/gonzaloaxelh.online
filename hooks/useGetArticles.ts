@@ -11,7 +11,7 @@ export async function useGetArticles() {
 }
 
 export async function useGetArticle(slug: string) {
-  const { idPage, article } = await findArticleBySlug(slug);
+  const { idPage, article } = await findArticleBySlug(process.env.NOTION_DATABASE,slug);
   const content = await getArticle(idPage);
   return { content, idPage, article };
 }

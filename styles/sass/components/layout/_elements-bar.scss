@@ -1,11 +1,12 @@
 .elements-bar {
+    
     position: fixed;
     top: 50%;
     min-height: $elements-bar;
 
     @include inline-flex;
     @include flex-just(center);
-
+    
     > li {
         padding: 0;
     }
@@ -15,18 +16,18 @@
         min-height: unset;
         width: 100vh;
     }
-        
+    
     &.left {
         z-index: 4;
         transform-origin: left top;
         transform: rotate(-90deg) translate(-50%, 0);
-
+        
         @include spacer(left);
 
         @include tablet-screen {
-
+            
             // Color switcher
-
+            
             .color-switcher {
                 top: calc(100vw - #{$grid-spacer});
                 right: calc(100vh - #{$grid-spacer} * 2);
@@ -36,16 +37,17 @@
     }
 
     &.right {
+        
         z-index: 3;
         transform-origin: right top;
         transform: rotate(-90deg) translate(50%, -100%);
-
+        
         @include spacer(right);
-
+        
         @include tablet-screen {
-
+            
             // Color switcher
-
+            
             .color-switcher {
                 bottom: calc(#{$grid-spacer});
                 right: calc(100vh - #{$grid-spacer} * 2);

@@ -9,6 +9,7 @@ code,pre {
   background: transparent;
   font-family:'Fira Code', monospace;
 }
+
 .p-h1 {
   font-size: 35px;
 }
@@ -82,15 +83,15 @@ code,pre {
 
 .gradient {
     position: absolute;
-    --size: 10px;
+    --size: 300px;
     --speed: 5s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
     width: var(--size);
     height: var(--size);
-    filter: blur(80px);
+    filter: blur(100px);
     
-    background-image: linear-gradient(rgba(49, 206, 148, 0.85), rgb(80, 46, 212));
+    background-image: linear-gradient(rgba(65, 189, 238, 0.85), rgb(100, 165, 226));
     animation: rotate var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     top: 9rem;
@@ -99,14 +100,14 @@ code,pre {
 
 .gradient2 {
     position: absolute;
-    --size: 10px;
+    --size: 300px;
     --speed: 5s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
     
     width: var(--size);
     height: var(--size);
-    filter: blur(80px);
-    background-image: linear-gradient(rgba(54, 224, 162, 0.85rgb(86, 53, 219)57));
+    filter: blur(100px);
+        background-image: linear-gradient(rgba(39, 118, 209, 0.85), rgb(207, 70, 60));
     animation: rotate2 var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 
@@ -117,17 +118,14 @@ body{
   
 }
 
-@media (min-width: 720px) {
+@media (max-width: 720px) {
     .gradient {
-        --size: 500px;
+        --size: 200px;
     }
         .gradient2 {
-            --size: 500px;
+            --size: 200px;
         }
 }
-
-
-
 
 
 

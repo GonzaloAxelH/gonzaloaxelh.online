@@ -257,15 +257,19 @@ const index = ({ recentArticles }: any) => {
 
                                           <div className="heading title">
                                             <h4 className="title">
-                                              <a
+                                              <Link
                                                 className="-unlink"
-                                                href="/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                                href={`/blog/${slugify(
+                                                  article?.properties?.Name
+                                                    ?.title[0]?.plain_text
+                                                ).toLowerCase()}`}
+                                                
                                               >
                                                 {
                                                   article?.properties?.Name
                                                     ?.title[0]?.plain_text
                                                 }{" "}
-                                              </a>
+                                              </Link>
                                             </h4>
                                           </div>
                                           <div className="category-holder -with-tag">

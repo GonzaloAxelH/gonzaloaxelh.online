@@ -1,8 +1,12 @@
+import Link from 'next/link';
 import React from 'react'
 
 const Sidebar = ({ visible, setCloseSidebar }: any) => {
   return (
-    <div className={`clb-popup hamburger-nav ${visible}`} style={{transition:"all 0.4s"}}>
+    <div
+      className={`clb-popup hamburger-nav ${visible}`}
+      style={{ transition: "all 0.4s" }}
+    >
       <div className="close-bar -right-flex">
         <button
           onClick={() => setCloseSidebar(false)}
@@ -48,194 +52,67 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             id="nav-menu-item-223703-63cc42ab233d5"
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu showed"
           >
-            <a href="#" className="menu-link -undash main-menu-link item-title">
-              <span>Pages</span>
-             
-            </a>
-            <ul className="menu-depth-1 sub-menu">
-              <li
-                id="nav-menu-item-223708-63cc42ab2344c"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/about/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>About</span>
-                </a>
-              </li>
-              <li
-                id="nav-menu-item-223709-63cc42ab234b2"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/contact/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Contact</span>
-                </a>
-              </li>
-              <li
-                id="nav-menu-item-223710-63cc42ab23502"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/adadad/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>404 Page</span>
-                </a>
-              </li>
-              <li
-                id="nav-menu-item-223711-63cc42ab23558"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/demo30/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Coming Soon</span>
-                </a>
-              </li>
-              <li
-                id="nav-menu-item-223712-63cc42ab235a1"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/my-account/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Sing In / Sign Up</span>
-                </a>
-              </li>
-            </ul>
+            <Link
+              href="/"
+              className="menu-link -undash main-menu-link item-title"
+            >
+              <span>Home</span>
+            </Link>
           </li>
           <li
             id="nav-menu-item-223704-63cc42ab2360d"
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu showed"
           >
-            <a href="#" className="menu-link -undash main-menu-link item-title">
+            <Link
+              href="/proyects"
+              className="menu-link -undash main-menu-link item-title"
+            >
               <span>Projects</span>
-              
-            </a>
-            <ul className="menu-depth-1 sub-menu">
-              <li
-                id="nav-menu-item-223713-63cc42ab23666"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/portfolio/minimal-metro/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Grid View</span>
-                </a>
-              </li>
-              <li
-                id="nav-menu-item-223714-63cc42ab236ae"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/portfolio/onepage-with-smooth-scroll/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Slider</span>
-                </a>
-              </li>
-              <li
-                id="nav-menu-item-223715-63cc42ab236f6"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/project/diseno-grafico-para-tu-hermosa-casa/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Single Project</span>
-                </a>
-              </li>
-            </ul>
+            </Link>
           </li>
           <li
             id="nav-menu-item-223705-63cc42ab2374a"
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu showed"
           >
-            <a
-              href="/blog/blog-minimal-metro/"
+            <Link
+              href="/about"
               className="menu-link -undash main-menu-link item-title"
             >
-              <span>Blog</span>
-             
-            </a>
-            <ul className="menu-depth-1 sub-menu">
-              <li
-                id="nav-menu-item-223716-63cc42ab237a7"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/blog/minimal-metro/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Grid View</span>
-                </a>
-              </li>
-              <li
-                id="nav-menu-item-223717-63cc42ab237f1"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/standard/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Single Post</span>
-                </a>
-              </li>
-            </ul>
+              <span>Anout</span>
+            </Link>
           </li>
           <li
             id="nav-menu-item-223706-63cc42ab2385e"
             className="mega-menu-item nav-item menu-item-depth-0 has-submenu showed"
           >
-            <a
-              href="/shop/"
+            <Link
+              href="/contact"
               className="menu-link -undash main-menu-link item-title"
             >
-              <span>Shop</span>
-             
-            </a>
-            <ul className="menu-depth-1 sub-menu">
-              <li
-                id="nav-menu-item-223718-63cc42ab238ba"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/shop/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Grid View</span>
-                </a>
-              </li>
-              <li
-                id="nav-menu-item-223719-63cc42ab23906"
-                className="mega-menu-item sub-nav-item menu-item-depth-1 "
-              >
-                <a
-                  href="/product/gosta-shape-armchair/"
-                  className="menu-link -undash sub-menu-link "
-                >
-                  <span>Single Product</span>
-                </a>
-              </li>
-            </ul>
+              <span>Contact</span>
+            </Link>
           </li>
           <li
             id="nav-menu-item-223707-63cc42ab2395c"
             className="mega-menu-item nav-item menu-item-depth-0 showed"
           >
-            <a
-              href="#"
+            <Link
+              href="/tutorials"
               className="menu-link -undash main-menu-link item-title"
             >
-              <span>Purchase</span>
-            </a>
+              <span>Tutorials</span>
+            </Link>
+          </li>
+          <li
+            id="nav-menu-item-223707-63cc42ab2395c"
+            className="mega-menu-item nav-item menu-item-depth-0 showed"
+          >
+            <Link
+              href="/community"
+              className="menu-link -undash main-menu-link item-title"
+            >
+              <span>Community</span>
+            </Link>
           </li>
         </ul>{" "}
       </div>
@@ -252,30 +129,30 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
           <br /> Ph: +1.831.306.6725{" "}
         </div>
         <div className="details-column social-networks ">
-          <a
+          <Link
             href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink facebook"
           >
             <i className="fab fa-facebook-f" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink behance"
           >
             <i className="fab fa-behance" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="/Gonzalo/"
             target="_blank"
             rel="nofollow"
             className="network -unlink youtube"
           >
             <i className="fab fa-youtube" />
-          </a>{" "}
+          </Link>{" "}
         </div>
       </div>
     </div>

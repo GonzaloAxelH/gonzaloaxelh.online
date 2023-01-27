@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { UIContext } from "@/context/UIContext";
+import React, { useContext, useEffect, useState } from "react";
 
 const ElementsbarLeft = () => {
+  const { setThemeGlobal, themeGlobal } = useContext(UIContext);
   const [theme, setTheme] = useState(true);
   useEffect(() => {
     if (theme) {
@@ -25,7 +27,10 @@ const ElementsbarLeft = () => {
           </div>
         </a>
       </li>
-      <li onClick={() => setTheme(!theme)}>
+      <li onClick={() => {
+        setThemeGlobal(!themeGlobal)
+        setTheme(!theme)
+      }}>
         <div
           className={`color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile ${
             theme ? "dark" : ""

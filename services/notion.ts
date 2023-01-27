@@ -5,10 +5,10 @@ const notion = new Client({
   auth: process.env.NOTION_KEY,
 });
 
-export const getAllArticles = async (query: any = {}) => {
+export const getAllArticles = async (database_id : any=process.env.NOTION_DATABASE,query: any = {}) => {
   const articles: any = [];
   const fullOrPartialPages = await notion.databases.query({
-    database_id: process.env.NOTION_DATABASE || "",
+    database_id: database_id || "",
   });
 
   for (const page of fullOrPartialPages.results) {
@@ -55,8 +55,11 @@ export const getArticle = async (id: string) => {
   return JSON.parse(JSON.stringify(content));
 };
 
-export const findArticleBySlug = async (slug: string) => {
-  const pages = await getAllArticles();
+export const findArticleBySlug = async (
+  database_id: any = process.env.NOTION_DATABASE,
+  slug: string
+) => {
+  const pages = await getAllArticles(database_id,{});
 
   const page = pages.find(
     (page: any) =>

@@ -6,10 +6,11 @@ import { a11yDark as theme } from "react-syntax-highlighter/dist/cjs/styles/hljs
 //@ts-ignore
 
 const style = {
-  borderRadius: "12px",
-  padding: "0.6rem",
+  borderRadius: "0.8em",
+  padding: "0.1rem",
   fontFamily: "'Fira Code', monospace",
   background: "#1b1a1f",
+  border: "1px solid #2C2C2C",
 };
 
 const CodeBlock = ({ code, language, metastring ,caption}: any) => {
@@ -34,7 +35,7 @@ const REMOVED = JSON.parse(JSON.stringify(co[1]  || "['asdad']" ));
         <span
           style={{
             color: "#ebdbb2",
-            padding: "10px",
+            padding: "2px",
             fontWeight: "bold",
           }}
         >
@@ -50,9 +51,17 @@ const REMOVED = JSON.parse(JSON.stringify(co[1]  || "['asdad']" ));
     );
   } else {
     return (
-      <div>
-        <div style={{ paddingTop: 20, display: "flex" }}>
+       <div style={style}>
           <div style={{ flex: 1, width: "100%", flexDirection: "column" }}>
+            <span
+              style={{
+                color: "#ebdbb2",
+                padding: "10px",
+                fontWeight: "bold",
+              }}
+            >
+              {language}
+            </span>{" "}
             <SyntaxHighlighter
               style={theme}
               showLineNumbers
@@ -63,9 +72,11 @@ const REMOVED = JSON.parse(JSON.stringify(co[1]  || "['asdad']" ));
                 if (ADDED.includes(lineNumber)) {
                   style.backgroundColor = "rgba(70,149,74,0.15)";
                   style.borderLeft = "3px solid green";
+                  
                 } else if (REMOVED.includes(lineNumber)) {
                   style.backgroundColor = "rgba(229,83,75,0.15)";
                   style.borderLeft = "3px solid red";
+                  
                 }
                 return { style };
               }}
@@ -74,7 +85,7 @@ const REMOVED = JSON.parse(JSON.stringify(co[1]  || "['asdad']" ));
             </SyntaxHighlighter>
           </div>
         </div>
-      </div>
+
     );  
   }
 };

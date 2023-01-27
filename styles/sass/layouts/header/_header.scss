@@ -1,6 +1,6 @@
 .dark-scheme .header {
 
-    background-color: rgba(0, 0, 0, 0.50) !important;
+    background-color: rgba(32, 33, 36,0.5) !important;
 }
 .light-scheme .header {
 
@@ -8,10 +8,9 @@
 }
 
 .header {
-    
+                            transition: none !important;
     -webkit-backdrop-filter:blur(200px);
     backdrop-filter: blur(200px);
-    
     vertical-align: middle;
     left: 0;
     right: 0;

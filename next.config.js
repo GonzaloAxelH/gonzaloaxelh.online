@@ -10,6 +10,8 @@ const nextConfig = {
       "s3.us-west-2.amazonaws.com",
       "themeforest.img.customer.envatousercontent.com",
       "lh3.googleusercontent.com",
+      "res.cloudinary.com",
+      "s3.us-west-2.amazonaws.com",
     ],
   },
   sassOptions: {

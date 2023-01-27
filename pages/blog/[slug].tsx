@@ -3,10 +3,10 @@ import CommentsBlock from "@/components/CommentsBlock";
 import ContentArticle from "@/components/ContentArticle";
 import RecentPosts from "@/components/RecentPosts";
 import Container from "@/components/hocs/Container";
+import slugify from "slugify";
 
 import { useGetArticle, useGetArticles} from "@/hooks/useGetArticles";
 import React, { useEffect, useState } from "react";
-import slugify from "slugify";
 const BlogSlug = (props: any) => {
   const [renderComments, seRenderComments] = useState(false)
   console.log(props.article)
@@ -83,6 +83,7 @@ const BlogSlug = (props: any) => {
           <div
             className="sticky-nav-thumbnail -fade-up"
             style={{
+
               backgroundImage: `url(${NextPost.cover.external.url})`,
             }}
           />
