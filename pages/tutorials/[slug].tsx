@@ -1,7 +1,9 @@
 import Container from "@/components/hocs/Container";
-import React from "react";
+import { UIContext } from "@/context/UIContext";
+import React, { useContext } from "react";
 
 const Tutorial = () => {
+  const { themeGlobal } = useContext(UIContext);
   return (
     <Container customAddClases="post-template-default single single-post postid-114 single-format-standard wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-1 with-fixed-search with-headline with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded">
       <div
@@ -11,7 +13,7 @@ const Tutorial = () => {
       >
         <div className="-layout2">
           <div className="vc_row">
-            <div className="post-meta -sticky-block">
+            <div className="post-meta  ">
               <div className="page-headline without-cap -left subheader_excluded">
                 <a
                   href="#fullscreen-post/"
@@ -159,327 +161,22 @@ const Tutorial = () => {
                           <div className="entry-content">
                             <figure className="wp-block-image size-full">
                               <img
+                                style={{ borderRadius: "12px" }}
                                 decoding="async"
                                 width={1800}
                                 height={1286}
-                                src="./Booktips_ eight tips for service design with expert users. – Ohio Demo 31_files/oh__demo6__3-min.jpg"
+                                src="/test_bg_tutorial.png"
                                 alt=""
                                 className="wp-image-110"
-                                srcSet="
-                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min-300x214.jpg    300w,
-                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min-1024x732.jpg  1024w,
-                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min-768x549.jpg    768w,
-                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min-1536x1097.jpg 1536w,
-                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min.jpg           1800w
-                          "
                                 sizes="(max-width: 1800px) 100vw, 1800px"
                               />
                             </figure>
-                            <p>
-                              Other pseudo-elements and pseudo-class selectors,
-                              <code>:not()</code> can be chained with other
-                              pseudo-classes and pseudo-elements. For example,
-                              the following will add a “New!” word to list items
-                              that do not have a <code>.old</code> class name,
-                              using the
-                              <a
-                                href="#5Q25j"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                              >
-                                <code>::after</code>
-                              </a>
-                            </p>
-                            <h3>Trivia &amp; Notes</h3>
-                            <p>
-                              The <code>:not()</code> selector is chainable with
-                              more <code>:not()</code> selectors. For example,
-                              <a
-                                href="#5Q25j"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                              >
-                                the following
-                              </a>
-                              will match all <code>article</code>s except the
-                              one with an ID <code>#featured</code>, and then
-                              will filter out the articles with a class name
-                              <code>.tutorial</code>:
-                            </p>
-                            <pre className="wp-block-preformatted">
-                              article:not(#featured):not(.tutorial) {"{"}
-                              {"\n"}
-                              {"    "}/* style the articles that match */{"\n"}
-                              {"}"}
-                            </pre>
+
                             <p>
                               Just like other pseudo-elements and pseudo-class
-                              selectors, <code>:not()</code> can be chained with
-                              other pseudo-classes and pseudo-elements. For
-                              example, the following will add a “New!” word to
-                              list items that do not have a<code>.old</code>{" "}
-                              class name, using the
-                              <a
-                                href="#5Q25j"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                              >
-                                <code>::after</code>
-                              </a>
-                              pseudo-element:
+                              selectors, can be chained with other
+                              pseudo-classes and pseudo-elements. For example.
                             </p>
-                            <pre className="wp-block-preformatted">
-                              li:not(.old)::after {"{"}
-                              {"\n"}
-                              {"    "}content: "New!";{"\n"}
-                              {"    "}color: deepPink;{"\n"}
-                              {"}"}
-                            </pre>
-                            <p>
-                              You can see a live demo in the Live Demo section
-                              below.
-                            </p>
-                            <h3>On the Specificity of Selectors</h3>
-                            <p>
-                              The specificity of the
-                              <code>:not()</code> pseudo-class is the
-                              specificity of its argument. The
-                              <code>:not()</code> pseudo-class does not add to
-                              the selector specificity, unlike other
-                              pseudo-classes.
-                            </p>
-                            <p>
-                              The
-                              <a
-                                href="#5Q25j"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                              >
-                                simple selector
-                              </a>
-                              that <code>:not()</code> takes as an argument can
-                              be any of the following:
-                            </p>
-                            <ul>
-                              <li>
-                                Type selector (e.g <code>p</code>,
-                                <code>span</code>, etc.)
-                              </li>
-                              <li>
-                                Class selector (e.g <code>.element</code>,
-                                <code>.sidebar</code>, etc.)
-                              </li>
-                              <li>
-                                ID selector (e.g <code>#header</code>)
-                              </li>
-                              <li>
-                                Pseudo-class selector (e.g
-                                <code>
-                                  <a
-                                    href="#5Q25j"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                  >
-                                    :first-child
-                                  </a>
-                                </code>
-                                ,
-                                <code>
-                                  <a
-                                    href="#5Q25j"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                  >
-                                    :last-of-type
-                                  </a>
-                                </code>
-                                )
-                              </li>
-                            </ul>
-                            <h3>Reference</h3>
-                            <p>
-                              The argument passed to <code>:not()</code> can
-                              <em>not</em>, however, be a pseudo-
-                              <strong>element</strong>
-                              selector (such as
-                              <a
-                                href="http://tympanus.net/codrops/css_reference/before"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                              >
-                                <code>::before</code>
-                              </a>
-                              and
-                              <a
-                                href="#5Q25j"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                              >
-                                <code>::after</code>
-                              </a>
-                              , among others) or another negation pseudo-class
-                              selector.
-                            </p>
-                            <blockquote className="wp-block-quote">
-                              <p>
-                                Getting practice furnished the where pouring the
-                                of emphasis as return encourage a then that
-                                times, the doing would in object we young been
-                                in the in the to their line helplessly or name
-                                to in of, and all and to more my way and
-                                opinion.
-                              </p>
-                              <p />
-                            </blockquote>
-                            <figure className="wp-block-table">
-                              <table>
-                                <tbody>
-                                  <tr>
-                                    <td>
-                                      <strong>Employee</strong>
-                                    </td>
-                                    <td>
-                                      <strong>Salary</strong>
-                                    </td>
-                                    <td />
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a
-                                        href="#5Q25j"
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                      >
-                                        Martin
-                                      </a>
-                                    </td>
-                                    <td>$1</td>
-                                    <td>
-                                      Because that’s all Steve Job’ needed for a
-                                      salary.
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a
-                                        href="#5Q25j"
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                      >
-                                        John
-                                      </a>
-                                    </td>
-                                    <td>$100K</td>
-                                    <td>For all the blogging he does.</td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a
-                                        href="#5Q25j"
-                                        data-type="URL"
-                                        data-id="#5Q25j"
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                      >
-                                        Robert
-                                      </a>
-                                    </td>
-                                    <td>$100M</td>
-                                    <td>
-                                      Pictures are worth a thousand words,
-                                      right? So Tom x 1,000.
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a
-                                        href="#5Q25j"
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                      >
-                                        Jane
-                                      </a>
-                                    </td>
-                                    <td>$100B</td>
-                                    <td>With hair like that?! Enough said…</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </figure>
-                            <h3>Useful Fallbacks</h3>
-                            <p>
-                              It’s extension live for much place. Road, are, the
-                              which, and handout tones. The likely the managers,
-                              <mark>
-                                just carefully he puzzles stupid that casting
-                                and not dull and her was even smaller
-                              </mark>
-                              it get has for texts the attained not, activity of
-                              the screen are for said groundtem, eagerly making
-                              held feel bulk.
-                            </p>
-                            <p>
-                              Just like other pseudo-elements and pseudo-class
-                              selectors, <code>:not()</code> can be chained with
-                              other pseudo-classes and pseudo-elements. For
-                              example, the following will add a “New!” word to
-                              list items that do not have a<code>.old</code>{" "}
-                              class name, using the
-                              <a
-                                href="#5Q25j"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                              >
-                                <code>::after</code>
-                              </a>
-                              pseudo-element:
-                            </p>
-                            <pre className="wp-block-preformatted">
-                              element:not(.old)::after {"{"}
-                              {"\n"}
-                              {"    "}content: "New!";{"\n"}
-                              {"    "}color: deepPink;{"\n"}
-                              {"}"}
-                              {"   "}
-                            </pre>
-                            <p>
-                              You can see a live demo in the
-                              <a
-                                href="#5Q25j"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                              >
-                                Live Demo
-                              </a>
-                              section below.
-                            </p>
-                          </div>
-                          <div className="entry-footer">
-                            <div className="entry-footer-tags">
-                              <div className="tagcloud">
-                                <span className="tags-caption">
-                                  Tagged with:{" "}
-                                </span>
-                                <a
-                                  href="#demo31/tag/ohio/"
-                                  rel="tag"
-                                >
-                                  Ohio
-                                </a>
-                                <a
-                                  href="#demo31/tag/theme/"
-                                  rel="tag"
-                                >
-                                  Theme
-                                </a>
-                                <a
-                                  href="#demo31/tag/wordpress/"
-                                  rel="tag"
-                                >
-                                  WordPress
-                                </a>
-                              </div>
-                            </div>
                           </div>
                         </article>
                       </div>
@@ -490,6 +187,335 @@ const Tutorial = () => {
             </div>
           </div>
         </div>
+
+        <div className="-layout2">
+          <div className="vc_row ">
+            <div className="">
+              <div className="post-content" style={{ padding:"0 7% 0 7%",width:"100%" }}>
+                <div className="page-content">
+                  <div id="primary" className="content-area">
+                    <main id="main" className="site-main page-offset-bottom">
+                      <div className="vc_row">
+                        <div className="vc_col-lg-12">
+                          <article
+                            id="post-114"
+                            className="post-114 post type-post status-publish format-standard has-post-thumbnail hentry category-case-study category-perspectives tag-ohio tag-theme tag-wordpress"
+                          >
+                            <div className="entry-content">
+                              <p>
+                                Other pseudo-elements and pseudo-class
+                                selectors,
+                                <code>:not()</code> can be chained with other
+                                pseudo-classes and pseudo-elements. For example,
+                                the following will add a “New!” word to list
+                                items that do not have a <code>.old</code> class
+                                name, using the
+                                <a
+                                  href="#5Q25j"
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  <code>::after</code>
+                                </a>
+                              </p>
+                              <h3>Trivia &amp; Notes</h3>
+                              <p>
+                                The <code>:not()</code> selector is chainable
+                                with more <code>:not()</code> selectors. For
+                                example,
+                                <a
+                                  href="#5Q25j"
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  the following
+                                </a>
+                                will match all <code>article</code>s except the
+                                one with an ID <code>#featured</code>, and then
+                                will filter out the articles with a class name
+                                <code>.tutorial</code>:
+                              </p>
+                              <pre className="wp-block-preformatted">
+                                article:not(#featured):not(.tutorial) {"{"}
+                                {"\n"}
+                                {"    "}/* style the articles that match */
+                                {"\n"}
+                                {"}"}
+                              </pre>
+                              <p>
+                                Just like other pseudo-elements and pseudo-class
+                                selectors, <code>:not()</code> can be chained
+                                with other pseudo-classes and pseudo-elements.
+                                For example, the following will add a “New!”
+                                word to list items that do not have a
+                                <code>.old</code> class name, using the
+                                <a
+                                  href="#5Q25j"
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  <code>::after</code>
+                                </a>
+                                pseudo-element:
+                              </p>
+                              <pre className="wp-block-preformatted">
+                                li:not(.old)::after {"{"}
+                                {"\n"}
+                                {"    "}content: "New!";{"\n"}
+                                {"    "}color: deepPink;{"\n"}
+                                {"}"}
+                              </pre>
+                              <p>
+                                You can see a live demo in the Live Demo section
+                                below.
+                              </p>
+                              <h3>On the Specificity of Selectors</h3>
+                              <p>
+                                The specificity of the
+                                <code>:not()</code> pseudo-class is the
+                                specificity of its argument. The
+                                <code>:not()</code> pseudo-class does not add to
+                                the selector specificity, unlike other
+                                pseudo-classes.
+                              </p>
+                              <p>
+                                The
+                                <a
+                                  href="#5Q25j"
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  simple selector
+                                </a>
+                                that <code>:not()</code> takes as an argument
+                                can be any of the following:
+                              </p>
+                              <ul>
+                                <li>
+                                  Type selector (e.g <code>p</code>,
+                                  <code>span</code>, etc.)
+                                </li>
+                                <li>
+                                  Class selector (e.g <code>.element</code>,
+                                  <code>.sidebar</code>, etc.)
+                                </li>
+                                <li>
+                                  ID selector (e.g <code>#header</code>)
+                                </li>
+                                <li>
+                                  Pseudo-class selector (e.g
+                                  <code>
+                                    <a
+                                      href="#5Q25j"
+                                      target="_blank"
+                                      rel="noreferrer noopener"
+                                    >
+                                      :first-child
+                                    </a>
+                                  </code>
+                                  ,
+                                  <code>
+                                    <a
+                                      href="#5Q25j"
+                                      target="_blank"
+                                      rel="noreferrer noopener"
+                                    >
+                                      :last-of-type
+                                    </a>
+                                  </code>
+                                  )
+                                </li>
+                              </ul>
+                              <h3>Reference</h3>
+                              <p>
+                                The argument passed to <code>:not()</code> can
+                                <em>not</em>, however, be a pseudo-
+                                <strong>element</strong>
+                                selector (such as
+                                <a
+                                  href="http://tympanus.net/codrops/css_reference/before"
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  <code>::before</code>
+                                </a>
+                                and
+                                <a
+                                  href="#5Q25j"
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  <code>::after</code>
+                                </a>
+                                , among others) or another negation pseudo-class
+                                selector.
+                              </p>
+                              <blockquote className="wp-block-quote">
+                                <p>
+                                  Getting practice furnished the where pouring
+                                  the of emphasis as return encourage a then
+                                  that times, the doing would in object we young
+                                  been in the in the to their line helplessly or
+                                  name to in of, and all and to more my way and
+                                  opinion.
+                                </p>
+                                <p />
+                              </blockquote>
+                              <figure className="wp-block-table">
+                                <table>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <strong>Employee</strong>
+                                      </td>
+                                      <td>
+                                        <strong>Salary</strong>
+                                      </td>
+                                      <td />
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <a
+                                          href="#5Q25j"
+                                          target="_blank"
+                                          rel="noreferrer noopener"
+                                        >
+                                          Martin
+                                        </a>
+                                      </td>
+                                      <td>$1</td>
+                                      <td>
+                                        Because that’s all Steve Job’ needed for
+                                        a salary.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <a
+                                          href="#5Q25j"
+                                          target="_blank"
+                                          rel="noreferrer noopener"
+                                        >
+                                          John
+                                        </a>
+                                      </td>
+                                      <td>$100K</td>
+                                      <td>For all the blogging he does.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <a
+                                          href="#5Q25j"
+                                          data-type="URL"
+                                          data-id="#5Q25j"
+                                          target="_blank"
+                                          rel="noreferrer noopener"
+                                        >
+                                          Robert
+                                        </a>
+                                      </td>
+                                      <td>$100M</td>
+                                      <td>
+                                        Pictures are worth a thousand words,
+                                        right? So Tom x 1,000.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <a
+                                          href="#5Q25j"
+                                          target="_blank"
+                                          rel="noreferrer noopener"
+                                        >
+                                          Jane
+                                        </a>
+                                      </td>
+                                      <td>$100B</td>
+                                      <td>
+                                        With hair like that?! Enough said…
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </figure>
+                              <h3>Useful Fallbacks</h3>
+                              <p>
+                                It’s extension live for much place. Road, are,
+                                the which, and handout tones. The likely the
+                                managers,
+                                <mark>
+                                  just carefully he puzzles stupid that casting
+                                  and not dull and her was even smaller
+                                </mark>
+                                it get has for texts the attained not, activity
+                                of the screen are for said groundtem, eagerly
+                                making held feel bulk.
+                              </p>
+                              <p>
+                                Just like other pseudo-elements and pseudo-class
+                                selectors, <code>:not()</code> can be chained
+                                with other pseudo-classes and pseudo-elements.
+                                For example, the following will add a “New!”
+                                word to list items that do not have a
+                                <code>.old</code> class name, using the
+                                <a
+                                  href="#5Q25j"
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  <code>::after</code>
+                                </a>
+                                pseudo-element:
+                              </p>
+                              <pre className="wp-block-preformatted">
+                                element:not(.old)::after {"{"}
+                                {"\n"}
+                                {"    "}content: "New!";{"\n"}
+                                {"    "}color: deepPink;{"\n"}
+                                {"}"}
+                                {"   "}
+                              </pre>
+                              <p>
+                                You can see a live demo in the
+                                <a
+                                  href="#5Q25j"
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  Live Demo
+                                </a>
+                                section below.
+                              </p>
+                            </div>
+                            <div className="entry-footer">
+                              <div className="entry-footer-tags">
+                                <div className="tagcloud">
+                                  <span className="tags-caption">
+                                    Tagged with:{" "}
+                                  </span>
+                                  <a href="#demo31/tag/ohio/" rel="tag">
+                                    Ohio
+                                  </a>
+                                  <a href="#demo31/tag/theme/" rel="tag">
+                                    Theme
+                                  </a>
+                                  <a href="#demo31/tag/wordpress/" rel="tag">
+                                    WordPress
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </main>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="author-container">
           <div className="page-container">
             <div className="vc_row">
@@ -512,9 +538,7 @@ const Tutorial = () => {
                   <div className="content">
                     <div className="details">
                       <h6>Colabrio</h6>
-                      <span className="site">
-                        #demo31
-                      </span>
+                      <span className="site">#demo31</span>
                     </div>
                     <div className="description">
                       Digital content wrangler | UX enthusiast | Recovering
@@ -536,7 +560,12 @@ const Tutorial = () => {
                 'url("https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-768x549.jpg")',
             }}
           />
-          <div className="sticky-nav-holder">
+          <div
+            className="sticky-nav-holder"
+            style={{
+              border: `1px solid ${!themeGlobal ? "#DADADA" : "#6E6E6E"}`,
+            }}
+          >
             <div className="sticky-nav-headline">
               <h6 className="title">Next Post</h6>
               <div className="nav-group">

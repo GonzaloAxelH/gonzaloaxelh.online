@@ -22,18 +22,16 @@ export default function Home() {
                 >
                   <div className="entry-content">
                     <section className="wpb-content-wrapper">
-                      <div
-                        className="vc_row wpb_row vc_row-fluid vc_row-o-full-height vc_row-o-columns-stretch vc_row-o-equal-height vc_row-o-content-bottom vc_row-flex"
-                        style={{ minHeight: "100vh" }}
-                      >
-                        <div className="vc-bg-lines page-container -dark">
-                          <div />
-                          <div />
-                          <div />
-                          <div />
-                          <div />
-                        </div>
-                        <div className="wpb_column vc_column_container vc_col-sm-5">
+                      <div className="vc_row wpb_row vc_row-fluid vc_row-o-full-height vc_row-o-columns-stretch vc_row-o-equal-height vc_row-o-content-bottom vc_row-flex">
+                        <div className="vc-bg-lines page-container -dark"></div>
+                        <div
+                          className="wpb_column  vc_col-sm-5"
+                          style={{
+                            display: "flex",
+                            marginTop:"2rem"
+                            
+                          }}
+                        >
                           <div className="vc_column-inner">
                             <div className="wpb_wrapper">
                               <div
@@ -54,14 +52,15 @@ export default function Home() {
                                 data-aos="fade-up"
                               >
                                 <h6 className="title">
-                                  <span>We are proud of </span>
+                                  <span>Hello ,</span>
                                   <br className="vc_hidden-sm" />
-                                  the works we’ve done.{" "}
+                                  I'am Gonzalo Axel.<br></br> Creative fullstack
+                                  developer and
                                 </h6>
                               </div>
                               <div
                                 className="vc_empty_space"
-                                style={{ height: "2vh" }}
+                                
                               >
                                 <span className="vc_empty_space_inner" />
                               </div>
@@ -73,11 +72,11 @@ export default function Home() {
                               >
                                 <h1
                                   className="title"
-                                  style={{ fontSize: "4rem" }}
+                                  style={{ fontSize: "3rem" }}
                                 >
-                                  We’re
                                   <br className="vc_hidden-xs vc_hidden-sm" />{" "}
-                                  design creators.{" "}
+                                  Welcome to the best content for amateur
+                                  programmers.I hope you like it.
                                 </h1>
                               </div>
                               <div
@@ -913,10 +912,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a0518d8be"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -940,10 +936,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a0518e975"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-2-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -967,10 +960,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a0518f1f8"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-4-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -994,10 +984,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a0518fac0"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-6-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -1021,10 +1008,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a051902df"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-8-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -1048,10 +1032,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a05190b6b"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-10-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -1077,10 +1058,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a05191677"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-1-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -1098,10 +1076,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a05191dde"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-3-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -1119,10 +1094,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a051924cb"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-5-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -1140,10 +1112,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a05192c78"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-7-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -1161,10 +1130,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a051933df"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-9-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
@@ -1182,10 +1148,7 @@ export default function Home() {
                                         className="ohio-widget logo -left"
                                         id="ohio-custom-63d3a05193af4"
                                       >
-                                        <a
-                                          className="-unlink"
-                                          href="#demo1/#"
-                                        >
+                                        <a className="-unlink" href="#demo1/#">
                                           <img
                                             src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-11-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"

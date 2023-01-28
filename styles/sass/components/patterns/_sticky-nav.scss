@@ -16,8 +16,9 @@
 	&-holder {
 
 		height: 100%;
+		
+		background-color: $color-grey-lighter;
 
-	background: transparent !important;
 		padding-top: 1rem;
 
 		@include spacer2x(padding-left);
@@ -79,6 +80,7 @@
 		.sticky-nav-holder {
 			padding-top: 2rem;
 			padding-bottom: 2rem;
+			
 		}
 
 		.nav-group {

@@ -1,6 +1,6 @@
 .dark-scheme .header {
 
-    background-color: rgba(32, 33, 36,1) !important;
+
 }
 .light-scheme .header {
 
@@ -9,7 +9,8 @@
 
 .header {
                             transition: none !important;
-
+                            background-color: transparent !important;
+    background-size: cover;
     vertical-align: middle;
     left: 0;
     right: 0;

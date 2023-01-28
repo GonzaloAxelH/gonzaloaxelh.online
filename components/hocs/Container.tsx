@@ -16,7 +16,7 @@ const Container = ({
   children,
   customAddClases = "page-template-default page page-id-20830 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-2 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded",
   title = "Gonzalo Axel",
-  circles=false
+  circles=true
 }: any) => {
   const [sidebar, setSidebar] = useState(false);
   return (

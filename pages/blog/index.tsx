@@ -77,32 +77,57 @@ const index = ({ recentArticles }: any) => {
                 <div className="headline-meta" />
                 <h1 className="title">Blog</h1>
                 <div className="post-meta-holder">
-                   <div className="builder-switcher">
+                  <div
+                    className="builder-switcher"
+                    style={{ display: "flex", flexWrap: "wrap" }}
+                  >
                     <a
+                      style={{ marginBottom: "15px" }}
                       className="active"
                       href="#blog/simple-contained/"
                     >
                       WPBakery
                     </a>
-                    <a href="#blog/simple-contained-elementor/">
+                    <a
+                      style={{ marginBottom: "15px" }}
+                      href="#blog/simple-contained-elementor/"
+                    >
                       Elementor
                     </a>
-<a href="#blog/simple-contained-elementor/">
+                    <a
+                      style={{ marginBottom: "15px" }}
+                      href="#blog/simple-contained-elementor/"
+                    >
                       Elementor
                     </a>
-<a href="#blog/simple-contained-elementor/">
+                    <a
+                      style={{ marginBottom: "15px" }}
+                      href="#blog/simple-contained-elementor/"
+                    >
                       Elementor
                     </a>
-<a href="#blog/simple-contained-elementor/">
+                    <a
+                      style={{ marginBottom: "15px" }}
+                      href="#blog/simple-contained-elementor/"
+                    >
                       Elementor
                     </a>
-<a href="#blog/simple-contained-elementor/">
+                    <a
+                      style={{ marginBottom: "15px" }}
+                      href="#blog/simple-contained-elementor/"
+                    >
                       Elementor
                     </a>
-                    <a href="#blog/simple-contained-elementor/">
+                    <a
+                      style={{ marginBottom: "15px" }}
+                      href="#blog/simple-contained-elementor/"
+                    >
                       Elementor
                     </a>
-                    <a href="#blog/simple-contained-elementor/">
+                    <a
+                      style={{ marginBottom: "15px" }}
+                      href="#blog/simple-contained-elementor/"
+                    >
                       Elementor
                     </a>
                   </div>
@@ -170,7 +195,7 @@ const index = ({ recentArticles }: any) => {
                   <span itemProp="name" className="active">
                     Classic
                   </span>
-                  <meta itemProp="position" content=""/>
+                  <meta itemProp="position" content="" />
                 </li>
               </ol>
             </nav>
@@ -194,10 +219,7 @@ const index = ({ recentArticles }: any) => {
                                 className="ohio-widget blog-posts vc_row ohio-masonry masonry"
                                 id="ohio-custom-63ce677ee22ec"
                                 data-lazy-container="posts"
-                                style={{
-                                  position: "relative",
-                                  
-                                }}
+                                style={{}}
                               >
                                 {recentArticles.map((article: any) => {
                                   return (
@@ -286,7 +308,6 @@ const index = ({ recentArticles }: any) => {
                                                   article?.properties?.Name
                                                     ?.title[0]?.plain_text
                                                 ).toLowerCase()}`}
-                                                
                                               >
                                                 {
                                                   article?.properties?.Name
@@ -313,9 +334,7 @@ const index = ({ recentArticles }: any) => {
                                       </div>
                                     </div>
                                   );
-                                 }) }
-                            
-                                
+                                })}
                               </div>
 
                               <div

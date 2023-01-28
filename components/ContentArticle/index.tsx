@@ -176,6 +176,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
             </div>
           </div>
         </div>
+        
         <div className="page-container">
           <div className="breadcrumb-holder">
             <nav aria-label="breadcrumb">
