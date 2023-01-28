@@ -2,10 +2,11 @@ import React, { useEffect, useRef } from "react";
 import CodeBlock from "./CodeBlock";
 import Text from "./Text";
 import Image from "next/image";
+import ReactDOM from "react-dom";
 const ContentBlock = ({ block }: any) => {
   const { type, id } = block;
   const value = block[type];
- 
+
   switch (type) {
     case "paragraph":
       return (
@@ -34,8 +35,9 @@ const ContentBlock = ({ block }: any) => {
 
     case "numbered_list_item":
     case "bulleted_list_item":
-    
-      return <li className="p-li-list">{value.rich_text[0]?.plain_text || ""}</li>;
+      return (
+        <li className="p-li-list">{value.rich_text[0]?.plain_text || ""}</li>
+      );
     case "to_do":
       return <></>;
     case "toggle":
@@ -44,24 +46,27 @@ const ContentBlock = ({ block }: any) => {
       return <></>;
     case "image":
       const src =
-        value.type === "external" ? value.external?.url : value.file?.url ;
+        value.type === "external" ? value.external?.url : value.file?.url;
       const caption =
         value.caption?.length >= 1 ? value.caption[0]?.plain_text : "";
 
       return (
         <figure
           className="wp-block-image size-full image-holder image-border-inset"
-          style={{ textAlign: "center",position:"relative",height:"400px",borderRadius:"10px" }}
+          style={{
+            textAlign: "center",
+            position: "relative",
+            height: "400px",
+            borderRadius: "10px",
+          }}
         >
           <Image
-          
             className="wp-image-20557"
             quality={100}
             src={src}
             blurDataURL={src}
             objectFit="contain"
             placeholder="blur"
-            
             fill={true}
             alt={
               caption
@@ -86,7 +91,6 @@ const ContentBlock = ({ block }: any) => {
         </figure>
       );
     case "code":
-    
       return (
         <CodeBlock
           language={value.language}
@@ -106,12 +110,25 @@ const ContentBlock = ({ block }: any) => {
         </div>
       );
     case "embed":
-      const codePenEmbedKey = value.url?.slice(value?.url?.lastIndexOf("/") + 1);
-      return <></>;
+      const codePenEmbedKey = value.url.slice(value.url.lastIndexOf("/") + 1);
+      return <Codepen codePenEmbedKey={codePenEmbedKey} url={value.url} />
     case "table_of_contents":
       return <div>TOC</div>;
     case "video":
-      return <></>;
+      return (
+        <div className="relative overflow-hidden" >
+          <iframe
+            style={{border:"none",borderRadius:"8px"}}
+            width="100%"
+            height={400}
+            src={value.external.url}
+            
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="Embedded youtube"
+          />
+        </div>
+      );
     case "quote":
       return <></>;
     case "divider":
@@ -128,3 +145,23 @@ const ContentBlock = ({ block }: any) => {
 
 export default ContentBlock;
 
+
+function Codepen({ url, codePenEmbedKey }:any) {
+  return (
+    <div>
+      <iframe
+        style={{ border: "none", borderRadius: "8px", width: "100%" }}
+        height={400}
+        className="w-full"
+        title="Postage from Bag End"
+        src={`https://codepen.io/gonzaloaxelh/embed/preview/${codePenEmbedKey}?default-tab=result`}
+        loading="lazy"
+        allowFullScreen
+      >
+        See the Pen <a href={url}>Postage from Bag End</a> by Gonzalo Axel
+        (<a href="https://codepen.io/gonzaloaxelh">@gonzaloaxelh</a>) on{" "}
+        <a href="https://codepen.io">CodePen</a>.
+      </iframe>
+    </div>
+  );
+}

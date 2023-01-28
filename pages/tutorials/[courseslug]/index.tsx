@@ -1,8 +1,24 @@
 import Container from "@/components/hocs/Container";
 import { UIContext } from "@/context/UIContext";
-import React, { useContext } from "react";
+import { useGetCurse, useGetCurses } from "@/hooks/useGetCurses";
+import { useGetSectionCurse } from "@/hooks/useGetSectionCurse";
+import { getChildrenDatabase } from "@/services/notion";
+import Link from "next/link";
+import React, { useContext, useEffect } from "react";
+import slugify from "slugify";
 
-const Tutorial = () => {
+const Tutorial = ({ curse,content }: any) => {
+  
+  useEffect(() => {
+    const fetch = async () => {
+      console.log(content[0].id)
+      console.log(content)
+   //await getChildrenDatabase(content[0].id)
+  // await useGetSectionCurse("");
+ }  
+    fetch()
+  },[])
+
   const { themeGlobal } = useContext(UIContext);
   return (
     <Container customAddClases="post-template-default single single-post postid-114 single-format-standard wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-1 with-fixed-search with-headline with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded">
@@ -78,11 +94,10 @@ const Tutorial = () => {
                             Perspectives
                           </a>
                         </div>
-                        <span className="post-meta-estimate">8 min read </span>
+                        <span className="post-meta-estimate">4 hours read </span>
                       </div>
                       <h1 className="title">
-                        Booktips: eight tips for service design with expert
-                        users.
+                        {curse.properties.Name?.title[0]?.plain_text}
                       </h1>
                       <div className="post-meta-holder">
                         <ul className="meta-holder -unlist">
@@ -108,11 +123,11 @@ const Tutorial = () => {
                           </li>
                           <li className="meta-item">
                             <span className="prefix"> 2 comments </span>
-                            <a href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/#comments">
+                            <Link href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/#comments">
                               <span className="date">
                                 Join the Conversation
                               </span>
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -188,370 +203,6 @@ const Tutorial = () => {
           </div>
         </div>
 
-        <div className="-layout2">
-          <div className="vc_row ">
-            <div className="">
-              <div className="post-content" style={{ padding:"0 7% 0 7%",width:"100%" }}>
-                <div className="page-content">
-                  <div id="primary" className="content-area">
-                    <main id="main" className="site-main page-offset-bottom">
-                      <div className="vc_row">
-                        <div className="vc_col-lg-12">
-                          <article
-                            id="post-114"
-                            className="post-114 post type-post status-publish format-standard has-post-thumbnail hentry category-case-study category-perspectives tag-ohio tag-theme tag-wordpress"
-                          >
-                            <div className="entry-content">
-                              <p>
-                                Other pseudo-elements and pseudo-class
-                                selectors,
-                                <code>:not()</code> can be chained with other
-                                pseudo-classes and pseudo-elements. For example,
-                                the following will add a “New!” word to list
-                                items that do not have a <code>.old</code> class
-                                name, using the
-                                <a
-                                  href="#5Q25j"
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  <code>::after</code>
-                                </a>
-                              </p>
-                              <h3>Trivia &amp; Notes</h3>
-                              <p>
-                                The <code>:not()</code> selector is chainable
-                                with more <code>:not()</code> selectors. For
-                                example,
-                                <a
-                                  href="#5Q25j"
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  the following
-                                </a>
-                                will match all <code>article</code>s except the
-                                one with an ID <code>#featured</code>, and then
-                                will filter out the articles with a class name
-                                <code>.tutorial</code>:
-                              </p>
-                              <pre className="wp-block-preformatted">
-                                article:not(#featured):not(.tutorial) {"{"}
-                                {"\n"}
-                                {"    "}/* style the articles that match */
-                                {"\n"}
-                                {"}"}
-                              </pre>
-                              <p>
-                                Just like other pseudo-elements and pseudo-class
-                                selectors, <code>:not()</code> can be chained
-                                with other pseudo-classes and pseudo-elements.
-                                For example, the following will add a “New!”
-                                word to list items that do not have a
-                                <code>.old</code> class name, using the
-                                <a
-                                  href="#5Q25j"
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  <code>::after</code>
-                                </a>
-                                pseudo-element:
-                              </p>
-                              <pre className="wp-block-preformatted">
-                                li:not(.old)::after {"{"}
-                                {"\n"}
-                                {"    "}content: "New!";{"\n"}
-                                {"    "}color: deepPink;{"\n"}
-                                {"}"}
-                              </pre>
-                              <p>
-                                You can see a live demo in the Live Demo section
-                                below.
-                              </p>
-                              <h3>On the Specificity of Selectors</h3>
-                              <p>
-                                The specificity of the
-                                <code>:not()</code> pseudo-class is the
-                                specificity of its argument. The
-                                <code>:not()</code> pseudo-class does not add to
-                                the selector specificity, unlike other
-                                pseudo-classes.
-                              </p>
-                              <p>
-                                The
-                                <a
-                                  href="#5Q25j"
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  simple selector
-                                </a>
-                                that <code>:not()</code> takes as an argument
-                                can be any of the following:
-                              </p>
-                              <ul>
-                                <li>
-                                  Type selector (e.g <code>p</code>,
-                                  <code>span</code>, etc.)
-                                </li>
-                                <li>
-                                  Class selector (e.g <code>.element</code>,
-                                  <code>.sidebar</code>, etc.)
-                                </li>
-                                <li>
-                                  ID selector (e.g <code>#header</code>)
-                                </li>
-                                <li>
-                                  Pseudo-class selector (e.g
-                                  <code>
-                                    <a
-                                      href="#5Q25j"
-                                      target="_blank"
-                                      rel="noreferrer noopener"
-                                    >
-                                      :first-child
-                                    </a>
-                                  </code>
-                                  ,
-                                  <code>
-                                    <a
-                                      href="#5Q25j"
-                                      target="_blank"
-                                      rel="noreferrer noopener"
-                                    >
-                                      :last-of-type
-                                    </a>
-                                  </code>
-                                  )
-                                </li>
-                              </ul>
-                              <h3>Reference</h3>
-                              <p>
-                                The argument passed to <code>:not()</code> can
-                                <em>not</em>, however, be a pseudo-
-                                <strong>element</strong>
-                                selector (such as
-                                <a
-                                  href="http://tympanus.net/codrops/css_reference/before"
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  <code>::before</code>
-                                </a>
-                                and
-                                <a
-                                  href="#5Q25j"
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  <code>::after</code>
-                                </a>
-                                , among others) or another negation pseudo-class
-                                selector.
-                              </p>
-                              <blockquote className="wp-block-quote">
-                                <p>
-                                  Getting practice furnished the where pouring
-                                  the of emphasis as return encourage a then
-                                  that times, the doing would in object we young
-                                  been in the in the to their line helplessly or
-                                  name to in of, and all and to more my way and
-                                  opinion.
-                                </p>
-                                <p />
-                              </blockquote>
-                              <figure className="wp-block-table">
-                                <table>
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <strong>Employee</strong>
-                                      </td>
-                                      <td>
-                                        <strong>Salary</strong>
-                                      </td>
-                                      <td />
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <a
-                                          href="#5Q25j"
-                                          target="_blank"
-                                          rel="noreferrer noopener"
-                                        >
-                                          Martin
-                                        </a>
-                                      </td>
-                                      <td>$1</td>
-                                      <td>
-                                        Because that’s all Steve Job’ needed for
-                                        a salary.
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <a
-                                          href="#5Q25j"
-                                          target="_blank"
-                                          rel="noreferrer noopener"
-                                        >
-                                          John
-                                        </a>
-                                      </td>
-                                      <td>$100K</td>
-                                      <td>For all the blogging he does.</td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <a
-                                          href="#5Q25j"
-                                          data-type="URL"
-                                          data-id="#5Q25j"
-                                          target="_blank"
-                                          rel="noreferrer noopener"
-                                        >
-                                          Robert
-                                        </a>
-                                      </td>
-                                      <td>$100M</td>
-                                      <td>
-                                        Pictures are worth a thousand words,
-                                        right? So Tom x 1,000.
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <a
-                                          href="#5Q25j"
-                                          target="_blank"
-                                          rel="noreferrer noopener"
-                                        >
-                                          Jane
-                                        </a>
-                                      </td>
-                                      <td>$100B</td>
-                                      <td>
-                                        With hair like that?! Enough said…
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </figure>
-                              <h3>Useful Fallbacks</h3>
-                              <p>
-                                It’s extension live for much place. Road, are,
-                                the which, and handout tones. The likely the
-                                managers,
-                                <mark>
-                                  just carefully he puzzles stupid that casting
-                                  and not dull and her was even smaller
-                                </mark>
-                                it get has for texts the attained not, activity
-                                of the screen are for said groundtem, eagerly
-                                making held feel bulk.
-                              </p>
-                              <p>
-                                Just like other pseudo-elements and pseudo-class
-                                selectors, <code>:not()</code> can be chained
-                                with other pseudo-classes and pseudo-elements.
-                                For example, the following will add a “New!”
-                                word to list items that do not have a
-                                <code>.old</code> class name, using the
-                                <a
-                                  href="#5Q25j"
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  <code>::after</code>
-                                </a>
-                                pseudo-element:
-                              </p>
-                              <pre className="wp-block-preformatted">
-                                element:not(.old)::after {"{"}
-                                {"\n"}
-                                {"    "}content: "New!";{"\n"}
-                                {"    "}color: deepPink;{"\n"}
-                                {"}"}
-                                {"   "}
-                              </pre>
-                              <p>
-                                You can see a live demo in the
-                                <a
-                                  href="#5Q25j"
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  Live Demo
-                                </a>
-                                section below.
-                              </p>
-                            </div>
-                            <div className="entry-footer">
-                              <div className="entry-footer-tags">
-                                <div className="tagcloud">
-                                  <span className="tags-caption">
-                                    Tagged with:{" "}
-                                  </span>
-                                  <a href="#demo31/tag/ohio/" rel="tag">
-                                    Ohio
-                                  </a>
-                                  <a href="#demo31/tag/theme/" rel="tag">
-                                    Theme
-                                  </a>
-                                  <a href="#demo31/tag/wordpress/" rel="tag">
-                                    WordPress
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
-                    </main>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="author-container">
-          <div className="page-container">
-            <div className="vc_row">
-              <div className="vc_col-md-12">
-                <div className="widget widget_ohio_widget_about_author">
-                  <div className="avatar -large">
-                    <img
-                      alt="Colabrio"
-                      src="./Booktips_ eight tips for service design with expert users. – Ohio Demo 31_files/172720f4a3c2aa57d5f6c81c3eee2c0f(1).png"
-                      srcSet="
-                  https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=144&d=mm&r=g 2x
-                "
-                      className="avatar avatar-72 photo"
-                      height={72}
-                      width={72}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className="content">
-                    <div className="details">
-                      <h6>Colabrio</h6>
-                      <span className="site">#demo31</span>
-                    </div>
-                    <div className="description">
-                      Digital content wrangler | UX enthusiast | Recovering
-                      educator | Shameless nerd &amp; GIF connoisseur | Hockey
-                      fan | Oxford comma or death.
-                    </div>
-                  </div>
-                  <div className="social-networks -contained -small" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="sticky-nav">
           <div
             className="sticky-nav-thumbnail -fade-up"
@@ -653,6 +304,9 @@ const Tutorial = () => {
           <div className="page-container">
             <h4 className="heading-md title">Recent Posts</h4>
             <div className="vc_row archive-holder">
+              {content.map((section: any) => {
+
+              })}
               <div className="vc_col-lg-4 vc_col-md-6 vc_col-xs-12 grid-item masonry-block">
                 <div
                   className="blog-item card -layout1 -contained -metro"
@@ -734,87 +388,7 @@ const Tutorial = () => {
                   </div>
                 </div>
               </div>
-              <div className="vc_col-lg-4 vc_col-md-6 vc_col-xs-12 grid-item masonry-block">
-                <div
-                  className="blog-item card -layout1 -contained -metro"
-                  data-tilt="true"
-                  data-tilt-perspective={6000}
-                >
-                  <a
-                    href="#demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
-                    data-cursor-class="cursor-link"
-                  >
-                    <figure className="image-holder">
-                      <img
-                        src="./Booktips_ eight tips for service design with expert users. – Ohio Demo 31_files/oh__demo6__3a-min-1024x732.jpg"
-                        srcSet="
-                    https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-300x214.jpg    300w,
-                    https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-1024x732.jpg  1024w,
-                    https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-768x549.jpg    768w,
-                    https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-1536x1097.jpg 1536w,
-                    https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min.jpg           1800w
-                  "
-                        sizes="(max-width: 1024px) 100vw, 1024px"
-                        alt=""
-                      />
-                      <div className="overlay-details -fade-up">
-                        <ul className="meta-holder -unlist">
-                          <li className="meta-item">
-                            <div className="avatar -small">
-                              <img
-                                alt="Colabrio"
-                                src="./Booktips_ eight tips for service design with expert users. – Ohio Demo 31_files/172720f4a3c2aa57d5f6c81c3eee2c0f(2).png"
-                                srcSet="
-                            https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                          "
-                                className="avatar avatar-50 photo author-avatar"
-                                height={50}
-                                width={50}
-                                loading="lazy"
-                                decoding="async"
-                              />
-                            </div>
-                          </li>
-                          <li className="meta-item">
-                            <span className="prefix">Posted by</span>
-                            <span className="author">Colabrio</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </figure>
-                  </a>
-                  <div className="card-details -left">
-                    <div className="headline-meta -small-t">
-                      <div className="date">May 3, 2021</div>
-                      <span className="post-meta-estimate">9 min read </span>
-                    </div>
-                    <div className="heading title">
-                      <h4 className="title">
-                        <a
-                          className="-unlink"
-                          href="#demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
-                        >
-                          Creativo Para Jóvenes: the designer’s UI/UX checklist.
-                        </a>
-                      </h4>
-                    </div>
-                    <div className="category-holder -with-tag">
-                      <a
-                        className="tag -unlink"
-                        href="#demo31/category/case-study/"
-                      >
-                        Case Study
-                      </a>
-                      <a
-                        className="tag -unlink"
-                        href="#demo31/category/perspectives/"
-                      >
-                        Perspectives
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -1100,5 +674,53 @@ const Tutorial = () => {
     </Container>
   );
 };
+
+
+
+
+
+
+export async function getStaticPaths(context:any) {
+  let articles = await useGetCurses();
+  let paths: any = [];
+  articles.map((art: any) => {
+    paths.push({
+      params: {
+        courseslug: slugify(art.properties.Name.title[0].plain_text).toLowerCase(),
+      },
+    });
+  });
+  
+  return {
+    paths,
+    fallback: false,
+  };
+}
+//X
+export async function getStaticProps(context: any) {
+  const { courseslug } = context.params;
+  
+  const { content, idPage, article } = await useGetCurse(courseslug);
+  const allCourses = await useGetCurses();
+  return {
+    // Passed to the page component as props
+    props: {
+      content,
+      curse: article,
+      courseslug,
+      curses: allCourses.slice(0, 3),
+    },
+    revalidate: 20,
+  };
+}
+
+
+
+
+
+
+
+
+
 
 export default Tutorial;

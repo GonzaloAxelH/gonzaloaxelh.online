@@ -4,7 +4,8 @@ import Link from "next/link";
 import React from "react";
 import slugify from "slugify";
 import Image from "next/image";
-const index = ({ recentArticles }: any) => {
+import { getTags } from "@/services/notion";
+const index = ({ recentArticles,tags }: any) => {
   
   return (
     <Container customAddClases="">
@@ -81,55 +82,19 @@ const index = ({ recentArticles }: any) => {
                     className="builder-switcher"
                     style={{ display: "flex", flexWrap: "wrap" }}
                   >
-                    <a
+                    {tags.map((tagname: any,index:any) => {
+                      return <a
+                        key={index}
                       style={{ marginBottom: "15px" }}
-                      className="active"
-                      href="#blog/simple-contained/"
+                      
+                      className="active_"
+                      href="#"
                     >
-                      WPBakery
+                      {tagname}
                     </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
+
+                    })}
+                                        
                   </div>
                 </div>
               </div>
@@ -415,109 +380,15 @@ const index = ({ recentArticles }: any) => {
 
 export async function getStaticProps(context: any) {
   const recentArticles = await useGetArticles();
+  const tags = getTags(recentArticles)
   return {
     // Passed to the page component as props
     props: {
       recentArticles: recentArticles,
+      tags
     },
     revalidate: 20,
   };
 }
 
 export default index;
-/*
- {
-   recentArticles.map((article: any) => {
-     return (
-       <div
-         className=" vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
-         data-lazy-item
-         data-lazy-scope="posts"
-       >
-         <div className="blog-item card -layout1 ">
-           <Link
-             href={`/blog/${slugify(
-               article?.properties?.Name?.title[0]?.plain_text
-             ).toLowerCase()}`}
-             data-cursor-class="cursor-link"
-           >
-             <figure
-               className="image-holder"
-               style={{
-                 height: "390px",
-                 position: "relative",
-               }}
-             >
-               <Image
-                 src={article?.cover?.external?.url}
-                 style={{}}
-                 sizes="(max-width: 882px) 100vw, 882px"
-                 fill
-                 alt="d"
-               />
-               <div className="overlay-details -fade-up">
-                 <ul className="meta-holder -unlist">
-                   <li className="meta-item">
-                     <div className="avatar -small">
-                       <Image
-                         alt="Gonzalo"
-                         src={
-                           "https://lh3.googleusercontent.com/ogw/AAEL6sjZywJSQ0Me8PR1WWUqFVhrUdXQtT1jFD6GOB73=s32-c-mo"
-                         }
-                         className="avatar avatar-50 photo author-avatar"
-                         height={50}
-                         width={50}
-                         loading="lazy"
-                         decoding="async"
-                       />
-                     </div>
-                   </li>
-                   <li className="meta-item">
-                     <span className="prefix">Posted by</span>
-                     <span className="author">Gonzalo Axel</span>
-                   </li>
-                 </ul>
-               </div>
-             </figure>
-           </Link>
-           <div className="card-details -left">
-             <div className="headline-meta -small-t">
-               <div className="date">
-                 {new Date(article.created_time).toLocaleDateString("es-PE", {
-                   year: "numeric",
-                   month: "long",
-                   day: "numeric",
-                 })}
-               </div>
-               <span className="post-meta-estimate">
-                 {article.properties.Category.select.name}
-               </span>
-             </div>
-             <div className="heading title">
-               <h4 className="title">
-                 <Link
-                   className="-unlink"
-                   href={`/blog/${slugify(
-                     article?.properties?.Name?.title[0]?.plain_text
-                   ).toLowerCase()}`}
-                 >
-                   {article?.properties?.Name?.title[0]?.plain_text}
-                 </Link>
-               </h4>
-             </div>
-             <div className="category-holder -with-tag">
-               {article?.properties?.Tags.multi_select.map((el: any) => {
-                 return (
-                   <a className="tag -unlink" href="#">
-                     {el.name}
-                   </a>
-                 );
-               })}
-             </div>
-           </div>
-         </div>
-       </div>
-     );
-   });
- }
- */

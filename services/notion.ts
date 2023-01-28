@@ -1,7 +1,7 @@
 import { Client, isFullPage } from "@notionhq/client";
 import slugify from "slugify";
 
-const notion = new Client({
+export const notion = new Client({
   auth: process.env.NOTION_KEY,
 });
 
@@ -67,3 +67,12 @@ export const findArticleBySlug = async (
   );
   return { idPage: page.id, article: page };
 };
+
+export const getChildrenDatabase = async (blockId:any) => {
+
+  const response = await notion.databases.query({
+    database_id:blockId,
+  })
+  console.log(response)
+  return response
+}
