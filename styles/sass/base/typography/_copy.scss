@@ -72,8 +72,8 @@ pre {
 
 		& + pre {
 			margin-top: 0;
-			background-color: rgba($color-warning, 0.15);
-			color: $color-warning;
+			
+			
 
 			@include border-top-radius(0);
 		}
@@ -83,12 +83,9 @@ pre {
 code {
 	font-family: "Fira Code" ,monospace;
 	font-size: $font-size-small;
-	color: $color-grey;
-	background-color: $color-neutral-8;
     padding: 3px 6px;
     word-break: normal;
-    
-    @include border-radius($radius-small);
+    @include border-radius($radius-xl);
 }
 
 caption {
@@ -96,7 +93,7 @@ caption {
 	font-weight: 600;
 }
 
-code,
+
 kbd,
 tt,
 var {
