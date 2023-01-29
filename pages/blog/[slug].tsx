@@ -8,14 +8,8 @@ import slugify from "slugify";
 import { useGetArticle, useGetArticles} from "@/hooks/useGetArticles";
 import React, { useEffect, useState } from "react";
 const BlogSlug = (props: any) => {
-  const [renderComments, seRenderComments] = useState(false)
-  console.log(props.article)
-  useEffect(() => {
   
-    
-    seRenderComments(true)
-    
-  }, [])
+
   const NextPost = props.recentArticles[2];
   return (
     <Container customAddClases="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded">
@@ -38,7 +32,7 @@ const BlogSlug = (props: any) => {
                   <div className="avatar -large">
                     <img
                       alt="Gonzalo"
-                      src="/small_logo.png"
+                      src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
                       className="avatar avatar-72 photo"
                       height={72}
                       width={72}
@@ -58,19 +52,19 @@ const BlogSlug = (props: any) => {
                       href="/"
                       className="network -unlink"
                     >
-                      <i className="fab fa-facebook-f" />
+                      <i aria-hidden className="fab fa-facebook-f" />
                     </a>
                     <a
                       href="/"
                       className="network -unlink"
                     >
-                      <i className="fab fa-instagram" />
+                      <i aria-hidden className="fab fa-instagram" />
                     </a>
                     <a
                       href="/"
                       className="network -unlink"
                     >
-                      <i className="fab fa-pinterest" />
+                      <i aria-hidden className="fab fa-pinterest" />
                     </a>
                   </div>
                 </div>
@@ -95,7 +89,7 @@ const BlogSlug = (props: any) => {
                   className="icon-button prev -unlink"
                   href="/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                 >
-                  <i className="icon">
+                  <i aria-hidden className="icon">
                     <svg
                       className="default"
                       width={16}
@@ -130,7 +124,7 @@ const BlogSlug = (props: any) => {
                   className="icon-button next -unlink"
                   href="/definitive-guide-to-make-a-daily-more-productive-working-flow/"
                 >
-                  <i className="icon">
+                  <i aria-hidden className="icon">
                     <svg
                       className="default"
                       width={16}
@@ -176,7 +170,7 @@ const BlogSlug = (props: any) => {
 
         <CommentsBlock
           idArticle={props.article.id}
-          renderComments={renderComments}
+          
         />
       </div>
     </Container>

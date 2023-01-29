@@ -9,7 +9,7 @@ import slugify from "slugify";
 
 const Proyects = ({ allProyects }: any) => {
   const { themeGlobal }  = useContext(UIContext)
-  console.log(allProyects);
+  
   return (
     <Container customAddClases="page-template-default page page-id-221785 page-child parent-pageid-17702 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation  with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded">
       <div
@@ -17,9 +17,9 @@ const Proyects = ({ allProyects }: any) => {
         className="site-content"
         data-mobile-menu-resolution={768}
       >
-        <div className="page-headline without-cap -center subheader_excluded headline-with-parallax">
+        <div className="page-headline without-cap -center subheader_excluded headline-with-parallax" >
           <a
-            href="#"
+            href="##"
             className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
           >
             <button
@@ -87,8 +87,8 @@ const Proyects = ({ allProyects }: any) => {
             </div>
           </div>
         </div>
-        <div className="page-container top-offset bottom-offset">
-          <div id="primary" className="content-area">
+        <div className="page-container top-offset bottom-offset" >
+          <div id="primary" className="content-area" >
             <div className="page-content">
               <main id="main" className="site-main">
                 <article
@@ -116,7 +116,7 @@ const Proyects = ({ allProyects }: any) => {
                                     <li>
                                       <a
                                         className="active"
-                                        href="#portfolio/sticky-metro/#all"
+                                        href="##portfolio/sticky-metro/#all"
                                         data-isotope-filter="*"
                                         data-category-count={10}
                                       >
@@ -127,7 +127,7 @@ const Proyects = ({ allProyects }: any) => {
                                     <li>
                                       /
                                       <a
-                                        href="#portfolio/sticky-metro/#apps"
+                                        href="##portfolio/sticky-metro/#apps"
                                         data-isotope-filter=".ohio-filter-project-123ae12c4c011e4cddeae3371b08bac6"
                                         data-category-count={3}
                                       >
@@ -138,7 +138,7 @@ const Proyects = ({ allProyects }: any) => {
                                     <li>
                                       /
                                       <a
-                                        href="#portfolio/sticky-metro/#branding"
+                                        href="##portfolio/sticky-metro/#branding"
                                         data-isotope-filter=".ohio-filter-project-5d845f00a32d05fb32beff8daf817d62"
                                         data-category-count={2}
                                       >
@@ -149,7 +149,7 @@ const Proyects = ({ allProyects }: any) => {
                                     <li>
                                       /
                                       <a
-                                        href="#portfolio/sticky-metro/#creative"
+                                        href="##portfolio/sticky-metro/#creative"
                                         data-isotope-filter=".ohio-filter-project-6a81d94fbf5dcff590506b4b42e693bd"
                                         data-category-count={2}
                                       >
@@ -160,7 +160,7 @@ const Proyects = ({ allProyects }: any) => {
                                     <li>
                                       /
                                       <a
-                                        href="#portfolio/sticky-metro/#identity"
+                                        href="##portfolio/sticky-metro/#identity"
                                         data-isotope-filter=".ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246"
                                         data-category-count={7}
                                       >
@@ -171,7 +171,7 @@ const Proyects = ({ allProyects }: any) => {
                                     <li>
                                       /
                                       <a
-                                        href="#portfolio/sticky-metro/#mockup"
+                                        href="##portfolio/sticky-metro/#mockup"
                                         data-isotope-filter=".ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                         data-category-count={3}
                                       >
@@ -191,9 +191,10 @@ const Proyects = ({ allProyects }: any) => {
                                     
                                   }}
                                 >
-                                  {allProyects.map((pro:any) => {
+                                  {allProyects.map((pro:any,index:any) => {
                                     return (
                                       <div
+                                        key={index}
                                         className="portfolio-item-wrap masonry-block grid-item vc_col-lg-12 vc_col-md-12 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                         data-lazy-item
                                         data-lazy-scope="projects"
@@ -253,12 +254,12 @@ const Proyects = ({ allProyects }: any) => {
                                               <div className="show-project">
                                                 <div className="category-holder">
                                                   <span className="category">
-                                                    <a href="#portfolio-category/identity/">
+                                                    <a href="##portfolio-category/identity/">
                                                       Identity
                                                     </a>
                                                   </span>
                                                   <span className="category">
-                                                    <a href="#portfolio-category/mockup/">
+                                                    <a href="##portfolio-category/mockup/">
                                                       Mockup
                                                     </a>
                                                   </span>
@@ -300,7 +301,7 @@ const Proyects = ({ allProyects }: any) => {
                                   <ul className="pagination -small -unlist">
                                     <li className="page-item">
                                       <a
-                                        href="#portfolio/sticky-metro/"
+                                        href="##portfolio/sticky-metro/"
                                         className="page-link button -unlink -pagination"
                                       >
                                         1
@@ -308,7 +309,7 @@ const Proyects = ({ allProyects }: any) => {
                                     </li>
                                     <li className="page-item">
                                       <a
-                                        href="#portfolio/sticky-metro/page/2/"
+                                        href="##portfolio/sticky-metro/page/2/"
                                         className="page-link button -unlink -pagination -flat"
                                       >
                                         2
@@ -316,7 +317,7 @@ const Proyects = ({ allProyects }: any) => {
                                     </li>
                                     <li className="page-item">
                                       <a
-                                        href="#portfolio/sticky-metro/page/2/"
+                                        href="##portfolio/sticky-metro/page/2/"
                                         className="page-link button -unlink -pagination -flat"
                                       >
                                         <i className="icon">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const TagsBlog = ({ tags }: any) => {
@@ -8,13 +9,13 @@ const TagsBlog = ({ tags }: any) => {
           <span className="tags-caption">Tagged with: </span>
           {tags.map((tag: any, index: any) => {
             return (
-              <a
+              <Link
                 key={index}
-                href="/tag/blog/"
+                href="#tag"
                 rel="tag"
               >
                 {tag?.name}
-              </a>
+              </Link>
             );
           })}
         </div>

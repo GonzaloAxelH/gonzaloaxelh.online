@@ -3,15 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 const RecentPosts = ({ recentArticles }: any) => {
-  
   return (
     <div className="related-posts">
       <div className="page-container">
         <h4 className="heading-md title">Recent Posts</h4>
         <div className="vc_row archive-holder">
-          {recentArticles.map((article: any) => {
+          {recentArticles.map((article: any, index: any) => {
             return (
-              <div className="vc_col-lg-4 vc_col-md-6 vc_col-xs-12 grid-item masonry-block">
+              <div
+              key={index + 9999999}
+                className="vc_col-lg-4 vc_col-md-6 vc_col-xs-12 grid-item masonry-block"
+              >
                 <div
                   className="blog-item card -layout1 -contained -metro"
                   data-tilt="true"
@@ -92,9 +94,9 @@ const RecentPosts = ({ recentArticles }: any) => {
                       </h4>
                     </div>
                     <div className="category-holder -with-tag">
-                      {article?.properties?.Tags.multi_select.map((el: any) => {
+                      {article?.properties?.Tags.multi_select.map((el: any,index:any) => {
                         return (
-                          <a className="tag -unlink" href="#">
+                          <a key={index} className="tag -unlink" href="#" >
                             {el.name}
                           </a>
                         );

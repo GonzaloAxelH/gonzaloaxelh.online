@@ -151,7 +151,7 @@ const Footer = () => {
                         <input
                           type="hidden"
                           name="_wpcf7_posted_data_hash"
-                          defaultValue=""
+                          
                         />
                       </div>
                       <div className="subscribe-form">
@@ -166,7 +166,7 @@ const Footer = () => {
                               aria-required="true"
                               aria-invalid="false"
                               placeholder="Email address"
-                              defaultValue=""
+                              
                               type="email"
                               name="your-email"
                             />

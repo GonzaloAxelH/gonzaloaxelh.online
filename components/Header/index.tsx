@@ -6,7 +6,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
   return (
     <header
       id="masthead"
-      className="header header-3 both-types -sticky showed "
+      className="header header-3 both-types -sticky showed " style={{maxWidth:"100vw"}}
       data-header-fixed="true"
       data-fixed-initial-offset={150}
     >
@@ -21,6 +21,23 @@ const Header = ({ setIsOpenSidebar }: any) => {
                 aria-expanded="false"
               >
                 <i className="icon" />
+              </button>
+              <button
+                style={{ marginLeft: "1em" }}
+                className="icon-button "
+                aria-controls="site-navigation"
+                aria-expanded="false"
+              >
+                <img
+                  alt="Colabrio"
+                  src="/small_logo.png"
+                  className=" "
+                  height={50}
+                  width={50}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ transform: "scale(0.8)" }}
+                ></img>
               </button>
             </div>
             <div className="mobile-hamburger -left">
@@ -38,12 +55,11 @@ const Header = ({ setIsOpenSidebar }: any) => {
                 href="/"
                 rel="home"
               >
-                <div className="logo">
-                  
-                </div>
+                <div className="logo"></div>
               </Link>
             </div>
           </div>
+
           <div className="right-part right">
             <nav
               id="site-navigation"
@@ -252,34 +268,30 @@ const Header = ({ setIsOpenSidebar }: any) => {
                   <div className="copyright">
                     <p>
                       © 2016-2023 {" - "}
-                      <Link href="#" target="_blank">
+                      <Link href="#d" target="_blank">
                         Gonzalo
                       </Link>
                       . All rights reserved |
-                      <Link target="_blank" href="#">
+                      <Link target="_blank" href="#d">
                         <b>Purchase</b>
                       </Link>
                     </p>
                     <p>
-                      <Link href="#" target="_blank">
+                      <Link href="#d" target="_blank">
                         Security
                       </Link>
                       |
-                      <Link href="#" target="_blank">
+                      <Link href="#sd" target="_blank">
                         Privacy &amp; Cookie Policy
                       </Link>
                       |
-                      <Link href="#" target="_blank">
+                      <Link href="#d" target="_blank">
                         Terms of Service
                       </Link>
                     </p>
                   </div>
                   <select className="lang-dropdown -small">
-                    <option
-                      className="active"
-                      selected={true}
-                      value="/about-ver6/"
-                    >
+                    <option className="active" value="/about-ver6/">
                       Español (PE)
                     </option>
                   </select>
@@ -290,7 +302,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                     <li>—</li>
                     <li>
                       <Link
-                        href="/Gonzalo/"
+                        href="#d"
                         target="_blank"
                         rel="nofollow"
                         className="-undash facebook"
@@ -300,7 +312,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                     </li>
                     <li>
                       <Link
-                        href="/Gonzalo/"
+                        href="#gh"
                         target="_blank"
                         rel="nofollow"
                         className="-undash behance"
@@ -310,7 +322,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                     </li>
                     <li>
                       <Link
-                        href="/Gonzalo/"
+                        href="#sf"
                         target="_blank"
                         rel="nofollow"
                         className="-undash youtube"
@@ -325,11 +337,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
             <ul className="menu-optional -unlist">
               <li className="vc_hidden-xs vc_hidden-sm">
                 <select className="lang-dropdown -small">
-                  <option
-                    className="active"
-                    selected={true}
-                    value="/about-ver6/"
-                  >
+                  <option className="active" value="/about-ver6/">
                     Eng
                   </option>
                 </select>
@@ -337,7 +345,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
               <li className="icon-button-holder">
                 <Link
                   className="icon-button favorites-global wishlist"
-                  href="/wishlist/?wishlist-action=user"
+                  href="#ddd"
                 >
                   <i className="icon">
                     <svg

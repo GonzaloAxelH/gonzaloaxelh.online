@@ -58,7 +58,7 @@
 
 	code,
 	pre {
-		color: $color-neutral;
+		
 	}
 
 	.woocommerce .stars:hover a::before, 
@@ -120,6 +120,10 @@
 	.woo-products .button:not(.-outlined):not(.-text):not(.-flat):not(.-primary):not(:hover),
 	.logo-details {
 		background: $color-black-light;
+	}
+
+	.page-headline::before{
+		height: 0;//edit
 	}
 
 	.clb-slider-pagination {

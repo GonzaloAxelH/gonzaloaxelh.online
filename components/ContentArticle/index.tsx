@@ -1,12 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 import Image from "next/image";
-import AuthorContainer from "../AuthorContainer";
-import NextPost from "../NextPost";
-import RecentPosts from "../RecentPosts";
+
 import TagsBlog from "../TagsBlog";
-import CommentsBlock from "../CommentsBlock";
-import PostMeta from "./PostMeta";
-import BreadcrumbHolder from "../BreadcrumbHolder";
+
 import ContentBlock from "./ContentBlock";
 import { getComments } from "@/services/firebase";
 interface Props {
@@ -41,7 +37,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
             aria-controls="site-navigation"
             aria-expanded="false"
           >
-            <i className="icon">
+            <i aria-hidden className="icon">
               <svg
                 className="default"
                 width={16}
@@ -113,7 +109,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                     <div className="avatar -small">
                       <img
                         alt="Gonzalo"
-                        src="/small_logo.png"
+                        src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
                         className="avatar avatar-96 photo"
                         height={96}
                         width={96}
@@ -157,21 +153,21 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                 target="_blank"
                 className="facebook network"
               >
-                <i className="fab fa-facebook-f" />
+                <i aria-hidden className="fab fa-facebook-f" />
               </a>
               <a
                 href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2F%2Fstandard%2F&description=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley."
                 target="_blank"
                 className="pinterest network"
               >
-                <i className="fab fa-pinterest" />
+                <i aria-hidden className="fab fa-pinterest" />
               </a>
               <a
                 href="/intent/tweet?text=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley.,+https%3A%2F%2F%2Fstandard%2F"
                 target="_blank"
                 className="twitter network"
               >
-                <i className="fab fa-twitter" />
+                <i aria-hidden className="fab fa-twitter" />
               </a>
             </div>
           </div>

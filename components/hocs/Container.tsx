@@ -16,12 +16,12 @@ const Container = ({
   children,
   customAddClases = "page-template-default page page-id-20830 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-2 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded",
   title = "Gonzalo Axel",
-  circles=true
+  circles=false
 }: any) => {
   const [sidebar, setSidebar] = useState(false);
   return (
     <div
-      style={{ maxWidth: "100vw" }}
+    
       id="body_next"
       className={`${customAddClases} dark-scheme custom-body`}
       cz-shortcut-listen="true"
@@ -32,14 +32,37 @@ const Container = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/small_logo.png" />
       </Head>
-      <div id="page" className="site">
-       
+      <div id="page" className="site" >
         {circles ? (
           <>
             <div className="gradient2"></div>
             <div className="gradient"></div>
           </>
         ) : null}
+        <section className="background" >
+          <ul className="background-grid">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div className="background-blurs">
+            <div className="blur-1">
+              <span></span>
+            </div>
+            <div className="blur-2">
+              <span></span>
+            </div>
+            <div className="blur-3">
+              <span></span>
+            </div>
+          </div>
+        </section>
+
         <ElementsbarLeft />
         <ElementsbarRight />
         <Header setIsOpenSidebar={(isOpen: boolean) => setSidebar(isOpen)} />

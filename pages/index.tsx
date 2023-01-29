@@ -4,7 +4,7 @@ import HomeSvg from "@/components/svgs/HomeSvg";
 import Link from "next/link";
 import React from "react";
 export default function Home() {
-  // let d = "";
+  
   return (
     <Container customAddClases="home page-template-default page page-id-152208 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded">
       <div
@@ -26,11 +26,7 @@ export default function Home() {
                         <div className="vc-bg-lines page-container -dark"></div>
                         <div
                           className="wpb_column  vc_col-sm-5"
-                          style={{
-                            display: "flex",
-                            marginTop:"2rem"
-                            
-                          }}
+                          style={{paddingTop:"3em"}}
                         >
                           <div className="vc_column-inner">
                             <div className="wpb_wrapper">
@@ -54,8 +50,7 @@ export default function Home() {
                                 <h6 className="title">
                                   <span>Hello ,</span>
                                   <br className="vc_hidden-sm" />
-                                  I'am Gonzalo Axel.<br></br> Creative fullstack
-                                  developer and
+                                  I'am Gonzalo Axel.<br></br> 
                                 </h6>
                               </div>
                               <div
@@ -72,11 +67,10 @@ export default function Home() {
                               >
                                 <h1
                                   className="title"
-                                  style={{ fontSize: "3rem" }}
+                                  
                                 >
                                   <br className="vc_hidden-xs vc_hidden-sm" />{" "}
-                                  Welcome to the best content for amateur
-                                  programmers.I hope you like it.
+                                  Descubre soluciones y tendencias en el mundo de la programación.
                                 </h1>
                               </div>
                               <div
@@ -93,7 +87,7 @@ export default function Home() {
                                   data-aos="fade-up"
                                   data-aos-delay={300}
                                 >
-                                  More Projects
+                                  Explore my web site
                                 </a>
                               </div>
                               <div
@@ -405,7 +399,7 @@ export default function Home() {
                                     className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
                                     data-lazy-item
                                     data-lazy-scope="projects"
-                                    style={{}}
+                                    
                                   >
                                     <div
                                       className="portfolio-item card -layout2 -img-scale"
@@ -600,7 +594,7 @@ export default function Home() {
                                     className="portfolio-item-wrap masonry-block grid-item vc_col-lg-8 vc_col-md-8 vc_col-xs-12 double-width ohio-filter-project-123ae12c4c011e4cddeae3371b08bac6 ohio-filter-project-f5a27e0cf01635b6d1350ab621aabe25"
                                     data-lazy-item
                                     data-lazy-scope="projects"
-                                    style={{}}
+                                    
                                   >
                                     <div
                                       className="portfolio-item card -layout2 -img-scale"
@@ -714,7 +708,7 @@ export default function Home() {
                                     className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-6a81d94fbf5dcff590506b4b42e693bd ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246"
                                     data-lazy-item
                                     data-lazy-scope="projects"
-                                    style={{}}
+                                    
                                   >
                                     <div
                                       className="portfolio-item card -layout2 -img-scale"
@@ -914,7 +908,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -938,7 +932,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-2-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-2-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -962,7 +956,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-4-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-4-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -986,7 +980,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-6-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-6-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -1010,7 +1004,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-8-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-8-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -1034,7 +1028,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-10-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-10-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -1060,7 +1054,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-1-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-1-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -1078,7 +1072,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-3-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-3-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -1096,7 +1090,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-5-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-5-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -1114,7 +1108,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-7-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-7-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -1132,7 +1126,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-9-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-9-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -1150,7 +1144,7 @@ export default function Home() {
                                       >
                                         <a className="-unlink" href="#demo1/#">
                                           <img
-                                            src="./Ohio Stage Demo 1 – WordPress theme demo site_files/LogoSC-11-min.png"
+                                            src="# Stage Demo 1 – WordPress theme demo site_files/LogoSC-11-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />

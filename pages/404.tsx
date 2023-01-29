@@ -1,4 +1,5 @@
 import Container from "@/components/hocs/Container";
+import Link from "next/link";
 import React from "react";
 
 const NotFound = () => {
@@ -10,8 +11,8 @@ const NotFound = () => {
         data-mobile-menu-resolution={768}
       >
         <div className="page-headline without-cap -left subheader_excluded  headline-with-parallax">
-          <a
-            href="/contact-us-ver5/"
+          <Link
+            href="#g"
             className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
           >
             <button
@@ -51,7 +52,7 @@ const NotFound = () => {
               </i>
             </button>
             <span className="caption">Back </span>
-          </a>
+          </Link>
           <div
             className="parallax"
             data-parallax-bg="vertical"

@@ -47,7 +47,7 @@ address {
 pre {
 	font-family: "Fira Code",monospace;
 	font-size: $font-size-extra-small;
-	background-color: $color-neutral-8;
+	
 		
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -81,7 +81,7 @@ pre {
 }
 
 code {
-	font-family: "Fira Code ,monospace";
+	font-family: "Fira Code" ,monospace;
 	font-size: $font-size-small;
 	color: $color-grey;
 	background-color: $color-neutral-8;

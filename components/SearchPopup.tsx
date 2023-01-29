@@ -5,7 +5,7 @@ const SearchPopup = () => {
     <div className="clb-popup search-popup">
       <div className="close-bar">
         <button className="icon-button -light" aria-label="close">
-          <i className="icon">
+          <i aria-hidden className="icon">
             <svg
               className="default"
               width={14}
@@ -52,7 +52,7 @@ const SearchPopup = () => {
               id="woocommerce-product-search-field-0"
               className="search-field"
               placeholder="Search..."
-              defaultValue=""
+              
               name="s"
             />
           </label>
@@ -65,7 +65,7 @@ const SearchPopup = () => {
             className="button -text search search-submit wp-element-button"
             aria-label="search"
           >
-            <i className="icon -right">
+            <i aria-hidden className="icon -right">
               <svg
                 className="default"
                 width={18}

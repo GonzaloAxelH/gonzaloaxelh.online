@@ -30,7 +30,7 @@ const Notification = () => {
           }
           aria-label="close"
         >
-          <i className="icon">
+          <i aria-hidden className="icon">
             <svg
               className="default"
               width={14}

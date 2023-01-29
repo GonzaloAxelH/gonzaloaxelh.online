@@ -580,7 +580,7 @@ const Tutorial = ({ curse,content }: any) => {
                           id="author"
                           name="author"
                           type="text"
-                          defaultValue=""
+                          
                           size={30}
                           maxLength={245}
                           autoComplete="name"
@@ -595,7 +595,7 @@ const Tutorial = ({ curse,content }: any) => {
                           id="email"
                           name="email"
                           type="email"
-                          defaultValue=""
+                          
                           size={30}
                           maxLength={100}
                           aria-describedby="email-notes"
@@ -609,7 +609,7 @@ const Tutorial = ({ curse,content }: any) => {
                           id="url"
                           name="url"
                           type="url"
-                          defaultValue=""
+                          
                           size={30}
                           maxLength={200}
                           autoComplete="url"

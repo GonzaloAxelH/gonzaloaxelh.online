@@ -18,7 +18,7 @@ const NextPost = () => {
               className="icon-button prev -unlink"
               href="/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
             >
-              <i className="icon">
+              <i aria-hidden className="icon">
                 <svg
                   className="default"
                   width={16}
@@ -53,7 +53,7 @@ const NextPost = () => {
               className="icon-button next -unlink"
               href="/definitive-guide-to-make-a-daily-more-productive-working-flow/"
             >
-              <i className="icon">
+              <i aria-hidden className="icon">
                 <svg
                   className="default"
                   width={16}

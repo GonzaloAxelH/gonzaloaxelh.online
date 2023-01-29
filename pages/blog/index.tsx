@@ -5,8 +5,7 @@ import React from "react";
 import slugify from "slugify";
 import Image from "next/image";
 import { getTags } from "@/services/notion";
-const index = ({ recentArticles,tags }: any) => {
-  
+const BlogPage = ({ recentArticles, tags }: any) => {
   return (
     <Container customAddClases="">
       <div
@@ -16,7 +15,7 @@ const index = ({ recentArticles,tags }: any) => {
       >
         <div className="page-headline without-cap -center subheader_excluded  headline-with-parallax">
           <a
-            href="/portfolio/sticky-metro/"
+            href="#/portfolio/sticky-metro/"
             className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
           >
             <button
@@ -24,7 +23,7 @@ const index = ({ recentArticles,tags }: any) => {
               aria-controls="site-navigation"
               aria-expanded="false"
             >
-              <i className="icon">
+              <i className="icon" aria-hidden>
                 <svg
                   className="default"
                   width={16}
@@ -82,19 +81,18 @@ const index = ({ recentArticles,tags }: any) => {
                     className="builder-switcher"
                     style={{ display: "flex", flexWrap: "wrap" }}
                   >
-                    {tags.map((tagname: any,index:any) => {
-                      return <a
-                        key={index}
-                      style={{ marginBottom: "15px" }}
-                      
-                      className="active_"
-                      href="#"
-                    >
-                      {tagname}
-                    </a>
-
+                    {tags.map((tagname: any, index: any) => {
+                      return (
+                        <a
+                          key={index}
+                          style={{ marginBottom: "15px" }}
+                          className="active_"
+                          href="##"
+                        >
+                          {tagname}
+                        </a>
+                      );
                     })}
-                                        
                   </div>
                 </div>
               </div>
@@ -115,7 +113,7 @@ const index = ({ recentArticles,tags }: any) => {
                   itemScope
                   itemType="http://schema.org/ListItem"
                 >
-                  <a itemProp="item" href="/">
+                  <a itemProp="item" href="#/">
                     <span itemProp="name">Home</span>
                   </a>
                   <svg
@@ -136,7 +134,7 @@ const index = ({ recentArticles,tags }: any) => {
                   itemScope
                   itemType="http://schema.org/ListItem"
                 >
-                  <a itemProp="item" href="/blog/">
+                  <a itemProp="item" href="#/blog/">
                     <span itemProp="name">Blog</span>
                   </a>
                   <svg
@@ -186,9 +184,10 @@ const index = ({ recentArticles,tags }: any) => {
                                 data-lazy-container="posts"
                                 style={{}}
                               >
-                                {recentArticles.map((article: any) => {
+                                {recentArticles.map((article: any,index:any) => {
                                   return (
                                     <div
+                                      key={index}
                                       className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item masonry-brick"
                                       data-lazy-item
                                       data-lazy-scope="posts"
@@ -287,7 +286,7 @@ const index = ({ recentArticles,tags }: any) => {
                                                 return (
                                                   <a
                                                     className="tag -unlink"
-                                                    href="#"
+                                                    href="##"
                                                   >
                                                     {el.name}
                                                   </a>
@@ -309,7 +308,7 @@ const index = ({ recentArticles,tags }: any) => {
                                 <ul className="pagination -small -unlist">
                                   <li className="page-item">
                                     <a
-                                      href="/blog/classic/"
+                                      href="#/blog/classic/"
                                       className="page-link button -unlink -pagination"
                                     >
                                       1
@@ -317,7 +316,7 @@ const index = ({ recentArticles,tags }: any) => {
                                   </li>
                                   <li className="page-item">
                                     <a
-                                      href="/blog/classic/page/2/"
+                                      href="#/blog/classic/page/2/"
                                       className="page-link button -unlink -pagination -flat"
                                     >
                                       2
@@ -325,10 +324,10 @@ const index = ({ recentArticles,tags }: any) => {
                                   </li>
                                   <li className="page-item">
                                     <a
-                                      href="/blog/classic/page/2/"
+                                      href="#/blog/classic/page/2/"
                                       className="page-link button -unlink -pagination -flat"
                                     >
-                                      <i className="icon">
+                                      <i className="icon" aria-hidden>
                                         <svg
                                           className="default"
                                           width={16}
@@ -380,15 +379,15 @@ const index = ({ recentArticles,tags }: any) => {
 
 export async function getStaticProps(context: any) {
   const recentArticles = await useGetArticles();
-  const tags = getTags(recentArticles)
+  const tags = getTags(recentArticles);
   return {
     // Passed to the page component as props
     props: {
       recentArticles: recentArticles,
-      tags
+      tags,
     },
     revalidate: 20,
   };
 }
 
-export default index;
+export default BlogPage;

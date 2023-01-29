@@ -14,7 +14,6 @@ const settings = {
 import Image from "next/image";
 import { UIContext } from "@/context/UIContext";
 const Proyect = ({ proyects, proyect, content }: any) => {
-  console.log(proyect);
   let title = proyect.properties.Name.title[0].plain_text;
   let cover = proyect?.cover?.file?.url || proyect.cover.external.url;
   let description = proyect.properties.Description.rich_text[0].plain_text;
@@ -36,14 +35,10 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                     <div className="headline-meta">
                       <span className="category-holder">
                         <span className="category">
-                          <a href="#portfolio-category/branding/">
-                            Branding
-                          </a>
+                          <a href="#portfolio-category/branding/">Branding</a>
                         </span>
                         <span className="category">
-                          <a href="#portfolio-category/identity/">
-                            Identity
-                          </a>
+                          <a href="#portfolio-category/identity/">Identity</a>
                         </span>
                       </span>
                       <span className="date">June 3, 2019</span>
@@ -84,7 +79,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                       href="#5Q25j"
                     >
                       Open Project
-                      <i className="icon -right">
+                      <i aria-hidden className="icon -right">
                         <svg
                           className="default"
                           width={16}
@@ -125,7 +120,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 <div className="wpb_column vc_column_container vc_col-sm-12">
                   <div className="vc_column-inner">
                     <div className="wpb_wrapper">
-                     
                       <div className="vc_empty_space" style={{ height: "4vh" }}>
                         <span className="vc_empty_space_inner" />
                       </div>
@@ -139,7 +133,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <img
                                   src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/4nyY9y6X-LogoSC-min.png"
-                                  
                                   sizes="(max-width: 268px) 100vw, 268px"
                                   alt=""
                                 />
@@ -162,7 +155,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <img
                                   src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/uOUzEYjO-LogoSC-2-min.png"
-                                  
                                   sizes="(max-width: 268px) 100vw, 268px"
                                   alt=""
                                 />
@@ -185,7 +177,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <img
                                   src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/Atru47Oe-LogoSC-6-min.png"
-                                  
                                   sizes="(max-width: 268px) 100vw, 268px"
                                   alt=""
                                 />
@@ -208,7 +199,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <img
                                   src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/VpmdAZwB-LogoSC-8-min.png"
-                                  
                                   sizes="(max-width: 268px) 100vw, 268px"
                                   alt=""
                                 />
@@ -233,7 +223,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <img
                                   src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/sSg7Wq4e-LogoSC-1-min.png"
-                                  
                                   sizes="(max-width: 268px) 100vw, 268px"
                                   alt=""
                                 />
@@ -256,7 +245,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <img
                                   src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/WX6iST7Q-LogoSC-3-min.png"
-                                  
                                   sizes="(max-width: 268px) 100vw, 268px"
                                   alt=""
                                 />
@@ -279,7 +267,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <img
                                   src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/u8m8OmB2-LogoSC-7-min.png"
-                                  
                                   sizes="(max-width: 268px) 100vw, 268px"
                                   alt=""
                                 />
@@ -302,7 +289,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <img
                                   src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/TRVurYif-LogoSC-9-min.png"
-                                  
                                   sizes="(max-width: 268px) 100vw, 268px"
                                   alt=""
                                 />
@@ -321,7 +307,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                   </div>
                 </div>
               </div>
-           
             </section>
 
             <div className="project-gallery">
@@ -367,7 +352,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fohio.clbthemes.com%2Fproject%2Fdiseno-grafico%2F"
                     target="_blank"
                   >
-                    <i className="network fab fa-facebook-f" />
+                    <i aria-hidden className="network fab fa-facebook-f" />
                     <span className="social-text">Facebook</span>
                   </a>
                   <a
@@ -375,7 +360,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                     href="https://twitter.com/intent/tweet?text=Dise%C3%B1o+Gr%C3%A1fico,+https%3A%2F%2Fohio.clbthemes.com%2Fproject%2Fdiseno-grafico%2F"
                     target="_blank"
                   >
-                    <i className="network fab fa-twitter" />
+                    <i aria-hidden className="network fab fa-twitter" />
                     <span className="social-text">Twitter</span>
                   </a>
                   <a
@@ -383,7 +368,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                     href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fohio.clbthemes.com%2Fproject%2Fdiseno-grafico%2F&description=Dise%C3%B1o+Gr%C3%A1fico"
                     target="_blank"
                   >
-                    <i className="network fab fa-pinterest" />
+                    <i aria-hidden className="network fab fa-pinterest" />
                     <span className="social-text">Pinterest</span>
                   </a>
                 </div>
@@ -447,7 +432,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                   id="ohio-custom-63d30e84eb85a"
                                 >
                                   Contact Us
-                                  <i className="icon -right">
+                                  <i aria-hidden className="icon -right">
                                     <svg
                                       className="default"
                                       width={16}
@@ -544,7 +529,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
             aria-controls="site-navigation"
             aria-expanded="false"
           >
-            <i className="icon">
+            <i aria-hidden className="icon">
               <svg
                 className="default"
                 width={16}
@@ -690,7 +675,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                             className="icon-button -light"
                             aria-label="close"
                           >
-                            <i className="icon">
+                            <i aria-hidden className="icon">
                               <svg
                                 className="default"
                                 width={14}
@@ -727,7 +712,9 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                   </div>
                 </div>
               </div>
+
               <div className="vc_row-full-width vc_clearfix" />
+
               <div
                 data-vc-full-width="true"
                 data-vc-full-width-init="true"
@@ -779,8 +766,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                                   ? "#DADADA"
                                                   : "#6E6E6E"
                                               }`,
-                                              clip: "rect(0px, 590px, 673.719px, 0px)",
-                                              filter: "grayscale(100%)",
                                             }}
                                             src={
                                               proyect.cover?.file?.url ||
@@ -811,7 +796,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                                   ? "#DADADA"
                                                   : "#6E6E6E"
                                               }`,
-                                              clip: "rect(0px,1180px,673.719px,590px )",
                                             }}
                                             src={
                                               proyect.cover?.file?.url ||
@@ -834,7 +818,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                         return (
                                           <div className="compare-handle">
                                             <button className="icon-button">
-                                              <i className="icon" />
+                                              <i aria-hidden className="icon" />
                                             </button>
                                           </div>
                                         );
@@ -857,6 +841,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                   </div>
                 </div>
               </div>
+
               <div className="vc_row-full-width vc_clearfix" />
               <div
                 data-vc-full-width="true"
@@ -961,19 +946,19 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                             }}
                           />
                           <li className="tabs-nav-link active undefined">
-                            <i className="icon undefined" />
+                            <i aria-hidden className="icon undefined" />
                             Brand Strategy
                           </li>
                           <li className="tabs-nav-link">
-                            <i className="icon undefined" />
+                            <i aria-hidden className="icon undefined" />
                             User Experience
                           </li>
                           <li className="tabs-nav-link">
-                            <i className="icon undefined" />
+                            <i aria-hidden className="icon undefined" />
                             Web Interface
                           </li>
                           <li className="tabs-nav-link">
-                            <i className="icon undefined" />
+                            <i aria-hidden className="icon undefined" />
                             App Prototyping
                           </li>
                         </ul>
@@ -1126,6 +1111,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                   </div>
                 </div>
               </div>
+
               <div className="vc_row-full-width vc_clearfix" />
               <div
                 data-vc-full-width="true"
@@ -1635,7 +1621,10 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <div className="counter-number title titles-typo -with-increaser">
                                   <div className="icon-group">
-                                    <i className="icon left-icon linea-software-pathfinder-intersect" />
+                                    <i
+                                      aria-hidden
+                                      className="icon left-icon linea-software-pathfinder-intersect"
+                                    />
                                   </div>
                                   <div className="holder">
                                     <span />
@@ -1667,7 +1656,10 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                               >
                                 <div className="counter-number title titles-typo">
                                   <div className="icon-group">
-                                    <i className="icon left-icon linea-software-box-polygon" />
+                                    <i
+                                      aria-hidden
+                                      className="icon left-icon linea-software-box-polygon"
+                                    />
                                   </div>
                                   <div className="holder">
                                     <span />
@@ -2216,7 +2208,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                   id="ohio-custom-63d342af00aad"
                                 >
                                   Get a Quote
-                                  <i className="icon -right">
+                                  <i aria-hidden className="icon -right">
                                     <svg
                                       className="default"
                                       width={16}
@@ -2305,6 +2297,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
             </section>
           </div>
         </div>
+
         <a
           href="#project/diseno-grafico/"
           className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
@@ -2314,7 +2307,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
             aria-controls="site-navigation"
             aria-expanded="false"
           >
-            <i className="icon">
+            <i aria-hidden className="icon">
               <svg
                 className="default"
                 width={16}
@@ -2403,7 +2396,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                             id="author"
                             name="author"
                             type="text"
-                            defaultValue=""
                             size={30}
                             maxLength={245}
                             autoComplete="name"
@@ -2418,7 +2410,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                             id="email"
                             name="email"
                             type="email"
-                            defaultValue=""
                             size={30}
                             maxLength={100}
                             aria-describedby="email-notes"
@@ -2432,7 +2423,6 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                             id="url"
                             name="url"
                             type="url"
-                            defaultValue=""
                             size={30}
                             maxLength={200}
                             autoComplete="url"

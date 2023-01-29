@@ -400,3 +400,233 @@ token svg start here
 .token-svg.token{
   animation:float 5s forwards ease-in-out infinite;
 }
+
+
+/* blur home*/
+.background {
+  
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(10px);
+}
+
+.dark-scheme .background{
+
+  background: rgba(68, 42, 121, 0.08);
+}
+.light-scheme .background{
+
+  background: transparent !important;
+}
+
+.background-grid {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  z-index: 2;
+  position: relative;
+  pointer-events: none;
+}
+
+.dark-scheme .background-grid li {
+
+  border-right: 1px solid rgba(69, 98, 132, 0.06);
+margin: 0;
+  padding: 0;
+  width: 16.66%;
+
+  list-style: none ;
+}
+ .light-scheme  .background-grid li {
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid rgb(21 56 92 / 0.06);
+  width: 16.66%;
+  list-style: none ;
+}
+.background-blurs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  perspective: 800px;
+}
+.background-blurs > [class*="blur"] {
+  animation: rotate 30s linear infinite;
+  transform-origin: top left;
+  perspective: 800px;
+}
+.background-blurs > [class="blur-2"] {
+  animation: rotate-backwards 30s linear infinite;
+}
+.background-blurs > [class="blur-2"] > span {
+  width: 800px !important;
+  height: 800px !important;
+}
+.background-blurs > [class="blur-3"] > span {
+  width: 700px !important;
+  height: 700px !important;
+}
+.background-blurs > [class*="blur"] > span {
+  display: block;
+  width: 500px;
+  background: url(https://envoria.com/img/blurry.png);
+  border-radius: 100%;
+  height: 500px;
+  background-size: cover;
+  margin-left: -125px;
+  margin-top: -125px;
+}
+.dark-scheme .background-blurs > [class*="blur"]::before {
+  content: " ";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: rgba(39, 39, 39, 0.2);
+  animation: bob 60s ease-in-out infinite;
+  position: absolute;
+  z-index: 2;
+  margin: -100px 0 0 -100px;
+  border-radius: 100%;
+
+  animation-delay: 6s !important;
+
+  animation: blur1 10s ease infinite;
+
+}
+.light-scheme .background-blurs > [class*="blur"]::before {
+  content: " ";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: rgb(255 255 255 / 20%);
+  animation: bob 60s ease-in-out infinite;
+  position: absolute;
+  z-index: 2;
+  margin: -100px 0 0 -100px;
+  border-radius: 100%;
+ animation-delay: 6s !important;
+
+  animation: blur2 10s ease infinite;
+
+}
+
+.blur-1 {
+  position: absolute;
+  left: 23%;
+  top: 20%;
+  width: 0px;
+  height: 0px;
+}
+.blur-2 {
+  position: absolute;
+  right: 20%;
+  top: 30%;
+  width: 0px;
+  height: 0px;
+  animation-delay: 1s !important;
+}
+.blur-2::before {
+  display: none !important;
+}
+.blur-3 {
+  position: absolute;
+  right: 35%;
+  top: 63%;
+  width: 0px;
+  height: 0px;
+  animation-delay: 6s !important;
+}
+
+.blur-1 > span {
+  animation: blur1 10s ease infinite;
+}
+.blur-2 > span {
+  animation: blur2 10s ease infinite;
+}
+.blur-3 > span {
+  animation: blur3 10s ease infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-backwards {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes bob {
+  0% {
+    transform: translateX(0em) translateY(0em) translateZ(-8em);
+  }
+  33.33% {
+    transform: translateX(0em) translateY(0em) translateZ(2em);
+  }
+  66.66% {
+    transform: translateX(0em) translateY(0em) translateZ(-8em);
+  }
+}
+@keyframes blur1 {
+  0% {
+    transform: translateX(0em) translateY(0em) translateZ(0em);
+  }
+  33.33% {
+    transform: translateX(0em) translateY(0em) translateZ(15em);
+  }
+  66.66% {
+    transform: translateX(0em) translateY(0em) translateZ(-15em);
+  }
+  100% {
+    transform: translateX(0em) translateY(0em) translateZ(0em);
+  }
+}
+@keyframes blur1 {
+  0% {
+    transform: translateX(0em) translateY(0em) translateZ(0em);
+  }
+  33.33% {
+    transform: translateX(0em) translateY(0em) translateZ(15em);
+  }
+  66.66% {
+    transform: translateX(0em) translateY(0em) translateZ(-15em);
+  }
+  100% {
+    transform: translateX(0em) translateY(0em) translateZ(0em);
+  }
+}
+@keyframes blur1 {
+  0% {
+    transform: translateX(0em) translateY(0em) translateZ(0em);
+  }
+  33.33% {
+    transform: translateX(0em) translateY(0em) translateZ(15em);
+  }
+  66.66% {
+    transform: translateX(0em) translateY(0em) translateZ(-15em);
+  }
+  100% {
+    transform: translateX(0em) translateY(0em) translateZ(0em);
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .background-grid {
+  }
+  .background-grid li {
+    width: 25%;
+  }
+  .background-grid li:nth-child(odd) {
+    display: none;
+  }
+}

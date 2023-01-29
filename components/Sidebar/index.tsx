@@ -13,7 +13,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
           className="icon-button -light"
           aria-label="close"
         >
-          <i className="icon">
+          <i className="icon" aria-hidden>
             <svg
               className="default"
               width={14}
@@ -135,7 +135,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             rel="nofollow"
             className="network -unlink facebook"
           >
-            <i className="fab fa-facebook-f" />
+            <i className="fab fa-facebook-f" aria-hidden />
           </Link>
           <Link
             href="/Gonzalo/"
@@ -143,7 +143,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             rel="nofollow"
             className="network -unlink behance"
           >
-            <i className="fab fa-behance" />
+            <i className="fab fa-behance" aria-hidden />
           </Link>
           <Link
             href="/Gonzalo/"
@@ -151,7 +151,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             rel="nofollow"
             className="network -unlink youtube"
           >
-            <i className="fab fa-youtube" />
+            <i className="fab fa-youtube" aria-hidden />
           </Link>{" "}
         </div>
       </div>
