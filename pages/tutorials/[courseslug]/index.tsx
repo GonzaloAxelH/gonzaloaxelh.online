@@ -691,7 +691,7 @@ export async function getStaticPaths(context:any) {
   articles.map((art: any) => {
     paths.push({
       params: {
-        courseslug: slugify(art.properties.Name.title[0].plain_text).toLowerCase(),
+        courseslug: slugify(art.properties.Name?.title[0]?.plain_text).toLowerCase(),
       },
     });
   });

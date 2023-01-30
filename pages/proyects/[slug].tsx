@@ -15,9 +15,9 @@ import Image from "next/image";
 import { UIContext } from "@/context/UIContext";
 import { PageType } from "@/settings/types";
 const Proyect = ({ proyects, proyect, content }: any) => {
-  let title = proyect.properties.Name.title[0].plain_text;
-  let cover = proyect?.cover?.file?.url || proyect.cover.external.url;
-  let description = proyect.properties.Description.rich_text[0].plain_text;
+  let title = proyect.properties.Name.title[0]?.plain_text;
+  let cover = proyect?.cover?.file?.url || proyect.cover?.external?.url;
+  let description = proyect.properties.Description?.rich_text[0]?.plain_text;
 
   const { themeGlobal } = useContext(UIContext);
   return (
@@ -2506,7 +2506,7 @@ export async function getStaticPaths() {
   articles.map((art: any) => {
     paths.push({
       params: {
-        slug: slugify(art.properties.Name.title[0].plain_text).toLowerCase(),
+        slug: slugify(art.properties.Name?.title[0]?.plain_text).toLowerCase(),
       },
     });
   });
