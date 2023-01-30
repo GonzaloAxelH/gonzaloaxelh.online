@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <Container>
+    <Container customMeta={{title:"About me - Gonzalo Axel"}} >
       <div
         id="content"
         className="site-content"

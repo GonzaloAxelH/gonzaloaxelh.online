@@ -3,7 +3,7 @@ import React from 'react'
 
 const contact = () => {
   return (
-      <Container>
+      <Container customMeta={{title:"Contact me - Gonzalo Axel"}}>
             
     </Container>
   )

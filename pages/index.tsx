@@ -1,7 +1,6 @@
-import ContentBlock from "@/components/ContentArticle";
+
 import Container from "@/components/hocs/Container";
-import HomeSvg from "@/components/svgs/HomeSvg";
-import Link from "next/link";
+
 import React from "react";
 export default function Home() {
   

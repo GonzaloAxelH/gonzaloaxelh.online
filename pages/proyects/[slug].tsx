@@ -13,6 +13,7 @@ const settings = {
 };
 import Image from "next/image";
 import { UIContext } from "@/context/UIContext";
+import { PageType } from "@/settings/types";
 const Proyect = ({ proyects, proyect, content }: any) => {
   let title = proyect.properties.Name.title[0].plain_text;
   let cover = proyect?.cover?.file?.url || proyect.cover.external.url;
@@ -20,7 +21,13 @@ const Proyect = ({ proyects, proyect, content }: any) => {
 
   const { themeGlobal } = useContext(UIContext);
   return (
-    <Container customAddClases="ohio_portfolio-template-default single single-ohio_portfolio postid-19300 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded dark-scheme">
+    <Container customAddClases="ohio_portfolio-template-default single single-ohio_portfolio postid-19300 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded dark-scheme"
+      customMeta={{
+        title, imageUrl: cover, description, type: PageType.PROYECT,
+      
+        date: proyect.created_time,
+      }}
+    >
       <div
         id="content"
         className="site-content"

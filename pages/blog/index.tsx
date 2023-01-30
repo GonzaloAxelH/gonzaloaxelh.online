@@ -7,7 +7,9 @@ import Image from "next/image";
 import { getTags } from "@/services/notion";
 const BlogPage = ({ recentArticles, tags }: any) => {
   return (
-    <Container customAddClases="">
+    <Container
+      customMeta={{title:"Super Blog - Gonzalo Axel"}}
+    >
       <div
         id="content"
         className="site-content"

@@ -3,25 +3,34 @@ import { UIContext } from "@/context/UIContext";
 import { useGetCurse, useGetCurses } from "@/hooks/useGetCurses";
 import { useGetSectionCurse } from "@/hooks/useGetSectionCurse";
 import { getChildrenDatabase } from "@/services/notion";
+import { PageType } from "@/settings/types";
 import Link from "next/link";
 import React, { useContext, useEffect } from "react";
 import slugify from "slugify";
 
-const Tutorial = ({ curse,content }: any) => {
+const Tutorial = ({ curse, content }: any) => {
   
   useEffect(() => {
     const fetch = async () => {
-      console.log(content[0].id)
-      console.log(content)
-   //await getChildrenDatabase(content[0].id)
-  // await useGetSectionCurse("");
- }  
+      
+      console.log(curse)
+      //await getChildrenDatabase(content[0].id)
+      // await useGetSectionCurse("");
+    }
     fetch()
-  },[])
+  }, [])
 
   const { themeGlobal } = useContext(UIContext);
   return (
-    <Container customAddClases="post-template-default single single-post postid-114 single-format-standard wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-1 with-fixed-search with-headline with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded">
+    <Container
+      customMeta={{
+        title: `${curse.properties.Name?.title[0]?.plain_text}`,
+        imageUrl: "/test_bg_tutorial.png",
+        type: PageType.TUTORIAL,
+        date: curse.created_time,
+      }}
+      customAddClases="post-template-default single single-post postid-114 single-format-standard wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-1 with-fixed-search with-headline with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded"
+    >
       <div
         id="content"
         className="site-content"
@@ -94,7 +103,9 @@ const Tutorial = ({ curse,content }: any) => {
                             Perspectives
                           </a>
                         </div>
-                        <span className="post-meta-estimate">4 hours read </span>
+                        <span className="post-meta-estimate">
+                          4 hours read{" "}
+                        </span>
                       </div>
                       <h1 className="title">
                         {curse.properties.Name?.title[0]?.plain_text}
@@ -304,9 +315,7 @@ const Tutorial = ({ curse,content }: any) => {
           <div className="page-container">
             <h4 className="heading-md title">Recent Posts</h4>
             <div className="vc_row archive-holder">
-              {content.map((section: any) => {
-
-              })}
+              {content.map((section: any) => {})}
               <div className="vc_col-lg-4 vc_col-md-6 vc_col-xs-12 grid-item masonry-block">
                 <div
                   className="blog-item card -layout1 -contained -metro"
@@ -388,7 +397,6 @@ const Tutorial = ({ curse,content }: any) => {
                   </div>
                 </div>
               </div>
-             
             </div>
           </div>
         </div>
@@ -580,7 +588,6 @@ const Tutorial = ({ curse,content }: any) => {
                           id="author"
                           name="author"
                           type="text"
-                          
                           size={30}
                           maxLength={245}
                           autoComplete="name"
@@ -595,7 +602,6 @@ const Tutorial = ({ curse,content }: any) => {
                           id="email"
                           name="email"
                           type="email"
-                          
                           size={30}
                           maxLength={100}
                           aria-describedby="email-notes"
@@ -609,7 +615,6 @@ const Tutorial = ({ curse,content }: any) => {
                           id="url"
                           name="url"
                           type="url"
-                          
                           size={30}
                           maxLength={200}
                           autoComplete="url"

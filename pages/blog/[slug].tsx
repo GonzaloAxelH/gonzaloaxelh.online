@@ -7,12 +7,22 @@ import slugify from "slugify";
 
 import { useGetArticle, useGetArticles} from "@/hooks/useGetArticles";
 import React, { useEffect, useState } from "react";
+import { PageType } from "@/settings/types";
 const BlogSlug = (props: any) => {
   
-
+  const title =props.article.properties.Name.title[0].plain_text
+  let cover = props.article?.cover?.file?.url || props.article.cover.external.url;
+  let description = props.article.properties.Summary.rich_text[0].plain_text || "Articulo aun no terminado.Intenta mas tarde.";
   const NextPost = props.recentArticles[2];
   return (
-    <Container customAddClases="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded">
+    <Container customAddClases="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded"
+
+      customMeta={{
+        title: `${title} - Gonzalo Axel`, imageUrl: cover, description, type: PageType.ARTICLE,
+      
+        date: props.article.created_time,
+      }}
+    >
       <div
         id="content"
         className="site-content"

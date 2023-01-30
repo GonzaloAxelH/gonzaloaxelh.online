@@ -11,7 +11,9 @@ const Proyects = ({ allProyects }: any) => {
   const { themeGlobal }  = useContext(UIContext)
   
   return (
-    <Container customAddClases="page-template-default page page-id-221785 page-child parent-pageid-17702 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation  with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded">
+    <Container customAddClases="page-template-default page page-id-221785 page-child parent-pageid-17702 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation  with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded"
+      customMeta={{title:"Proyects - Gonzalo Axel"}}
+    >
       <div
         id="content"
         className="site-content"
