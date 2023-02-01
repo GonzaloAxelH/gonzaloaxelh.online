@@ -58,7 +58,7 @@
 
 	code,
 	pre {
-		
+		color: $color-neutral;
 	}
 
 	.woocommerce .stars:hover a::before, 
@@ -92,11 +92,17 @@
 	.portfolio-item {
 
 		&.-with-slider {
-
+			
 			.overlay::after,
 			.overlay-image::before {
-				background-color: rgba($color-black, .992);
+				background-color: transparent;
+				background-color: rgba($color-black, 0.5);
+				
+				filter: blur(100px) !important;
+				
+				
 			}
+			
 		}
 
 		&.-layout4 {
@@ -113,8 +119,9 @@
 	&,
 	.site-content,
 	.header.-sticky,
-	// #masthead.header:not(.-sticky),
-	.page-headline::before,
+	
+	
+	//.page-headline::before,
 	.coming-soon,
 	.site-footer,
 	.woo-products .button:not(.-outlined):not(.-text):not(.-flat):not(.-primary):not(:hover),
@@ -123,9 +130,9 @@
 	}
 
 	.page-headline::before{
-		height: 0;//edit
+		//edit
+		background-color: transparent;
 	}
-
 	.clb-slider-pagination {
 		background-color: rgba(#000, 0.25);
 
@@ -146,7 +153,7 @@
 	.sticky-product,
 	.select2-dropdown,
 	.header.-mobile .mobile-overlay .holder {
-		background-color: lighten($color-black-light, 1%) ;
+		background-color: lighten($color-black, 4%);
 	}
 
 	.tabs {

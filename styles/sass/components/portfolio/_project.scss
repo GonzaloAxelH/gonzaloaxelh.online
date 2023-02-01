@@ -296,13 +296,14 @@
 		}
 
 		.overlay {
-		    background: linear-gradient(-90deg, rgba($color-black, 0), rgba($color-black, 0.5));
+			
 
 		    @include md-screen {
 
 				width: 50%;
 			}
 		}
+		
 
 		.share-bar {
 

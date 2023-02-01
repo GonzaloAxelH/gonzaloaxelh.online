@@ -36,7 +36,7 @@ const ContentBlock = ({ block }: any) => {
     case "numbered_list_item":
     case "bulleted_list_item":
       return (
-        <li className="p-li-list">{value.rich_text[0]?.plain_text || ""}</li>
+        <li style={{marginLeft:"2em"}} className="p-li-list">{value.rich_text[0]?.plain_text || ""}</li>
       );
     case "to_do":
       return <></>;

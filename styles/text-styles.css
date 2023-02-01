@@ -407,14 +407,14 @@ token svg start here
   overflow: hidden;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   max-width: 100vw;
-  filter: blur(10px);
+  filter: blur(20px);
 }
 
 .dark-scheme .background{
 
-  background: rgba(68, 42, 121, 0.08);
+  background: rgba(20, 13, 34, 0.08);
 }
 .light-scheme .background{
 

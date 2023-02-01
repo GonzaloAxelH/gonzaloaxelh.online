@@ -87,6 +87,12 @@
 			}
 		}
 
+			.overlay-image::before {
+			//edit two
+			
+				background-color: transparent !important;
+				filter: blur(100px) !important;
+			}
 		// Image
 
 		.portfolio-item-image {
@@ -123,6 +129,8 @@
 				width: 100%;
 				height: 100%;
 			}
+			
+			
 		}
 
 		// Headline decoration
@@ -167,8 +175,9 @@
 		.portfolio-item-image {
 
 			@include sm-screen {
-
-				height: 45vh;
+				//edit	
+				height: 100vh !important;
+				
 				position: relative;
 				overflow: hidden;
 
@@ -729,6 +738,7 @@
 
 		.overlay {
 
+
 			&,
 			&-image {
 				background-size: cover;
@@ -736,19 +746,23 @@
 			}
 
 			&-image {
-
+				//edit
+				//
 				.headline-decor {
 					z-index: initial;
 				}
 
+
 				&::before {
 					content: "";
+					
 					position: absolute;
 					top: 0;
 					left: 0;
 					width: 100%;
 					height: 100%;
 					background-color: rgba($color-white, 0.98);
+					
 				}
 			}	
 		}
@@ -772,18 +786,28 @@
 		    left: $grid-spacer;
 
 		    @include md-screen {
+		    	transform: scale(.9);				
+			}
 
-		    	transform: scale(.9);
-		    }
+			
 		    
 		    @include transition;
 
 			&::before {
 				left: 0;
+				//edit	
+				//@include gradient(90deg, .85, $color-white);
 
-				@include gradient(90deg, .85, $color-white);
+				@include md-screen {
+
+					@include gradient(90deg, .99, $color-white);
+				}
+
+					@include gradient(0deg, .99, $color-white);
 			}
 		}
+
+	
 
 		.project-content {
 
