@@ -8,14 +8,14 @@ import { getTags } from "@/services/notion";
 const BlogPage = ({ recentArticles, tags }: any) => {
   const feactureArticle = recentArticles[1];
   const descriptionArticleFeature =
-    feactureArticle.properties?.Summary.rich_text[0]?.plain_text ||
-    "Articulo aun no terminado.Intenta mas tarde.";
+  feactureArticle.properties?.Summary.rich_text[0]?.plain_text ||
+  "Articulo aun no terminado.Intenta mas tarde.";
+  const categoryFeature = feactureArticle?.properties?.Category?.select?.name;
   const coverImageFeature =
     feactureArticle?.cover?.file?.url || feactureArticle?.cover?.external?.url;
-  const categoryFeature = feactureArticle?.properties?.Category?.select?.name;
-  const dataFeature = feactureArticle.created_time;
-  const title = feactureArticle.properties.Name?.title[0]?.plain_text;
-  const titleLink = slugify(title).toLowerCase()
+    const dataFeature = feactureArticle.created_time;
+    const title = feactureArticle.properties.Name?.title[0]?.plain_text;
+    const titleLink = slugify(title).toLowerCase();
 
   return (
     <Container
@@ -53,21 +53,16 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                   data-slider-mousescroll={1}
                                   data-slider-pagination={1}
                                   data-slider-navigation={1}
-                                  
                                 >
-                                 
-
-
                                   <div
                                     className="portfolio-item -with-slider -with-gradient -layout10 -full-vh clb-smooth-slider-item next-slide active"
                                     data-portfolio-popup="ohio-lightbox-63d8da546ec0e"
-                                    style={{ position: "absolute" ,height:"100vh" }}
+                                    style={{
+                                      position: "absolute",
+                                      height: "100vh",
+                                    }}
                                   >
-                                    <div
-                                      className="overlay-image -full-h -full-w"
-                                      
-                                      
-                                    >
+                                    <div className="overlay-image -full-h -full-w">
                                       <div className="headline-decor">
                                         <span className="title -decor">
                                           {title}
@@ -79,10 +74,9 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                             className="portfolio-item-image"
                                             data-ohio-bg-image={`${coverImageFeature}`}
                                             style={{
-                                              backgroundImage:
-                                                `url("${coverImageFeature}")`,
+                                              backgroundImage: `url("${coverImageFeature}")`,
                                               height: "100%",
-                                               borderRadius:"12px"
+                                              borderRadius: "12px",
                                             }}
                                           />
                                         </div>
@@ -91,69 +85,65 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                             className="video-button -animation open-popup -outlined"
                                             data-video="https://www.youtube.com/embed/t67_zAg5vvI?"
                                           >
-                                            
-                                                <Link href={`/blog/${titleLink}`}>
-                                            
-                                            <button className="icon-button">
-                                              <i aria-hidden className="icon">
-                                                <svg
-                                                  className="default"
-                                                  width={13}
-                                                  height={20}
-                                                  viewBox="0 0 13 20"
-                                                  fill="none"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <path d="M0 20L13 10L0 0V20Z" />
-                                                </svg>
-                                                <svg
-                                                  className="minimal"
-                                                  width={17}
-                                                  height={20}
-                                                  viewBox="0 0 17 20"
-                                                  fill="none"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
-                                                  />
-                                                </svg>
-                                              </i>
+                                            <Link href={`/blog/${titleLink}`}>
+                                              <button className="icon-button">
+                                                <i aria-hidden className="icon">
+                                                  <svg
+                                                    className="default"
+                                                    width={13}
+                                                    height={20}
+                                                    viewBox="0 0 13 20"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path d="M0 20L13 10L0 0V20Z" />
+                                                  </svg>
+                                                  <svg
+                                                    className="minimal"
+                                                    width={17}
+                                                    height={20}
+                                                    viewBox="0 0 17 20"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path
+                                                      fillRule="evenodd"
+                                                      clipRule="evenodd"
+                                                      d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
+                                                    />
+                                                  </svg>
+                                                </i>
                                               </button>
-
                                             </Link>
                                           </div>
                                           <div className="headline-meta">
                                             <span className="category-holder">
                                               <span className="category ">
-                                                <Link href={`/blog/${titleLink}`}>
+                                                <Link
+                                                  href={`/blog/${titleLink}`}
+                                                >
                                                   {categoryFeature}
-                                                </Link> 
+                                                </Link>
                                               </span>
-                                             
                                             </span>
                                             <span className="date ">
-                                               {new Date(dataFeature).toLocaleDateString(
-                      "es-PE",
-                      {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      }
-                    )}
+                                              {new Date(
+                                                dataFeature
+                                              ).toLocaleDateString("es-PE", {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric",
+                                              })}
                                             </span>
                                           </div>
                                           <Link
                                             className="project-title -unlink"
-                                            
-                                                 href={`/blog/${titleLink}`}
+                                            href={`/blog/${titleLink}`}
                                           >
                                             <h2 className="headline ">
                                               {title}
                                             </h2>
-                                          </Link> 
+                                          </Link>
                                           <div className="project-details">
                                             <p className="">
                                               {descriptionArticleFeature}...
@@ -161,11 +151,13 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                           </div>
                                           <Link
                                             className="button -text -unlink btn-lightbox "
-                                            
-                                                href={`/blog/${titleLink}`}
+                                            href={`/blog/${titleLink}`}
                                           >
                                             Show Article{" "}
-                                            <i aria-hidden className="icon -right">
+                                            <i
+                                              aria-hidden
+                                              className="icon -right"
+                                            >
                                               <svg
                                                 className="default"
                                                 width={16}
@@ -195,14 +187,11 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                                 />
                                               </svg>
                                             </i>
-                                          </Link> 
+                                          </Link>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-                                 
-                          
-                                
                                 </div>
                               </div>
                               <div className="scroll-bar-container grid_10">
@@ -247,7 +236,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
               aria-controls="site-navigation"
               aria-expanded="false"
             >
-              <i aria-hidden className="icon" >
+              <i aria-hidden className="icon">
                 <svg
                   className="default"
                   width={16}
@@ -279,7 +268,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
               </i>
             </button>
             <span className="caption">Back </span>
-          </Link> 
+          </Link>
           <div
             className="parallax"
             data-parallax-bg="vertical"
@@ -312,7 +301,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                 >
                   <Link itemProp="item" href="#/">
                     <span itemProp="name">Home</span>
-                  </Link> 
+                  </Link>
                   <svg
                     className="default"
                     width={5}
@@ -333,7 +322,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                 >
                   <Link itemProp="item" href="#/blog/">
                     <span itemProp="name">Blog</span>
-                  </Link> 
+                  </Link>
                   <svg
                     className="default"
                     width={5}
@@ -406,7 +395,8 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                                 position: "relative",
                                               }}
                                             >
-                                              <Image aria-hiddenmage
+                                              <Image
+                                                aria-hiddenmage
                                                 src={
                                                   article?.cover?.external?.url
                                                 }
@@ -419,11 +409,10 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                                 <ul className="meta-holder -unlist">
                                                   <li className="meta-item">
                                                     <div className="avatar -small">
-                                                      <img 
+                                                      <img
                                                         alt="Gonzalo"
                                                         src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
                                                         srcSet="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
-                                                        
                                                         className="avatar avatar-50 photo author-avatar"
                                                         height={50}
                                                         width={50}
@@ -488,7 +477,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                                       href="##"
                                                     >
                                                       {el.name}
-                                                    </Link> 
+                                                    </Link>
                                                   );
                                                 }
                                               )}
@@ -512,7 +501,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                       className="page-link button -unlink -pagination"
                                     >
                                       1
-                                    </Link> 
+                                    </Link>
                                   </li>
                                   <li className="page-item">
                                     <Link
@@ -520,7 +509,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                       className="page-link button -unlink -pagination -flat"
                                     >
                                       2
-                                    </Link> 
+                                    </Link>
                                   </li>
                                   <li className="page-item">
                                     <Link
@@ -557,7 +546,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                           />
                                         </svg>
                                       </i>
-                                    </Link> 
+                                    </Link>
                                   </li>
                                 </ul>
                               </div>

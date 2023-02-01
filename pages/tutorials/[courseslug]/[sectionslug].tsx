@@ -12,7 +12,7 @@ const SectionCourse = () => {
         <div className="-layout1">
           <div className="page-headline without-cap -left subheader_excluded headline-with-parallax">
             <a
-              href="https://ohio.clbthemes.com/blog/compact/"
+              href="#blog/compact/"
               className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
             >
               <button
@@ -75,14 +75,14 @@ const SectionCourse = () => {
                     <div className="category-holder">
                       <a
                         className="category"
-                        href="https://ohio.clbthemes.com/category/digital/"
+                        href="#category/digital/"
                         rel="category tag"
                       >
                         Digital
                       </a>
                       <a
                         className="category"
-                        href="https://ohio.clbthemes.com/category/marketing/"
+                        href="#category/marketing/"
                         rel="category tag"
                       >
                         Marketing
@@ -117,7 +117,7 @@ const SectionCourse = () => {
                       </li>
                       <li className="meta-item">
                         <span className="prefix"> 2 comments </span>
-                        <a href="https://ohio.clbthemes.com/standard/#comments">
+                        <a href="#standard/#comments">
                           <span className="date">Join the Conversation</span>
                         </a>
                       </li>
@@ -172,7 +172,7 @@ const SectionCourse = () => {
                       itemScope
                       itemType="http://schema.org/ListItem"
                     >
-                      <a itemProp="item" href="https://ohio.clbthemes.com/">
+                      <a itemProp="item" href="#">
                         <span itemProp="name">Home</span>
                       </a>
                       <svg
@@ -195,7 +195,7 @@ const SectionCourse = () => {
                     >
                       <a
                         itemProp="item"
-                        href="https://ohio.clbthemes.com/category/digital/"
+                        href="#category/digital/"
                       >
                         <span itemProp="name">Digital</span>
                       </a>
@@ -567,31 +567,31 @@ const SectionCourse = () => {
                                 Tagged with:{" "}
                               </span>
                               <a
-                                href="https://ohio.clbthemes.com/tag/blog/"
+                                href="#tag/blog/"
                                 rel="tag"
                               >
                                 Blog
                               </a>
                               <a
-                                href="https://ohio.clbthemes.com/tag/creative/"
+                                href="#tag/creative/"
                                 rel="tag"
                               >
                                 Creative
                               </a>
                               <a
-                                href="https://ohio.clbthemes.com/tag/portfolio/"
+                                href="#tag/portfolio/"
                                 rel="tag"
                               >
                                 Portfolio
                               </a>
                               <a
-                                href="https://ohio.clbthemes.com/tag/theme/"
+                                href="#tag/theme/"
                                 rel="tag"
                               >
                                 Theme
                               </a>
                               <a
-                                href="https://ohio.clbthemes.com/tag/wordpress/"
+                                href="#tag/wordpress/"
                                 rel="tag"
                               >
                                 WordPress
@@ -622,7 +622,7 @@ const SectionCourse = () => {
               <div className="nav-group">
                 <a
                   className="icon-button prev -unlink"
-                  href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                  href="#creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                 >
                   <i className="icon">
                     <svg
@@ -657,7 +657,7 @@ const SectionCourse = () => {
                 </a>
                 <a
                   className="icon-button next -unlink"
-                  href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                  href="#definitive-guide-to-make-a-daily-more-productive-working-flow/"
                 >
                   <i className="icon">
                     <svg
@@ -694,7 +694,7 @@ const SectionCourse = () => {
             </div>
             <a
               className="titles-typo -undash"
-              href="https://ohio.clbthemes.com/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+              href="#definitive-guide-to-make-a-daily-more-productive-working-flow/"
             >
               Definitive Guide to Make a Daily More Productive Working Flow.
             </a>

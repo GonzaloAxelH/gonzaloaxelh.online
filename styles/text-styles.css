@@ -631,3 +631,17 @@ margin: 0;
     display: none;
   }
 }
+
+
+.custom_site-content-paddings{
+
+        padding: 3em;
+}
+
+
+@media screen and (max-width: 1180px) {
+    .custom_site-content-paddings{
+        padding: 0em;
+    }
+}
+

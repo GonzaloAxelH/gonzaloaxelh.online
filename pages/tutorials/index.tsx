@@ -3,388 +3,407 @@ import { useGetCurse, useGetCurses } from "@/hooks/useGetCurses";
 import Link from "next/link";
 import React from "react";
 import slugify from "slugify";
-
+import Image from "next/image";
 const index = ({ recentCurses, test }: any) => {
   console.log(recentCurses);
   console.log(test);
   return (
     <Container
-    customMeta={{title:"Tutorials - Gonzalo Axel"}}
-      customAddClases=" page-template-default page page-id-17344 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded">
+      customMeta={{ title: "Tutorials - Gonzalo Axel" }}
+      customAddClases="page-template-default page page-id-17344 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation  with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded dark-scheme custom-body"
+    >
       <div
         id="content"
-        className="site-content"
+        className="site-content custom_site-content-paddings"
         data-mobile-menu-resolution={768}
       >
-        <div className="page-headline without-cap -center subheader_excluded headline-with-parallax">
-          <a
-            href="#blog/simple/"
-            className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
-          >
-            <button
-              className="icon-button"
-              aria-controls="site-navigation"
-              aria-expanded="false"
-            >
-              <i className="icon">
-                <svg
-                  className="default"
-                  width={16}
-                  height={16}
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                </svg>
-                <svg
-                  className="minimal"
-                  width={18}
-                  height={16}
-                  viewBox="0 0 18 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                  />
-                </svg>
-              </i>
-            </button>
-            <span className="caption"> Back </span>
-          </a>
-          <div
-            className="parallax"
-            data-parallax-bg="vertical"
-            data-parallax-speed=".5"
-          >
-            <div
-              className="parallax-bg bg-image"
-              style={{
-                height: "398.5px",
-                transform: "translate3d(0px, -89.5596px, 0px)",
-                transition: "transform 0.1s linear 0s",
-              }}
-            />
-            <div className="parallax-content" />
-          </div>
-          <div className="holder">
-            <div className="page-container">
-              <div className="animated-holder">
-                <div className="headline-meta" />
-                <h1 className="title">Simple Contained</h1>
-                <div className="post-meta-holder">
-                  <div
-                    className="builder-switcher"
-                    style={{ display: "flex", flexWrap: "wrap" }}
-                  >
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      className="active"
-                      href="#blog/simple-contained/"
-                    >
-                      WPBakery
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                    <a
-                      style={{ marginBottom: "15px" }}
-                      href="#blog/simple-contained-elementor/"
-                    >
-                      Elementor
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="page-container">
+        <div className="header-cap" />
+        <div className="page-container -full-w">
           <div id="primary" className="content-area">
             <div className="page-content">
               <main id="main" className="site-main">
                 <article
-                  id="post-217621"
-                  className="post-217621 page type-page status-publish hentry"
+                  id="post-150791"
+                  className="post-150791 page type-page status-publish hentry"
                 >
                   <div className="entry-content">
                     <section className="wpb-content-wrapper">
-                      <div className="vc_row wpb_row vc_row-fluid clb__narrow">
+                      <div className="vc_row wpb_row vc_row-fluid vc_custom_1640352119559 vc_row-has-fill vc_row-o-equal-height vc_row-o-content-bottom vc_row-flex">
+                        <div className="clb__padding_set wpb_column vc_column_container vc_col-sm-6 vc_col-lg-6 vc_col-md-8">
+                          <div className="vc_column-inner vc_custom_1657010041456">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "6vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                              <div
+                                className="ohio-widget heading -left"
+                                id="ohio-custom-63d7bb43ace1d"
+                              >
+                                <div className="subtitle">
+                                  <strong>Become a member</strong> and stay up
+                                  to <br />
+                                  date with our favorite topics and
+                                  publications.
+                                </div>
+                                <h1 className="title">
+                                  The best
+                                  <span className="brand-color">
+                                    tutorials of your framework
+                                    <br className="vc_hidden-sm vc_hidden-xs" />
+                                    made
+                                  </span>
+                                  just for you.
+                                </h1>
+                              </div>
+                              <div
+                                className="vc_empty_space clb__section_spacer"
+                                style={{ height: "5vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-6 vc_col-md-4">
+                          <div className="vc_column-inner">
+                            <div className="wpb_wrapper">
+                              <div
+                                className="ohio-widget blog-posts vc_row clb__dark_mode_light"
+                                id="ohio-custom-63d7bb43ad63e"
+                                data-lazy-container="posts"
+                              >
+                                <div
+                                  className="vc_col-lg-6 vc_col-md-12 vc_col-xs-12 masonry-block grid-item"
+                                  data-lazy-item
+                                  data-lazy-scope="posts"
+                                >
+                                  <div className="blog-item card -layout4 -metro ">
+                                    <figure className="">
+                                      <a
+                                        className="-unlink"
+                                        data-cursor-class="cursor-link"
+                                        href="#demo29/definitive-guide-to-make-a-more-productive-workflow/"
+                                      >
+                                        <Image
+                                          style={{ borderRadius: "0.5em" }}
+                                          height={540}
+                                          width={540}
+                                          objectFit="cover"
+                                          src="https://res.cloudinary.com/ddksrkond/image/upload/c_fill,h_540,w_540/v1675291317/Blog/React_18_tvnfki.png"
+                                          alt=""
+                                        />
+                                        <div className="overlay" />
+                                      </a>
+                                      <div className="overlay-details -top"></div>
+                                      <div className="overlay-details card-details -left">
+                                        <div className="heading title">
+                                          <h4 className="title">
+                                            <a
+                                              style={{ color: "#fff" }}
+                                              className="-unlink"
+                                              href="#"
+                                            >
+                                              React Hooks
+                                            </a>
+                                          </h4>
+                                        </div>
+                                        <div className="category-holder -with-tag">
+                                          <a
+                                            style={{ color: "#fff" }}
+                                            className="tag -unlink"
+                                            href="#"
+                                          >
+                                            Javascript
+                                          </a>
+                                          <a
+                                            style={{ color: "#fff" }}
+                                            className="tag -unlink"
+                                            href="#"
+                                          >
+                                            React
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </figure>
+                                  </div>
+                                </div>
+                                <div
+                                  className="vc_col-lg-6 vc_col-md-12 vc_col-xs-12 masonry-block grid-item"
+                                  data-lazy-item
+                                  data-lazy-scope="posts"
+                                >
+                                  <div className="blog-item card -layout4 -metro -img-scale">
+                                    <figure className="">
+                                      <a
+                                        className="-unlink"
+                                        data-cursor-class="cursor-link"
+                                        href="#demo29/organic-food-isnt-much-better-for-your-future-health/"
+                                      >
+                                        <Image
+                                          style={{ borderRadius: "0.5em" }}
+                                          height={540}
+                                          width={540}
+                                          objectFit="cover"
+                                          src="https://res.cloudinary.com/ddksrkond/image/upload/c_fill,h_540,w_540/v1675292785/Blog/Anguar_f1d2a5.png"
+                                          sizes="(max-width: 1024px) 100vw, 1024px"
+                                          alt=""
+                                        />
+                                        <div className="overlay" />
+                                      </a>
+                                      <div className="overlay-details -top"></div>
+                                      <div className="overlay-details card-details -left">
+                                        <div className="heading title">
+                                          <h4 className="title">
+                                            <a
+                                              className="-unlink"
+                                              href="#demo29/organic-food-isnt-much-better-for-your-future-health/"
+                                            >
+                                              Directivas Angular
+                                            </a>
+                                          </h4>
+                                        </div>
+                                        <div className="category-holder -with-tag">
+                                          <a
+                                            className="tag -unlink"
+                                            href="#demo29/category/creative/"
+                                          >
+                                            Creative
+                                          </a>
+                                          <a
+                                            className="tag -unlink"
+                                            href="#demo29/category/media/"
+                                          >
+                                            Media
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </figure>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="vc_row wpb_row vc_row-fluid">
                         <div className="wpb_column vc_column_container vc_col-sm-12">
                           <div className="vc_column-inner">
                             <div className="wpb_wrapper">
                               <div
-                                className="ohio-widget blog-posts vc_row"
-                                id="ohio-custom-63d3ea56a17ba"
+                                className="ohio-widget blog-posts vc_row clb__dark_mode_light"
+                                id="ohio-custom-63d7bb43b4969"
                                 data-lazy-container="posts"
                               >
-                                {recentCurses.map((course: any) => {
+                                {recentCurses?.map((course: any) => {
                                   return (
                                     <div
-                                      className="vc_col-lg-12 vc_col-md-12 vc_col-xs-12 masonry-block grid-item"
+                                      className="vc_col-lg-3 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
                                       data-lazy-item
                                       data-lazy-scope="posts"
                                     >
-                                      <div
-                                        className="blog-item card -layout6 -contained type-blockquote"
-                                        data-tilt="true"
-                                        data-tilt-perspective={6000}
-                                      >
-                                        <a
-                                          href="#organic-food-isnt-much-better-for-your-future-health/"
-                                          data-cursor-class="cursor-link"
-                                        >
-                                          <figure className="image-holder">
-                                            <img
-                                              src="./Simple Contained – Ohio Theme_files/clb_blog_5-872x1024.jpg"
-                                              srcSet="
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/clb_blog_5-900x1057.jpg  900w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/clb_blog_5-255x300.jpg   255w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/clb_blog_5-768x902.jpg   768w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/clb_blog_5-872x1024.jpg  872w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/clb_blog_5.jpg          1362w
-                                    "
-                                              sizes="(max-width: 872px) 100vw, 872px"
+                                      <div className="blog-item card -layout4 -metro -img-scale">
+                                        <figure className="">
+                                          <Link
+                                            className="-unlink"
+                                            data-cursor-class="cursor-link"
+                                            href={`/tutorials/${slugify(
+                                              course?.properties?.Name?.title[0]
+                                                ?.plain_text
+                                            ).toLowerCase()}`}
+                                          >
+                                            <Image
+                                              style={{ borderRadius: "0.5em" }}
+                                              src={
+                                                course?.cover?.external?.url ||
+                                                course?.cover?.file?.url
+                                              }
+                                              height={540}
+                                              width={540}
+                                              objectFit="cover"
+                                              sizes="(max-width: 1024px) 100vw, 1024px"
                                               alt=""
                                             />
-                                          </figure>
-                                        </a>
-                                        <div className="card-details">
-                                          <div className="card-details-item">
-                                            <div className="headline-meta -small-t">
-                                              <div className="date">
-                                                July 5, 2020
-                                              </div>
-                                              <span className="post-meta-estimate">
-                                                9 min read
-                                              </span>
-                                            </div>
-                                            <div className="overlay-details -top -fade-up">
-                                              <ul className="meta-holder -unlist">
-                                                <li className="meta-item">
-                                                  <div className="avatar -small">
-                                                    <img
-                                                      alt="Colabrio"
-                                                      src="./Simple Contained – Ohio Theme_files/4058fe7404c4f9d88d5d2d6db42320f8.png"
-                                                      srcSet="
-                                              https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=100&d=mm&r=g 2x
-                                            "
-                                                      className="avatar avatar-50 photo author-avatar"
-                                                      height={50}
-                                                      width={50}
-                                                      loading="lazy"
-                                                      decoding="async"
-                                                    />
-                                                  </div>
-                                                </li>
-                                                <li className="meta-item">
-                                                  <span className="prefix">
-                                                    Posted by
-                                                  </span>
-                                                  <span className="author">
-                                                    Colabrio
-                                                  </span>
-                                                </li>
-                                              </ul>
-                                            </div>
-                                          </div>
-                                          <div className="card-details-item -left">
+                                            <div className="overlay" />
+                                          </Link>
+
+                                          <div className="overlay-details card-details -left">
                                             <div className="heading title">
                                               <h4 className="title">
                                                 <Link
+                                                  style={{ color: "#fff" }}
                                                   className="-unlink"
                                                   href={`/tutorials/${slugify(
-                                                    course.properties.Name
-                                                      .title[0].plain_text
+                                                    course?.properties?.Name
+                                                      ?.title[0]?.plain_text
                                                   ).toLowerCase()}`}
                                                 >
                                                   {
-                                                    course.properties.Name
-                                                      .title[0].plain_text
+                                                    course?.properties?.Name
+                                                      ?.title[0]?.plain_text
                                                   }
                                                 </Link>
                                               </h4>
                                             </div>
-                                            <p />
-                                            <blockquote>
-                                              Getting practice furnished the
-                                              where pouring the of emphasis as
-                                              return encourage a then that
-                                              times, the doing would in object
-                                              we young been in the in the to
-                                              their line helplessly or name to
-                                              in of, and all and to more my way
-                                              and opinion.
-                                            </blockquote>
-                                            <p />
                                             <div className="category-holder -with-tag">
-                                              <a
-                                                className="tag -unlink"
-                                                href="#category/personal/"
-                                              >
-                                                Personal
-                                              </a>
-                                              <a
-                                                className="tag -unlink"
-                                                href="#category/stories/"
-                                              >
-                                                Stories
-                                              </a>
+                                              {course?.properties?.Tags.multi_select.map(
+                                                (el: any) => {
+                                                  return (
+                                                    <Link
+                                                      className="tag -unlink"
+                                                      style={{ color: "#fff" }}
+                                                      href="##"
+                                                    >
+                                                      {el.name}
+                                                    </Link>
+                                                  );
+                                                }
+                                              )}
                                             </div>
                                           </div>
-                                          <div className="card-details-item">
-                                            <Link
-                                              className="button -text"
-                                              
-                                                      href={`/tutorials/${slugify(
-                                                    course.properties.Name
-                                                      .title[0].plain_text
-                                                  ).toLowerCase()}`}
-                                            >
-                                              View Course
-                                              <i className="icon -right">
-                                                <svg
-                                                  className="default"
-                                                  width={16}
-                                                  height={16}
-                                                  viewBox="0 0 16 16"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                                </svg>
-                                                <svg
-                                                  className="minimal"
-                                                  width={18}
-                                                  height={16}
-                                                  viewBox="0 0 18 16"
-                                                  fill="none"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                                  />
-                                                  <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                                  />
-                                                </svg>
-                                              </i>
-                                            </Link>
-                                          </div>
-                                        </div>
+                                        </figure>
                                       </div>
                                     </div>
                                   );
                                 })}
                               </div>
-                              <div
-                                className="holder"
-                                id="ohio-custom-63d3ea56a17ba"
-                              >
-                                <ul className="pagination -small -unlist">
-                                  <li className="page-item">
-                                    <a
-                                      href="#blog/simple-contained/"
-                                      className="page-link button -unlink -pagination"
-                                    >
-                                      1
-                                    </a>
-                                  </li>
-                                  <li className="page-item">
-                                    <a
-                                      href="#blog/simple-contained/page/2/"
-                                      className="page-link button -unlink -pagination -flat"
-                                    >
-                                      2
-                                    </a>
-                                  </li>
-                                  <li className="page-item">
-                                    <a
-                                      href="#blog/simple-contained/page/2/"
-                                      className="page-link button -unlink -pagination -flat"
-                                    >
-                                      <i className="icon">
-                                        <svg
-                                          className="default"
-                                          width={16}
-                                          height={16}
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                        </svg>
-                                        <svg
-                                          className="minimal"
-                                          width={18}
-                                          height={16}
-                                          viewBox="0 0 18 16"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                          />
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                          />
-                                        </svg>{" "}
-                                      </i>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="vc_row wpb_row vc_row-fluid clb__dark_section vc_custom_1657011403376 vc_row-has-fill">
+                        <div className="clb__padding_set wpb_column vc_column_container vc_col-sm-12">
+                          <div className="vc_column-inner vc_custom_1657010380311">
+                            <div className="wpb_wrapper">
                               <div
                                 className="vc_empty_space clb__section_spacer"
-                                style={{ height: "8vh" }}
+                                style={{ height: "10vh" }}
                               >
                                 <span className="vc_empty_space_inner" />
+                              </div>
+                              <div className="vc_row wpb_row vc_inner vc_row-fluid">
+                                <div className="wpb_column vc_column_container vc_col-sm-6">
+                                  <div className="vc_column-inner">
+                                    <div className="wpb_wrapper">
+                                      <div
+                                        className="ohio-widget heading -left"
+                                        id="ohio-custom-63d7bb43cbea7"
+                                      >
+                                        <div className="subtitle">
+                                          Collaboration
+                                        </div>
+                                        <h2 className="title">Let’s talk.</h2>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="wpb_column vc_column_container vc_col-sm-6">
+                                  <div className="vc_column-inner">
+                                    <div className="wpb_wrapper">
+                                      <div
+                                        className="vc_empty_space"
+                                        style={{ height: "3vh" }}
+                                      >
+                                        <span className="vc_empty_space_inner" />
+                                      </div>
+                                      <div className="ohio-widget-holder -right">
+                                        <a
+                                          href="#contact-us-ver4/"
+                                          target="_blank"
+                                          className="ohio-widget button -primary clb__alignment_reset"
+                                          id="ohio-custom-63d7bb43cc222"
+                                        >
+                                          Contact Us
+                                          <i className="icon -right">
+                                            <svg
+                                              className="default"
+                                              width={16}
+                                              height={16}
+                                              viewBox="0 0 16 16"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
+                                            </svg>
+                                            <svg
+                                              className="minimal"
+                                              width={18}
+                                              height={16}
+                                              viewBox="0 0 18 16"
+                                              fill="none"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                fillRule="evenodd"
+                                                clipRule="evenodd"
+                                                d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
+                                              />
+                                              <path
+                                                fillRule="evenodd"
+                                                clipRule="evenodd"
+                                                d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
+                                              />
+                                            </svg>
+                                          </i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text">
+                                <span className="vc_sep_holder vc_sep_holder_l">
+                                  <span
+                                    style={{
+                                      borderColor: "rgba(99, 93, 111, 0.65)",
+                                    }}
+                                    className="vc_sep_line"
+                                  />
+                                </span>
+                                <span className="vc_sep_holder vc_sep_holder_r">
+                                  <span
+                                    style={{
+                                      borderColor: "rgba(99, 93, 111, 0.65)",
+                                    }}
+                                    className="vc_sep_line"
+                                  />
+                                </span>
+                              </div>
+                              <div className="vc_row wpb_row vc_inner vc_row-fluid">
+                                <div className="wpb_column vc_column_container vc_col-sm-6">
+                                  <div className="vc_column-inner">
+                                    <div className="wpb_wrapper">
+                                      <div
+                                        className="ohio-text-sc"
+                                        id="ohio-custom-63d7bb43cd619"
+                                      >
+                                        <p>
+                                          We’re
+                                          <strong>a team of creatives</strong>
+                                          who are excited about unique ideas and
+                                          help fin-tech companies to
+                                          <strong>
+                                            create amazing identity
+                                          </strong>
+                                          by crafting top-notch UI/UX.
+                                        </p>
+                                      </div>
+                                      <div
+                                        className="vc_empty_space clb__section_spacer"
+                                        style={{ height: "10vh" }}
+                                      >
+                                        <span className="vc_empty_space_inner" />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="wpb_column vc_column_container vc_col-sm-6">
+                                  <div className="vc_column-inner">
+                                    <div className="wpb_wrapper" />
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -883,7 +902,6 @@ const index = ({ recentCurses, test }: any) => {
                                 </div>
                               </div>
                             </div>
-                            
                           </div>
                         </div>
                       </div>
@@ -895,7 +913,7 @@ const index = ({ recentCurses, test }: any) => {
           </div>
         </div>
       </div>
- <div className="page-container">
+      <div className="page-container">
         <div id="primary" className="content-area">
           <div className="page-content">
             <main id="main" className="site-main">
@@ -1299,7 +1317,6 @@ const index = ({ recentCurses, test }: any) => {
                                 </div>
                               </div>
                             </div>
-                            
                           </div>
                         </div>
                       </div>
@@ -1316,7 +1333,6 @@ const index = ({ recentCurses, test }: any) => {
 };
 
 export async function getStaticProps(context: any) {
-  
   const recentCurses = await useGetCurses();
   const test = await useGetCurse(
     slugify(recentCurses[1].properties.Name?.title[0]?.plain_text).toLowerCase()

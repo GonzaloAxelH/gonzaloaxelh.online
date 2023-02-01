@@ -9,16 +9,8 @@ import React, { useContext, useEffect } from "react";
 import slugify from "slugify";
 
 const Tutorial = ({ curse, content }: any) => {
-  
-  useEffect(() => {
-    const fetch = async () => {
-      
-      console.log(curse)
-      //await getChildrenDatabase(content[0].id)
-      // await useGetSectionCurse("");
-    }
-    fetch()
-  }, [])
+  console.log(curse);
+  useEffect(() => {}, []);
 
   const { themeGlobal } = useContext(UIContext);
   return (
@@ -31,7 +23,7 @@ const Tutorial = ({ curse, content }: any) => {
       }}
       customAddClases="post-template-default single single-post postid-114 single-format-standard wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-1 with-fixed-search with-headline with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded"
     >
-      <div
+           <div
         id="content"
         className="site-content"
         data-mobile-menu-resolution={768}
@@ -680,22 +672,19 @@ const Tutorial = ({ curse, content }: any) => {
   );
 };
 
-
-
-
-
-
-export async function getStaticPaths(context:any) {
+export async function getStaticPaths(context: any) {
   let articles = await useGetCurses();
   let paths: any = [];
   articles.map((art: any) => {
     paths.push({
       params: {
-        courseslug: slugify(art.properties.Name?.title[0]?.plain_text).toLowerCase(),
+        courseslug: slugify(
+          art.properties.Name?.title[0]?.plain_text
+        ).toLowerCase(),
       },
     });
   });
-  
+
   return {
     paths,
     fallback: false,
@@ -704,7 +693,7 @@ export async function getStaticPaths(context:any) {
 //X
 export async function getStaticProps(context: any) {
   const { courseslug } = context.params;
-  
+
   const { content, idPage, article } = await useGetCurse(courseslug);
   const allCourses = await useGetCurses();
   return {
@@ -718,14 +707,5 @@ export async function getStaticProps(context: any) {
     revalidate: 20,
   };
 }
-
-
-
-
-
-
-
-
-
 
 export default Tutorial;

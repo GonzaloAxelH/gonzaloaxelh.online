@@ -6,7 +6,8 @@ const Header = ({ setIsOpenSidebar }: any) => {
   return (
     <header
       id="masthead"
-      className="header header-3 both-types -sticky showed " style={{maxWidth:"100vw"}}
+      className="header header-3 both-types -sticky showed "
+      style={{ maxWidth: "100vw" }}
       data-header-fixed="true"
       data-fixed-initial-offset={150}
     >
@@ -200,6 +201,30 @@ const Header = ({ setIsOpenSidebar }: any) => {
                           className="menu-link -undash main-menu-link item-title"
                         >
                           <span>Blog</span>
+                          <div className="has-submenu-icon">
+                            <i className="icon menu-plus">
+                              <svg
+                                width={14}
+                                height={14}
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" />
+                              </svg>{" "}
+                            </i>
+                          </div>
+                        </Link>
+                      </li>
+                      <li
+                        id="nav-menu-item-17471-63cc32b1c99a4"
+                        className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
+                      >
+                        <Link
+                          href="/about"
+                          className="menu-link -undash main-menu-link item-title"
+                        >
+                          <span>About</span>
                           <div className="has-submenu-icon">
                             <i className="icon menu-plus">
                               <svg
