@@ -1,9 +1,29 @@
 import Container from "@/components/hocs/Container";
-import React from "react";
-//
-const SectionCourse = () => {
+import { UIContext } from "@/context/UIContext";
+import { useGetCurse, useGetCurses } from "@/hooks/useGetCurses";
+import { useGetSectionCurse } from "@/hooks/useGetSectionCurse";
+import { getChildrenDatabase } from "@/services/notion";
+import { PageType } from "@/settings/types";
+import Link from "next/link";
+import React, { useContext, useEffect } from "react";
+import slugify from "slugify";
+
+const Tutorial = ({ curse, content }: any) => {
+  console.log(curse);
+  useEffect(() => {}, []);
+
+  const { themeGlobal } = useContext(UIContext);
   return (
-    <Container customAddClases="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded">
+    <Container
+      customAddClases="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded"
+      customMeta={{
+        title: `${curse.properties.Name.title[0]?.plain_text} - Gonzalo Axel`,
+        imageUrl: curse?.cover?.file?.url || curse.cover?.external?.url,
+        description:"Tutorial aun no terminado.Intenta mas tarde.",
+        type: PageType.TUTORIAL,
+        date: curse.created_time,
+      }}
+    >
       <div
         id="content"
         className="site-content"
@@ -91,7 +111,7 @@ const SectionCourse = () => {
                     <span className="post-meta-estimate">9 min read </span>
                   </div>
                   <h1 className="title">
-                    The Highly Contemporary UI/UX Design from a Silicon Valley.
+                    {curse.properties.Name.title[0]?.plain_text}
                   </h1>
                   <div className="post-meta-holder">
                     <ul className="meta-holder -unlist">
@@ -193,10 +213,7 @@ const SectionCourse = () => {
                       itemScope
                       itemType="http://schema.org/ListItem"
                     >
-                      <a
-                        itemProp="item"
-                        href="#category/digital/"
-                      >
+                      <a itemProp="item" href="#category/digital/">
                         <span itemProp="name">Digital</span>
                       </a>
                       <svg
@@ -566,34 +583,19 @@ const SectionCourse = () => {
                               <span className="tags-caption">
                                 Tagged with:{" "}
                               </span>
-                              <a
-                                href="#tag/blog/"
-                                rel="tag"
-                              >
+                              <a href="#tag/blog/" rel="tag">
                                 Blog
                               </a>
-                              <a
-                                href="#tag/creative/"
-                                rel="tag"
-                              >
+                              <a href="#tag/creative/" rel="tag">
                                 Creative
                               </a>
-                              <a
-                                href="#tag/portfolio/"
-                                rel="tag"
-                              >
+                              <a href="#tag/portfolio/" rel="tag">
                                 Portfolio
                               </a>
-                              <a
-                                href="#tag/theme/"
-                                rel="tag"
-                              >
+                              <a href="#tag/theme/" rel="tag">
                                 Theme
                               </a>
-                              <a
-                                href="#tag/wordpress/"
-                                rel="tag"
-                              >
+                              <a href="#tag/wordpress/" rel="tag">
                                 WordPress
                               </a>
                             </div>
@@ -607,7 +609,7 @@ const SectionCourse = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="sticky-nav">
           <div
             className="sticky-nav-thumbnail -fade-up"
@@ -700,11 +702,45 @@ const SectionCourse = () => {
             </a>
           </div>
         </div>
-     
-       
       </div>
     </Container>
   );
 };
 
-export default SectionCourse;
+export async function getStaticPaths(context: any) {
+  let articles = await useGetCurses();
+  let paths: any = [];
+  articles.map((art: any) => {
+    paths.push({
+      params: {
+        courseslug: slugify(
+          art.properties.Name?.title[0]?.plain_text
+        ).toLowerCase(),
+      },
+    });
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+//X
+export async function getStaticProps(context: any) {
+  const { courseslug } = context.params;
+
+  const { content, idPage, article } = await useGetCurse(courseslug);
+  const allCourses = await useGetCurses();
+  return {
+    // Passed to the page component as props
+    props: {
+      content,
+      curse: article,
+      courseslug,
+      curses: allCourses.slice(0, 3),
+    },
+    revalidate: 20,
+  };
+}
+
+export default Tutorial;

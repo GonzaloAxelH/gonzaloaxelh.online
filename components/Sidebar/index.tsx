@@ -108,10 +108,10 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
             className="mega-menu-item nav-item menu-item-depth-0 showed"
           >
             <Link
-              href="/community"
+              href="/about"
               className="menu-link -undash main-menu-link item-title"
             >
-              <span>Community</span>
+              <span>About me </span>
             </Link>
           </li>
         </ul>{" "}

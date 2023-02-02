@@ -166,7 +166,7 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-min.png"
-                                            srcSet
+                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -189,7 +189,7 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-5-min.png"
-                                            srcSet
+                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -212,7 +212,7 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-6-min.png"
-                                            srcSet
+                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -235,7 +235,7 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-9-min.png"
-                                            srcSet
+                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -258,7 +258,7 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-10-min.png"
-                                            srcSet
+                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -281,7 +281,7 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-7-min.png"
-                                            srcSet
+                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -731,7 +731,7 @@ const Proyects = ({ allProyects }: any) => {
                                     method="post"
                                     className="wpcf7-form init"
                                     aria-label="Contact form"
-                                    noValidate="novalidate"
+                                    noValidate
                                     data-status="init"
                                   >
                                     <div style={{ display: "none" }}>
@@ -763,7 +763,7 @@ const Proyects = ({ allProyects }: any) => {
                                       <input
                                         type="hidden"
                                         name="_wpcf7_posted_data_hash"
-                                        defaultValue
+                                        defaultValue=""
                                       />
                                     </div>
                                     <div className="subscribe-form">
@@ -778,7 +778,7 @@ const Proyects = ({ allProyects }: any) => {
                                             aria-required="true"
                                             aria-invalid="false"
                                             placeholder="name@email.com"
-                                            defaultValue
+                                            defaultValue=""
                                             type="email"
                                             name="your-email"
                                           />
@@ -3457,7 +3457,7 @@ const Proyects = ({ allProyects }: any) => {
                                             method="post"
                                             className="wpcf7-form init"
                                             aria-label="Contact form"
-                                            noValidate="novalidate"
+                                            noValidate
                                             data-status="init"
                                           >
                                             <div style={{ display: "none" }}>
@@ -3489,7 +3489,7 @@ const Proyects = ({ allProyects }: any) => {
                                               <input
                                                 type="hidden"
                                                 name="_wpcf7_posted_data_hash"
-                                                defaultValue
+                                                defaultValue=""
                                               />
                                             </div>
                                             <div className="subscribe-form">
@@ -3504,7 +3504,7 @@ const Proyects = ({ allProyects }: any) => {
                                                     aria-required="true"
                                                     aria-invalid="false"
                                                     placeholder="name@email.com"
-                                                    defaultValue
+                                                    defaultValue=""
                                                     type="email"
                                                     name="your-email"
                                                   />
