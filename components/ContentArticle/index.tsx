@@ -27,6 +27,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
   },[])
   return (
     <div className="-layout1">
+
       <div className="page-headline without-cap -left subheader_excluded headline-with-parallax">
         <a
           href="/about-ver6/"

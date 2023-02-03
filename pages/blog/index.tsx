@@ -568,12 +568,12 @@ const BlogPage = ({ recentArticles, tags }: any) => {
 
 export async function getStaticProps(context: any) {
   const recentArticles = await useGetArticles();
-  const tags = getTags(recentArticles);
+  const {tagsKeys,tagsValues} = getTags(recentArticles);
   return {
     // Passed to the page component as props
     props: {
       recentArticles: recentArticles,
-      tags,
+      tags:tagsKeys,
     },
     revalidate: 20,
   };

@@ -98,7 +98,7 @@
 				background-color: transparent;
 				background-color: rgba($color-black, 0.5);
 				
-				filter: blur(100px) !important;
+				
 				
 				
 			}
@@ -379,7 +379,8 @@
 	.dark_mode_light_row,
 	.dark_mode_light_column > .elementor-column-wrap,
 	.dark_mode_light_widget > .elementor-widget-container {
-		background-color: rgba($color-white, .025) !important;
+		//edit
+		background-color: rgba($color-white, 0) !important;
 	}
 
 	.clb__dark_mode_black.vc_row,

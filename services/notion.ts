@@ -22,28 +22,31 @@ export const getAllArticles = async (database_id : any=process.env.NOTION_DATABA
 };
 
 export const getTags = (articles: any) => {
-  let tags: any = [];
-
+    let list:any= []
   articles.map((art: any) => {
-    tags.push(art.properties.Tags.multi_select);
+    list.push(art.properties.Tags.multi_select);
   });
 
-  let planeArr = tags.reduce((acc: any, el: any) => {
-    return acc.concat(el);
-  }, []);
+  let result = list.reduce((acc: any, el: any) => {
+      return acc.concat(el)
+  }, [])
+  
+  let tagsNames = result.reduce((acc: any, el: any) => {
+  
+      return  [...acc, el.name]
+  }, [])
+ 
+  let objetsTags = tagsNames.reduce((acc: any, el: any) => {
+    acc[el] = (acc[el] || 0) + 1 
 
-  const allTags = planeArr.reduce((acc: any, item: any) => {
-    return [...acc, item.name];
-  }, []);
+    return acc 
+  },{})
 
-  const fTags = allTags.reduce((acc: any, item: any) => {
-    if (!acc.includes(item)) {
-      acc.push(item);
-    }
-    return acc;
-  }, []);
 
-  return fTags;
+  let tagsKeys = Object.keys(objetsTags)
+  let tagsValues = Object.values(objetsTags)
+  
+ return { tagsKeys,tagsValues}
 };
 
 export const getArticle = async (id: string) => {
