@@ -7,7 +7,7 @@ import { useGetArticles } from "@/hooks/useGetArticles";
 import { useGetCurses } from "@/hooks/useGetCurses";
 import { getTags } from "@/services/notion";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 export default function Home({ articles, allTags, tutorials }: any) {
   return (
     <Container customAddClases="home page-template-default page page-id-152208 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded">
