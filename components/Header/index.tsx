@@ -1,13 +1,25 @@
+import { UIContext } from "@/context/UIContext";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
-import React from "react";
-
+import React, { useContext, useEffect, useState } from "react";
+//@ts-ignore
+import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import Image from "next/image";
 const Header = ({ setIsOpenSidebar }: any) => {
   const isOpen = true;
+  const { scrollTop } = useContext(UIContext);
+
+  const { data: session } = useSession();
+console.log(session)
+  console.log(scrollTop);
   return (
     <header
       id="masthead"
-      className="header header-3 both-types -sticky showed "
-      style={{ maxWidth: "100vw" }}
+      className={` header header-3 both-types -sticky ${
+        scrollTop > 500 || scrollTop === 0
+          ? "showed header-rounded-transparent"
+          : ""
+      } ${scrollTop === 0 ? "header-transparent" : ""} `}
       data-header-fixed="true"
       data-fixed-initial-offset={150}
     >
@@ -33,12 +45,12 @@ const Header = ({ setIsOpenSidebar }: any) => {
                   alt="Colabrio"
                   src="/small_logo.png"
                   className=" "
-                  height={50}
-                  width={50}
+                  height="100"
+                  width="100"
                   loading="lazy"
                   decoding="async"
                   style={{ transform: "scale(0.8)" }}
-                ></img>
+                />
               </button>
             </div>
             <div className="mobile-hamburger -left">
@@ -216,7 +228,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                           </div>
                         </Link>
                       </li>
-                      
+
                       <li
                         id="nav-menu-item-27-63cc32b1cadf9"
                         className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
@@ -261,11 +273,10 @@ const Header = ({ setIsOpenSidebar }: any) => {
                           href="/about"
                           className="menu-link -undash main-menu-link item-title"
                         >
-                          <span>About me</span>
+                          <span>About</span>
                           <div className="has-submenu-icon"></div>
                         </Link>
                       </li>
-                     
                     </ul>
                   </div>
                   <div className="copyright">
@@ -345,90 +356,85 @@ const Header = ({ setIsOpenSidebar }: any) => {
                   </option>
                 </select>
               </li>
-              <li className="icon-button-holder">
-                <Link
-                  className="icon-button favorites-global wishlist"
-                  href="#ddd"
-                >
-                  <i className="icon">
-                    <svg
-                      className="default"
-                      width={20}
-                      height={18}
-                      viewBox="0 0 20 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M14.5 0C12.76 0 11.09 0.794551 10 2.05014C8.91 0.794551 7.24 0 5.5 0C2.42 0 0 2.37384 0 5.3951C0 9.103 3.4 12.1243 8.55 16.715L10 18L11.45 16.7052C16.6 12.1243 20 9.103 20 5.3951C20 2.37384 17.58 0 14.5 0ZM10.1 15.2534L10 15.3515L9.9 15.2534C5.14 11.0256 2 8.22997 2 5.3951C2 3.43324 3.5 1.96185 5.5 1.96185C7.04 1.96185 8.54 2.93297 9.07 4.27684H10.94C11.46 2.93297 12.96 1.96185 14.5 1.96185C16.5 1.96185 18 3.43324 18 5.3951C18 8.22997 14.86 11.0256 10.1 15.2534Z" />
-                    </svg>
-                  </i>
-                </Link>
-              </li>
-              <li className="icon-button-holder">
-                <div className="cart-button">
-                  <span className="cart-button-total"></span>
-                  <span className="holder">
-                    <button className="icon-button " aria-label="cart">
-                      <img
-                        alt="Colabrio"
-                        src="/small_logo.png"
-                        className=" "
-                        height="50"
-                        width="50"
-                        loading="lazy"
-                        decoding="async"
-                        style={{ transform: "scale(0.8)" }}
-                      />
-                    </button>
-                  </span>
-                  <div className="cart-mini">
-                    <div className="headline">
-                      <h5 className="title">Cart review</h5>
-                      <button
-                        className="icon-button -small clb-close -reset"
-                        aria-label="close"
-                      >
-                        <i className="icon">
-                          <svg
-                            className="default"
-                            width={14}
-                            height={14}
-                            viewBox="0 0 14 14"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" />
-                          </svg>
-                          <svg
-                            className="minimal"
-                            width={16}
-                            height={16}
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M15.7552 0.244806C16.0816 0.571215 16.0816 1.10043 15.7552 1.42684L1.42684 15.7552C1.10043 16.0816 0.571215 16.0816 0.244806 15.7552C-0.0816021 15.4288 -0.0816021 14.8996 0.244806 14.5732L14.5732 0.244806C14.8996 -0.0816019 15.4288 -0.0816019 15.7552 0.244806Z"
-                            />
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M15.7552 15.7552C15.4288 16.0816 14.8996 16.0816 14.5732 15.7552L0.244807 1.42684C-0.0816013 1.10043 -0.0816013 0.571215 0.244807 0.244806C0.571215 -0.0816021 1.10043 -0.0816021 1.42684 0.244806L15.7552 14.5732C16.0816 14.8996 16.0816 15.4288 15.7552 15.7552Z"
-                            />
-                          </svg>
-                        </i>
+
+              {session ? (
+                <li className="icon-button-holder">
+                  <div className="cart-button">
+                    <span className="cart-button-total"></span>
+                    <span className="holder">
+                      <button className="icon-button " aria-label="cart">
+                        <Image
+                          alt="Colabrio"
+                          style={{borderRadius:"50%"}}
+                          src={session?.user?.image || ""}
+                          className=" "
+                          height={40}
+                          width={40}
+                          loading="lazy"
+                          decoding="async"
+                          
+                        />
                       </button>
-                    </div>
-                    <div className="widget_shopping_cart_content">
-                      <p className="woocommerce-mini-cart__empty-message">
-                        No products in the cart.
-                      </p>
+                    </span>
+                    <div className="cart-mini">
+                      <div className="headline">
+                        <h5 className="title">Cart review</h5>
+                        <button
+                          className="icon-button -small clb-close -reset"
+                          aria-label="close"
+                        >
+                          <i className="icon">
+                            <svg
+                              className="default"
+                              width={14}
+                              height={14}
+                              viewBox="0 0 14 14"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" />
+                            </svg>
+                            <svg
+                              className="minimal"
+                              width={16}
+                              height={16}
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                clipRule="evenodd"
+                                d="M15.7552 0.244806C16.0816 0.571215 16.0816 1.10043 15.7552 1.42684L1.42684 15.7552C1.10043 16.0816 0.571215 16.0816 0.244806 15.7552C-0.0816021 15.4288 -0.0816021 14.8996 0.244806 14.5732L14.5732 0.244806C14.8996 -0.0816019 15.4288 -0.0816019 15.7552 0.244806Z"
+                              />
+                              <path
+                                fillRule="evenodd"
+                                clipRule="evenodd"
+                                d="M15.7552 15.7552C15.4288 16.0816 14.8996 16.0816 14.5732 15.7552L0.244807 1.42684C-0.0816013 1.10043 -0.0816013 0.571215 0.244807 0.244806C0.571215 -0.0816021 1.10043 -0.0816021 1.42684 0.244806L15.7552 14.5732C16.0816 14.8996 16.0816 15.4288 15.7552 15.7552Z"
+                              />
+                            </svg>
+                          </i>
+                        </button>
+                      </div>
+                      <div className="widget_shopping_cart_content">
+                        <p className="woocommerce-mini-cart__empty-message">
+                          No products in the cart.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              ) : (
+                <li>
+                  <a
+                    href="https://1.envato.market/5Q25j"
+                    className="button -small btn-optional"
+                    target="_blank"
+                  >
+                    Getting Started
+                  </a>
+                </li>
+              )}
             </ul>
             <div className="close-menu" />
           </div>

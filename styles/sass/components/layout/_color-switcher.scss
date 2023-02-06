@@ -23,11 +23,18 @@
         z-index: 100;
         position: absolute;
 
-        @include border-radius(1.25rem);
 
+        @include border-radius(1.25rem);
+        
+        .color-switcher{
+
+
+        }       
         .color-switcher-item,
         .color-switcher-toddler-item {
-
+               border-radius: 50%;
+               
+               
             &.dark {
 
                 .color-switcher-item-state {

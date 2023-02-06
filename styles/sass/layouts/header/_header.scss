@@ -1,15 +1,9 @@
-.dark-scheme .header {
 
 
-}
-.light-scheme .header {
-
-
-}
 
 .header {
-                            transition: none !important;
-                            background-color: transparent !important;
+    
+    //background-color: transparent !important;
     background-size: cover;
     vertical-align: middle;
     left: 0;
@@ -19,6 +13,20 @@
     border-width: 0;
     border-bottom-width: 1px;
     border-bottom-color: $color-border;
+    padding: 0.3em 0;
+   &-transparent{
+        
+        background-color: transparent !important;
+
+    }
+    
+    
+    &-rounded-transparent{
+        border-radius: 60px;
+        margin: 0.4em 0.5em 0 0.5em;
+        transform: scale(0.93) !important;
+        
+   }
 
     &:not(.-fixed) {
         position: absolute;
@@ -430,7 +438,7 @@
             opacity: 0;
             transition-duration: 0.05s;
             transition-timing-function: $transition-function;
-            transition-property: opacity;
+            
         }
 
         .lang-dropdown-holder {

@@ -40,43 +40,69 @@ const ArticlesOfBlog = ({ articles, tags }: any) => {
                   </p>
                 </div>
               </div>
-
-              <div
-                className="portfolio-filter -center"
-                data-filter="portfolio"
-                data-filter-paged="true"
-              >
-                <ul className="-unlist">
-                  <li>Fitrar por:</li>
-                  <li>
-                    <a
-                      className="active"
-                      href="#all"
-                      data-isotope-filter="*"
-                      data-category-count={10}
-                    >
-                      <span className="name">All</span>
-                    </a>
-                  </li>
-                  {fullTags?.map((el: any, index: number) => {
-                    return (
-                      <li>
-                        {" "}
-                        <a
-                          key={index}
-                          href="#apps"
-                          data-isotope-filter=".ohio-filter-project-123ae12c4c011e4cddeae3371b08bac6"
-                          data-category-count={3}
-                        >
-                          <span className="name">{el.name}</span>
-                          <span className="num">{el.count}</span>
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-
+             <div
+                        id="schedule"
+                        className="vc_row wpb_row vc_row-fluid"
+                      >
+                        <div className="wpb_column vc_column_container vc_col-sm-6">
+                          <div className="vc_column-inner">
+                            
+                          </div>
+                        </div>
+                        <div className="wpb_column vc_column_container vc_col-sm-6">
+                          <div className="vc_column-inner">
+                            <div className="wpb_wrapper">
+                             
+                              <div className="ohio-widget-holder -right">
+                                <a
+                                  href="#"
+                                  target="_blank"
+                                  className="ohio-widget button clb__alignment_reset -outlined -small"
+                                  id="ohio-custom-63d7a7d3c5fb3"
+                                >
+                                  Ver mas secciones
+                                  <i className="icon -right">
+                                    <svg
+                                      className="default"
+                                      width={16}
+                                      height={16}
+                                      viewBox="0 0 16 16"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
+                                    </svg>
+                                    <svg
+                                      className="minimal"
+                                      width={18}
+                                      height={16}
+                                      viewBox="0 0 18 16"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
+                                        d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
+                                      />
+                                      <path
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
+                                        d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
+                                      />
+                                    </svg>
+                                  </i>
+                                </a>
+                              </div>
+                              <div
+                                className="vc_empty_space"
+                                style={{ height: "4vh" }}
+                              >
+                                <span className="vc_empty_space_inner" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
               <div
                 className="vc_row portfolio-grid"
                 data-isotope-grid="true"
@@ -110,8 +136,7 @@ const ArticlesOfBlog = ({ articles, tags }: any) => {
                               src={article?.cover?.external?.url}
                               sizes="(max-width: 882px) 100vw, 882px"
                               fill
-                              
-                              style={{objectFit:"cover"}}
+                              style={{ objectFit: "cover" }}
                               alt=""
                             />
                             <div className="overlay-details -fade-up">
@@ -177,21 +202,7 @@ const ArticlesOfBlog = ({ articles, tags }: any) => {
                 })}
               </div>
 
-              <div className="holder" id="ohio-custom-63dc4ac430207">
-                <div
-                  className="lazy-load load-more -small"
-                  data-lazy-load="click"
-                  data-lazy-pages-count={3}
-                  data-lazy-load-shortcode="W29oaW9fcmVjZW50X3Byb2plY3RzIGNhcmRfbGF5b3V0PSJncmlkXzIiIHByb2plY3RzX2NhdGVnb3J5PSJhcHBzLGNyZWF0aXZlLG1vY2t1cCIgbWV0cm9fc3R5bGU9IjEiIHByb2plY3RzX2luX2Jsb2NrPSIxMiIgY29sdW1uc19pbl9yb3c9IjMtMy0xIiBzaG93X3Byb2plY3RzX2ZpbHRlcj0iMCIgdXNlX3BhZ2luYXRpb249IjEiIHBhZ2luYXRpb25faXRlbXNfcGVyX3BhZ2U9IjMiIHBhZ2luYXRpb25fdHlwZT0ibGF6eV9idXR0b24iIHBhZ2luYXRpb25fc3R5bGU9ImRlZmF1bHQiIHBhZ2luYXRpb25fc2l6ZT0ic21hbGwiIHBhZ2luYXRpb25fcG9zaXRpb249ImxlZnQiIHByb2plY3RzX2luX2Jsb2NrX3BhZ2luYXRpb249IjciIHBvcnRmb2xpb19jYXRlZ29yeT0iYXBwcyxicmFuZGluZyxjYW1wYWlnbixjcmVhdGl2ZSxpZGVudGl0eSxtb2NrdXAiIGl0ZW1zX3Blcl9yb3dfZGVza3RvcD0iMyIgaXRlbXNfcGVyX3BhZ2U9IjciIHRpdGxlX3R5cG9ncmFwaHk9Im51bGwiIGNhdGVnb3J5X3R5cG9ncmFwaHk9Im51bGwiIGxpbmtfdHlwb2dyYXBoeT0iJTdCJTIyd2VpZ2h0JTIyOiUyMmluaGVyaXQlMjIsJTIyc3R5bGUlMjI6JTIyaW5oZXJpdCUyMiwlMjJ1c2VfY3VzdG9tX2ZvbnQlMjI6ZmFsc2UlN0QiIHRpdGxlX3R5cG89Im51bGwiIGNhdGVnb3J5X3R5cG89Im51bGwiIGxpbmtfdHlwbz0ie2BgZm9udF9zaXplYGA6YGBgYCxgYGZvbnRfc2l6ZV90YWJsZXRgYDpgYGBgLGBgZm9udF9zaXplX21vYmlsZWBgOmBgYGAsYGBsaW5lX2hlaWdodGBgOmBgYGAsYGBsaW5lX2hlaWdodF90YWJsZXRgYDpgYGBgLGBgbGluZV9oZWlnaHRfbW9iaWxlYGA6YGBgYCxgYGxldHRlcl9zcGFjaW5nYGA6YGBgYCxgYGxldHRlcl9zcGFjaW5nX3RhYmxldGBgOmBgYGAsYGBsZXR0ZXJfc3BhY2luZ19tb2JpbGVgYDpgYGBgLGBgY29sb3JgYDpgYGBgLGBgd2VpZ2h0YGA6YGBpbmhlcml0YGAsYGBzdHlsZWBgOmBgaW5oZXJpdGBgLGBgdXNlX2N1c3RvbV9mb250YGA6ZmFsc2V9Il0="
-                  data-lazy-load-rest="#wp-json/wp/v2/ohio_lazy_load_shortcodes"
-                  data-lazy-load-scope="projects"
-                >
-                  <button className="button -pagination">
-                    <span className="loadmore-text">Load More</span>
-                    <span className="loading-text">Loading</span>
-                  </button>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>

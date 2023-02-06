@@ -111,7 +111,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
               href="/about"
               className="menu-link -undash main-menu-link item-title"
             >
-              <span>About me </span>
+              <span>About</span>
             </Link>
           </li>
         </ul>{" "}

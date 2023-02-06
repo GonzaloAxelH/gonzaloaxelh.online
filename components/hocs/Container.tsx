@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ElementsbarRight from "../ElementsbarRight";
 import ElementsbarLeft from "../ElementsbarLeft";
 import HamburgerNav from "../HamburgerNav";
@@ -14,6 +14,7 @@ import Head from "next/head";
 import siteMetadata from "@/settings/sitemetdata";
 
 import { useRouter } from 'next/router';
+import { UIContext } from "@/context/UIContext";
 
 const Container = ({
   children,
@@ -36,9 +37,21 @@ const Container = ({
     date: null,
     ...customMeta,
   };
-
+const {setScrollTop} = useContext(UIContext)
+    
+  useEffect(() => {
+ const handleScroll = (event:any) => {
+      setScrollTop(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  },[])
   return (
     <div
+    
       id="body_next"
       className={`${customAddClases} dark-scheme custom-body`}
       cz-shortcut-listen="true"

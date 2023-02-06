@@ -1,13 +1,12 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-code,pre {
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+code,
+pre {
   background: transparent;
-  font-family:'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
 }
 
 .p-h1 {
@@ -49,358 +48,435 @@ code,pre {
   margin-top: 1rem;
 }
 
+@keyframes rotate2 {
+  0% {
+    transform: rotate(360deg);
+    transform: translate(104%, 12%);
+  }
 
-
-
-
-
-
-@keyframes rotate2{
-    0% {
-        transform: rotate(360deg);
-            transform: translate(104%, 12%);
-    }
-
-    100% {
-                transform: rotate(0deg);
-                    transform: translate(0%, 0%);
-    }
+  100% {
+    transform: rotate(0deg);
+    transform: translate(0%, 0%);
+  }
 }
 
 @keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-        transform: translate(0%,0%);
-    }
+  0% {
+    transform: rotate(0deg);
+    transform: translate(0%, 0%);
+  }
 
-    100% {
-        transform: rotate(360deg);
-                transform: translate(54%, 12%);
-    }
+  100% {
+    transform: rotate(360deg);
+    transform: translate(54%, 12%);
+  }
 }
 
-
-
 .gradient {
-    position: absolute;
-    --size: 300px;
-    --speed: 5s;
-    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  position: absolute;
+  --size: 300px;
+  --speed: 5s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
-    width: var(--size);
-    height: var(--size);
-    filter: blur(100px);
-    
-    background-image: linear-gradient(rgba(65, 189, 238, 0.85), rgb(100, 165, 226));
-    animation: rotate var(--speed) var(--easing) alternate infinite;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    top: 9rem;
-    right: 9rem;
+  width: var(--size);
+  height: var(--size);
+  filter: blur(100px);
+
+  background-image: linear-gradient(
+    rgba(65, 189, 238, 0.85),
+    rgb(100, 165, 226)
+  );
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  top: 9rem;
+  right: 9rem;
 }
 
 .gradient2 {
-    position: absolute;
-    --size: 300px;
-    --speed: 5s;
-    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-    
-    width: var(--size);
-    height: var(--size);
-    filter: blur(100px);
-        background-image: linear-gradient(rgba(39, 118, 209, 0.85), rgb(207, 70, 60));
-    animation: rotate2 var(--speed) var(--easing) alternate infinite;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  position: absolute;
+  --size: 300px;
+  --speed: 5s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
-
+  width: var(--size);
+  height: var(--size);
+  filter: blur(100px);
+  background-image: linear-gradient(rgba(39, 118, 209, 0.85), rgb(207, 70, 60));
+  animation: rotate2 var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
-body{
+body {
   position: relative;
-  
 }
 
 @media (max-width: 720px) {
-    .gradient {
-        --size: 200px;
-    }
-        .gradient2 {
-            --size: 200px;
-        }
+  .gradient {
+    --size: 200px;
+  }
+  .gradient2 {
+    --size: 200px;
+  }
 }
 
-
-
-
-
-.section{
+.section {
   margin: 0;
   position: relative;
   display: flex;
-   justify-content: center;
+  justify-content: center;
   transform: scale(1.3) translateY(-4em);
   background-size: contain;
-  
 }
-@media (max-width:700px) {
-    .section{
-        transform: scale(1.2) translateY(-4em);
-    }
+@media (max-width: 700px) {
+  .section {
+    transform: scale(1.2) translateY(-4em);
+  }
 }
-@media (max-width:600px) {
-    .section{
-        transform: scale(1.1) translateY(-4em);
-    }
+@media (max-width: 600px) {
+  .section {
+    transform: scale(1.1) translateY(-4em);
+  }
 }
-@media (max-width:500px) {
-    .section{
-        transform: scale(1.05) translateY(-4em);
-    }
+@media (max-width: 500px) {
+  .section {
+    transform: scale(1.05) translateY(-4em);
+  }
 }
-@media (max-width:400px) {
-    .section{
-        transform: scale(1) translateY(-4em);
-    }
+@media (max-width: 400px) {
+  .section {
+    transform: scale(1) translateY(-4em);
+  }
 }
-.svg{
-  
-  
-  height:500px;
-  width:auto;
-  
+.svg {
+  height: 500px;
+  width: auto;
 }
 
 /* ---------------------------------------------------
 hero Svg starts here
 --------------------------------------------------- */
-.hero-svg .code{
+.hero-svg .code {
   animation: hero1 10s forwards linear infinite;
-  transform-origin:80% 40%;
+  transform-origin: 80% 40%;
 }
 
-@keyframes hero1{
-  0%{
-    transform:rotate(30deg);
-    opacity:0;
+@keyframes hero1 {
+  0% {
+    transform: rotate(30deg);
+    opacity: 0;
   }
-  25%{
-    transform:rotate(-15deg);
-    opacity:1;
+  25% {
+    transform: rotate(-15deg);
+    opacity: 1;
   }
-  50%{
-    transform:rotate(-60deg);
-    opacity:0;
+  50% {
+    transform: rotate(-60deg);
+    opacity: 0;
   }
-  75%{
-    transform:rotate(-15deg);
-    opacity:1;
+  75% {
+    transform: rotate(-15deg);
+    opacity: 1;
   }
-  100%{
-    transform:rotate(30deg);
-    opacity:0;
+  100% {
+    transform: rotate(30deg);
+    opacity: 0;
   }
 }
 
-.hero-svg .git{
+.hero-svg .git {
   animation: hero2 5s forwards linear infinite;
 }
 
-@keyframes hero2{
-  0%{transform:translateX(0px);}
-  25%{transform:translateX(20px);}
-  50%{transform:translateX(0px);}
-  75%{transform:translateX(-20px);}
-  100%{transform:translateX(0px);}
+@keyframes hero2 {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
-.hero-svg .notes{
+.hero-svg .notes {
   animation: hero3 5s forwards linear infinite;
 }
 
-@keyframes hero3{
-  0%{transform:translateY(0px);}
-  50%{transform:translateY(-50px);}
-  100%{transform:translateY(0px);}
+@keyframes hero3 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-.hero-svg .discord .tab{
+.hero-svg .discord .tab {
   animation: hero4 3s forwards linear infinite;
 }
 
-@keyframes hero4{
-  0%{transform:translateX(0px);}
-  50%{transform:translateX(20px);}
-  100%{transform:translateX(0px);}
+@keyframes hero4 {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
-.hero-svg .discord .one{
-  animation-delay:0s;
+.hero-svg .discord .one {
+  animation-delay: 0s;
 }
 
-.hero-svg .discord .two{
-  animation-delay:0.5s;
+.hero-svg .discord .two {
+  animation-delay: 0.5s;
 }
 
-.hero-svg .discord .three{
-  animation-delay:1s;
+.hero-svg .discord .three {
+  animation-delay: 1s;
 }
 
-.hero-svg .gitlab{
+.hero-svg .gitlab {
   animation: hero5 2s forwards linear infinite;
 }
-@keyframes hero5{
-  0%{transform:translate(0px, 0px);}
-  50%{transform:translate(5px, 5px);}
-  100%{transform:translate(0px, 0px);}
+@keyframes hero5 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 /* ---------------------------------------------------
 git Svg starts here
 --------------------------------------------------- */
-.git-svg .box .screen{
-  fill:#3D0576;
+.git-svg .box .screen {
+  fill: #3d0576;
   animation: screen 2s forwards linear infinite;
 }
-@keyframes screen{
-  0%{ fill:#3D0576;}
-  50%{fill:#00000036;}
-  100%{fill:#3D0576;}
+@keyframes screen {
+  0% {
+    fill: #3d0576;
+  }
+  50% {
+    fill: #00000036;
+  }
+  100% {
+    fill: #3d0576;
+  }
 }
 
-.git-svg:hover .path{
-  stroke-dashoffset:100;
-  stroke-dasharray:5;
+.git-svg:hover .path {
+  stroke-dashoffset: 100;
+  stroke-dasharray: 5;
   animation: transfer 5s forwards linear infinite;
 }
 
-@keyframes transfer{
-  0%{stroke-dashoffset:100;}
-  100%{stroke-dashoffset:0;}
+@keyframes transfer {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
-.git-svg:hover .main{
-  animation:main 5s forwards linear infinite;
+.git-svg:hover .main {
+  animation: main 5s forwards linear infinite;
   transform-origin: 30% 60%;
 }
-@keyframes main{
-  0%{ transform:scale(1) translateY(0px);}
-  25%{transform:scale(0.8) translateY(10px);}
-  50%{transform:scale(1) translateY(0px);}
-  75%{transform:scale(0.8) translateY(10px);}
-  100%{transform:scale(1) translateY(0px);}
+@keyframes main {
+  0% {
+    transform: scale(1) translateY(0px);
+  }
+  25% {
+    transform: scale(0.8) translateY(10px);
+  }
+  50% {
+    transform: scale(1) translateY(0px);
+  }
+  75% {
+    transform: scale(0.8) translateY(10px);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+  }
 }
 
 /* ---------------------------------------------------
 Avalance Svg starts here
 --------------------------------------------------- */
 
-.avalanche-svg:hover .path1{
-  stroke-dashoffset:100;
-  stroke-dasharray:5;
+.avalanche-svg:hover .path1 {
+  stroke-dashoffset: 100;
+  stroke-dasharray: 5;
   animation: transfer 5s forwards linear infinite;
 }
 
-.rocket{
+.rocket {
   animation: float 5s forwards ease infinite;
 }
-@keyframes float{
-  0%{ transform:translateY(0px);}
-  25%{transform:translateY(10px);}
-  50%{transform:translateY(0px);}
-  75%{transform:translateY(10px);}
-  100%{transform:translateY(0px);}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-.dot, .dots{
+.dot,
+.dots {
   animation: blink 2s forwards ease infinite;
 }
-.dots{
-  animation-delay:1s;
+.dots {
+  animation-delay: 1s;
 }
 
-.first{
-  animation-delay:1s;
+.first {
+  animation-delay: 1s;
 }
-.second{
-  animation-delay:0.75s;
+.second {
+  animation-delay: 0.75s;
 }
-.fourth{
-  animation-delay:1.23s;
-}
-
-@keyframes blink{
-  0%{ opacity:0;}
-  50%{ opacity:1;}
-  100%{opacity:0;}
+.fourth {
+  animation-delay: 1.23s;
 }
 
-.avalanche-svg:hover .avalanche{
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.avalanche-svg:hover .avalanche {
   animation: float 5s forwards linear infinite;
 }
 .avalanche-svg .rings .top,
 .avalanche-svg .rings .middle,
-.avalanche-svg .rings .bottom{
-  opacity:0;
+.avalanche-svg .rings .bottom {
+  opacity: 0;
 }
-.avalanche-svg:hover .rings .top{
-  animation:bounce1 2s forwards ease-in-out infinite;
+.avalanche-svg:hover .rings .top {
+  animation: bounce1 2s forwards ease-in-out infinite;
 }
-.avalanche-svg:hover .rings .middle{
-  animation:bounce1 2s forwards ease-in-out infinite;
-  animation-delay:0.6s;
+.avalanche-svg:hover .rings .middle {
+  animation: bounce1 2s forwards ease-in-out infinite;
+  animation-delay: 0.6s;
 }
 
-.avalanche-svg:hover .rings .bottom{
-  animation:bounce1 2s forwards ease-in-out infinite;
-  animation-delay:1.2s;
+.avalanche-svg:hover .rings .bottom {
+  animation: bounce1 2s forwards ease-in-out infinite;
+  animation-delay: 1.2s;
 }
-@keyframes bounce1{
-  0%{transform:translateY(0px); opacity:0;}
-  50%{transform:translateY(10px);opacity:0;}
-  51%{transform:translateY(0px);opacity:1;}
-  100%{transform:translateY(-30px);opacity:0;}
+@keyframes bounce1 {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
 }
 
 /* ---------------------------------------------------
 token svg start here
 --------------------------------------------------- */
 
-.token-svg:hover .path{
-  stroke-dashoffset:100;
-  stroke-dasharray:5;
+.token-svg:hover .path {
+  stroke-dashoffset: 100;
+  stroke-dasharray: 5;
   animation: transfer 5s forwards linear infinite;
 }
 
-.token-svg .cloud{
-  animation:float 5s forwards ease-in-out infinite;
+.token-svg .cloud {
+  animation: float 5s forwards ease-in-out infinite;
 }
-.token-svg .top-base{
-  animation:float1 5s forwards ease-in-out infinite;
-  animation-delay:1s;
+.token-svg .top-base {
+  animation: float1 5s forwards ease-in-out infinite;
+  animation-delay: 1s;
 }
-@keyframes float{
-  0%{transform:translateY(0px);}
-  50%{transform:translateY(-20px);}
-  100%{transform:translateY(0px);}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
-@keyframes float1{
-  0%{transform:translateY(5px);}
-  50%{transform:translateY(-5px);}
-  100%{transform:translateY(5px);}
-}
-
-.token-svg:hover .screen{
-  animation:screen 2s forwards linear infinite;
-}
-
-@keyframes screen{
-  0%{opacity:0.2}
-  50%{opacity:0.8}
-  100%{opacity:0.2}
-}
-
-
-.token-svg.token{
-  animation:float 5s forwards ease-in-out infinite;
+@keyframes float1 {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
 
+.token-svg:hover .screen {
+  animation: screen 2s forwards linear infinite;
+}
+
+@keyframes screen {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.token-svg.token {
+  animation: float 5s forwards ease-in-out infinite;
+}
 
 /* blur home*/
 .background {
@@ -409,15 +485,12 @@ token svg start here
   width: 100vw;
   height: 150vh;
   max-width: 100vw;
-  
 }
 
-.dark-scheme .background{
-
+.dark-scheme .background {
   background: rgba(20, 13, 34, 0.08);
 }
-.light-scheme .background{
-
+.light-scheme .background {
   background: transparent !important;
 }
 
@@ -432,20 +505,19 @@ token svg start here
 }
 
 .dark-scheme .background-grid li {
-
   border-right: 1px solid rgba(99, 134, 172, 0.06);
-margin: 0;
+  margin: 0;
   padding: 0;
   width: 16.66%;
 
-  list-style: none ;
+  list-style: none;
 }
- .light-scheme  .background-grid li {
+.light-scheme .background-grid li {
   margin: 0;
   padding: 0;
   border-right: 1px solid rgb(21 56 92 / 0.06);
   width: 16.66%;
-  list-style: none ;
+  list-style: none;
 }
 .background-blurs {
   position: absolute;
@@ -496,7 +568,6 @@ margin: 0;
   animation-delay: 6s !important;
 
   animation: blur1 10s ease infinite;
-
 }
 .light-scheme .background-blurs > [class*="blur"]::before {
   content: " ";
@@ -509,10 +580,9 @@ margin: 0;
   z-index: 2;
   margin: -100px 0 0 -100px;
   border-radius: 100%;
- animation-delay: 6s !important;
+  animation-delay: 6s !important;
 
   animation: blur2 10s ease infinite;
-
 }
 
 .blur-1 {
@@ -632,31 +702,37 @@ margin: 0;
   }
 }
 
-
-.custom_site-content-paddings{
-        
-        padding: 4em;
+.custom_site-content-paddings {
+  padding: 4em;
 }
 
-
 @media screen and (max-width: 1180px) {
-    .custom_site-content-paddings{
-        padding: 0em;
-    }
+  .custom_site-content-paddings {
+    padding: 0em;
+  }
 }
 
 /* item floates */
 
-.list-tecnologies{
-  
+.list-tecnologies {
   display: grid;
-  grid-template-columns:  repeat(8,1fr);
+  grid-template-columns: repeat(8, 1fr);
   flex-wrap: wrap;
-  height: 80px;
-} 
+  gap:2rem;
+}
 
+@media screen and (max-width: 768px) {
+  .list-tecnologies {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
 
-.list-tecnologies img{
+@media screen and (max-width: 768px) {
+  .list-tecnologies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.list-tecnologies img {
   object-fit: contain;
-  
 }
