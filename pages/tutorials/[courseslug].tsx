@@ -9,10 +9,7 @@ import React, { useContext, useEffect } from "react";
 import slugify from "slugify";
 
 const Tutorial = ({ curse, content }: any) => {
-  console.log(curse);
-  useEffect(() => {}, []);
-
-  const { themeGlobal } = useContext(UIContext);
+   const { themeGlobal } = useContext(UIContext);
   return (
     <Container
       customAddClases="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded"

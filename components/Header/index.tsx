@@ -10,8 +10,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
   const { scrollTop } = useContext(UIContext);
 
   const { data: session } = useSession();
-console.log(session)
-  console.log(scrollTop);
+
   return (
     <header
       id="masthead"

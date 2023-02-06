@@ -5,8 +5,7 @@ import React from "react";
 import slugify from "slugify";
 import Image from "next/image";
 const index = ({ recentCurses, test }: any) => {
-  console.log(recentCurses);
-  console.log(test);
+
   return (
     <Container
       customMeta={{ title: "Tutorials - Gonzalo Axel" }}

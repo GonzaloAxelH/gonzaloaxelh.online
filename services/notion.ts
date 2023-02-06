@@ -76,6 +76,6 @@ export const getChildrenDatabase = async (blockId:any) => {
   const response = await notion.databases.query({
     database_id:blockId,
   })
-  console.log(response)
+  
   return response
 }

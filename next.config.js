@@ -12,8 +12,8 @@ const nextConfig = {
       "lh3.googleusercontent.com",
       "res.cloudinary.com",
       "s3.us-west-2.amazonaws.com",
-      "colabrio.ams3.cdn.digitaloceanspaces.com"
-      
+      "colabrio.ams3.cdn.digitaloceanspaces.com",
+      "secure.gravatar.com"
     ],
   },
   sassOptions: {
