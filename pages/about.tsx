@@ -1,6 +1,6 @@
 import Container from "@/components/hocs/Container";
 import React from "react";
-
+import Image from "next/image"
 const About = () => {
   return (
     <Container
@@ -131,22 +131,18 @@ const About = () => {
                                       <div className="wpb_single_image wpb_content_element vc_align_left vc_custom_1641303820363">
                                         <figure className="wpb_wrapper vc_figure">
                                           <div className="vc_single_image-wrapper vc_box_border_grey">
-                                            <img
+                                            <Image
                                               width={1668}
                                               height={798}
                                               src="./Ohio Demo 31 – Just another WordPress site_files/shape1-min.png"
+                                              blurDataURL="./Ohio Demo 31 – Just another WordPress site_files/shape1-min.png"
                                               className="vc_single_image-img attachment-full"
                                               alt=""
+                                              quality={100}
                                               decoding="async"
                                               loading="lazy"
-                                              title="shape1-min"
-                                              srcSet="
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/shape1-min-300x144.png   300w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/shape1-min-1024x490.png 1024w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/shape1-min-768x367.png   768w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/shape1-min-1536x735.png 1536w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/shape1-min.png          1668w
-                                        "
+                                              
+                                        
                                               sizes="(max-width: 1668px) 100vw, 1668px"
                                             />
                                           </div>
@@ -354,15 +350,11 @@ const About = () => {
                                             data-tilt="true"
                                             data-tilt-perspective={6000}
                                           >
-                                            <img
+                                            <Image
                                               src="./Ohio Demo 31 – Just another WordPress site_files/oh__img9.jpeg"
-                                              srcSet="
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img9-255x300.jpeg    255w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img9-871x1024.jpeg   871w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img9-768x903.jpeg    768w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img9-1306x1536.jpeg 1306w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img9.jpeg           1600w
-                                        "
+                                              blurDataURL="./Ohio Demo 31 – Just another WordPress site_files/oh__img9.jpeg"
+                                              fill
+                                              quality={100}
                                               sizes="(max-width: 1600px) 100vw, 1600px"
                                               alt="Highly<br />
 accessible"
@@ -419,15 +411,9 @@ accessible"
                                             data-tilt="true"
                                             data-tilt-perspective={6000}
                                           >
-                                            <img
+                                            <Image
                                               src="./Ohio Demo 31 – Just another WordPress site_files/oh__img116.jpeg"
-                                              srcSet="
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img116-255x300.jpeg    255w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img116-871x1024.jpeg   871w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img116-768x903.jpeg    768w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img116-1306x1536.jpeg 1306w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img116.jpeg           1600w
-                                        "
+                                            fill
                                               sizes="(max-width: 1600px) 100vw, 1600px"
                                               alt="Creative<br />
 networking"
@@ -485,15 +471,9 @@ networking"
                                                 "perspective(6000px) rotateX(0deg) rotateY(0deg)",
                                             }}
                                           >
-                                            <img
+                                            <Image
                                               src="./Ohio Demo 31 – Just another WordPress site_files/oh__img34.1.jpeg"
-                                              srcSet="
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img34.1-255x300.jpeg    255w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img34.1-871x1024.jpeg   871w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img34.1-768x903.jpeg    768w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img34.1-1306x1536.jpeg 1306w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img34.1.jpeg           1600w
-                                        "
+                                              fill
                                               sizes="(max-width: 1600px) 100vw, 1600px"
                                               alt="Ongoing<br />
 optimization"
@@ -550,15 +530,9 @@ optimization"
                                             data-tilt="true"
                                             data-tilt-perspective={6000}
                                           >
-                                            <img
+                                            <Image
                                               src="./Ohio Demo 31 – Just another WordPress site_files/oh__img118.jpeg"
-                                              srcSet="
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img118-255x300.jpeg    255w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img118-871x1024.jpeg   871w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img118-768x903.jpeg    768w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img118-1306x1536.jpeg 1306w,
-                                          https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__img118.jpeg           1600w
-                                        "
+                                              fill
                                               sizes="(max-width: 1600px) 100vw, 1600px"
                                               alt="Collaborative<br />
 discovery"
@@ -1728,7 +1702,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -1756,7 +1731,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-2-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -1784,10 +1760,12 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-4-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
+                                            
                                           />
                                         </a>
                                       </div>
@@ -1812,7 +1790,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-6-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -1842,10 +1821,11 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-1-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
+                                            fill
                                           />
                                         </a>
                                       </div>
@@ -1870,7 +1850,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-3-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -1898,7 +1879,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-5-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -1926,7 +1908,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-7-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -1956,7 +1939,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-8-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -1984,7 +1968,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-9-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -2012,7 +1997,8 @@ discovery"
                                           href="#demo31/#"
                                           target="_blank"
                                         >
-                                          <img
+                                          <Image
+                                            fill
                                             src="./Ohio Demo 31 – Just another WordPress site_files/LogoSC-10-min.png"
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
@@ -2824,15 +2810,9 @@ discovery"
                                         data-cursor-class="cursor-link"
                                         href="#demo31/exploring-our-new-series-on-overcoming-adversity/"
                                       >
-                                        <img
+                                        <Image
                                           src="./Ohio Demo 31 – Just another WordPress site_files/oh__demo6__3a-min-1024x732.jpg"
-                                          srcSet="
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-300x214.jpg    300w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-1024x732.jpg  1024w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-768x549.jpg    768w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-1536x1097.jpg 1536w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min.jpg           1800w
-                                    "
+                                        fill
                                           sizes="(max-width: 1024px) 100vw, 1024px"
                                           alt=""
                                         />
@@ -2842,12 +2822,10 @@ discovery"
                                         <ul className="meta-holder -unlist">
                                           <li className="meta-item">
                                             <div className="avatar -small">
-                                              <img
+                                              <Image
                                                 alt="Colabrio"
                                                 src="./Ohio Demo 31 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                srcSet="
-                                            https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                          "
+                                                fill
                                                 className="avatar avatar-50 photo author-avatar"
                                                 height={50}
                                                 width={50}
@@ -2920,15 +2898,9 @@ discovery"
                                         data-cursor-class="cursor-link"
                                         href="#demo31/booktips-eight-tips-for-service-design-with-expert-users/"
                                       >
-                                        <img
+                                        <Image
                                           src="./Ohio Demo 31 – Just another WordPress site_files/oh__demo6__3-min-1024x732.jpg"
-                                          srcSet="
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min-300x214.jpg    300w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min-1024x732.jpg  1024w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min-768x549.jpg    768w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min-1536x1097.jpg 1536w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3-min.jpg           1800w
-                                    "
+                                          fill
                                           sizes="(max-width: 1024px) 100vw, 1024px"
                                           alt=""
                                         />
@@ -2938,12 +2910,10 @@ discovery"
                                         <ul className="meta-holder -unlist">
                                           <li className="meta-item">
                                             <div className="avatar -small">
-                                              <img
+                                              <Image
                                                 alt="Colabrio"
                                                 src="./Ohio Demo 31 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                srcSet="
-                                            https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                          "
+                                                fill
                                                 className="avatar avatar-50 photo author-avatar"
                                                 height={50}
                                                 width={50}
@@ -3016,15 +2986,9 @@ discovery"
                                         data-cursor-class="cursor-link"
                                         href="#demo31/creativo-para-jovenes-the-designers-ui-ux-checklist/"
                                       >
-                                        <img
+                                        <Image
                                           src="./Ohio Demo 31 – Just another WordPress site_files/oh__demo6__3a-min-1024x732.jpg"
-                                          srcSet="
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-300x214.jpg    300w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-1024x732.jpg  1024w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-768x549.jpg    768w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min-1536x1097.jpg 1536w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-31/oh__demo6__3a-min.jpg           1800w
-                                    "
+                                          fill
                                           sizes="(max-width: 1024px) 100vw, 1024px"
                                           alt=""
                                         />
@@ -3034,12 +2998,10 @@ discovery"
                                         <ul className="meta-holder -unlist">
                                           <li className="meta-item">
                                             <div className="avatar -small">
-                                              <img
+                                              <Image
                                                 alt="Colabrio"
                                                 src="./Ohio Demo 31 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                srcSet="
-                                            https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                          "
+                                                fill
                                                 className="avatar avatar-50 photo author-avatar"
                                                 height={50}
                                                 width={50}

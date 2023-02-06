@@ -9,8 +9,6 @@ import { getTags } from "@/services/notion";
 import Image from "next/image";
 import React, { useEffect } from "react";
 export default function Home({ articles, allTags, tutorials }: any) {
-  
-
   return (
     <Container customAddClases="home page-template-default page page-id-152208 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded">
       <div
@@ -18,7 +16,6 @@ export default function Home({ articles, allTags, tutorials }: any) {
         className="site-content"
         data-mobile-menu-resolution={768}
       >
-      
         <div className="page-container">
           <div id="primary" className="content-area">
             <div className="page-content">
@@ -31,61 +28,98 @@ export default function Home({ articles, allTags, tutorials }: any) {
                     <section className="wpb-content-wrapper">
                       <Banner />
                       <div className="list-tecnologies">
-
-
-                        <img
+                        <Image
+                          
                           className="item-flotate-1"
                           src="/imagenjavascript.png"
+                          blurDataURL="/imagenjavascript.png"
                           width={80}
+                          height={80}
+                          quality={100}
+                          placeholder="blur"
                           alt=""
                         />
-                        <img
+                        <Image
                           className="item-flotate-2"
                           src="/angularimage.png"
+                          blurDataURL="/angularimage.png"
                           width={80}
+
+                          height={80}
+                          quality={100}
+                          placeholder="blur"
                           alt=""
                         />
-                        <img
+                        <Image
                           className="item-flotate-3"
                           src="/tailwindcssimage.png"
+                          blurDataURL="/tailwindcssimage.png"
+                          quality={100}
+                          placeholder="blur"
                           width={80}
+
+                          height={80}
                           alt=""
                         />
-                        <img
+                        <Image
                           className="item-flotate-4"
                           src="/boostrapimage.png"
+                          blurDataURL="/boostrapimage.png"
                           width={80}
+
+                          height={80}
+                          quality={100}
+                          placeholder="blur"
                           alt=""
                         />
-                        <img
+                        <Image
                           className="item-flotate-5"
                           src="/nextjsimage.png"
+                          blurDataURL="/nextjsimage.png"
                           width={80}
+
+                          height={80}
                           alt=""
+                          quality={100}
+                          placeholder="blur"
                         />
-                        <img
+                        <Image
                           className="item-flotate-6"
                           src="/reactimage.png"
+                          blurDataURL="/reactimage.png"
                           width={80}
+
+                          height={80}
+                          quality={100}
+                          placeholder="blur"
                           alt=""
                         />
-                        <img
+                        <Image
                           className="item-flotate-7"
                           src="/pythonimage.webp"
+                          blurDataURL="/pythonimage.webp"
+                          quality={100}
+                          placeholder="blur"
                           width={80}
+                          height={80}
+
                           alt=""
                         />
-                        <img
+                        <Image
                           className="item-flotate-8"
+                          quality={100}
+                          placeholder="blur"
                           src="/c.png"
+                          blurDataURL="/c.png"
                           width={80}
+
+                          height={80}
                           alt=""
                         />
                       </div>
                       <AboutSetcion />
 
                       <ArticlesOfBlog tags={allTags} articles={articles} />
-                     
 
                       <div
                         data-vc-full-width="true"
@@ -112,12 +146,17 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                               width={400}
                                               height={400}
                                               src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img155.png"
+                                              blurDataURL="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img155.png"
                                               className="vc_single_image-img attachment-full"
                                               alt=""
                                               decoding="async"
                                               loading="lazy"
                                               title="oh__img155"
                                               sizes="(max-width: 400px) 100vw, 400px"
+                                              quality={100}
+
+                                                placeholder="blur"
+
                                             />
                                           </div>
                                         </figure>
@@ -168,17 +207,20 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                       <div className="wpb_single_image wpb_content_element vc_align_center  vc_custom_1627645440038">
                                         <figure className="wpb_wrapper vc_figure">
                                           <div className="vc_single_image-wrapper   vc_box_border_grey">
-                                            <img
+                                            <Image
                                               width={400}
                                               height={400}
                                               src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img156.png"
+                                              blurDataURL="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img156.png"
                                               className="vc_single_image-img attachment-full"
                                               alt=""
                                               decoding="async"
                                               loading="lazy"
                                               title="oh__img156"
-                                              srcSet="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img156-300x300.png 300w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img156-150x150.png 150w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img156-200x200.png 200w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img156.png 400w"
+                                              quality={100}
                                               sizes="(max-width: 400px) 100vw, 400px"
+
+                                                placeholder="blur"
                                             />
                                           </div>
                                         </figure>
@@ -230,17 +272,19 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                       <div className="wpb_single_image wpb_content_element vc_align_center  vc_custom_1627645445825">
                                         <figure className="wpb_wrapper vc_figure">
                                           <div className="vc_single_image-wrapper   vc_box_border_grey">
-                                            <img
+                                            <Image
                                               width={400}
                                               height={400}
                                               src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img157.png"
+                                              blurDataURL="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img157.png"
                                               className="vc_single_image-img attachment-full"
                                               alt=""
                                               decoding="async"
                                               loading="lazy"
                                               title="oh__img157"
-                                              srcSet="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img157-300x300.png 300w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img157-150x150.png 150w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img157-200x200.png 200w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-28/oh__img157.png 400w"
                                               sizes="(max-width: 400px) 100vw, 400px"
+
+                                                placeholder="blur"
                                             />
                                           </div>
                                         </figure>
@@ -382,17 +426,21 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                       <div className="wpb_single_image wpb_content_element vc_align_center  vc_custom_1626956916148">
                                         <figure className="wpb_wrapper vc_figure">
                                           <div className="vc_single_image-wrapper   vc_box_border_grey">
-                                            <img
+                                            <Image
                                               width={1000}
                                               height={740}
                                               src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-9/oh__img169.png"
+                                              blurDataURL="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-9/oh__img169.png"
                                               className="vc_single_image-img attachment-full"
                                               alt=""
+                                              quality={100}
                                               decoding="async"
                                               loading="lazy"
                                               title="oh__img169"
-                                              srcSet="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-9/oh__img169-300x222.png 300w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-9/oh__img169-768x568.png 768w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-9/oh__img169.png 1000w"
+                                              
                                               sizes="(max-width: 1000px) 100vw, 1000px"
+
+                                                placeholder="blur"
                                             />
                                           </div>
                                         </figure>
@@ -464,14 +512,11 @@ export default function Home({ articles, allTags, tutorials }: any) {
                         className="vc_row wpb_row vc_row-fluid"
                       >
                         <div className="wpb_column vc_column_container vc_col-sm-6">
-                          <div className="vc_column-inner">
-                            
-                          </div>
+                          <div className="vc_column-inner"></div>
                         </div>
                         <div className="wpb_column vc_column_container vc_col-sm-6">
                           <div className="vc_column-inner">
                             <div className="wpb_wrapper">
-                             
                               <div className="ohio-widget-holder -right">
                                 <a
                                   href="#"
@@ -546,10 +591,13 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                   >
                                     <Image
                                       src="/Google-Keep-Android.webp"
+                                      blurDataURL="/Google-Keep-Android.webp"
                                       fill
                                       objectFit="cover"
                                       sizes="(max-width: 1600px) 100vw, 1600px"
                                       alt=""
+
+                                                placeholder="blur"
                                     />
                                     <div className="overlay-details">
                                       <div className="card-details">
@@ -601,10 +649,13 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                   >
                                     <Image
                                       src="/instagramclone.webp"
+                                      blurDataURL="/instagramclone.webp"
+                                      quality={100}
                                       fill
                                       objectFit="cover"
                                       sizes="(max-width: 1600px) 100vw, 1600px"
                                       alt=""
+placeholder="blur"
                                     />
                                     <div className="overlay-details">
                                       <div className="card-details">
@@ -656,10 +707,14 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                   >
                                     <Image
                                       src="/googleclone.webp"
+                                      blurDataURL="/googleclone.webp"
                                       fill
+                                      quality={100}
                                       objectFit="cover"
                                       sizes="(max-width: 1600px) 100vw, 1600px"
                                       alt=""
+                                    
+                                    placeholder="blur"
                                     />
                                     <div className="overlay-details">
                                       <div className="card-details">
@@ -710,10 +765,13 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                     }}
                                   >
                                     <Image
-                                      src="/portfolioclone.png"
+                                      src="/googleclone.webp"
+                                      blurDataURL="/portfolioclone.png"
                                       fill
+                                      quality={100}
                                       objectFit="cover"
                                       sizes="(max-width: 1600px) 100vw, 1600px"
+placeholder="blur"
                                       alt=""
                                     />
                                     <div className="overlay-details">
@@ -771,75 +829,71 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                   </div>
                                 </div>
                               </div>
-<div
-                        id="schedule"
-                        className="vc_row wpb_row vc_row-fluid"
-                      >
-                        <div className="wpb_column vc_column_container vc_col-sm-6">
-                          <div className="vc_column-inner">
-                            
-                          </div>
-                        </div>
-                        <div className="wpb_column vc_column_container vc_col-sm-6">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper">
-                             
-                              <div className="ohio-widget-holder -right">
-                                <a
-                                  href="#"
-                                  target="_blank"
-                                  className="ohio-widget button clb__alignment_reset -outlined -small"
-                                  id="ohio-custom-63d7a7d3c5fb3"
-                                >
-                                  Ver mas secciones
-                                  <i className="icon -right">
-                                    <svg
-                                      className="default"
-                                      width={16}
-                                      height={16}
-                                      viewBox="0 0 16 16"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                    </svg>
-                                    <svg
-                                      className="minimal"
-                                      width={18}
-                                      height={16}
-                                      viewBox="0 0 18 16"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        fillRule="evenodd"
-                                        clipRule="evenodd"
-                                        d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                      />
-                                      <path
-                                        fillRule="evenodd"
-                                        clipRule="evenodd"
-                                        d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                      />
-                                    </svg>
-                                  </i>
-                                </a>
-                              </div>
                               <div
-                                className="vc_empty_space"
-                                style={{ height: "4vh" }}
+                                id="schedule"
+                                className="vc_row wpb_row vc_row-fluid"
                               >
-                                <span className="vc_empty_space_inner" />
+                                <div className="wpb_column vc_column_container vc_col-sm-6">
+                                  <div className="vc_column-inner"></div>
+                                </div>
+                                <div className="wpb_column vc_column_container vc_col-sm-6">
+                                  <div className="vc_column-inner">
+                                    <div className="wpb_wrapper">
+                                      <div className="ohio-widget-holder -right">
+                                        <a
+                                          href="#"
+                                          target="_blank"
+                                          className="ohio-widget button clb__alignment_reset -outlined -small"
+                                          id="ohio-custom-63d7a7d3c5fb3"
+                                        >
+                                          Ver mas secciones
+                                          <i className="icon -right">
+                                            <svg
+                                              className="default"
+                                              width={16}
+                                              height={16}
+                                              viewBox="0 0 16 16"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
+                                            </svg>
+                                            <svg
+                                              className="minimal"
+                                              width={18}
+                                              height={16}
+                                              viewBox="0 0 18 16"
+                                              fill="none"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                fillRule="evenodd"
+                                                clipRule="evenodd"
+                                                d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
+                                              />
+                                              <path
+                                                fillRule="evenodd"
+                                                clipRule="evenodd"
+                                                d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
+                                              />
+                                            </svg>
+                                          </i>
+                                        </a>
+                                      </div>
+                                      <div
+                                        className="vc_empty_space"
+                                        style={{ height: "4vh" }}
+                                      >
+                                        <span className="vc_empty_space_inner" />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                               <div
                                 className="ohio-widget blog-posts vc_row"
                                 id="ohio-custom-63dd38b76ed05"
                                 data-lazy-container="posts"
                               >
-
                                 {tutorials.slice(0, 3).map((tutorial: any) => {
                                   return (
                                     <div
@@ -858,13 +912,20 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                             data-cursor-class="cursor-link"
                                             href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
                                           >
-                                            <img
+                                            <Image
                                               src={
                                                 tutorial?.cover?.file?.url ||
                                                 tutorial.cover?.external?.url
                                               }
+blurDataURL={
+                                                tutorial?.cover?.file?.url ||
+                                                tutorial.cover?.external?.url
+                                              }
+                                              quality={100}
+                                                fill
                                               sizes="(max-width: 882px) 100vw, 882px"
                                               alt=""
+placeholder="blur"
                                             />
                                             <div className="overlay" />
                                           </a>
@@ -872,14 +933,18 @@ export default function Home({ articles, allTags, tutorials }: any) {
                                             <ul className="meta-holder -unlist">
                                               <li className="meta-item">
                                                 <div className="avatar -small">
-                                                  <img
+                                                  <Image
                                                     alt="Colabrio"
                                                     src="/react_logo_t.png"
+                                                    blurDataURL="/react_logo_t.png"
+                                                    quality={100}
                                                     className="avatar avatar-50 photo author-avatar"
                                                     height={50}
                                                     width={50}
                                                     loading="lazy"
                                                     decoding="async"
+
+                                                placeholder="blur"
                                                   />
                                                 </div>
                                               </li>

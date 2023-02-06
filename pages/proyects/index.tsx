@@ -3803,6 +3803,8 @@ const Proyects = ({ allProyects }: any) => {
                                                 width={1200}
                                                 height={684}
                                                 objectFit="fill"
+                                                placeholder="blur"
+                                                quality={100}
                                                 alt="Stickers Pack"
                                               />
                                               <div className="overlay-details -top -fade-down"></div>

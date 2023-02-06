@@ -4,7 +4,7 @@ import ContentArticle from "@/components/ContentArticle";
 import RecentPosts from "@/components/RecentPosts";
 import Container from "@/components/hocs/Container";
 import slugify from "slugify";
-
+import Image from "next/image"
 import { useGetArticle, useGetArticles} from "@/hooks/useGetArticles";
 import React, { useEffect, useState } from "react";
 import { PageType } from "@/settings/types";
@@ -40,14 +40,18 @@ const BlogSlug = (props: any) => {
               <div className="vc_col-md-12">
                 <div className="widget widget_ohio_widget_about_author">
                   <div className="avatar -large">
-                    <img
+                    <Image
                       alt="Gonzalo"
                       src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
+                      blurDataURL="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
+                      
                       className="avatar avatar-72 photo"
                       height={72}
                       width={72}
                       loading="lazy"
                       decoding="async"
+                      quality={100}
+                      
                     />
                   </div>
                   <div className="content">

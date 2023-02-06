@@ -334,6 +334,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                     height={684}
                     objectFit="fill"
                     alt="Stickers Pack"
+                    placeholder="blur"
+                    quality={100}
                   />
                   <div className="overlay-details -top -fade-down"></div>
                 </div>
@@ -351,6 +353,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                 height={684}
                 objectFit="fill"
                 alt="Stickers Pack"
+placeholder="blur"
+                    quality={100}
               />
               <div className="share-bar -vertical">
                 <div className="social-networks -small">
@@ -788,6 +792,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                             sizes="(max-width: 2400px) 100vw, 2400px"
                                             alt="Before"
                                             className="compare-before"
+placeholder="blur"
+                    quality={100}
                                           />
                                         </div>
                                       }
@@ -816,6 +822,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                             alt="After"
                                             className="compare-after"
                                             sizes="(max-width: 2000px) 100vw, 2000px"
+placeholder="blur"
+                    quality={100}
                                           />
                                         </div>
                                       }
@@ -999,6 +1007,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                     }
                                     objectFit="fill"
                                     sizes="(max-width: 2000px) 100vw, 2000px"
+placeholder="blur"
+                    quality={100}
                                   />
                                 </div>
                               </figure>
@@ -1033,6 +1043,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                     }
                                     objectFit="fill"
                                     sizes="(max-width: 2000px) 100vw, 2000px"
+placeholder="blur"
+                    quality={100}
                                   />
                                 </div>
                               </figure>
@@ -1067,6 +1079,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                     }
                                     objectFit="fill"
                                     sizes="(max-width: 2000px) 100vw, 2000px"
+placeholder="blur"
+                    quality={100}
                                   />
                                 </div>
                               </figure>
@@ -1249,6 +1263,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                           }
                           objectFit="fill"
                           sizes="(max-width: 2000px) 100vw, 2000px"
+placeholder="blur"
+                    quality={100}
                         />{" "}
                       </div>{" "}
                     </figure>
@@ -1279,6 +1295,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                           }
                           objectFit="fill"
                           sizes="(max-width: 2000px) 100vw, 2000px"
+placeholder="blur"
+                    quality={100}
                         />{" "}
                       </div>{" "}
                     </figure>
@@ -1309,6 +1327,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                           }
                           objectFit="fill"
                           sizes="(max-width: 2000px) 100vw, 2000px"
+placeholder="blur"
+                    quality={100}
                         />{" "}
                       </div>{" "}
                     </figure>
@@ -1339,6 +1359,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                           }
                           objectFit="fill"
                           sizes="(max-width: 2000px) 100vw, 2000px"
+placeholder="blur"
+                    quality={100}
                         />{" "}
                       </div>{" "}
                     </figure>
@@ -1464,6 +1486,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       }
                                       objectFit="fill"
                                       sizes="(max-width: 700px) 100vw, 700px"
+placeholder="blur"
+                    quality={100}
                                     />
                                   </div>
                                 </figure>
@@ -1498,6 +1522,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       }
                                       objectFit="fill"
                                       sizes="(max-width: 700px) 100vw, 700px"
+placeholder="blur"
+                    quality={100}
                                     />
                                   </div>
                                 </figure>
@@ -1532,6 +1558,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       }
                                       objectFit="fill"
                                       sizes="(max-width: 780px) 100vw, 780px"
+placeholder="blur"
+                    quality={100}
                                     />
                                   </div>
                                 </figure>
@@ -1767,6 +1795,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       }
                                       objectFit="fill"
                                       sizes="(max-width: 352px) 100vw, 352px"
+placeholder="blur"
+                    quality={100}
                                     />
                                   </div>
                                 </figure>
@@ -1807,6 +1837,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       }
                                       objectFit="fill"
                                       sizes="(max-width: 352px) 100vw, 352px"
+placeholder="blur"
+                    quality={100}
                                     />
                                   </div>
                                 </figure>
@@ -1853,6 +1885,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       }
                                       objectFit="fill"
                                       sizes="(max-width: 352px) 100vw, 352px"
+placeholder="blur"
+                    quality={100}
                                     />
                                   </div>
                                 </figure>
@@ -1893,6 +1927,8 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                       }
                                       objectFit="fill"
                                       sizes="(max-width: 352px) 100vw, 352px"
+placeholder="blur"
+                    quality={100}
                                     />
                                   </div>
                                 </figure>
@@ -1937,8 +1973,11 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                                         proyect?.cover?.file?.url ||
                                         proyect.cover.external.url
                                       }
+                                      quality={100}
                                       objectFit="fill"
                                       sizes="(max-width: 352px) 100vw, 352px"
+                                      placeholder="blur"
+                                      
                                     />
                                   </div>
                                 </figure>

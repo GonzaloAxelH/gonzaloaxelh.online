@@ -409,15 +409,20 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                                 <ul className="meta-holder -unlist">
                                                   <li className="meta-item">
                                                     <div className="avatar -small">
-                                                      <img
+                                                      <Image
                                                         alt="Gonzalo"
                                                         src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
-                                                        srcSet="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
+                                                        blurDataURL="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
+                                                        
                                                         className="avatar avatar-50 photo author-avatar"
                                                         height={50}
                                                         width={50}
                                                         loading="lazy"
                                                         decoding="async"
+
+                    
+                                                        quality={100}
+                                                        placeholder="blur"
                                                       />
                                                     </div>
                                                   </li>
