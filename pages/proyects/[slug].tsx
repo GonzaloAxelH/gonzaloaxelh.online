@@ -360,7 +360,7 @@ placeholder="blur"
                 <div className="social-networks -small">
                   <a
                     className="-unlink"
-                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fohio.clbthemes.com%2Fproject%2Fdiseno-grafico%2F"
+                    href="#"
                     target="_blank"
                   >
                     <i aria-hidden className="network fab fa-facebook-f" />
@@ -368,7 +368,7 @@ placeholder="blur"
                   </a>
                   <a
                     className="-unlink"
-                    href="https://twitter.com/intent/tweet?text=Dise%C3%B1o+Gr%C3%A1fico,+https%3A%2F%2Fohio.clbthemes.com%2Fproject%2Fdiseno-grafico%2F"
+                    href="#"
                     target="_blank"
                   >
                     <i aria-hidden className="network fab fa-twitter" />
@@ -376,7 +376,7 @@ placeholder="blur"
                   </a>
                   <a
                     className="-unlink"
-                    href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fohio.clbthemes.com%2Fproject%2Fdiseno-grafico%2F&description=Dise%C3%B1o+Gr%C3%A1fico"
+                    href="#"
                     target="_blank"
                   >
                     <i aria-hidden className="network fab fa-pinterest" />

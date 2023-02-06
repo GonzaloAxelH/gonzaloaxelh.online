@@ -5,73 +5,28 @@ import React from "react";
 import slugify from "slugify";
 import Image from "next/image";
 const index = ({ recentCurses, test }: any) => {
-
+  console.log(recentCurses);
   return (
     <Container
       customMeta={{ title: "Tutorials - Gonzalo Axel" }}
-      customAddClases="home page-template-default page page-id-152078 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded"
+      customAddClases="home page-template-default page page-id-152078 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation  wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 page-is-loaded"
     >
       <div
         id="content"
-        className="site-content"
+        className="site-content "
         data-mobile-menu-resolution={768}
-        style={{maxWidth:"98vw"}}
+        style={{ maxWidth: "98vw", padding: "2.8em" }}
       >
         <div className="page-container">
           <div id="primary" className="content-area">
-            <div className="page-content">
-              <main id="main" className="site-main">
+            <div className="page-content ">
+              <main id="main" className="site-main ">
                 <article
                   id="post-152078"
                   className="post-152078 page type-page status-publish hentry"
                 >
-                  <div className="entry-content">
+                  <div className="entry-content ">
                     <section className="wpb-content-wrapper">
-                      <div className="vc_row wpb_row vc_row-fluid vc_row-o-content-bottom vc_row-flex">
-                        <div className="clb__padding_set wpb_column vc_column_container vc_col-sm-8">
-                          <div className="vc_column-inner vc_custom_1657104922871">
-                            <div className="wpb_wrapper">
-                              <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                <div className="clb__dark_mode_light clb__padding_set wpb_column vc_column_container vc_col-sm-12 vc_col-has-fill">
-                                  <div className="vc_column-inner vc_custom_1657104901745">
-                                    <div className="wpb_wrapper">
-                                      <div
-                                        className="vc_empty_space"
-                                        style={{ height: "20vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                      <div
-                                        className="ohio-widget heading clb__heading -left"
-                                        id="ohio-custom-63dc9546ba181"
-                                      >
-                                        <div className="subtitle">
-                                          <strong>Some queries</strong> from the
-                                          journal.
-                                        </div>
-                                        <h1 className="title">
-                                          How to overcome
-                                          <br className="vc_hidden-xs vc_hidden-sm" />
-                                          with a writing
-                                          <br className="vc_hidden-xs vc_hidden-sm" />
-                                          stagnation.
-                                        </h1>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space clb__section_spacer"
-                                        style={{ height: "5vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                      </div>
                       <div className="vc_row wpb_row vc_row-fluid">
                         <div className="wpb_column vc_column_container vc_col-sm-12">
                           <div className="vc_column-inner">
@@ -93,19 +48,20 @@ const index = ({ recentCurses, test }: any) => {
                                   data-lazy-scope="posts"
                                 >
                                   <div className="blog-item card -layout3">
-                                    <a
-                                      href="#demo25/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                                    <Link
+                                      href={`/tutorial/${slugify(
+                                        recentCurses[0]?.properties?.Name
+                                          ?.title[0]?.plain_text
+                                      ).toLowerCase()}`}
                                       data-cursor-class="cursor-link"
                                     >
                                       <figure className="image-holder">
                                         <img
-                                          src="./Ohio Stage Demo 25 – Just another WordPress site_files/clb_blog_18-1024x597.jpg"
-                                          srcSet="
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_18-300x175.jpg   300w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_18-1024x597.jpg 1024w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_18-768x448.jpg   768w,
-                                      https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_18.jpg          1200w
-                                    "
+                                          src={
+                                            recentCurses[0]?.cover?.external
+                                              ?.url ||
+                                            recentCurses[0]?.cover?.file?.url
+                                          }
                                           sizes="(max-width: 1024px) 100vw, 1024px"
                                           alt=""
                                         />
@@ -116,9 +72,6 @@ const index = ({ recentCurses, test }: any) => {
                                                 <img
                                                   alt="Colabrio"
                                                   src="./Ohio Stage Demo 25 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                  srcSet="
-                                              https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                            "
                                                   className="avatar avatar-50 photo author-avatar"
                                                   height={50}
                                                   width={50}
@@ -127,22 +80,20 @@ const index = ({ recentCurses, test }: any) => {
                                                 />
                                               </div>
                                             </li>
-                                            <li className="meta-item">
-                                              <span className="prefix">
-                                                Posted by
-                                              </span>
-                                              <span className="author">
-                                                Colabrio
-                                              </span>
-                                            </li>
                                           </ul>
                                         </div>
                                       </figure>
-                                    </a>
+                                    </Link>
                                     <div className="card-details -left">
                                       <div className="headline-meta -small-t">
                                         <div className="date">
-                                          December 22, 2021
+                                          {new Date(
+                                            recentCurses[0].created_time
+                                          ).toLocaleDateString("es-PE", {
+                                            year: "numeric",
+                                            month: "long",
+                                            day: "numeric",
+                                          })}
                                         </div>
                                         <span className="post-meta-estimate">
                                           9 min read
@@ -150,34 +101,27 @@ const index = ({ recentCurses, test }: any) => {
                                       </div>
                                       <div className="heading title">
                                         <h4 className="title">
-                                          <a
+                                          <Link
+href={`/tutorial/${slugify(
+                                        recentCurses[0]?.properties?.Name
+                                          ?.title[0]?.plain_text
+                                      ).toLowerCase()}`}
                                             className="-unlink"
-                                            href="#demo25/definitive-guide-to-make-a-daily-more-productive-working-flow/"
+                                            
                                           >
-                                            Definitive Guide to Make a Daily
-                                            More Productive Working Flow.
-                                          </a>
+                                            {
+                                              recentCurses[0].properties.Name
+                                                ?.title[0]?.plain_text
+                                            }
+                                          </Link>
                                         </h4>
                                       </div>
                                       <p>
-                                        Using a Query A CSS pseudo-class is a
-                                        keyword added to a selector that
-                                        specifies a...
+                                        {
+                                          recentCurses[0].properties.Summary
+                                            ?.rich_text[0]?.plain_text
+                                        }
                                       </p>
-                                      <div className="category-holder -with-tag">
-                                        <a
-                                          className="tag -unlink"
-                                          href="#demo25/category/digital/"
-                                        >
-                                          Digital
-                                        </a>
-                                        <a
-                                          className="tag -unlink"
-                                          href="#demo25/category/strategy/"
-                                        >
-                                          Strategy
-                                        </a>
-                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -201,614 +145,86 @@ const index = ({ recentCurses, test }: any) => {
                                 id="ohio-custom-63dc9546c1877"
                                 data-lazy-container="posts"
                               >
-                                <div
-                                  className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
-                                  data-lazy-item
-                                  data-lazy-scope="posts"
-                                >
-                                  <div
-                                    data-aos-once="true"
-                                    data-aos="fade-up"
-                                    data-aos-delay={0}
-                                    className="aos-init aos-animate"
-                                  >
-                                    <div className="blog-item card -layout2 -metro">
-                                      <figure className="image-holder">
-                                        <a
-                                          className="-unlink"
-                                          data-cursor-class="cursor-link"
-                                          href="#demo25/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
-                                        >
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/clb_blog_4-1024x1024.jpg"
-                                            srcSet="
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_4-300x300.jpg    300w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_4-1024x1024.jpg 1024w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_4-150x150.jpg    150w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_4-768x768.jpg    768w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_4-200x200.jpg    200w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_4-500x500.jpg    500w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_4.jpg           1362w
-                                      "
-                                            sizes="(max-width: 1024px) 100vw, 1024px"
-                                            alt=""
-                                          />
-                                          <div className="overlay" />
-                                        </a>
-                                        <div className="overlay-details -top -fade-down">
-                                          <ul className="meta-holder -unlist">
-                                            <li className="meta-item">
-                                              <div className="avatar -small">
-                                                <img
-                                                  alt="Colabrio"
-                                                  src="./Ohio Stage Demo 25 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                  srcSet="
-                                              https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                            "
-                                                  className="avatar avatar-50 photo author-avatar"
-                                                  height={50}
-                                                  width={50}
-                                                  loading="lazy"
-                                                  decoding="async"
-                                                />
-                                              </div>
-                                            </li>
-                                            <li className="meta-item">
-                                              <span className="prefix">
-                                                Posted by
-                                              </span>
-                                              <span className="author">
-                                                Colabrio
-                                              </span>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                        <div className="overlay-details card-details -left">
-                                          <div className="headline-meta -small-t">
-                                            <div className="date">
-                                              December 22, 2021
+                                {recentCurses.map((tutorial: any) => {
+                                  return (
+                                    <div
+                                      className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
+                                      data-lazy-item
+                                      data-lazy-scope="posts"
+                                    >
+                                      <div
+                                        data-aos-once="true"
+                                        data-aos="fade-up"
+                                        data-aos-delay={0}
+                                        className="aos-init aos-animate"
+                                      >
+                                        <div className="blog-item card -layout2 -metro">
+                                          <figure
+                                            className="image-holder"
+                                            style={{}}
+                                          >
+                                            <Link
+                                              href={`/tutorial/${slugify(
+                                                recentCurses[0]?.properties
+                                                  ?.Name?.title[0]?.plain_text
+                                              ).toLowerCase()}`}
+                                              className="-unlink"
+                                              data-cursor-class="cursor-link"
+                                            >
+                                              <Image
+                                                src={
+                                                  tutorial.properties.ImageSmall
+                                                    ?.url
+                                                }
+                                                blurDataURL={
+                                                  tutorial.properties.ImageSmall
+                                                    ?.url
+                                                }
+                                                quality={100}
+                                                fill
+                                                sizes="(max-width: 1024px) 100vw, 1024px"
+                                                alt=""
+                                              />
+                                              <div className="overlay" />
+                                            </Link>
+                                            <div className="overlay-details -top -fade-down">
+                                              <ul className="meta-holder -unlist">
+                                                <li className="meta-item">
+                                                  <div className="avatar -small">
+                                                    <img
+                                                      alt="Colabrio"
+                                                      src="/imagenjavascript.png"
+                                                      className="avatar avatar-50 photo author-avatar"
+                                                      height={50}
+                                                      width={50}
+                                                      loading="lazy"
+                                                      decoding="async"
+                                                    />
+                                                  </div>
+                                                </li>
+                                              </ul>
                                             </div>
-                                            <span className="post-meta-estimate">
-                                              9 min read
-                                            </span>
-                                          </div>
-                                          <div className="heading title">
-                                            <h4 className="title">
-                                              <a
-                                                className="-unlink"
-                                                href="#demo25/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
-                                              >
-                                                Creativo Para Jóvenes: a
-                                                Designer’s UI/UX Complete
-                                                Checklist.
-                                              </a>
-                                            </h4>
-                                          </div>
-                                          <div className="category-holder -with-tag">
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/digital/"
-                                            >
-                                              Digital
-                                            </a>
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/marketing/"
-                                            >
-                                              Marketing
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </figure>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
-                                  data-lazy-item
-                                  data-lazy-scope="posts"
-                                >
-                                  <div
-                                    data-aos-once="true"
-                                    data-aos="fade-up"
-                                    data-aos-delay={100}
-                                    className="aos-init aos-animate"
-                                  >
-                                    <div className="blog-item card -layout2 -metro">
-                                      <figure className="image-holder">
-                                        <a
-                                          className="-unlink"
-                                          data-cursor-class="cursor-link"
-                                          href="#demo25/organic-food-isnt-much-better-for-your-future-health/"
-                                        >
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/clb_blog_5-1024x1024.jpg"
-                                            srcSet="
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_5-300x300.jpg    300w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_5-1024x1024.jpg 1024w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_5-150x150.jpg    150w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_5-768x768.jpg    768w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_5-200x200.jpg    200w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_5-500x500.jpg    500w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_5.jpg           1362w
-                                      "
-                                            sizes="(max-width: 1024px) 100vw, 1024px"
-                                            alt=""
-                                          />
-                                          <div className="overlay" />
-                                        </a>
-                                        <div className="overlay-details -top -fade-down">
-                                          <ul className="meta-holder -unlist">
-                                            <li className="meta-item">
-                                              <div className="avatar -small">
-                                                <img
-                                                  alt="Colabrio"
-                                                  src="./Ohio Stage Demo 25 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                  srcSet="
-                                              https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                            "
-                                                  className="avatar avatar-50 photo author-avatar"
-                                                  height={50}
-                                                  width={50}
-                                                  loading="lazy"
-                                                  decoding="async"
-                                                />
+                                            <div className="overlay-details card-details -left">
+                                              <div className="heading title">
+                                                <h4 className="title">
+                                                  <a
+                                                    className="-unlink"
+                                                    href="#demo25/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                                                  >
+                                                    {
+                                                      tutorial.properties.Name
+                                                        ?.title[0]?.plain_text
+                                                    }
+                                                  </a>
+                                                </h4>
                                               </div>
-                                            </li>
-                                            <li className="meta-item">
-                                              <span className="prefix">
-                                                Posted by
-                                              </span>
-                                              <span className="author">
-                                                Colabrio
-                                              </span>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                        <div className="overlay-details card-details -left">
-                                          <div className="headline-meta -small-t">
-                                            <div className="date">
-                                              December 22, 2021
                                             </div>
-                                            <span className="post-meta-estimate">
-                                              9 min read
-                                            </span>
-                                          </div>
-                                          <div className="heading title">
-                                            <h4 className="title">
-                                              <a
-                                                className="-unlink"
-                                                href="#demo25/organic-food-isnt-much-better-for-your-future-health/"
-                                              >
-                                                Organic Food Isn’t Much Better
-                                                For Your Future Health.
-                                              </a>
-                                            </h4>
-                                          </div>
-                                          <div className="category-holder -with-tag">
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/digital/"
-                                            >
-                                              Digital
-                                            </a>
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/marketing/"
-                                            >
-                                              Marketing
-                                            </a>
-                                          </div>
+                                          </figure>
                                         </div>
-                                      </figure>
+                                      </div>
                                     </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
-                                  data-lazy-item
-                                  data-lazy-scope="posts"
-                                >
-                                  <div
-                                    data-aos-once="true"
-                                    data-aos="fade-up"
-                                    data-aos-delay={250}
-                                    className="aos-init aos-animate"
-                                  >
-                                    <div className="blog-item card -layout2 -metro">
-                                      <figure className="image-holder">
-                                        <a
-                                          className="-unlink"
-                                          data-cursor-class="cursor-link"
-                                          href="#demo25/ways-of-lying-to-yourself-about-your-new-relationship/"
-                                        >
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/clb_blog_6-1024x1024.jpg"
-                                            srcSet="
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_6-300x300.jpg    300w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_6-1024x1024.jpg 1024w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_6-150x150.jpg    150w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_6-768x768.jpg    768w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_6-200x200.jpg    200w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_6-500x500.jpg    500w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_6.jpg           1463w
-                                      "
-                                            sizes="(max-width: 1024px) 100vw, 1024px"
-                                            alt=""
-                                          />
-                                          <div className="overlay" />
-                                        </a>
-                                        <div className="overlay-details -top -fade-down">
-                                          <ul className="meta-holder -unlist">
-                                            <li className="meta-item">
-                                              <div className="avatar -small">
-                                                <img
-                                                  alt="Colabrio"
-                                                  src="./Ohio Stage Demo 25 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                  srcSet="
-                                              https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                            "
-                                                  className="avatar avatar-50 photo author-avatar"
-                                                  height={50}
-                                                  width={50}
-                                                  loading="lazy"
-                                                  decoding="async"
-                                                />
-                                              </div>
-                                            </li>
-                                            <li className="meta-item">
-                                              <span className="prefix">
-                                                Posted by
-                                              </span>
-                                              <span className="author">
-                                                Colabrio
-                                              </span>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                        <div className="overlay-details card-details -left">
-                                          <div className="headline-meta -small-t">
-                                            <div className="date">
-                                              December 22, 2021
-                                            </div>
-                                            <span className="post-meta-estimate">
-                                              9 min read
-                                            </span>
-                                          </div>
-                                          <div className="heading title">
-                                            <h4 className="title">
-                                              <a
-                                                className="-unlink"
-                                                href="#demo25/ways-of-lying-to-yourself-about-your-new-relationship/"
-                                              >
-                                                Ways of Lying to Yourself About
-                                                Your New Relationship.
-                                              </a>
-                                            </h4>
-                                          </div>
-                                          <div className="category-holder -with-tag">
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/digital/"
-                                            >
-                                              Digital
-                                            </a>
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/marketing/"
-                                            >
-                                              Marketing
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </figure>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
-                                  data-lazy-item
-                                  data-lazy-scope="posts"
-                                >
-                                  <div
-                                    data-aos-once="true"
-                                    data-aos="fade-up"
-                                    data-aos-delay={0}
-                                    className="aos-init aos-animate"
-                                  >
-                                    <div className="blog-item card -layout2 -metro">
-                                      <figure className="image-holder">
-                                        <a
-                                          className="-unlink"
-                                          data-cursor-class="cursor-link"
-                                          href="#demo25/the-start-up-ultimate-guide-to-make-your-wordpress-journal/"
-                                        >
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/clb_blog_7-1024x1024.jpg"
-                                            srcSet="
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_7-300x300.jpg    300w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_7-1024x1024.jpg 1024w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_7-150x150.jpg    150w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_7-768x768.jpg    768w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_7-200x200.jpg    200w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_7-500x500.jpg    500w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_7.jpg           1463w
-                                      "
-                                            sizes="(max-width: 1024px) 100vw, 1024px"
-                                            alt=""
-                                          />
-                                          <div className="overlay" />
-                                        </a>
-                                        <div className="overlay-details -top -fade-down">
-                                          <ul className="meta-holder -unlist">
-                                            <li className="meta-item">
-                                              <div className="avatar -small">
-                                                <img
-                                                  alt="Colabrio"
-                                                  src="./Ohio Stage Demo 25 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                  srcSet="
-                                              https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                            "
-                                                  className="avatar avatar-50 photo author-avatar"
-                                                  height={50}
-                                                  width={50}
-                                                  loading="lazy"
-                                                  decoding="async"
-                                                />
-                                              </div>
-                                            </li>
-                                            <li className="meta-item">
-                                              <span className="prefix">
-                                                Posted by
-                                              </span>
-                                              <span className="author">
-                                                Colabrio
-                                              </span>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                        <div className="overlay-details card-details -left">
-                                          <div className="headline-meta -small-t">
-                                            <div className="date">
-                                              July 5, 2020
-                                            </div>
-                                            <span className="post-meta-estimate">
-                                              9 min read
-                                            </span>
-                                          </div>
-                                          <div className="heading title">
-                                            <h4 className="title">
-                                              <a
-                                                className="-unlink"
-                                                href="#demo25/the-start-up-ultimate-guide-to-make-your-wordpress-journal/"
-                                              >
-                                                The Start-Up Ultimate Guide to
-                                                Make Your WordPress Journal.
-                                              </a>
-                                            </h4>
-                                          </div>
-                                          <div className="category-holder -with-tag">
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/digital/"
-                                            >
-                                              Digital
-                                            </a>
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/marketing/"
-                                            >
-                                              Marketing
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </figure>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
-                                  data-lazy-item
-                                  data-lazy-scope="posts"
-                                >
-                                  <div
-                                    data-aos-once="true"
-                                    data-aos="fade-up"
-                                    data-aos-delay={100}
-                                    className="aos-init aos-animate"
-                                  >
-                                    <div className="blog-item card -layout2 -metro">
-                                      <figure className="image-holder">
-                                        <a
-                                          className="-unlink"
-                                          data-cursor-class="cursor-link"
-                                          href="#demo25/outdoor-work-a-designers-checklist-for-every-ux-project/"
-                                        >
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/clb_blog_2-1024x1024.jpg"
-                                            srcSet="
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_2-300x300.jpg    300w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_2-1024x1024.jpg 1024w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_2-150x150.jpg    150w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_2-768x768.jpg    768w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_2-200x200.jpg    200w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_2-500x500.jpg    500w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_2.jpg           1185w
-                                      "
-                                            sizes="(max-width: 1024px) 100vw, 1024px"
-                                            alt=""
-                                          />
-                                          <div className="overlay" />
-                                        </a>
-                                        <div className="overlay-details -top -fade-down">
-                                          <ul className="meta-holder -unlist">
-                                            <li className="meta-item">
-                                              <div className="avatar -small">
-                                                <img
-                                                  alt="Colabrio"
-                                                  src="./Ohio Stage Demo 25 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                  srcSet="
-                                              https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                            "
-                                                  className="avatar avatar-50 photo author-avatar"
-                                                  height={50}
-                                                  width={50}
-                                                  loading="lazy"
-                                                  decoding="async"
-                                                />
-                                              </div>
-                                            </li>
-                                            <li className="meta-item">
-                                              <span className="prefix">
-                                                Posted by
-                                              </span>
-                                              <span className="author">
-                                                Colabrio
-                                              </span>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                        <div className="overlay-details card-details -left">
-                                          <div className="headline-meta -small-t">
-                                            <div className="date">
-                                              June 5, 2020
-                                            </div>
-                                            <span className="post-meta-estimate">
-                                              9 min read
-                                            </span>
-                                          </div>
-                                          <div className="heading title">
-                                            <h4 className="title">
-                                              <a
-                                                className="-unlink"
-                                                href="#demo25/outdoor-work-a-designers-checklist-for-every-ux-project/"
-                                              >
-                                                Outdoor Work: a Designer’s
-                                                Checklist for Every UX Project.
-                                              </a>
-                                            </h4>
-                                          </div>
-                                          <div className="category-holder -with-tag">
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/digital/"
-                                            >
-                                              Digital
-                                            </a>
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/marketing/"
-                                            >
-                                              Marketing
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </figure>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item"
-                                  data-lazy-item
-                                  data-lazy-scope="posts"
-                                >
-                                  <div
-                                    data-aos-once="true"
-                                    data-aos="fade-up"
-                                    data-aos-delay={250}
-                                    className="aos-init aos-animate"
-                                  >
-                                    <div className="blog-item card -layout2 -metro">
-                                      <figure className="image-holder">
-                                        <a
-                                          className="-unlink"
-                                          data-cursor-class="cursor-link"
-                                          href="#demo25/the-high-quality-architecture-solutions-from-a-silicon-valley/"
-                                        >
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/clb_blog_3-1024x1024.jpg"
-                                            srcSet="
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_3-300x300.jpg    300w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_3-1024x1024.jpg 1024w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_3-150x150.jpg    150w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_3-768x768.jpg    768w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_3-1536x1536.jpg 1536w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_3-200x200.jpg    200w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_3-500x500.jpg    500w,
-                                        https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-25/clb_blog_3.jpg           1600w
-                                      "
-                                            sizes="(max-width: 1024px) 100vw, 1024px"
-                                            alt=""
-                                          />
-                                          <div className="overlay" />
-                                        </a>
-                                        <div className="overlay-details -top -fade-down">
-                                          <ul className="meta-holder -unlist">
-                                            <li className="meta-item">
-                                              <div className="avatar -small">
-                                                <img
-                                                  alt="Colabrio"
-                                                  src="./Ohio Stage Demo 25 – Just another WordPress site_files/172720f4a3c2aa57d5f6c81c3eee2c0f.png"
-                                                  srcSet="
-                                              https://secure.gravatar.com/avatar/172720f4a3c2aa57d5f6c81c3eee2c0f?s=100&d=mm&r=g 2x
-                                            "
-                                                  className="avatar avatar-50 photo author-avatar"
-                                                  height={50}
-                                                  width={50}
-                                                  loading="lazy"
-                                                  decoding="async"
-                                                />
-                                              </div>
-                                            </li>
-                                            <li className="meta-item">
-                                              <span className="prefix">
-                                                Posted by
-                                              </span>
-                                              <span className="author">
-                                                Colabrio
-                                              </span>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                        <div className="overlay-details card-details -left">
-                                          <div className="headline-meta -small-t">
-                                            <div className="date">
-                                              March 5, 2020
-                                            </div>
-                                            <span className="post-meta-estimate">
-                                              9 min read
-                                            </span>
-                                          </div>
-                                          <div className="heading title">
-                                            <h4 className="title">
-                                              <a
-                                                className="-unlink"
-                                                href="#demo25/the-high-quality-architecture-solutions-from-a-silicon-valley/"
-                                              >
-                                                The High-Quality Architecture
-                                                Solutions from a Silicon Valley.
-                                              </a>
-                                            </h4>
-                                          </div>
-                                          <div className="category-holder -with-tag">
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/digital/"
-                                            >
-                                              Digital
-                                            </a>
-                                            <a
-                                              className="tag -unlink"
-                                              href="#demo25/category/marketing/"
-                                            >
-                                              Marketing
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </figure>
-                                    </div>
-                                  </div>
-                                </div>
+                                  );
+                                })}
                               </div>
                               <div
                                 className="vc_empty_space clb__section_spacer"
@@ -949,7 +365,7 @@ const index = ({ recentCurses, test }: any) => {
                               >
                                 <span className="vc_empty_space_inner" />
                               </div>
-                             
+
                               <div
                                 className="vc_empty_space clb__section_spacer"
                                 style={{ height: "8vh" }}
@@ -960,851 +376,14 @@ const index = ({ recentCurses, test }: any) => {
                           </div>
                         </div>
                       </div>
-                      
-                      
                     </section>
                   </div>
                 </article>
               </main>
             </div>
           </div>
-        
-        
-        </div>
-  <div id="primary" className="content-area" style={{margin:"1rem"}}>
-          <div className="page-content">
-            <main id="main" className="site-main">
-              <article
-                id="post-17344"
-                className="post-17344 page type-page status-publish hentry"
-              >
-                <div className="entry-content">
-                  <section className="wpb-content-wrapper">
-                    <div className="vc_row wpb_row vc_row-fluid clb__narrow">
-                      <div className="wpb_column vc_column_container vc_col-sm-12">
-                        <div className="vc_column-inner">
-                          <div className="wpb_wrapper">
-                            <div
-                              className="ohio-widget heading ohio-heading-sc -center"
-                              id="ohio-custom-63d3e6ba41d8f"
-                            >
-                              <h4 className="title">React</h4>
-                            </div>
-                            <div
-                              className="vc_empty_space"
-                              style={{ height: "4vh" }}
-                            >
-                              <span className="vc_empty_space_inner" />
-                            </div>
-                            <div
-                              className="ohio-widget portfolio-projects grid_1"
-                              id="ohio-custom-63d3e6ba42075"
-                              data-ohio-portfolio-grid="true"
-                            >
-                              <div
-                                className="vc_row portfolio-grid"
-                                data-isotope-grid="true"
-                                data-lazy-container="projects"
-                                data-projects-per-page={3}
-                                style={{
-                                  position: "relative",
-                                  height: "502.406px",
-                                }}
-                              >
-                                <div
-                                  className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
-                                  data-lazy-item
-                                  data-lazy-scope="projects"
-                                >
-                                  <div
-                                    className="portfolio-item card -layout1"
-                                    data-portfolio-popup="ohio-lightbox-63d3e6ba4d196"
-                                  >
-                                    <a
-                                      className="-unlink"
-                                      href="#project/stickers-pack/"
-                                      data-cursor-class="cursor-link"
-                                    >
-                                      <div
-                                        className="image-holder"
-                                        data-tilt="true"
-                                        data-tilt-perspective={6000}
-                                        style={{
-                                          willChange: "transform",
-                                          transform:
-                                            "perspective(6000px) rotateX(0deg) rotateY(0deg)",
-                                        }}
-                                      >
-                                        <img
-                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
-                                          alt="Stickers Pack"
-                                        />
-                                        <div className="overlay-details -top -fade-down">
-                                          <button className="icon-button -light btn-lightbox">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 2V6H2V2H6V0H2C0.9 0 0 0.9 0 2ZM2 12H0V16C0 17.1 0.9 18 2 18H6V16H2V12ZM16 16H12V18H16C17.1 18 18 17.1 18 16V12H16V16ZM16 0H12V2H16V6H18V2C18 0.9 17.1 0 16 0Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.427734 1.20793C0.427734 0.77758 0.776603 0.428711 1.20696 0.428711H5.10306C5.53341 0.428711 5.88228 0.77758 5.88228 1.20793C5.88228 1.63828 5.53341 1.98715 5.10306 1.98715H1.98618V5.10404C1.98618 5.53439 1.63731 5.88326 1.20696 5.88326C0.776603 5.88326 0.427734 5.53439 0.427734 5.10404V1.20793ZM12.116 1.20793C12.116 0.77758 12.4649 0.428711 12.8953 0.428711H16.7914C17.2217 0.428711 17.5706 0.77758 17.5706 1.20793V5.10404C17.5706 5.53439 17.2217 5.88326 16.7914 5.88326C16.361 5.88326 16.0121 5.53439 16.0121 5.10404V1.98715H12.8953C12.4649 1.98715 12.116 1.63828 12.116 1.20793ZM1.20696 12.117C1.63731 12.117 1.98618 12.4659 1.98618 12.8962V16.0131H5.10306C5.53341 16.0131 5.88228 16.362 5.88228 16.7923C5.88228 17.2227 5.53341 17.5716 5.10306 17.5716H1.20696C0.776603 17.5716 0.427734 17.2227 0.427734 16.7923V12.8962C0.427734 12.4659 0.776603 12.117 1.20696 12.117ZM16.7914 12.117C17.2217 12.117 17.5706 12.4659 17.5706 12.8962V16.7923C17.5706 17.2227 17.2217 17.5716 16.7914 17.5716H12.8953C12.4649 17.5716 12.116 17.2227 12.116 16.7923C12.116 16.362 12.4649 16.0131 12.8953 16.0131H16.0121V12.8962C16.0121 12.4659 16.361 12.117 16.7914 12.117Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="video-button -animation open-popup"
-                                          data-video="https://player.vimeo.com/video/356065748?&controls=1&muted=1&autoplay=1&title=1&byline=1&#t=31s"
-                                        >
-                                          <button className="icon-button">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={13}
-                                                height={20}
-                                                viewBox="0 0 13 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 20L13 10L0 0V20Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={17}
-                                                height={20}
-                                                viewBox="0 0 17 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </a>
-                                    <div className="card-details">
-                                      <div className="heading">
-                                        <h4 className="title">Stickers Pack</h4>
-                                        <div className="show-project">
-                                          <div className="category-holder">
-                                            <span className="category">
-                                              <a href="#portfolio-category/identity/">
-                                                Identity
-                                              </a>
-                                            </span>
-                                            <span className="category">
-                                              <a href="#portfolio-category/mockup/">
-                                                Mockup
-                                              </a>
-                                            </span>
-                                          </div>
-                                          <div className="show-project-link -full-w">
-                                            <a href="#project/stickers-pack/">
-                                              Show project
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
-                                  data-lazy-item
-                                  data-lazy-scope="projects"
-                                >
-                                  <div
-                                    className="portfolio-item card -layout1"
-                                    data-portfolio-popup="ohio-lightbox-63d3e6ba563d4"
-                                  >
-                                    <a
-                                      className="-unlink"
-                                      href="#project/grafico-scenic/"
-                                      data-cursor-class="cursor-link"
-                                    >
-                                      <div
-                                        className="image-holder"
-                                        data-tilt="true"
-                                        data-tilt-perspective={6000}
-                                        style={{
-                                          transform:
-                                            "perspective(6000px) rotateX(0deg) rotateY(0deg)",
-                                          willChange: "transform",
-                                        }}
-                                      >
-                                        <img
-                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
-                                          alt="Gráfico Scenic"
-                                        />
-                                        <div className="overlay-details -top -fade-down">
-                                          <button className="icon-button -light btn-lightbox">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 2V6H2V2H6V0H2C0.9 0 0 0.9 0 2ZM2 12H0V16C0 17.1 0.9 18 2 18H6V16H2V12ZM16 16H12V18H16C17.1 18 18 17.1 18 16V12H16V16ZM16 0H12V2H16V6H18V2C18 0.9 17.1 0 16 0Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.427734 1.20793C0.427734 0.77758 0.776603 0.428711 1.20696 0.428711H5.10306C5.53341 0.428711 5.88228 0.77758 5.88228 1.20793C5.88228 1.63828 5.53341 1.98715 5.10306 1.98715H1.98618V5.10404C1.98618 5.53439 1.63731 5.88326 1.20696 5.88326C0.776603 5.88326 0.427734 5.53439 0.427734 5.10404V1.20793ZM12.116 1.20793C12.116 0.77758 12.4649 0.428711 12.8953 0.428711H16.7914C17.2217 0.428711 17.5706 0.77758 17.5706 1.20793V5.10404C17.5706 5.53439 17.2217 5.88326 16.7914 5.88326C16.361 5.88326 16.0121 5.53439 16.0121 5.10404V1.98715H12.8953C12.4649 1.98715 12.116 1.63828 12.116 1.20793ZM1.20696 12.117C1.63731 12.117 1.98618 12.4659 1.98618 12.8962V16.0131H5.10306C5.53341 16.0131 5.88228 16.362 5.88228 16.7923C5.88228 17.2227 5.53341 17.5716 5.10306 17.5716H1.20696C0.776603 17.5716 0.427734 17.2227 0.427734 16.7923V12.8962C0.427734 12.4659 0.776603 12.117 1.20696 12.117ZM16.7914 12.117C17.2217 12.117 17.5706 12.4659 17.5706 12.8962V16.7923C17.5706 17.2227 17.2217 17.5716 16.7914 17.5716H12.8953C12.4649 17.5716 12.116 17.2227 12.116 16.7923C12.116 16.362 12.4649 16.0131 12.8953 16.0131H16.0121V12.8962C16.0121 12.4659 16.361 12.117 16.7914 12.117Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="video-button -animation open-popup"
-                                          data-video="https://player.vimeo.com/video/356065748?&controls=1&muted=1&autoplay=1&title=1&byline=1&#t=31s"
-                                        >
-                                          <button className="icon-button">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={13}
-                                                height={20}
-                                                viewBox="0 0 13 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 20L13 10L0 0V20Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={17}
-                                                height={20}
-                                                viewBox="0 0 17 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </a>
-                                    <div className="card-details">
-                                      <div className="heading">
-                                        <h4 className="title">
-                                          Gráfico Scenic
-                                        </h4>
-                                        <div className="show-project">
-                                          <div className="category-holder">
-                                            <span className="category">
-                                              <a href="#portfolio-category/identity/">
-                                                Identity
-                                              </a>
-                                            </span>
-                                            <span className="category">
-                                              <a href="#portfolio-category/mockup/">
-                                                Mockup
-                                              </a>
-                                            </span>
-                                          </div>
-                                          <div className="show-project-link -full-w">
-                                            <a href="#project/grafico-scenic/">
-                                              Show project
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
-                                  data-lazy-item
-                                  data-lazy-scope="projects"
-                                >
-                                  <div
-                                    className="portfolio-item card -layout1"
-                                    data-portfolio-popup="ohio-lightbox-63d3e6ba58b3d"
-                                  >
-                                    <a
-                                      className="-unlink"
-                                      href="#project/space-campaign/"
-                                      data-cursor-class="cursor-link"
-                                    >
-                                      <div
-                                        className="image-holder"
-                                        data-tilt="true"
-                                        data-tilt-perspective={6000}
-                                        style={{
-                                          willChange: "transform",
-                                          transform:
-                                            "perspective(6000px) rotateX(0deg) rotateY(0deg)",
-                                        }}
-                                      >
-                                        <img
-                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
-                                          alt="Space Campaign"
-                                        />
-                                        <div className="overlay-details -top -fade-down">
-                                          <button className="icon-button -light btn-lightbox">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 2V6H2V2H6V0H2C0.9 0 0 0.9 0 2ZM2 12H0V16C0 17.1 0.9 18 2 18H6V16H2V12ZM16 16H12V18H16C17.1 18 18 17.1 18 16V12H16V16ZM16 0H12V2H16V6H18V2C18 0.9 17.1 0 16 0Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.427734 1.20793C0.427734 0.77758 0.776603 0.428711 1.20696 0.428711H5.10306C5.53341 0.428711 5.88228 0.77758 5.88228 1.20793C5.88228 1.63828 5.53341 1.98715 5.10306 1.98715H1.98618V5.10404C1.98618 5.53439 1.63731 5.88326 1.20696 5.88326C0.776603 5.88326 0.427734 5.53439 0.427734 5.10404V1.20793ZM12.116 1.20793C12.116 0.77758 12.4649 0.428711 12.8953 0.428711H16.7914C17.2217 0.428711 17.5706 0.77758 17.5706 1.20793V5.10404C17.5706 5.53439 17.2217 5.88326 16.7914 5.88326C16.361 5.88326 16.0121 5.53439 16.0121 5.10404V1.98715H12.8953C12.4649 1.98715 12.116 1.63828 12.116 1.20793ZM1.20696 12.117C1.63731 12.117 1.98618 12.4659 1.98618 12.8962V16.0131H5.10306C5.53341 16.0131 5.88228 16.362 5.88228 16.7923C5.88228 17.2227 5.53341 17.5716 5.10306 17.5716H1.20696C0.776603 17.5716 0.427734 17.2227 0.427734 16.7923V12.8962C0.427734 12.4659 0.776603 12.117 1.20696 12.117ZM16.7914 12.117C17.2217 12.117 17.5706 12.4659 17.5706 12.8962V16.7923C17.5706 17.2227 17.2217 17.5716 16.7914 17.5716H12.8953C12.4649 17.5716 12.116 17.2227 12.116 16.7923C12.116 16.362 12.4649 16.0131 12.8953 16.0131H16.0121V12.8962C16.0121 12.4659 16.361 12.117 16.7914 12.117Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="video-button -animation open-popup"
-                                          data-video="https://player.vimeo.com/video/356065748?&controls=1&muted=1&autoplay=1&title=1&byline=1&#t=31s"
-                                        >
-                                          <button className="icon-button">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={13}
-                                                height={20}
-                                                viewBox="0 0 13 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 20L13 10L0 0V20Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={17}
-                                                height={20}
-                                                viewBox="0 0 17 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </a>
-                                    <div className="card-details">
-                                      <div className="heading">
-                                        <h4 className="title">
-                                          Space Campaign
-                                        </h4>
-                                        <div className="show-project">
-                                          <div className="category-holder">
-                                            <span className="category">
-                                              <a href="#portfolio-category/identity/">
-                                                Identity
-                                              </a>
-                                            </span>
-                                            <span className="category">
-                                              <a href="#portfolio-category/mockup/">
-                                                Mockup
-                                              </a>
-                                            </span>
-                                          </div>
-                                          <div className="show-project-link -full-w">
-                                            <a href="#project/space-campaign/">
-                                              Show project
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </article>
-            </main>
-          </div>
-        </div>
-        
-      
-        <div id="primary" className="content-area" style={{margin:"1rem"}}>
-          <div className="page-content">
-            <main id="main" className="site-main">
-              <article
-                id="post-17344"
-                className="post-17344 page type-page status-publish hentry"
-              >
-                <div className="entry-content">
-                  <section className="wpb-content-wrapper">
-                    <div className="vc_row wpb_row vc_row-fluid clb__narrow">
-                      <div className="wpb_column vc_column_container vc_col-sm-12">
-                        <div className="vc_column-inner">
-                          <div className="wpb_wrapper">
-                            <div
-                              className="ohio-widget heading ohio-heading-sc -center"
-                              id="ohio-custom-63d3e6ba41d8f"
-                            >
-                              <h4 className="title">Angular </h4>
-                            </div>
-                            <div
-                              className="vc_empty_space"
-                              style={{ height: "4vh" }}
-                            >
-                              <span className="vc_empty_space_inner" />
-                            </div>
-                            <div
-                              className="ohio-widget portfolio-projects grid_1"
-                              id="ohio-custom-63d3e6ba42075"
-                              data-ohio-portfolio-grid="true"
-                            >
-                              <div
-                                className="vc_row portfolio-grid"
-                                data-isotope-grid="true"
-                                data-lazy-container="projects"
-                                data-projects-per-page={3}
-                                style={{
-                                  position: "relative",
-                                  height: "502.406px",
-                                }}
-                              >
-                                <div
-                                  className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
-                                  data-lazy-item
-                                  data-lazy-scope="projects"
-                                >
-                                  <div
-                                    className="portfolio-item card -layout1"
-                                    data-portfolio-popup="ohio-lightbox-63d3e6ba4d196"
-                                  >
-                                    <a
-                                      className="-unlink"
-                                      href="#project/stickers-pack/"
-                                      data-cursor-class="cursor-link"
-                                    >
-                                      <div
-                                        className="image-holder"
-                                        data-tilt="true"
-                                        data-tilt-perspective={6000}
-                                        style={{
-                                          willChange: "transform",
-                                          transform:
-                                            "perspective(6000px) rotateX(0deg) rotateY(0deg)",
-                                        }}
-                                      >
-                                        <img
-                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
-                                          alt="Stickers Pack"
-                                        />
-                                        <div className="overlay-details -top -fade-down">
-                                          <button className="icon-button -light btn-lightbox">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 2V6H2V2H6V0H2C0.9 0 0 0.9 0 2ZM2 12H0V16C0 17.1 0.9 18 2 18H6V16H2V12ZM16 16H12V18H16C17.1 18 18 17.1 18 16V12H16V16ZM16 0H12V2H16V6H18V2C18 0.9 17.1 0 16 0Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.427734 1.20793C0.427734 0.77758 0.776603 0.428711 1.20696 0.428711H5.10306C5.53341 0.428711 5.88228 0.77758 5.88228 1.20793C5.88228 1.63828 5.53341 1.98715 5.10306 1.98715H1.98618V5.10404C1.98618 5.53439 1.63731 5.88326 1.20696 5.88326C0.776603 5.88326 0.427734 5.53439 0.427734 5.10404V1.20793ZM12.116 1.20793C12.116 0.77758 12.4649 0.428711 12.8953 0.428711H16.7914C17.2217 0.428711 17.5706 0.77758 17.5706 1.20793V5.10404C17.5706 5.53439 17.2217 5.88326 16.7914 5.88326C16.361 5.88326 16.0121 5.53439 16.0121 5.10404V1.98715H12.8953C12.4649 1.98715 12.116 1.63828 12.116 1.20793ZM1.20696 12.117C1.63731 12.117 1.98618 12.4659 1.98618 12.8962V16.0131H5.10306C5.53341 16.0131 5.88228 16.362 5.88228 16.7923C5.88228 17.2227 5.53341 17.5716 5.10306 17.5716H1.20696C0.776603 17.5716 0.427734 17.2227 0.427734 16.7923V12.8962C0.427734 12.4659 0.776603 12.117 1.20696 12.117ZM16.7914 12.117C17.2217 12.117 17.5706 12.4659 17.5706 12.8962V16.7923C17.5706 17.2227 17.2217 17.5716 16.7914 17.5716H12.8953C12.4649 17.5716 12.116 17.2227 12.116 16.7923C12.116 16.362 12.4649 16.0131 12.8953 16.0131H16.0121V12.8962C16.0121 12.4659 16.361 12.117 16.7914 12.117Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="video-button -animation open-popup"
-                                          data-video="https://player.vimeo.com/video/356065748?&controls=1&muted=1&autoplay=1&title=1&byline=1&#t=31s"
-                                        >
-                                          <button className="icon-button">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={13}
-                                                height={20}
-                                                viewBox="0 0 13 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 20L13 10L0 0V20Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={17}
-                                                height={20}
-                                                viewBox="0 0 17 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </a>
-                                    <div className="card-details">
-                                      <div className="heading">
-                                        <h4 className="title">Stickers Pack</h4>
-                                        <div className="show-project">
-                                          <div className="category-holder">
-                                            <span className="category">
-                                              <a href="#portfolio-category/identity/">
-                                                Identity
-                                              </a>
-                                            </span>
-                                            <span className="category">
-                                              <a href="#portfolio-category/mockup/">
-                                                Mockup
-                                              </a>
-                                            </span>
-                                          </div>
-                                          <div className="show-project-link -full-w">
-                                            <a href="#project/stickers-pack/">
-                                              Show project
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
-                                  data-lazy-item
-                                  data-lazy-scope="projects"
-                                >
-                                  <div
-                                    className="portfolio-item card -layout1"
-                                    data-portfolio-popup="ohio-lightbox-63d3e6ba563d4"
-                                  >
-                                    <a
-                                      className="-unlink"
-                                      href="#project/grafico-scenic/"
-                                      data-cursor-class="cursor-link"
-                                    >
-                                      <div
-                                        className="image-holder"
-                                        data-tilt="true"
-                                        data-tilt-perspective={6000}
-                                        style={{
-                                          transform:
-                                            "perspective(6000px) rotateX(0deg) rotateY(0deg)",
-                                          willChange: "transform",
-                                        }}
-                                      >
-                                        <img
-                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
-                                          alt="Gráfico Scenic"
-                                        />
-                                        <div className="overlay-details -top -fade-down">
-                                          <button className="icon-button -light btn-lightbox">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 2V6H2V2H6V0H2C0.9 0 0 0.9 0 2ZM2 12H0V16C0 17.1 0.9 18 2 18H6V16H2V12ZM16 16H12V18H16C17.1 18 18 17.1 18 16V12H16V16ZM16 0H12V2H16V6H18V2C18 0.9 17.1 0 16 0Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.427734 1.20793C0.427734 0.77758 0.776603 0.428711 1.20696 0.428711H5.10306C5.53341 0.428711 5.88228 0.77758 5.88228 1.20793C5.88228 1.63828 5.53341 1.98715 5.10306 1.98715H1.98618V5.10404C1.98618 5.53439 1.63731 5.88326 1.20696 5.88326C0.776603 5.88326 0.427734 5.53439 0.427734 5.10404V1.20793ZM12.116 1.20793C12.116 0.77758 12.4649 0.428711 12.8953 0.428711H16.7914C17.2217 0.428711 17.5706 0.77758 17.5706 1.20793V5.10404C17.5706 5.53439 17.2217 5.88326 16.7914 5.88326C16.361 5.88326 16.0121 5.53439 16.0121 5.10404V1.98715H12.8953C12.4649 1.98715 12.116 1.63828 12.116 1.20793ZM1.20696 12.117C1.63731 12.117 1.98618 12.4659 1.98618 12.8962V16.0131H5.10306C5.53341 16.0131 5.88228 16.362 5.88228 16.7923C5.88228 17.2227 5.53341 17.5716 5.10306 17.5716H1.20696C0.776603 17.5716 0.427734 17.2227 0.427734 16.7923V12.8962C0.427734 12.4659 0.776603 12.117 1.20696 12.117ZM16.7914 12.117C17.2217 12.117 17.5706 12.4659 17.5706 12.8962V16.7923C17.5706 17.2227 17.2217 17.5716 16.7914 17.5716H12.8953C12.4649 17.5716 12.116 17.2227 12.116 16.7923C12.116 16.362 12.4649 16.0131 12.8953 16.0131H16.0121V12.8962C16.0121 12.4659 16.361 12.117 16.7914 12.117Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="video-button -animation open-popup"
-                                          data-video="https://player.vimeo.com/video/356065748?&controls=1&muted=1&autoplay=1&title=1&byline=1&#t=31s"
-                                        >
-                                          <button className="icon-button">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={13}
-                                                height={20}
-                                                viewBox="0 0 13 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 20L13 10L0 0V20Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={17}
-                                                height={20}
-                                                viewBox="0 0 17 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </a>
-                                    <div className="card-details">
-                                      <div className="heading">
-                                        <h4 className="title">
-                                          Gráfico Scenic
-                                        </h4>
-                                        <div className="show-project">
-                                          <div className="category-holder">
-                                            <span className="category">
-                                              <a href="#portfolio-category/identity/">
-                                                Identity
-                                              </a>
-                                            </span>
-                                            <span className="category">
-                                              <a href="#portfolio-category/mockup/">
-                                                Mockup
-                                              </a>
-                                            </span>
-                                          </div>
-                                          <div className="show-project-link -full-w">
-                                            <a href="#project/grafico-scenic/">
-                                              Show project
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  className="portfolio-item-wrap masonry-block grid-item vc_col-lg-4 vc_col-md-4 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
-                                  data-lazy-item
-                                  data-lazy-scope="projects"
-                                >
-                                  <div
-                                    className="portfolio-item card -layout1"
-                                    data-portfolio-popup="ohio-lightbox-63d3e6ba58b3d"
-                                  >
-                                    <a
-                                      className="-unlink"
-                                      href="#project/space-campaign/"
-                                      data-cursor-class="cursor-link"
-                                    >
-                                      <div
-                                        className="image-holder"
-                                        data-tilt="true"
-                                        data-tilt-perspective={6000}
-                                        style={{
-                                          willChange: "transform",
-                                          transform:
-                                            "perspective(6000px) rotateX(0deg) rotateY(0deg)",
-                                        }}
-                                      >
-                                        <img
-                                          src="https://colabrio.ams3.cdn.digitaloceanspaces.com/stage.clbthemes.com/ZRJlKIPg-project__01.jpeg"
-                                          alt="Space Campaign"
-                                        />
-                                        <div className="overlay-details -top -fade-down">
-                                          <button className="icon-button -light btn-lightbox">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 2V6H2V2H6V0H2C0.9 0 0 0.9 0 2ZM2 12H0V16C0 17.1 0.9 18 2 18H6V16H2V12ZM16 16H12V18H16C17.1 18 18 17.1 18 16V12H16V16ZM16 0H12V2H16V6H18V2C18 0.9 17.1 0 16 0Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={18}
-                                                height={18}
-                                                viewBox="0 0 18 18"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.427734 1.20793C0.427734 0.77758 0.776603 0.428711 1.20696 0.428711H5.10306C5.53341 0.428711 5.88228 0.77758 5.88228 1.20793C5.88228 1.63828 5.53341 1.98715 5.10306 1.98715H1.98618V5.10404C1.98618 5.53439 1.63731 5.88326 1.20696 5.88326C0.776603 5.88326 0.427734 5.53439 0.427734 5.10404V1.20793ZM12.116 1.20793C12.116 0.77758 12.4649 0.428711 12.8953 0.428711H16.7914C17.2217 0.428711 17.5706 0.77758 17.5706 1.20793V5.10404C17.5706 5.53439 17.2217 5.88326 16.7914 5.88326C16.361 5.88326 16.0121 5.53439 16.0121 5.10404V1.98715H12.8953C12.4649 1.98715 12.116 1.63828 12.116 1.20793ZM1.20696 12.117C1.63731 12.117 1.98618 12.4659 1.98618 12.8962V16.0131H5.10306C5.53341 16.0131 5.88228 16.362 5.88228 16.7923C5.88228 17.2227 5.53341 17.5716 5.10306 17.5716H1.20696C0.776603 17.5716 0.427734 17.2227 0.427734 16.7923V12.8962C0.427734 12.4659 0.776603 12.117 1.20696 12.117ZM16.7914 12.117C17.2217 12.117 17.5706 12.4659 17.5706 12.8962V16.7923C17.5706 17.2227 17.2217 17.5716 16.7914 17.5716H12.8953C12.4649 17.5716 12.116 17.2227 12.116 16.7923C12.116 16.362 12.4649 16.0131 12.8953 16.0131H16.0121V12.8962C16.0121 12.4659 16.361 12.117 16.7914 12.117Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="video-button -animation open-popup"
-                                          data-video="https://player.vimeo.com/video/356065748?&controls=1&muted=1&autoplay=1&title=1&byline=1&#t=31s"
-                                        >
-                                          <button className="icon-button">
-                                            <i className="icon">
-                                              <svg
-                                                className="default"
-                                                width={13}
-                                                height={20}
-                                                viewBox="0 0 13 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path d="M0 20L13 10L0 0V20Z" />
-                                              </svg>
-                                              <svg
-                                                className="minimal"
-                                                width={17}
-                                                height={20}
-                                                viewBox="0 0 17 20"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  fillRule="evenodd"
-                                                  clipRule="evenodd"
-                                                  d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
-                                                />
-                                              </svg>
-                                            </i>
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </a>
-                                    <div className="card-details">
-                                      <div className="heading">
-                                        <h4 className="title">
-                                          Space Campaign
-                                        </h4>
-                                        <div className="show-project">
-                                          <div className="category-holder">
-                                            <span className="category">
-                                              <a href="#portfolio-category/identity/">
-                                                Identity
-                                              </a>
-                                            </span>
-                                            <span className="category">
-                                              <a href="#portfolio-category/mockup/">
-                                                Mockup
-                                              </a>
-                                            </span>
-                                          </div>
-                                          <div className="show-project-link -full-w">
-                                            <a href="#project/space-campaign/">
-                                              Show project
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </article>
-            </main>
-          </div>
         </div>
       </div>
-
-    
-    
-      
-        
     </Container>
   );
 };

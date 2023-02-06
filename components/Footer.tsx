@@ -75,7 +75,7 @@ const Footer = () => {
                   Interested in working with us?
                   <br className="vc_hidden-xs" />
                   <b>
-                    <a href="mailto:hello@clbthemes.com">hello@clbthemes.com</a>
+                    <a href="mailto:gonzaloaxelh@gmail.com">gonzaloaxelh@gmail.com</a>
                   </b>
                 </div>
               </li>
@@ -219,24 +219,21 @@ const Footer = () => {
             <div className="vc_col-md-12">
               <div className="holder">
                 <div className="-left">
-                  © 2022-2023
+                  © 2023 {" - "}
                   <a href="/" target="_blank">
                     Gonzalo Axel
                   </a>
-                  . All rights reserved |
-                  <a target="_blank" href="/5Q25j">
-                    <b>Purchase</b>
-                  </a>
+                  . All rights reserved
                 </div>
                 <div className="-right">
                   <a href="/" target="_blank">
                     Security
                   </a>
-                  |
+                  {" - "}
                   <a href="/" target="_blank">
                     Privacy &amp; Cookie Policy
                   </a>
-                  |
+                  {" - "}
                   <a href="/" target="_blank">
                     Terms of Service
                   </a>

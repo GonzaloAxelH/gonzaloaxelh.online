@@ -1,4 +1,6 @@
 import Image from "next/image"
+import Link from "next/link";
+import slugify from "slugify";
 const MyTutorialsOfProgramming = ({ tutorials }: any) => {
   return (
     <div className="vc_row wpb_row vc_row-fluid clb__narrow">
@@ -105,10 +107,14 @@ const MyTutorialsOfProgramming = ({ tutorials }: any) => {
                            
                               borderRadius: "0.7rem",
                             }}>
-                        <a
+                        <Link
+href={`/tutorial/${slugify(
+                                        tutorial?.properties?.Name
+                                          ?.title[0]?.plain_text
+                                      ).toLowerCase()}`}
                           className="-unlink"
                           data-cursor-class="cursor-link"
-                          href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+                          
                         >
                           <Image
                             src={
@@ -127,7 +133,7 @@ const MyTutorialsOfProgramming = ({ tutorials }: any) => {
                             placeholder="blur"
                           />
                           <div className="overlay" />
-                        </a>
+                        </Link>
                         <div className="overlay-details -top ">
                           <ul className="meta-holder -unlist">
                             <li className="meta-item">
@@ -155,12 +161,16 @@ const MyTutorialsOfProgramming = ({ tutorials }: any) => {
                         <div className="overlay-details card-details -left">
                           <div className="heading title">
                             <h4 className="title">
-                              <a
+                              <Link
                                 className="-unlink"
-                                href="https://ohio.clbthemes.com/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/"
+href={`/tutorial/${slugify(
+                                        tutorial?.properties?.Name
+                                          ?.title[0]?.plain_text
+                                      ).toLowerCase()}`}
+                                      
                               >
                                 {tutorial.properties.Name.title[0]?.plain_text}{" "}
-                              </a>
+                              </Link>
                             </h4>
                           </div>
                         </div>

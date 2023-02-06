@@ -152,21 +152,21 @@ const Tutorial = ({ curse, content }: any) => {
               <div className="share-bar -vertical" data-blog-share="true">
                 <div className="social-networks -small">
                   <a
-                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fohio.clbthemes.com%2Fstandard%2F"
+                    href="#"
                     target="_blank"
                     className="facebook network"
                   >
                     <i className="fab fa-facebook-f" />
                   </a>
                   <a
-                    href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fohio.clbthemes.com%2Fstandard%2F&description=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley."
+                    href="#"
                     target="_blank"
                     className="pinterest network"
                   >
                     <i className="fab fa-pinterest" />
                   </a>
                   <a
-                    href="https://twitter.com/intent/tweet?text=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley.,+https%3A%2F%2Fohio.clbthemes.com%2Fstandard%2F"
+                    href="#"
                     target="_blank"
                     className="twitter network"
                   >

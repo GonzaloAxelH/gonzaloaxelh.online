@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const UIContext = createContext<any>({});
 
 export const UIProvider = ({ children }: any) => {
-  const [themeGlobal, setThemeGlobalState] = useState(true)
+  const [themeGlobal, setThemeGlobalState] = useState(false)
   const [scrollTop, setScrollTop] = useState(0);
   const [showNotification, setShowNotification] = useState({
         show: false,
