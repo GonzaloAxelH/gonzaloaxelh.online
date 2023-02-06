@@ -41,15 +41,19 @@ console.log(session)
                 aria-controls="site-navigation"
                 aria-expanded="false"
               >
-                <img
+                <Image
                   alt="Colabrio"
                   src="/small_logo.png"
+                  blurDataURL="/small_logo.png"
+                  quality={100}
+                  placeholder="blur"
                   className=" "
-                  height="100"
-                  width="100"
+                  height={100}
+                  width={100}
                   loading="lazy"
                   decoding="async"
                   style={{ transform: "scale(0.8)" }}
+
                 />
               </button>
             </div>

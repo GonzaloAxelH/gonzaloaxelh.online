@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image"
 const Banner = () => {
   return (
     <div className="vc_row wpb_row vc_row-fluid vc_row-o-full-height vc_row-o-columns-stretch vc_row-o-equal-height vc_row-o-content-bottom vc_row-flex">
@@ -83,17 +83,20 @@ const Banner = () => {
                 
 
                     
-                  <img
+                  <Image
                     width={1488}
                     height={1560}
                     src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1.png"
+                    blurDataURL="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1.png"
                     className="vc_single_image-img attachment-full"
                     alt=""
                     decoding="async"
                     loading="lazy"
                     title="oh__demo1__1"
-                    srcSet="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1-286x300.png 286w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1-977x1024.png 977w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1-768x805.png 768w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1-1465x1536.png 1465w, https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1.png 1488w"
+                    
                     sizes="(max-width: 1488px) 100vw, 1488px"
+                    quality={100}
+                    placeholder="blur"
                   />
                 </div>
               </figure>
