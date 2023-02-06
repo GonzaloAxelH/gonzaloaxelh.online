@@ -3,18 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 const ElementsbarLeft = () => {
   const { setThemeGlobal, themeGlobal } = useContext(UIContext);
-  const [theme, setTheme] = useState(true);
-  useEffect(() => {
-    if (theme) {
-      let body = document.getElementById("body_next"); 
-      body?.classList.remove("light-scheme")
-      body?.classList.add("dark-scheme")
-    } else {
-      let body = document.getElementById("body_next"); 
-      body?.classList.remove("dark-scheme");
-      body?.classList.add("light-scheme");
-      }
-  },[theme])
+
   return (
     <ul className="elements-bar left -unlist" style={{marginTop:"-2em"}}>
       <li>
@@ -23,23 +12,22 @@ const ElementsbarLeft = () => {
             <div className="scroll-track" style={{ width: "9.07424%" }} />
           </div>
           <div className="scroll-top-holder titles-typo title">
-            Scroll to top
+          
           </div>
         </a>
       </li>
       <li onClick={() => {
         setThemeGlobal(!themeGlobal)
-        setTheme(!theme)
       }}>
         <div
           className={`color-switcher dynamic-typo cursor-as-pointer color-switcher-mobile ${
-            theme ? "dark" : ""
+            themeGlobal ? "dark" : ""
           }`}
         >
           <div
             className="color-switcher-item dark"
             style={{
-              minWidth: theme ? "61.4062px" : "auto",
+              minWidth: themeGlobal ? "61.4062px" : "auto",
               transition: "0.4s all",
               
             }}
@@ -60,7 +48,7 @@ const ElementsbarLeft = () => {
           <div
             className="color-switcher-item light"
             style={{
-              minWidth: theme ? "auto" : "63.6094px",
+              minWidth: themeGlobal ? "auto" : "63.6094px",
               transition: "0.4s all",
             }}
           >
@@ -80,8 +68,8 @@ const ElementsbarLeft = () => {
           <div
             className="color-switcher-toddler"
             style={{
-              width: theme ? "61.4062px" : "63.6094px",
-              transform: theme ? "translateX(-45.6098px)" : "translateX(0px)",
+              width: themeGlobal ? "61.4062px" : "63.6094px",
+              transform: themeGlobal ? "translateX(-45.6098px)" : "translateX(0px)",
               transition: "0.4s all",
               borderRadius: "50%",
             }}

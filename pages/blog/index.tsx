@@ -20,7 +20,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
   return (
     <Container
       customMeta={{ title: "Super Blog - Gonzalo Axel" }}
-      customAddClases="home page-template-default page page-id-10 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 slider-with-bullets page-is-loaded"
+      customAddClases="home page-template-default page page-id-10 wp-embed-responsive ohio-theme-3-1-2 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-6 slider-with-bullets "
     >
       <div
         id="content"
