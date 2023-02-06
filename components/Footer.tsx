@@ -38,7 +38,7 @@ const Footer = () => {
                 id="custom_html-15"
                 className="widget_text widget widget_custom_html"
               >
-                <h3 className="title widget-title">Rotterdam</h3>
+                <h3 className="title widget-title">General</h3>
                 <div className="textwidget custom-html-widget">
                   <b>Ohio Digital Media LTD.</b>
                   <br className="vc_hidden-xs" />

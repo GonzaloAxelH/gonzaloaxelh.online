@@ -134,8 +134,8 @@ const About = () => {
                                             <Image
                                               width={1668}
                                               height={798}
-                                              src="./Ohio Demo 31 – Just another WordPress site_files/shape1-min.png"
-                                              blurDataURL="./Ohio Demo 31 – Just another WordPress site_files/shape1-min.png"
+                                              src=""
+                                              blurDataURL=""
                                               className="vc_single_image-img attachment-full"
                                               alt=""
                                               quality={100}

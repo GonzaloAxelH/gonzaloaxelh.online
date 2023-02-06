@@ -15,6 +15,7 @@ const index = ({ recentCurses, test }: any) => {
         id="content"
         className="site-content"
         data-mobile-menu-resolution={768}
+        style={{maxWidth:"98vw"}}
       >
         <div className="page-container">
           <div id="primary" className="content-area">
@@ -69,19 +70,7 @@ const index = ({ recentCurses, test }: any) => {
                             </div>
                           </div>
                         </div>
-                        <div className="wpb_column vc_column_container vc_col-sm-4">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper">
-                              <div
-                                className="vc_empty_space"
-                                style={{ height: "6vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                             .
-                            </div>
-                          </div>
-                        </div>
+                        
                       </div>
                       <div className="vc_row wpb_row vc_row-fluid">
                         <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -960,240 +949,7 @@ const index = ({ recentCurses, test }: any) => {
                               >
                                 <span className="vc_empty_space_inner" />
                               </div>
-                              <div
-                                className="ohio-widget instagram-feed"
-                                id="ohio-custom-63dc9546d6fe7"
-                              >
-                                <div
-                                  id="sb_instagram"
-                                  className="sbi sbi_mob_col_1 sbi_tab_col_2 sbi_col_6 sbi_width_resp sbi_medium"
-                                  style={{ paddingBottom: "10px" }}
-                                  data-feedid="*4"
-                                  data-res="auto"
-                                  data-cols={6}
-                                  data-colsmobile={1}
-                                  data-colstablet={2}
-                                  data-num={6}
-                                  data-nummobile={6}
-                                  data-shortcode-atts='{"feed":"4"}'
-                                  data-postid={152078}
-                                  data-locatornonce="a8781b8eb0"
-                                  data-sbi-flags="favorLocal"
-                                  data-sbi-index={1}
-                                >
-                                  <div
-                                    id="sbi_images"
-                                    style={{ padding: "5px" }}
-                                  >
-                                    <div
-                                      className="sbi_item sbi_type_image"
-                                      id="sbi_17843715958815295"
-                                      data-date={1574240555}
-                                    >
-                                      <div className="sbi_photo_wrap">
-                                        <a
-                                          className="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready -unlink"
-                                          href="https://www.instagram.com/p/B5FNzwtp-Ex/"
-                                          target="_blank"
-                                          rel="noopener nofollow"
-                                          data-full-res="#demo25/wp-content/uploads/sb-instagram-feed-images/72465562_269218047369593_5822726700456694171_nfull.jpg"
-                                          data-img-src-set='{"d":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/72465562_269218047369593_5822726700456694171_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=VqTFdCaznvMAX-djbsU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBjUvnqLmwwsf-XSAWFe3TK1gbFiOO0Hmhq7f9luNHNzA&oe=63E0D2D2","150":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/72465562_269218047369593_5822726700456694171_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=VqTFdCaznvMAX-djbsU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBjUvnqLmwwsf-XSAWFe3TK1gbFiOO0Hmhq7f9luNHNzA&oe=63E0D2D2","320":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/72465562_269218047369593_5822726700456694171_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=VqTFdCaznvMAX-djbsU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBjUvnqLmwwsf-XSAWFe3TK1gbFiOO0Hmhq7f9luNHNzA&oe=63E0D2D2","640":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/72465562_269218047369593_5822726700456694171_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=VqTFdCaznvMAX-djbsU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBjUvnqLmwwsf-XSAWFe3TK1gbFiOO0Hmhq7f9luNHNzA&oe=63E0D2D2"}'
-                                          style={{
-                                            height: "163.25px",
-                                            backgroundImage:
-                                              'url("#demo25/wp-content/uploads/sb-instagram-feed-images/72465562_269218047369593_5822726700456694171_nlow.jpg")',
-                                            backgroundSize: "cover",
-                                            backgroundPosition: "center center",
-                                            backgroundRepeat: "no-repeat",
-                                          }}
-                                          data-cursor-class="cursor-link"
-                                        >
-                                          <span className="sbi-screenreader">
-                                            Instagram post 17843715958815295
-                                          </span>
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/72465562_269218047369593_5822726700456694171_nlow.jpg"
-                                            alt="Instagram post 17843715958815295"
-                                            style={{ display: "none" }}
-                                          />
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div
-                                      className="sbi_item sbi_type_image"
-                                      id="sbi_17845740913760667"
-                                      data-date={1574240542}
-                                    >
-                                      <div className="sbi_photo_wrap">
-                                        <a
-                                          className="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready -unlink"
-                                          href="https://www.instagram.com/p/B5FNyN7JH16/"
-                                          target="_blank"
-                                          rel="noopener nofollow"
-                                          data-full-res="#demo25/wp-content/uploads/sb-instagram-feed-images/75426255_166371937763477_7031855037122923055_nfull.jpg"
-                                          data-img-src-set='{"d":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/75426255_166371937763477_7031855037122923055_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=KrwdCj8RpO8AX_0u8t3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDMS5VPa9EKn6rN0YnoSrQLouTqHIASs35x-AY-T3mZUA&oe=63E1EA3E","150":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/75426255_166371937763477_7031855037122923055_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=KrwdCj8RpO8AX_0u8t3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDMS5VPa9EKn6rN0YnoSrQLouTqHIASs35x-AY-T3mZUA&oe=63E1EA3E","320":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/75426255_166371937763477_7031855037122923055_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=KrwdCj8RpO8AX_0u8t3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDMS5VPa9EKn6rN0YnoSrQLouTqHIASs35x-AY-T3mZUA&oe=63E1EA3E","640":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/75426255_166371937763477_7031855037122923055_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=KrwdCj8RpO8AX_0u8t3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDMS5VPa9EKn6rN0YnoSrQLouTqHIASs35x-AY-T3mZUA&oe=63E1EA3E"}'
-                                          style={{
-                                            height: "163.25px",
-                                            backgroundImage:
-                                              'url("#demo25/wp-content/uploads/sb-instagram-feed-images/75426255_166371937763477_7031855037122923055_nlow.jpg")',
-                                            backgroundSize: "cover",
-                                            backgroundPosition: "center center",
-                                            backgroundRepeat: "no-repeat",
-                                          }}
-                                          data-cursor-class="cursor-link"
-                                        >
-                                          <span className="sbi-screenreader">
-                                            Instagram post 17845740913760667
-                                          </span>
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/75426255_166371937763477_7031855037122923055_nlow.jpg"
-                                            alt="Instagram post 17845740913760667"
-                                            style={{ display: "none" }}
-                                          />
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div
-                                      className="sbi_item sbi_type_image"
-                                      id="sbi_17844992452796784"
-                                      data-date={1574240516}
-                                    >
-                                      <div className="sbi_photo_wrap">
-                                        <a
-                                          className="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready -unlink"
-                                          href="https://www.instagram.com/p/B5FNvGJJkXw/"
-                                          target="_blank"
-                                          rel="noopener nofollow"
-                                          data-full-res="#demo25/wp-content/uploads/sb-instagram-feed-images/70646773_163828784679604_6454519038758974702_nfull.jpg"
-                                          data-img-src-set='{"d":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/70646773_163828784679604_6454519038758974702_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=CoYq5WBsG8kAX8lNUk1&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCeLjxhCf19e-rSSB0tbVzRDBzzjU8kOuIjk6su0UYAcw&oe=63E0DACB","150":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/70646773_163828784679604_6454519038758974702_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=CoYq5WBsG8kAX8lNUk1&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCeLjxhCf19e-rSSB0tbVzRDBzzjU8kOuIjk6su0UYAcw&oe=63E0DACB","320":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/70646773_163828784679604_6454519038758974702_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=CoYq5WBsG8kAX8lNUk1&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCeLjxhCf19e-rSSB0tbVzRDBzzjU8kOuIjk6su0UYAcw&oe=63E0DACB","640":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/70646773_163828784679604_6454519038758974702_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=CoYq5WBsG8kAX8lNUk1&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCeLjxhCf19e-rSSB0tbVzRDBzzjU8kOuIjk6su0UYAcw&oe=63E0DACB"}'
-                                          style={{
-                                            height: "163.25px",
-                                            backgroundImage:
-                                              'url("#demo25/wp-content/uploads/sb-instagram-feed-images/70646773_163828784679604_6454519038758974702_nlow.jpg")',
-                                            backgroundSize: "cover",
-                                            backgroundPosition: "center center",
-                                            backgroundRepeat: "no-repeat",
-                                          }}
-                                          data-cursor-class="cursor-link"
-                                        >
-                                          <span className="sbi-screenreader">
-                                            Instagram post 17844992452796784
-                                          </span>
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/70646773_163828784679604_6454519038758974702_nlow.jpg"
-                                            alt="Instagram post 17844992452796784"
-                                            style={{ display: "none" }}
-                                          />
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div
-                                      className="sbi_item sbi_type_image"
-                                      id="sbi_17879058715467371"
-                                      data-date={1574240493}
-                                    >
-                                      <div className="sbi_photo_wrap">
-                                        <a
-                                          className="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready -unlink"
-                                          href="https://www.instagram.com/p/B5FNsTOp5pv/"
-                                          target="_blank"
-                                          rel="noopener nofollow"
-                                          data-full-res="#demo25/wp-content/uploads/sb-instagram-feed-images/73480740_529463840966237_6668377064868469311_nfull.jpg"
-                                          data-img-src-set='{"d":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/73480740_529463840966237_6668377064868469311_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=b_8N4v0sSnUAX94UYIR&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfD-jJ0_nL1lI--ddiLiqgtL-y6k8VzpqKc9DO5gUF5raA&oe=63E0BA69","150":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/73480740_529463840966237_6668377064868469311_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=b_8N4v0sSnUAX94UYIR&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfD-jJ0_nL1lI--ddiLiqgtL-y6k8VzpqKc9DO5gUF5raA&oe=63E0BA69","320":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/73480740_529463840966237_6668377064868469311_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=b_8N4v0sSnUAX94UYIR&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfD-jJ0_nL1lI--ddiLiqgtL-y6k8VzpqKc9DO5gUF5raA&oe=63E0BA69","640":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/73480740_529463840966237_6668377064868469311_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=b_8N4v0sSnUAX94UYIR&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfD-jJ0_nL1lI--ddiLiqgtL-y6k8VzpqKc9DO5gUF5raA&oe=63E0BA69"}'
-                                          style={{
-                                            height: "163.25px",
-                                            backgroundImage:
-                                              'url("#demo25/wp-content/uploads/sb-instagram-feed-images/73480740_529463840966237_6668377064868469311_nlow.jpg")',
-                                            backgroundSize: "cover",
-                                            backgroundPosition: "center center",
-                                            backgroundRepeat: "no-repeat",
-                                          }}
-                                          data-cursor-class="cursor-link"
-                                        >
-                                          <span className="sbi-screenreader">
-                                            Instagram post 17879058715467371
-                                          </span>
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/73480740_529463840966237_6668377064868469311_nlow.jpg"
-                                            alt="Instagram post 17879058715467371"
-                                            style={{ display: "none" }}
-                                          />
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div
-                                      className="sbi_item sbi_type_image"
-                                      id="sbi_17870514025507455"
-                                      data-date={1574240475}
-                                    >
-                                      <div className="sbi_photo_wrap">
-                                        <a
-                                          className="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready -unlink"
-                                          href="https://www.instagram.com/p/B5FNqAwJR0X/"
-                                          target="_blank"
-                                          rel="noopener nofollow"
-                                          data-full-res="#demo25/wp-content/uploads/sb-instagram-feed-images/70275039_1420732338091131_8610475513553640345_nfull.jpg"
-                                          data-img-src-set='{"d":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/70275039_1420732338091131_8610475513553640345_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=wFsP10sKuCAAX97SWr3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDmqiw9nOewZw95bcfToWAhLUNGq2YQ_gvEYuo9sbE9EA&oe=63E0F60D","150":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/70275039_1420732338091131_8610475513553640345_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=wFsP10sKuCAAX97SWr3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDmqiw9nOewZw95bcfToWAhLUNGq2YQ_gvEYuo9sbE9EA&oe=63E0F60D","320":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/70275039_1420732338091131_8610475513553640345_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=wFsP10sKuCAAX97SWr3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDmqiw9nOewZw95bcfToWAhLUNGq2YQ_gvEYuo9sbE9EA&oe=63E0F60D","640":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/70275039_1420732338091131_8610475513553640345_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=wFsP10sKuCAAX97SWr3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDmqiw9nOewZw95bcfToWAhLUNGq2YQ_gvEYuo9sbE9EA&oe=63E0F60D"}'
-                                          style={{
-                                            height: "163.25px",
-                                            backgroundImage:
-                                              'url("#demo25/wp-content/uploads/sb-instagram-feed-images/70275039_1420732338091131_8610475513553640345_nlow.jpg")',
-                                            backgroundSize: "cover",
-                                            backgroundPosition: "center center",
-                                            backgroundRepeat: "no-repeat",
-                                          }}
-                                          data-cursor-class="cursor-link"
-                                        >
-                                          <span className="sbi-screenreader">
-                                            Instagram post 17870514025507455
-                                          </span>
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/70275039_1420732338091131_8610475513553640345_nlow.jpg"
-                                            alt="Instagram post 17870514025507455"
-                                            style={{ display: "none" }}
-                                          />
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div
-                                      className="sbi_item sbi_type_image"
-                                      id="sbi_17929714156335776"
-                                      data-date={1574240437}
-                                    >
-                                      <div className="sbi_photo_wrap">
-                                        <a
-                                          className="sbi_photo sbi_imgLiquid_bgSize sbi_imgLiquid_ready -unlink"
-                                          href="https://www.instagram.com/p/B5FNlaRphEj/"
-                                          target="_blank"
-                                          rel="noopener nofollow"
-                                          data-full-res="#demo25/wp-content/uploads/sb-instagram-feed-images/74953527_129824991769523_1023441925881389361_nfull.jpg"
-                                          data-img-src-set='{"d":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/74953527_129824991769523_1023441925881389361_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=F29A90rEyXoAX-Fv5jt&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBGk_5IW6VckuLlBDu7uu9LCBN-dCAksZOdDLIXdppFLQ&oe=63E0B3BC","150":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/74953527_129824991769523_1023441925881389361_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=F29A90rEyXoAX-Fv5jt&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBGk_5IW6VckuLlBDu7uu9LCBN-dCAksZOdDLIXdppFLQ&oe=63E0B3BC","320":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/74953527_129824991769523_1023441925881389361_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=F29A90rEyXoAX-Fv5jt&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBGk_5IW6VckuLlBDu7uu9LCBN-dCAksZOdDLIXdppFLQ&oe=63E0B3BC","640":"https:\/\/scontent.cdninstagram.com\/v\/t51.2885-15\/74953527_129824991769523_1023441925881389361_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=F29A90rEyXoAX-Fv5jt&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBGk_5IW6VckuLlBDu7uu9LCBN-dCAksZOdDLIXdppFLQ&oe=63E0B3BC"}'
-                                          style={{
-                                            height: "163.25px",
-                                            backgroundImage:
-                                              'url("#demo25/wp-content/uploads/sb-instagram-feed-images/74953527_129824991769523_1023441925881389361_nlow.jpg")',
-                                            backgroundSize: "cover",
-                                            backgroundPosition: "center center",
-                                            backgroundRepeat: "no-repeat",
-                                            opacity: 1,
-                                          }}
-                                          data-cursor-class="cursor-link"
-                                        >
-                                          <span className="sbi-screenreader">
-                                            Instagram post 17929714156335776
-                                          </span>
-                                          <img
-                                            src="./Ohio Stage Demo 25 – Just another WordPress site_files/74953527_129824991769523_1023441925881389361_nlow.jpg"
-                                            alt="Instagram post 17929714156335776"
-                                            style={{ display: "none" }}
-                                          />
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div id="sbi_load" />
-                                </div>
-                              </div>
+                             
                               <div
                                 className="vc_empty_space clb__section_spacer"
                                 style={{ height: "8vh" }}
@@ -1204,246 +960,18 @@ const index = ({ recentCurses, test }: any) => {
                           </div>
                         </div>
                       </div>
-                      <div
-                        data-vc-full-width="true"
-                        data-vc-full-width-init="true"
-                        className="vc_row wpb_row vc_row-fluid clb__light_section clb__dark_mode_light vc_custom_1627978993017 vc_row-has-fill"
-                        style={{
-                          position: "relative",
-                          left: "-64.5px",
-                          boxSizing: "border-box",
-                          width: "1349px",
-                          maxWidth: "1349px",
-                          paddingLeft: "64.5px",
-                          paddingRight: "64.5px",
-                        }}
-                      >
-                        <div className="wpb_column vc_column_container vc_col-sm-12">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper">
-                              <div
-                                className="vc_empty_space clb__section_spacer"
-                                style={{ height: "10vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                              <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                <div className="wpb_column vc_column_container vc_col-sm-6">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                      <div
-                                        className="ohio-widget heading -left"
-                                        id="ohio-custom-63dc9546dc173"
-                                      >
-                                        <div className="subtitle">Careers</div>
-                                        <h2 className="title">
-                                          Join our team.
-                                        </h2>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="wpb_column vc_column_container vc_col-sm-6">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                      <div
-                                        className="vc_empty_space"
-                                        style={{ height: "3vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                      <div className="ohio-widget-holder -right">
-                                        <a
-                                          href="#contact-us-ver4/"
-                                          target="_blank"
-                                          className="ohio-widget button clb__alignment_reset"
-                                          id="ohio-custom-63dc9546dc637"
-                                        >
-                                          Contact Us
-                                          <i className="icon -right">
-                                            <svg
-                                              className="default"
-                                              width={16}
-                                              height={16}
-                                              viewBox="0 0 16 16"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                            </svg>
-                                            <svg
-                                              className="minimal"
-                                              width={18}
-                                              height={16}
-                                              viewBox="0 0 18 16"
-                                              fill="none"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                fillRule="evenodd"
-                                                clipRule="evenodd"
-                                                d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                              />
-                                              <path
-                                                fillRule="evenodd"
-                                                clipRule="evenodd"
-                                                d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                              />
-                                            </svg>
-                                          </i>
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text">
-                                <span className="vc_sep_holder vc_sep_holder_l">
-                                  <span
-                                    style={{
-                                      borderColor: "rgba(99, 93, 111, 0.65)",
-                                    }}
-                                    className="vc_sep_line"
-                                  />
-                                </span>
-                                <span className="vc_sep_holder vc_sep_holder_r">
-                                  <span
-                                    style={{
-                                      borderColor: "rgba(99, 93, 111, 0.65)",
-                                    }}
-                                    className="vc_sep_line"
-                                  />
-                                </span>
-                              </div>
-                              <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                <div className="wpb_column vc_column_container vc_col-sm-6">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                      <div
-                                        className="ohio-text-sc"
-                                        id="ohio-custom-63dc9546dcd0c"
-                                      >
-                                        <p>
-                                          We’re
-                                          <strong>a team of creatives</strong>
-                                          who are excited about unique ideas and
-                                          help fin-tech companies to
-                                          <strong>
-                                            create amazing identity
-                                          </strong>
-                                          by crafting top-notch UI/UX.
-                                        </p>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space clb__section_spacer"
-                                        style={{ height: "10vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="wpb_column vc_column_container vc_col-sm-6">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="vc_row-full-width vc_clearfix" />
+                      
+                      
                     </section>
                   </div>
                 </article>
               </main>
             </div>
           </div>
+        
+        
         </div>
-      </div>
-
-      <div className="page-headline without-cap -center subheader_excluded headline-with-parallax">
-        <a
-          href="#"
-          className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
-        >
-          <button
-            className="icon-button"
-            aria-controls="site-navigation"
-            aria-expanded="false"
-          >
-            <i className="icon">
-              <svg
-                className="default"
-                width={16}
-                height={16}
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-              </svg>
-              <svg
-                className="minimal"
-                width={18}
-                height={16}
-                viewBox="0 0 18 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                />
-              </svg>
-            </i>
-          </button>
-          <span className="caption"> Back </span>
-        </a>
-        <div
-          className="parallax"
-          data-parallax-bg="vertical"
-          data-parallax-speed=".5"
-        >
-          <div
-            className="parallax-bg bg-image"
-            style={{
-              height: "398.891px",
-              transform: "translate3d(0px, -66.5362px, 0px)",
-              transition: "transform 0.1s linear 0s",
-            }}
-          />
-          <div className="parallax-content" />
-        </div>
-        <div className="holder">
-          <div className="page-container">
-            <div className="animated-holder">
-              <div className="headline-meta" />
-              <h1 className="title">Episodios de cursos</h1>
-              <div className="post-meta-holder">
-                <div className="builder-switcher">
-                  <a
-                    className="active"
-                    href="#portfolio-projects-shortcode/portfolio-projects-shortcode/"
-                  >
-                    WPBakery
-                  </a>
-                  <a href="#portfolio-projects-shortcode/portfolio-projects-widget/">
-                    Elementor
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="page-container">
-        <div id="primary" className="content-area">
+  <div id="primary" className="content-area" style={{margin:"1rem"}}>
           <div className="page-content">
             <main id="main" className="site-main">
               <article
@@ -1856,9 +1384,9 @@ const index = ({ recentCurses, test }: any) => {
             </main>
           </div>
         </div>
-      </div>
-      <div className="page-container">
-        <div id="primary" className="content-area">
+        
+      
+        <div id="primary" className="content-area" style={{margin:"1rem"}}>
           <div className="page-content">
             <main id="main" className="site-main">
               <article
@@ -2272,6 +1800,11 @@ const index = ({ recentCurses, test }: any) => {
           </div>
         </div>
       </div>
+
+    
+    
+      
+        
     </Container>
   );
 };

@@ -200,6 +200,8 @@ const AboutSetcion = () => {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 };

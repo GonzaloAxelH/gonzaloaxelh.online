@@ -24,7 +24,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
     >
       <div
         id="content"
-        className="site-content"
+        className="site-content "
         data-mobile-menu-resolution={768}
       >
         <div className="page-container -full-w">
@@ -76,7 +76,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                             style={{
                                               backgroundImage: `url("${coverImageFeature}")`,
                                               height: "100%",
-                                              borderRadius: "12px",
+                                              borderRadius: "5px",
                                             }}
                                           />
                                         </div>
