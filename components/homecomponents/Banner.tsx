@@ -79,15 +79,15 @@ const Banner = () => {
                     <Image
                       width={1488}
                       height={1560}
-                      src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1.png"
-                      blurDataURL="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-1/oh__demo1__1.png"
+                      src="https://res.cloudinary.com/ddksrkond/image/upload/v1675725885/Blog/oh__demo1__1_ebnfju.png"
+                      blurDataURL="https://res.cloudinary.com/ddksrkond/image/upload/v1675725885/Blog/oh__demo1__1_ebnfju.png"
                       className="vc_single_image-img attachment-full"
                       alt=""
                       decoding="async"
                       loading="lazy"
                       title="oh__demo1__1"
                       sizes="(max-width: 1488px) 100vw, 1488px"
-                      quality={100}
+                      quality={80}
                       placeholder="blur"
                     />
                   </div>
