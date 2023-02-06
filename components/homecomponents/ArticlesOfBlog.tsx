@@ -48,13 +48,13 @@ const ArticlesOfBlog = ({ articles, tags }: any) => {
                   <div className="vc_column-inner">
                     <div className="wpb_wrapper">
                       <div className="ohio-widget-holder -right">
-                        <a
-                          href="#"
+                        <Link
+                          href="/blog"
                           target="_blank"
                           className="ohio-widget button clb__alignment_reset -outlined -small"
                           id="ohio-custom-63d7a7d3c5fb3"
                         >
-                          Ver mas secciones
+                          Ver mas articulos
                           <i className="icon -right">
                             <svg
                               className="default"
@@ -85,7 +85,7 @@ const ArticlesOfBlog = ({ articles, tags }: any) => {
                               />
                             </svg>
                           </i>
-                        </a>
+                        </Link>
                       </div>
                       <div className="vc_empty_space" style={{ height: "4vh" }}>
                         <span className="vc_empty_space_inner" />

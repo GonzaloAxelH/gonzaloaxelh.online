@@ -86,37 +86,9 @@ const {setScrollTop} = useContext(UIContext)
         )}
       </Head>
       <div id="page" className="site">
-        {circles ? (
-          <>
-            <div className="gradient2"></div>
-            <div className="gradient"></div>
-          </>
-        ) : null}
-        
        
-          <section className="background" style={{position:blurredFixed ? "fixed":"absolute"}}>
-            <ul className="background-grid">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <div className="background-blurs">
-              <div className="blur-1">
-                <span></span>
-              </div>
-              <div className="blur-2">
-                <span></span>
-              </div>
-              <div className="blur-3">
-                <span></span>
-              </div>
-            </div>
-          </section>
+       
+
         
         <ElementsbarLeft />
         <ElementsbarRight />

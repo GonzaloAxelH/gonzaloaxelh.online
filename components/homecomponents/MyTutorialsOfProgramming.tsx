@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 const MyTutorialsOfProgramming = ({ tutorials }: any) => {
@@ -37,8 +37,8 @@ const MyTutorialsOfProgramming = ({ tutorials }: any) => {
                 <div className="vc_column-inner">
                   <div className="wpb_wrapper">
                     <div className="ohio-widget-holder -right">
-                      <a
-                        href="#"
+                      <Link
+                        href="/tutorials"
                         target="_blank"
                         className="ohio-widget button clb__alignment_reset -outlined -small"
                         id="ohio-custom-63d7a7d3c5fb3"
@@ -74,7 +74,7 @@ const MyTutorialsOfProgramming = ({ tutorials }: any) => {
                             />
                           </svg>
                         </i>
-                      </a>
+                      </Link>
                     </div>
                     <div className="vc_empty_space" style={{ height: "4vh" }}>
                       <span className="vc_empty_space_inner" />
@@ -87,13 +87,10 @@ const MyTutorialsOfProgramming = ({ tutorials }: any) => {
               className="ohio-widget blog-posts vc_row"
               id="ohio-custom-63dd38b76ed05"
               data-lazy-container="posts"
-                      >
-                          
-                          
+            >
               {tutorials.map((tutorial: any) => {
                 return (
-                    <div
-                        
+                  <div
                     className="vc_col-lg-4 vc_col-md-4 vc_col-xs-12 masonry-block grid-item ribbon"
                     data-lazy-item
                     data-lazy-scope="posts"
@@ -103,18 +100,18 @@ const MyTutorialsOfProgramming = ({ tutorials }: any) => {
                       data-tilt="true"
                       data-tilt-perspective={6000}
                     >
-                      <figure className="image-holder" style={{
-                           
-                              borderRadius: "0.7rem",
-                            }}>
+                      <figure
+                        className="image-holder"
+                        style={{
+                          borderRadius: "0.7rem",
+                        }}
+                      >
                         <Link
-href={`/tutorial/${slugify(
-                                        tutorial?.properties?.Name
-                                          ?.title[0]?.plain_text
-                                      ).toLowerCase()}`}
+                          href={`/tutorial/${slugify(
+                            tutorial?.properties?.Name?.title[0]?.plain_text
+                          ).toLowerCase()}`}
                           className="-unlink"
                           data-cursor-class="cursor-link"
-                          
                         >
                           <Image
                             src={
@@ -126,8 +123,8 @@ href={`/tutorial/${slugify(
                               tutorial.cover?.external?.url
                             }
                             quality={100}
-                                        width={250}
-                                        height={250}
+                            width={250}
+                            height={250}
                             sizes="(max-width: 882px) 100vw, 882px"
                             alt=""
                             placeholder="blur"
@@ -163,11 +160,10 @@ href={`/tutorial/${slugify(
                             <h4 className="title">
                               <Link
                                 className="-unlink"
-href={`/tutorial/${slugify(
-                                        tutorial?.properties?.Name
-                                          ?.title[0]?.plain_text
-                                      ).toLowerCase()}`}
-                                      
+                                href={`/tutorial/${slugify(
+                                  tutorial?.properties?.Name?.title[0]
+                                    ?.plain_text
+                                ).toLowerCase()}`}
                               >
                                 {tutorial.properties.Name.title[0]?.plain_text}{" "}
                               </Link>

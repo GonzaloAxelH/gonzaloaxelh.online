@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 const WorkNow = () => {
   return (
     <div className="vc_row wpb_row vc_row-fluid">
@@ -42,8 +43,8 @@ const WorkNow = () => {
                       <span className="vc_empty_space_inner" />
                     </div>
                     <div className="ohio-widget-holder -left">
-                      <a
-                        href="#"
+                      <Link
+                        href="/proyects"
                         target="_blank"
                         className="ohio-widget button"
                         id="ohio-custom-63d74634d296a"
@@ -79,7 +80,7 @@ const WorkNow = () => {
                             />
                           </svg>
                         </i>
-                      </a>
+                      </Link>
                     </div>
                     <div
                       className="vc_empty_space  vc_hidden-xs vc_hidden-sm"

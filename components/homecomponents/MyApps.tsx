@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 import Image from "next/image"
 const MyApps = () => {
   return (
@@ -42,8 +42,8 @@ const MyApps = () => {
           <div className="vc_column-inner">
             <div className="wpb_wrapper">
               <div className="ohio-widget-holder -right">
-                <a
-                  href="#"
+                <Link
+                  href="/apps"
                   target="_blank"
                   className="ohio-widget button clb__alignment_reset -outlined -small"
                   id="ohio-custom-63d7a7d3c5fb3"
@@ -79,7 +79,7 @@ const MyApps = () => {
                       />
                     </svg>
                   </i>
-                </a>
+                </Link>
               </div>
               <div className="vc_empty_space" style={{ height: "4vh" }}>
                 <span className="vc_empty_space_inner" />
