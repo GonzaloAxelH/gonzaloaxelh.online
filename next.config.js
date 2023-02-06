@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
-const withPurgeCSSModules = require('next-purge-css-modules');
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+
 const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
@@ -25,4 +22,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPurgeCSSModules(nextConfig);
+module.exports = nextConfig
