@@ -22,7 +22,7 @@ const ArticlesOfBlog = ({ articles, tags }: any) => {
               id="ohio-custom-63dbf46d72daa"
               data-ohio-portfolio-grid="true"
             >
-              <div className="vc_row blur-effect">
+              <div className="vc_row ">
                 <div
                   className="vc_col-md-6 vc_col-md-push-3 -center"
                   style={{ margin: "3em 0 3em 0" }}

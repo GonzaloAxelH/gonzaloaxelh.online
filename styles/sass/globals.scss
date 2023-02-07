@@ -158,7 +158,8 @@
 .blur-effect{
   position: relative;
   max-width: 100vw;
- 
+  overflow-x: hidden;
+  
   background-color: transparent;
   &::before {
     content: "";
@@ -175,7 +176,7 @@
     position: absolute;
     width: 123px;
     height: 123px;
-    left: 80%;
+    left: 20%;
     top: 550px;
     background-color: #18B2DE;
     filter: blur(80px);
