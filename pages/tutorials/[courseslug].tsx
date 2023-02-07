@@ -3,6 +3,7 @@ import { UIContext } from "@/context/UIContext";
 import { useGetCurse, useGetCurses } from "@/hooks/useGetCurses";
 import { useGetSectionCurse } from "@/hooks/useGetSectionCurse";
 import { getChildrenDatabase } from "@/services/notion";
+import siteMetadata from "@/settings/sitemetdata";
 import { PageType } from "@/settings/types";
 import Link from "next/link";
 import React, { useContext, useEffect } from "react";
@@ -97,13 +98,7 @@ const Tutorial = ({ curse, content }: any) => {
                       >
                         Digital
                       </a>
-                      <a
-                        className="category"
-                        href="#category/marketing/"
-                        rel="category tag"
-                      >
-                        Marketing
-                      </a>
+                      
                     </div>
                     <span className="post-meta-estimate">9 min read </span>
                   </div>
@@ -116,7 +111,7 @@ const Tutorial = ({ curse, content }: any) => {
                         <div className="avatar -small">
                           <img
                             alt="Colabrio"
-                            src="./The Highly Contemporary UI_UX Design from a Silicon Valley. – Ohio Theme_files/4058fe7404c4f9d88d5d2d6db42320f8.png"
+                            src={siteMetadata.avatarImage}
                             className="avatar avatar-96 photo"
                             height={96}
                             width={96}
@@ -126,7 +121,7 @@ const Tutorial = ({ curse, content }: any) => {
                       </li>
                       <li className="meta-item">
                         <span className="prefix">Author</span>
-                        <span className="author">Colabrio</span>
+                        <span className="author">{siteMetadata.author}</span>
                       </li>
                       <li className="meta-item">
                         <span className="prefix">Published</span>

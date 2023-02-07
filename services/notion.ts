@@ -54,7 +54,7 @@ export const getArticle = async (id: string) => {
     block_id: id,
   });
   let content = [...blocks.results];
-
+  
   return JSON.parse(JSON.stringify(content));
 };
 

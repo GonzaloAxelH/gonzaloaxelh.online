@@ -49,7 +49,7 @@ const index = ({ recentCurses, test }: any) => {
                                 >
                                   <div className="blog-item card -layout3">
                                     <Link
-                                      href={`/tutorial/${slugify(
+                                      href={`/tutorials/${slugify(
                                         recentCurses[0]?.properties?.Name
                                           ?.title[0]?.plain_text
                                       ).toLowerCase()}`}
@@ -102,7 +102,7 @@ const index = ({ recentCurses, test }: any) => {
                                       <div className="heading title">
                                         <h4 className="title">
                                           <Link
-href={`/tutorial/${slugify(
+href={`/tutorials/${slugify(
                                         recentCurses[0]?.properties?.Name
                                           ?.title[0]?.plain_text
                                       ).toLowerCase()}`}
@@ -164,8 +164,8 @@ href={`/tutorial/${slugify(
                                             style={{}}
                                           >
                                             <Link
-                                              href={`/tutorial/${slugify(
-                                                recentCurses[0]?.properties
+                                              href={`/tutorials/${slugify(
+                                                tutorial?.properties
                                                   ?.Name?.title[0]?.plain_text
                                               ).toLowerCase()}`}
                                               className="-unlink"

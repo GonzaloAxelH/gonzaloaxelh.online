@@ -1,6 +1,5 @@
 import Container from "@/components/hocs/Container";
 import { UIContext } from "@/context/UIContext";
-import { useGetArticles } from "@/hooks/useGetArticles";
 import { useGetProyects } from "@/hooks/useGetProyects";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,12 +9,14 @@ import slugify from "slugify";
 const Proyects = ({ allProyects }: any) => {
   const { themeGlobal } = useContext(UIContext);
   const proyectFeature = allProyects[3];
-
+  console.log(allProyects);
   const coverImageFeature =
     proyectFeature?.cover?.file?.url || proyectFeature?.cover?.external?.url;
   const dateFeature = proyectFeature.created_time;
   const title = proyectFeature.properties.Name?.title[0]?.plain_text;
   const titleLink = slugify(title).toLowerCase();
+  
+  
 
   return (
     <Container customMeta={{ title: "Proyects - Gonzalo Axel" }}>
@@ -65,10 +66,11 @@ const Proyects = ({ allProyects }: any) => {
                                 id="ohio-custom-63d77104d9a96"
                               >
                                 <p style={{ textAlign: "center" }}>
-                                  Give customers a structutal experience they’ll
-                                  and come back.
+                                  Bienvenido a mi coleccion de proyectos en que
+                                  estoy trabajando.
                                   <br />
-                                  <b>Join #1 app</b> to track your data.
+                                  <b>Tinenes acesso gratuito </b> a todos ellos.
+                                  :)
                                 </p>
                               </div>
                               <div
@@ -77,16 +79,7 @@ const Proyects = ({ allProyects }: any) => {
                               >
                                 <span className="vc_empty_space_inner" />
                               </div>
-                              <div className="ohio-widget-holder -center">
-                                <a
-                                  href="#demo26/#"
-                                  target="_blank"
-                                  className="ohio-widget button"
-                                  id="ohio-custom-63d77104da25e"
-                                >
-                                  Sign Up for Free
-                                </a>
-                              </div>
+                              <div className="ohio-widget-holder -center"></div>
                               <div
                                 className="vc_empty_space vc_hidden-lg vc_hidden-md vc_hidden-sm"
                                 style={{ height: "5vh" }}
@@ -128,8 +121,9 @@ const Proyects = ({ allProyects }: any) => {
                                 id="ohio-custom-63d77104dc2dd"
                               >
                                 <p style={{ textAlign: "center" }}>
-                                  Join <strong>2,5K+</strong> software
-                                  businesses growing with Colabrio Group.
+                                  Muy pronto{" "}
+                                  <strong> proyectos colaborativos </strong>{" "}
+                                  donde podras hacer tus contruibuciones.
                                 </p>
                               </div>
                             </div>
@@ -296,7 +290,7 @@ const Proyects = ({ allProyects }: any) => {
                         </div>
                       </div>
 
-                      {allProyects.slice(0, 3).map((proyect: any) => {
+                      {allProyects.map((proyect: any) => {
                         return (
                           <div
                             data-vc-full-width="true"
@@ -364,7 +358,10 @@ const Proyects = ({ allProyects }: any) => {
                                               #datatracking app
                                             </div>
                                             <h2 className="title">
-                                              {proyect.properties.Name.title[0].plain_text}
+                                              {
+                                                proyect.properties.Name.title[0]
+                                                  .plain_text
+                                              }
                                             </h2>
                                           </div>
                                           <div
@@ -372,8 +369,10 @@ const Proyects = ({ allProyects }: any) => {
                                             id="ohio-custom-63d77104e17ac"
                                           >
                                             <p>
-                                             
-                                              {proyect.properties.Description.rich_text[0].plain_text}
+                                              {
+                                                proyect.properties.Description
+                                                  .rich_text[0].plain_text
+                                              }
                                             </p>
                                           </div>
                                           <div
@@ -383,14 +382,37 @@ const Proyects = ({ allProyects }: any) => {
                                             <span className="vc_empty_space_inner" />
                                           </div>
                                           <div className="ohio-widget-holder -left">
-                                            <a
-                                              href="#demo26/#"
+                                            <Link
+                                              href={`/proyects/${slugify(
+                                                proyect?.properties?.Name
+                                                  ?.title[0]?.plain_text
+                                              ).toLowerCase()}`}
                                               target="_blank"
                                               className="ohio-widget button -outlined -small"
                                               id="ohio-custom-63d77104e18fe"
                                             >
                                               Ver este proyecto
-                                            </a>
+                                            </Link>
+
+                                            <button
+                                              style={{ marginLeft: "1em" }}
+                                              className="ohio-widget button -outlined -small"
+                                              disabled={
+                                                proyect?.properties
+                                                  ?.LivePreview?.url === null
+                                              }
+                                            >
+                                              <Link
+                                                href={
+                                                  proyect?.properties
+                                                    ?.LivePreview?.url || "#"
+                                                }
+                                                target="_blank"
+                                                id="ohio-custom-63d77104e18fe"
+                                              >
+                                                Demo
+                                              </Link>
+                                            </button>
                                           </div>
                                           <div
                                             className="vc_empty_space"
@@ -405,21 +427,30 @@ const Proyects = ({ allProyects }: any) => {
                                       <div className="vc_column-inner">
                                         <div className="wpb_wrapper">
                                           <div className="wpb_single_image wpb_content_element vc_align_left vc_custom_1628165984912">
-                                            <figure className="wpb_wrapper vc_figure" >
+                                            <figure className="wpb_wrapper vc_figure">
                                               <div className="vc_single_image-wrapper vc_box_border_grey">
                                                 <Image
-                                                  style={{borderRadius:"12px"}}
+                                                  style={{
+                                                    borderRadius: "12px",
+                                                  }}
                                                   width={1433}
                                                   height={812}
-                                                  src={proyect.cover?.external?.url || proyect.cover?.file?.url}
-                                                  blurDataURL={proyect.cover?.external?.url || proyect.cover?.file?.url}
+                                                  src={
+                                                    proyect.cover?.external
+                                                      ?.url ||
+                                                    proyect.cover?.file?.url
+                                                  }
+                                                  blurDataURL={
+                                                    proyect.cover?.external
+                                                      ?.url ||
+                                                    proyect.cover?.file?.url
+                                                  }
                                                   placeholder="blur"
                                                   className="vc_single_image-img attachment-full"
                                                   alt=""
                                                   decoding="async"
                                                   loading="lazy"
                                                   title="oh__demo26__2-min"
-                                                  
                                                   sizes="(max-width: 1433px) 100vw, 1433px"
                                                 />
                                               </div>
@@ -466,20 +497,22 @@ const Proyects = ({ allProyects }: any) => {
                                             <span className="vc_empty_space_inner" />
                                           </div>
                                           <div
-                                            className="ohio-widget icon-box -left -left-flex"
+                                            className="ohio-widget icon-box -left -left-flex -center"
                                             id="ohio-custom-63d77104e3c33"
                                           >
-                                            <span className="icon-group -contained">
-                                              <i className="icon ion ion-ios-star-outline" />
+                                             <span className="-contained">
+                                            
+                                              <img src={proyect.properties.Feacture1?.rich_text[1]?.plain_text} alt="" width={60} style={{borderRadius:"50%"}}/>
+                                                    
                                             </span>
                                             <div className="icon-box-content">
                                               <h5 className="icon-box-heading">
-                                                Expenses
+                                              
+                                                {proyect.properties.Feacture1?.rich_text[0]?.plain_text.match(/\[(.*)\]/).pop()}
+
                                               </h5>
                                               <p>
-                                                Packed with API features you
-                                                will love to collaborate with
-                                                issues and change business.
+                                                {proyect.properties.Feacture1?.rich_text[0]?.plain_text.substring(proyect.properties.Feacture1?.rich_text[0]?.plain_text.indexOf("]") + 1,)}    
                                               </p>
                                             </div>
                                           </div>
@@ -522,20 +555,22 @@ const Proyects = ({ allProyects }: any) => {
                                             <span className="vc_empty_space_inner" />
                                           </div>
                                           <div
-                                            className="ohio-widget icon-box -left -left-flex"
+                                            className="ohio-widget icon-box -left -left-flex -center"
                                             id="ohio-custom-63d77104e446b"
                                           >
-                                            <span className="icon-group -contained">
-                                              <i className="icon ion ion-ios-git-compare" />
+                                             <span className="-contained">
+                                            
+                                              <img src={proyect.properties.Feacture2?.rich_text[1]?.plain_text} alt="" width={60} style={{borderRadius:"50%"}}/>
+                                                    
                                             </span>
                                             <div className="icon-box-content">
                                               <h5 className="icon-box-heading">
-                                                Tracking API
+                                              
+                                                {proyect.properties.Feacture2?.rich_text[0]?.plain_text.match(/\[(.*)\]/).pop()}
+
                                               </h5>
                                               <p>
-                                                Get insights from your customers
-                                                directly using the app API and
-                                                test funnels earlier.
+                                                {proyect.properties.Feacture2?.rich_text[0]?.plain_text.substring(proyect.properties.Feacture2?.rich_text[0]?.plain_text.indexOf("]") + 1,)}    
                                               </p>
                                             </div>
                                           </div>
@@ -578,20 +613,22 @@ const Proyects = ({ allProyects }: any) => {
                                             <span className="vc_empty_space_inner" />
                                           </div>
                                           <div
-                                            className="ohio-widget icon-box -left -left-flex"
+                                            className="ohio-widget icon-box left -left-flex -center"
                                             id="ohio-custom-63d77104e4a6a"
                                           >
-                                            <span className="icon-group -contained">
-                                              <i className="icon ion ion-ios-pulse" />
+                                            <span className="-contained">
+                                            
+                                              <img src={proyect.properties.Feacture3?.rich_text[1]?.plain_text} alt="" width={60} style={{borderRadius:"50%"}}/>
+                                                    
                                             </span>
                                             <div className="icon-box-content">
-                                              <h5 className="icon-box-heading">
-                                                Statistics
+                                               <h5 className="icon-box-heading">
+                                              
+                                                {proyect.properties.Feacture3?.rich_text[0]?.plain_text.match(/\[(.*)\]/).pop()}
+
                                               </h5>
                                               <p>
-                                                Create a scalable statistics
-                                                system that’s accessible for
-                                                your company.
+                                                {proyect.properties.Feacture3?.rich_text[0]?.plain_text.substring(proyect.properties.Feacture3?.rich_text[0]?.plain_text.indexOf("]") + 1,)}    
                                               </p>
                                             </div>
                                           </div>
@@ -612,7 +649,6 @@ const Proyects = ({ allProyects }: any) => {
                         );
                       })}
 
-                     
                       <div
                         data-vc-full-width="true"
                         data-vc-full-width-init="true"

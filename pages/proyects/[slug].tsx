@@ -18,7 +18,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
   let title = proyect.properties.Name.title[0]?.plain_text;
   let cover = proyect?.cover?.file?.url || proyect.cover?.external?.url;
   let description = proyect.properties.Description?.rich_text[0]?.plain_text;
-
+  console.log(content)
   const { themeGlobal } = useContext(UIContext);
   return (
     <Container customAddClases="ohio_portfolio-template-default single single-ohio_portfolio postid-19300 wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-sticky-header with-mobile-switcher links-underline icon-buttons-animation custom-cursor with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 page-is-loaded dark-scheme"
@@ -324,9 +324,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                   <Image
                     style={{
                       borderRadius: "12px",
-                      border: `1px solid ${
-                        !themeGlobal ? "#DADADA" : "#6E6E6E"
-                      }`,
+                      
                     }}
                     src={proyect.cover?.file?.url || proyect.cover.external.url}
                     blurDataURL={
@@ -342,22 +340,7 @@ const Proyect = ({ proyects, proyect, content }: any) => {
                   <div className="overlay-details -top -fade-down"></div>
                 </div>
               </div>
-              <Image
-                style={{
-                  borderRadius: "12px",
-                  border: `1px solid ${!themeGlobal ? "#DADADA" : "#6E6E6E"}`,
-                }}
-                src={proyect.cover?.file?.url || proyect.cover.external.url}
-                blurDataURL={
-                  proyect?.cover?.file?.url || proyect.cover.external.url
-                }
-                width={1200}
-                height={684}
-                objectFit="fill"
-                alt="Stickers Pack"
-placeholder="blur"
-                    quality={100}
-              />
+            
               <div className="share-bar -vertical">
                 <div className="social-networks -small">
                   <a
@@ -774,11 +757,7 @@ placeholder="blur"
                                           <Image
                                             style={{
                                               borderRadius: "12px",
-                                              border: `1px solid ${
-                                                !themeGlobal
-                                                  ? "#DADADA"
-                                                  : "#6E6E6E"
-                                              }`,
+                                              filter:"grayscale(1)"
                                             }}
                                             src={
                                               proyect.cover?.file?.url ||
@@ -806,11 +785,7 @@ placeholder="blur"
                                             height={684}
                                             style={{
                                               borderRadius: "12px",
-                                              border: `1px solid ${
-                                                !themeGlobal
-                                                  ? "#DADADA"
-                                                  : "#6E6E6E"
-                                              }`,
+                                             
                                             }}
                                             src={
                                               proyect.cover?.file?.url ||
@@ -995,9 +970,7 @@ placeholder="blur"
                                     alt=""
                                     style={{
                                       borderRadius: "12px",
-                                      border: `1px solid ${
-                                        !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                      }`,
+                                      
                                     }}
                                     src={
                                       proyect.cover?.file?.url ||
@@ -1031,9 +1004,7 @@ placeholder="blur"
                                     alt=""
                                     style={{
                                       borderRadius: "12px",
-                                      border: `1px solid ${
-                                        !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                      }`,
+                                    
                                     }}
                                     src={
                                       proyect.cover?.file?.url ||
@@ -1067,9 +1038,7 @@ placeholder="blur"
                                     alt=""
                                     style={{
                                       borderRadius: "12px",
-                                      border: `1px solid ${
-                                        !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                      }`,
+                                     
                                     }}
                                     src={
                                       proyect.cover?.file?.url ||
@@ -1103,9 +1072,7 @@ placeholder="blur"
                                     alt=""
                                     style={{
                                       borderRadius: "12px",
-                                      border: `1px solid ${
-                                        !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                      }`,
+                                      
                                     }}
                                     src={
                                       proyect.cover?.file?.url ||
@@ -1251,9 +1218,7 @@ placeholder="blur"
                           alt=""
                           style={{
                             borderRadius: "12px",
-                            border: `1px solid ${
-                              !themeGlobal ? "#DADADA" : "#6E6E6E"
-                            }`,
+                            
                           }}
                           src={
                             proyect.cover?.file?.url ||
@@ -1283,9 +1248,7 @@ placeholder="blur"
                           alt=""
                           style={{
                             borderRadius: "12px",
-                            border: `1px solid ${
-                              !themeGlobal ? "#DADADA" : "#6E6E6E"
-                            }`,
+                            
                           }}
                           src={
                             proyect.cover?.file?.url ||
@@ -1315,9 +1278,7 @@ placeholder="blur"
                           alt=""
                           style={{
                             borderRadius: "12px",
-                            border: `1px solid ${
-                              !themeGlobal ? "#DADADA" : "#6E6E6E"
-                            }`,
+                           
                           }}
                           src={
                             proyect.cover?.file?.url ||
@@ -1347,9 +1308,7 @@ placeholder="blur"
                           alt=""
                           style={{
                             borderRadius: "12px",
-                            border: `1px solid ${
-                              !themeGlobal ? "#DADADA" : "#6E6E6E"
-                            }`,
+                            
                           }}
                           src={
                             proyect.cover?.file?.url ||
@@ -1474,9 +1433,7 @@ placeholder="blur"
                                       alt=""
                                       style={{
                                         borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
+                                        
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
@@ -1510,9 +1467,7 @@ placeholder="blur"
                                       alt=""
                                       style={{
                                         borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
+                                       
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
@@ -1546,9 +1501,7 @@ placeholder="blur"
                                       alt=""
                                       style={{
                                         borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
+                                        
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
@@ -1783,9 +1736,7 @@ placeholder="blur"
                                       alt=""
                                       style={{
                                         borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
+                                        
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
@@ -1825,9 +1776,7 @@ placeholder="blur"
                                       alt=""
                                       style={{
                                         borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
+                                        
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
@@ -1873,9 +1822,7 @@ placeholder="blur"
                                       alt=""
                                       style={{
                                         borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
+                                        
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
@@ -1915,9 +1862,7 @@ placeholder="blur"
                                       alt=""
                                       style={{
                                         borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
+                                        
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
@@ -1963,9 +1908,7 @@ placeholder="blur"
                                       alt=""
                                       style={{
                                         borderRadius: "12px",
-                                        border: `1px solid ${
-                                          !themeGlobal ? "#DADADA" : "#6E6E6E"
-                                        }`,
+                                        
                                       }}
                                       src={
                                         proyect.cover?.file?.url ||
