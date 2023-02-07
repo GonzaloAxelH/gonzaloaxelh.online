@@ -85,11 +85,7 @@ const {setScrollTop} = useContext(UIContext)
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div id="page" className="site">
-       
-       
-
-        
+      <div id="page" className="site " >
         <ElementsbarLeft />
         <ElementsbarRight />
         <Header setIsOpenSidebar={(isOpen: boolean) => setSidebar(isOpen)} />

@@ -8,7 +8,7 @@ const MyTutorialsOfProgramming = ({ tutorials }: any) => {
         <div className="vc_column-inner vc_custom_1494925290262">
           <div className="wpb_wrapper">
             <div
-              className="ohio-widget heading -center"
+              className="ohio-widget heading -center blur-effect"
               id="ohio-custom-63dd38b768157"
             >
               <div className="vc_row">

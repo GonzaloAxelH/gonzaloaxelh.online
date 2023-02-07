@@ -12,7 +12,7 @@ export default function Document() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <body>
+      <body className="blur-effect">
         <Main />
       </body>
 

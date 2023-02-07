@@ -46,7 +46,7 @@ const Proyects = ({ allProyects }: any) => {
                             <div className="wpb_wrapper">
                               <div
                                 className="vc_empty_space clb__section_spacer"
-                                style={{ height: "12vh" }}
+                                style={{ height: "3vh" }}
                               >
                                 <span className="vc_empty_space_inner" />
                               </div>
@@ -56,8 +56,8 @@ const Proyects = ({ allProyects }: any) => {
                               >
                                 <h1 className="title">
                                   Echale un vistazo
-                                  <br className="vc_hidden-xs" />
-                                  a mis proyectos mas recientes.
+                                  <br className="vc_hidden-xs" />a mis proyectos
+                                  mas recientes.
                                 </h1>
                               </div>
                               <div
@@ -166,7 +166,6 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-min.png"
-                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -189,7 +188,6 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-5-min.png"
-                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -212,7 +210,6 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-6-min.png"
-                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -235,7 +232,6 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-9-min.png"
-                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -258,7 +254,6 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-10-min.png"
-                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -281,7 +276,6 @@ const Proyects = ({ allProyects }: any) => {
                                         >
                                           <img
                                             src="./Ohio Stage Demo 26 – Just another WordPress site_files/LogoSC-7-min.png"
-                                            
                                             sizes="(max-width: 268px) 100vw, 268px"
                                             alt=""
                                           />
@@ -301,548 +295,328 @@ const Proyects = ({ allProyects }: any) => {
                           </div>
                         </div>
                       </div>
-                      <div
-                        data-vc-full-width="true"
-                        data-vc-full-width-init="true"
-                        className="vc_row wpb_row vc_row-fluid clb__dark_mode_light vc_custom_1608806116530 vc_row-has-fill"
-                        style={{
-                          position: "relative",
-                          left: "0px",
-                          boxSizing: "border-box",
-                          width: "1157.78px",
-                          maxWidth: "1349px",
-                          paddingLeft: "95.6094px",
-                          paddingRight: "95.6106px",
-                        }}
-                      >
-                        <div className="wpb_column vc_column_container vc_col-sm-12">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper">
-                              <div
-                                className="vc_empty_space clb__section_spacer"
-                                style={{ height: "12vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                              <div className="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-content-middle vc_row-flex">
-                                <div className="wpb_column vc_column_container vc_col-sm-5">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                      <div
-                                        className="video-button open-popup -left-flex -animation"
-                                        id="ohio-custom-63d77104e133a"
-                                        data-video="https://www.youtube.com/embed/t67_zAg5vvI?controls=1&start=0&mute=0"
-                                      >
-                                        <button className="icon-button">
-                                          <i className="icon">
-                                            <svg
-                                              className="default"
-                                              width={13}
-                                              height={20}
-                                              viewBox="0 0 13 20"
-                                              fill="none"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path d="M0 20L13 10L0 0V20Z" />
-                                            </svg>
-                                            <svg
-                                              className="minimal"
-                                              width={17}
-                                              height={20}
-                                              viewBox="0 0 17 20"
-                                              fill="none"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                fillRule="evenodd"
-                                                clipRule="evenodd"
-                                                d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
-                                              />
-                                            </svg>
-                                          </i>
-                                        </button>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space"
-                                        style={{ height: "3vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                      <div
-                                        className="ohio-widget heading -left"
-                                        id="ohio-custom-63d77104e1702"
-                                      >
-                                        <div className="subtitle">
-                                          #datatracking app
-                                        </div>
-                                        <h2 className="title">
-                                          The app is great for basic setup and
-                                          adjusts.
-                                        </h2>
-                                      </div>
-                                      <div
-                                        className="ohio-text-sc"
-                                        id="ohio-custom-63d77104e17ac"
-                                      >
-                                        <p>
-                                          So how does it work? Let’s check our
-                                          <strong>Getting Started</strong>
-                                          tutorial or choose from pre-made
-                                          templates.
-                                        </p>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space"
-                                        style={{ height: "3vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                      <div className="ohio-widget-holder -left">
-                                        <a
-                                          href="#demo26/#"
-                                          target="_blank"
-                                          className="ohio-widget button -outlined -small"
-                                          id="ohio-custom-63d77104e18fe"
-                                        >
-                                          Explore Features
-                                        </a>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space"
-                                        style={{ height: "4vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="wpb_column vc_column_container vc_col-sm-7">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                      <div className="wpb_single_image wpb_content_element vc_align_left vc_custom_1628165984912">
-                                        <figure className="wpb_wrapper vc_figure">
-                                          <div className="vc_single_image-wrapper vc_box_border_grey">
-                                            <img
-                                              width={1433}
-                                              height={812}
-                                              src="./Ohio Stage Demo 26 – Just another WordPress site_files/oh__demo26__2-min.png"
-                                              className="vc_single_image-img attachment-full"
-                                              alt=""
-                                              decoding="async"
-                                              loading="lazy"
-                                              title="oh__demo26__2-min"
-                                              srcSet="
-                                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__demo26__2-min-300x170.png   300w,
-                                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__demo26__2-min-1024x580.png 1024w,
-                                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__demo26__2-min-768x435.png   768w,
-                                            https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__demo26__2-min.png          1433w
-                                          "
-                                              sizes="(max-width: 1433px) 100vw, 1433px"
-                                            />
-                                          </div>
-                                        </figure>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space vc_hidden-lg vc_hidden-md vc_hidden-sm"
-                                        style={{ height: "30px" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                <div className="wpb_column vc_column_container vc_col-sm-4">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                      <div className="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_custom_1628157254855 vc_custom_1628157254855">
-                                        <span className="vc_sep_holder vc_sep_holder_l">
-                                          <span
-                                            style={{
-                                              borderColor:
-                                                "rgba(99,93, 111,0.65)",
-                                            }}
-                                            className="vc_sep_line"
-                                          />
-                                        </span>
-                                        <span className="vc_sep_holder vc_sep_holder_r">
-                                          <span
-                                            style={{
-                                              borderColor:
-                                                "rgba(99,93,111,0.65)",
-                                            }}
-                                            className="vc_sep_line"
-                                          />
-                                        </span>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space"
-                                        style={{ height: "4vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                      <div
-                                        className="ohio-widget icon-box -left -left-flex"
-                                        id="ohio-custom-63d77104e3c33"
-                                      >
-                                        <span className="icon-group -contained">
-                                          <i className="icon ion ion-ios-star-outline" />
-                                        </span>
-                                        <div className="icon-box-content">
-                                          <h5 className="icon-box-heading">
-                                            Expenses
-                                          </h5>
-                                          <p>
-                                            Packed with API features you will
-                                            love to collaborate with issues and
-                                            change business.
-                                          </p>
-                                          <a
-                                            className="button -small"
-                                            href="#demo26/#"
-                                            target="_blank"
-                                          >
-                                            Read More
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space vc_hidden-lg vc_hidden-md"
-                                        style={{ height: "2vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="wpb_column vc_column_container vc_col-sm-4">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                      <div className="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_custom_1628157254855 vc_custom_1628157254855">
-                                        <span className="vc_sep_holder vc_sep_holder_l">
-                                          <span
-                                            style={{
-                                              borderColor:
-                                                "rgba(99,93,111,0.65)",
-                                            }}
-                                            className="vc_sep_line"
-                                          />
-                                        </span>
-                                        <span className="vc_sep_holder vc_sep_holder_r">
-                                          <span
-                                            style={{
-                                              borderColor:
-                                                "rgba(99,93,111,0.65)",
-                                            }}
-                                            className="vc_sep_line"
-                                          />
-                                        </span>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space"
-                                        style={{ height: "4vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                      <div
-                                        className="ohio-widget icon-box -left -left-flex"
-                                        id="ohio-custom-63d77104e446b"
-                                      >
-                                        <span className="icon-group -contained">
-                                          <i className="icon ion ion-ios-git-compare" />
-                                        </span>
-                                        <div className="icon-box-content">
-                                          <h5 className="icon-box-heading">
-                                            Tracking API
-                                          </h5>
-                                          <p>
-                                            Get insights from your customers
-                                            directly using the app API and test
-                                            funnels earlier.
-                                          </p>
-                                          <a
-                                            className="button -small"
-                                            href="#demo26/#"
-                                            target="_blank"
-                                          >
-                                            Read More
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space vc_hidden-lg vc_hidden-md"
-                                        style={{ height: "2vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="wpb_column vc_column_container vc_col-sm-4">
-                                  <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                      <div className="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_custom_1628157269605 vc_custom_1628157269605">
-                                        <span className="vc_sep_holder vc_sep_holder_l">
-                                          <span
-                                            style={{
-                                              borderColor:
-                                                "rgba(99,93,111,0.65)",
-                                            }}
-                                            className="vc_sep_line"
-                                          />
-                                        </span>
-                                        <span className="vc_sep_holder vc_sep_holder_r">
-                                          <span
-                                            style={{
-                                              borderColor:
-                                                "rgba(99,93,111,0.65)",
-                                            }}
-                                            className="vc_sep_line"
-                                          />
-                                        </span>
-                                      </div>
-                                      <div
-                                        className="vc_empty_space"
-                                        style={{ height: "4vh" }}
-                                      >
-                                        <span className="vc_empty_space_inner" />
-                                      </div>
-                                      <div
-                                        className="ohio-widget icon-box -left -left-flex"
-                                        id="ohio-custom-63d77104e4a6a"
-                                      >
-                                        <span className="icon-group -contained">
-                                          <i className="icon ion ion-ios-pulse" />
-                                        </span>
-                                        <div className="icon-box-content">
-                                          <h5 className="icon-box-heading">
-                                            Statistics
-                                          </h5>
-                                          <p>
-                                            Create a scalable statistics system
-                                            that’s accessible for your company.
-                                          </p>
-                                          <a
-                                            className="button -small"
-                                            href="#demo26/#"
-                                            target="_blank"
-                                          >
-                                            Read More
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                className="vc_empty_space clb__section_spacer"
-                                style={{ height: "12vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="vc_row-full-width vc_clearfix" />
-                      <div className="vc_row wpb_row vc_row-fluid">
-                        <div className="wpb_column vc_column_container vc_col-sm-3">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper" />
-                          </div>
-                        </div>
-                        <div className="wpb_column vc_column_container vc_col-sm-6">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper">
-                              <div
-                                className="vc_empty_space clb__section_spacer"
-                                style={{ height: "12vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                              <div
-                                className="ohio-widget heading -center"
-                                id="ohio-custom-63d77104e54e6"
-                              >
-                                <h2 className="title">
-                                  Save your data,
-                                  <br className="vc_hidden-sm vc_hidden-xs" />
-                                  wherever you are.
-                                </h2>
-                              </div>
-                              <div
-                                className="ohio-text-sc"
-                                id="ohio-custom-63d77104e556a"
-                              >
-                                <p style={{ textAlign: "center" }}>
-                                  Helping SaaS teams to increase e-commerce and
-                                  ROI conversions,
-                                  <br className="vc_hidden-sm vc_hidden-xs" />
-                                  reduce bounce rate, and
-                                  <strong>scale up faster</strong>.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="wpb_column vc_column_container vc_col-sm-3">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper" />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="vc_row wpb_row vc_row-fluid">
-                        <div className="wpb_column vc_column_container vc_col-sm-4">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper" />
-                          </div>
-                        </div>
-                        <div className="wpb_column vc_column_container vc_col-sm-4">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper">
-                              <div
-                                className="vc_empty_space"
-                                style={{ height: "4vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                              <div
-                                className="ohio-widget contact-form -left"
-                                id="ohio-custom-63d77104e5ee4"
-                              >
-                                <div
-                                  className="wpcf7 js"
-                                  id="wpcf7-f224297-p152197-o1"
-                                  lang="en-US"
-                                  dir="ltr"
-                                >
-                                  <div className="screen-reader-response">
-                                    <p
-                                      role="status"
-                                      aria-live="polite"
-                                      aria-atomic="true"
-                                    />
-                                    <ul />
-                                  </div>
-                                  <form
-                                    action="#demo26/#wpcf7-f224297-p152197-o1"
-                                    method="post"
-                                    className="wpcf7-form init"
-                                    aria-label="Contact form"
-                                    noValidate
-                                    data-status="init"
+
+                      {allProyects.slice(0, 3).map((proyect: any) => {
+                        return (
+                          <div
+                            data-vc-full-width="true"
+                            data-vc-full-width-init="true"
+                            className="vc_row wpb_row vc_row-fluid clb__dark_mode_light vc_custom_1608806116530 vc_row-has-fill"
+                          >
+                            <div className="wpb_column vc_column_container vc_col-sm-12">
+                              <div className="vc_column-inner">
+                                <div className="wpb_wrapper">
+                                  <div
+                                    className="vc_empty_space clb__section_spacer"
+                                    style={{ height: "12vh" }}
                                   >
-                                    <div style={{ display: "none" }}>
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7"
-                                        defaultValue={224297}
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_version"
-                                        defaultValue="5.7.2"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_locale"
-                                        defaultValue="en_US"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_unit_tag"
-                                        defaultValue="wpcf7-f224297-p152197-o1"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_container_post"
-                                        defaultValue={152197}
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_posted_data_hash"
-                                        defaultValue=""
-                                      />
+                                    <span className="vc_empty_space_inner" />
+                                  </div>
+                                  <div className="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-content-middle vc_row-flex">
+                                    <div className="wpb_column vc_column_container vc_col-sm-5">
+                                      <div className="vc_column-inner">
+                                        <div className="wpb_wrapper">
+                                          <div
+                                            className="video-button open-popup -left-flex -animation"
+                                            id="ohio-custom-63d77104e133a"
+                                            data-video="https://www.youtube.com/embed/t67_zAg5vvI?controls=1&start=0&mute=0"
+                                          >
+                                            <button className="icon-button">
+                                              <i className="icon">
+                                                <svg
+                                                  className="default"
+                                                  width={13}
+                                                  height={20}
+                                                  viewBox="0 0 13 20"
+                                                  fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path d="M0 20L13 10L0 0V20Z" />
+                                                </svg>
+                                                <svg
+                                                  className="minimal"
+                                                  width={17}
+                                                  height={20}
+                                                  viewBox="0 0 17 20"
+                                                  fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M0.766274 0.442678C0.998698 0.312329 1.26165 0.24625 1.52808 0.25124C1.79452 0.256229 2.05481 0.332105 2.28219 0.471065L15.78 8.72C15.9993 8.85399 16.1804 9.04206 16.3061 9.26618C16.4318 9.4903 16.4978 9.74295 16.4978 9.99991C16.4978 10.2569 16.4318 10.5095 16.3061 10.7336C16.1804 10.9578 15.9993 11.1458 15.78 11.2798L2.28219 19.5288C2.05481 19.6677 1.79451 19.7436 1.52808 19.7486C1.26165 19.7536 0.9987 19.6875 0.766274 19.5571C0.533848 19.4268 0.340346 19.2369 0.205669 19.0069C0.0709916 18.777 1.3411e-07 18.5153 0 18.2488V1.75098C1.3411e-07 1.48449 0.0709911 1.22282 0.205669 0.992883C0.340347 0.76294 0.533849 0.573027 0.766274 0.442678ZM14.9978 9.99991L1.5 1.75098L1.5 18.2488L14.9978 9.99991Z"
+                                                  />
+                                                </svg>
+                                              </i>
+                                            </button>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space"
+                                            style={{ height: "3vh" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                          <div
+                                            className="ohio-widget heading -left"
+                                            id="ohio-custom-63d77104e1702"
+                                          >
+                                            <div className="subtitle">
+                                              #datatracking app
+                                            </div>
+                                            <h2 className="title">
+                                              {proyect.properties.Name.title[0].plain_text}
+                                            </h2>
+                                          </div>
+                                          <div
+                                            className="ohio-text-sc"
+                                            id="ohio-custom-63d77104e17ac"
+                                          >
+                                            <p>
+                                             
+                                              {proyect.properties.Description.rich_text[0].plain_text}
+                                            </p>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space"
+                                            style={{ height: "3vh" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                          <div className="ohio-widget-holder -left">
+                                            <a
+                                              href="#demo26/#"
+                                              target="_blank"
+                                              className="ohio-widget button -outlined -small"
+                                              id="ohio-custom-63d77104e18fe"
+                                            >
+                                              Ver este proyecto
+                                            </a>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space"
+                                            style={{ height: "4vh" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
-                                    <div className="subscribe-form">
-                                      <p>
-                                        <span
-                                          className="wpcf7-form-control-wrap"
-                                          data-name="your-email"
-                                        >
-                                          <input
-                                            size={40}
-                                            className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                            aria-required="true"
-                                            aria-invalid="false"
-                                            placeholder="name@email.com"
-                                            defaultValue=""
-                                            type="email"
-                                            name="your-email"
-                                          />
-                                        </span>
-                                        <br />
-                                        <button
-                                          className="button"
-                                          data-button-loading="true"
-                                        >
-                                          Get a Demo
-                                        </button>
-                                        <span className="wpcf7-spinner" />
-                                      </p>
+                                    <div className="wpb_column vc_column_container vc_col-sm-7">
+                                      <div className="vc_column-inner">
+                                        <div className="wpb_wrapper">
+                                          <div className="wpb_single_image wpb_content_element vc_align_left vc_custom_1628165984912">
+                                            <figure className="wpb_wrapper vc_figure" >
+                                              <div className="vc_single_image-wrapper vc_box_border_grey">
+                                                <Image
+                                                  style={{borderRadius:"12px"}}
+                                                  width={1433}
+                                                  height={812}
+                                                  src={proyect.cover?.external?.url || proyect.cover?.file?.url}
+                                                  blurDataURL={proyect.cover?.external?.url || proyect.cover?.file?.url}
+                                                  placeholder="blur"
+                                                  className="vc_single_image-img attachment-full"
+                                                  alt=""
+                                                  decoding="async"
+                                                  loading="lazy"
+                                                  title="oh__demo26__2-min"
+                                                  
+                                                  sizes="(max-width: 1433px) 100vw, 1433px"
+                                                />
+                                              </div>
+                                            </figure>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space vc_hidden-lg vc_hidden-md vc_hidden-sm"
+                                            style={{ height: "30px" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
-                                    <div
-                                      className="wpcf7-response-output"
-                                      aria-hidden="true"
-                                    />
-                                  </form>
+                                  </div>
+                                  <div className="vc_row wpb_row vc_inner vc_row-fluid">
+                                    <div className="wpb_column vc_column_container vc_col-sm-4">
+                                      <div className="vc_column-inner">
+                                        <div className="wpb_wrapper">
+                                          <div className="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_custom_1628157254855 vc_custom_1628157254855">
+                                            <span className="vc_sep_holder vc_sep_holder_l">
+                                              <span
+                                                style={{
+                                                  borderColor:
+                                                    "rgba(99,93, 111,0.65)",
+                                                }}
+                                                className="vc_sep_line"
+                                              />
+                                            </span>
+                                            <span className="vc_sep_holder vc_sep_holder_r">
+                                              <span
+                                                style={{
+                                                  borderColor:
+                                                    "rgba(99,93,111,0.65)",
+                                                }}
+                                                className="vc_sep_line"
+                                              />
+                                            </span>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space"
+                                            style={{ height: "4vh" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                          <div
+                                            className="ohio-widget icon-box -left -left-flex"
+                                            id="ohio-custom-63d77104e3c33"
+                                          >
+                                            <span className="icon-group -contained">
+                                              <i className="icon ion ion-ios-star-outline" />
+                                            </span>
+                                            <div className="icon-box-content">
+                                              <h5 className="icon-box-heading">
+                                                Expenses
+                                              </h5>
+                                              <p>
+                                                Packed with API features you
+                                                will love to collaborate with
+                                                issues and change business.
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space vc_hidden-lg vc_hidden-md"
+                                            style={{ height: "2vh" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="wpb_column vc_column_container vc_col-sm-4">
+                                      <div className="vc_column-inner">
+                                        <div className="wpb_wrapper">
+                                          <div className="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_custom_1628157254855 vc_custom_1628157254855">
+                                            <span className="vc_sep_holder vc_sep_holder_l">
+                                              <span
+                                                style={{
+                                                  borderColor:
+                                                    "rgba(99,93,111,0.65)",
+                                                }}
+                                                className="vc_sep_line"
+                                              />
+                                            </span>
+                                            <span className="vc_sep_holder vc_sep_holder_r">
+                                              <span
+                                                style={{
+                                                  borderColor:
+                                                    "rgba(99,93,111,0.65)",
+                                                }}
+                                                className="vc_sep_line"
+                                              />
+                                            </span>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space"
+                                            style={{ height: "4vh" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                          <div
+                                            className="ohio-widget icon-box -left -left-flex"
+                                            id="ohio-custom-63d77104e446b"
+                                          >
+                                            <span className="icon-group -contained">
+                                              <i className="icon ion ion-ios-git-compare" />
+                                            </span>
+                                            <div className="icon-box-content">
+                                              <h5 className="icon-box-heading">
+                                                Tracking API
+                                              </h5>
+                                              <p>
+                                                Get insights from your customers
+                                                directly using the app API and
+                                                test funnels earlier.
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space vc_hidden-lg vc_hidden-md"
+                                            style={{ height: "2vh" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="wpb_column vc_column_container vc_col-sm-4">
+                                      <div className="vc_column-inner">
+                                        <div className="wpb_wrapper">
+                                          <div className="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_custom_1628157269605 vc_custom_1628157269605">
+                                            <span className="vc_sep_holder vc_sep_holder_l">
+                                              <span
+                                                style={{
+                                                  borderColor:
+                                                    "rgba(99,93,111,0.65)",
+                                                }}
+                                                className="vc_sep_line"
+                                              />
+                                            </span>
+                                            <span className="vc_sep_holder vc_sep_holder_r">
+                                              <span
+                                                style={{
+                                                  borderColor:
+                                                    "rgba(99,93,111,0.65)",
+                                                }}
+                                                className="vc_sep_line"
+                                              />
+                                            </span>
+                                          </div>
+                                          <div
+                                            className="vc_empty_space"
+                                            style={{ height: "4vh" }}
+                                          >
+                                            <span className="vc_empty_space_inner" />
+                                          </div>
+                                          <div
+                                            className="ohio-widget icon-box -left -left-flex"
+                                            id="ohio-custom-63d77104e4a6a"
+                                          >
+                                            <span className="icon-group -contained">
+                                              <i className="icon ion ion-ios-pulse" />
+                                            </span>
+                                            <div className="icon-box-content">
+                                              <h5 className="icon-box-heading">
+                                                Statistics
+                                              </h5>
+                                              <p>
+                                                Create a scalable statistics
+                                                system that’s accessible for
+                                                your company.
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="vc_empty_space clb__section_spacer"
+                                    style={{ height: "12vh" }}
+                                  >
+                                    <span className="vc_empty_space_inner" />
+                                  </div>
                                 </div>
-                                <div
-                                  className="hidden"
-                                  data-button-contact="true"
-                                />
-                              </div>
-                              <div
-                                className="ohio-text-sc"
-                                id="ohio-custom-63d77104e6b39"
-                              >
-                                <p style={{ textAlign: "center" }}>
-                                  Already using our service?
-                                  <a href="#demo26/#">
-                                    <strong>Sign In</strong>
-                                  </a>
-                                </p>
-                              </div>
-                              <div
-                                className="vc_empty_space clb__section_spacer"
-                                style={{ height: "12vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div className="wpb_column vc_column_container vc_col-sm-4">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper" />
-                          </div>
-                        </div>
-                      </div>
+                        );
+                      })}
+
+                     
                       <div
                         data-vc-full-width="true"
                         data-vc-full-width-init="true"
                         className="vc_row wpb_row vc_row-fluid clb__dark_mode_light vc_custom_1608806125006 vc_row-has-fill"
-                        style={{
-                          position: "relative",
-                          left: "0px",
-                          boxSizing: "border-box",
-                          width: "1157.78px",
-                          maxWidth: "1349px",
-                          paddingLeft: "95.6094px",
-                          paddingRight: "95.6106px",
-                        }}
                       >
                         <div className="wpb_column vc_column_container vc_col-sm-12">
                           <div className="vc_column-inner">
@@ -1462,15 +1236,6 @@ const Proyects = ({ allProyects }: any) => {
                         data-vc-full-width="true"
                         data-vc-full-width-init="true"
                         className="vc_row wpb_row vc_row-fluid clb__dark_mode_light vc_custom_1608806132073 vc_row-has-fill"
-                        style={{
-                          position: "relative",
-                          left: "0px",
-                          boxSizing: "border-box",
-                          width: "1157.78px",
-                          maxWidth: "1349px",
-                          paddingLeft: "95.6094px",
-                          paddingRight: "95.6106px",
-                        }}
                       >
                         <div className="wpb_column vc_column_container vc_col-sm-12">
                           <div className="vc_column-inner">
@@ -2672,717 +2437,7 @@ const Proyects = ({ allProyects }: any) => {
                           </div>
                         </div>
                       </div>
-                      <div
-                        data-vc-full-width="true"
-                        data-vc-full-width-init="true"
-                        className="vc_row wpb_row vc_row-fluid clb__dark_mode_light vc_custom_1608806138866 vc_row-has-fill"
-                        style={{
-                          position: "relative",
-                          left: "0px",
-                          boxSizing: "border-box",
-                          width: "1157.78px",
-                          maxWidth: "1349px",
-                          paddingLeft: "95.6094px",
-                          paddingRight: "95.6106px",
-                        }}
-                      >
-                        <div className="wpb_column vc_column_container vc_col-sm-2">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper" />
-                          </div>
-                        </div>
-                        <div className="text-center wpb_column vc_column_container vc_col-sm-8">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper">
-                              <div
-                                className="vc_empty_space clb__section_spacer"
-                                style={{ height: "12vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                              <div
-                                className="ohio-widget heading -center"
-                                id="ohio-custom-63d771050ecd5"
-                              >
-                                <h2 className="title">Meet our customers.</h2>
-                              </div>
-                              <div
-                                className="vc_empty_space"
-                                style={{ height: "3vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                              <div className="slider-holder">
-                                <div
-                                  className="ohio-widget slider ohio-slider autoheight with-pagination full -nav-inset with-preloader clb-slider visible"
-                                  id="ohio-custom-63d771050edf1"
-                                  data-ohio-slider='{"loop":true,"navBtn":true,"autoplay":false,"autoplayHoverPause":true,"autoHeight":true,"slidesCount":true,"drag":true,"gap":"40","navContainerClass":"slider-nav","itemsDesktop":"1","itemsTablet":"1","itemsMobile":"1","autoplayTimeout":"5"}'
-                                >
-                                  <div
-                                    className="clb-slider-outer-stage"
-                                    style={{ maxWidth: "728.312px" }}
-                                  >
-                                    <div
-                                      className="clb-slider-stage"
-                                      style={{
-                                        transform: "translate(-2305px, 0px)",
-                                      }}
-                                    >
-                                      <div
-                                        className="slider-wrap clb-slider-item cloned"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d771050fda4"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Design Quality</b>
-                                                  </h6>
-                                                  <p>
-                                                    “The app is a part of our
-                                                    team, helping to crystalize
-                                                    our vision and delivering
-                                                    incredible results in a
-                                                    record time.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar1-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Colin Lucido
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media •
-                                                      Co-Founder
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="slider-wrap clb-slider-item cloned"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d7710510881"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Code Quality</b>
-                                                  </h6>
-                                                  <p>
-                                                    “I'll tell you what, make
-                                                    higher preparation better
-                                                    large one either government
-                                                    drunk brought be totally
-                                                    concepts deference.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar3-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Laura Norson
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media • Art
-                                                      Direction
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="slider-wrap clb-slider-item cloned prev-slide"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d77105110f0"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Customer Support</b>
-                                                  </h6>
-                                                  <p>
-                                                    “5 stars WordPress template!
-                                                    If anyone wants an example
-                                                    of what you can do with this
-                                                    theme, check out my site at
-                                                    ohio.clbthemes.com.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar2-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Stacey Rickson
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media • Web
-                                                      Developer
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="slider-wrap clb-slider-item active"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d771050fda4"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Design Quality</b>
-                                                  </h6>
-                                                  <p>
-                                                    “The app is a part of our
-                                                    team, helping to crystalize
-                                                    our vision and delivering
-                                                    incredible results in a
-                                                    record time.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar1-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Colin Lucido
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media •
-                                                      Co-Founder
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="slider-wrap clb-slider-item next-slide"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d7710510881"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Code Quality</b>
-                                                  </h6>
-                                                  <p>
-                                                    “I'll tell you what, make
-                                                    higher preparation better
-                                                    large one either government
-                                                    drunk brought be totally
-                                                    concepts deference.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar3-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Laura Norson
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media • Art
-                                                      Direction
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="slider-wrap clb-slider-item"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d77105110f0"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Customer Support</b>
-                                                  </h6>
-                                                  <p>
-                                                    “5 stars WordPress template!
-                                                    If anyone wants an example
-                                                    of what you can do with this
-                                                    theme, check out my site at
-                                                    ohio.clbthemes.com.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar2-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Stacey Rickson
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media • Web
-                                                      Developer
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="slider-wrap clb-slider-item cloned"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d771050fda4"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Design Quality</b>
-                                                  </h6>
-                                                  <p>
-                                                    “The app is a part of our
-                                                    team, helping to crystalize
-                                                    our vision and delivering
-                                                    incredible results in a
-                                                    record time.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar1-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Colin Lucido
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media •
-                                                      Co-Founder
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="slider-wrap clb-slider-item cloned"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d7710510881"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Code Quality</b>
-                                                  </h6>
-                                                  <p>
-                                                    “I'll tell you what, make
-                                                    higher preparation better
-                                                    large one either government
-                                                    drunk brought be totally
-                                                    concepts deference.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar3-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Laura Norson
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media • Art
-                                                      Direction
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="slider-wrap clb-slider-item cloned"
-                                        style={{
-                                          minWidth: "728.312px",
-                                          marginRight: "40px",
-                                        }}
-                                      >
-                                        <div className="vc_row wpb_row vc_inner vc_row-fluid">
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-6">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper">
-                                                <div
-                                                  className="ohio-widget testimonial -center -center-flex -middle-avatar"
-                                                  id="ohio-custom-63d77105110f0"
-                                                >
-                                                  <h6 className="testimonial-headline">
-                                                    <b>Customer Support</b>
-                                                  </h6>
-                                                  <p>
-                                                    “5 stars WordPress template!
-                                                    If anyone wants an example
-                                                    of what you can do with this
-                                                    theme, check out my site at
-                                                    ohio.clbthemes.com.”
-                                                  </p>
-                                                  <div
-                                                    className="avatar"
-                                                    style={{
-                                                      backgroundImage:
-                                                        "url(https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__avatar2-min.png)",
-                                                    }}
-                                                  />
-                                                  <div className="author">
-                                                    <h6 className="title">
-                                                      Stacey Rickson
-                                                    </h6>
-                                                    <p className="author-details">
-                                                      Colabrio Media • Web
-                                                      Developer
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="wpb_column vc_column_container vc_col-sm-3">
-                                            <div className="vc_column-inner">
-                                              <div className="wpb_wrapper" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div />
-                                  </div>
-                                  <div className="clb-slider-nav-btn">
-                                    <div
-                                      className="prev-btn icon-button"
-                                      tabIndex={0}
-                                    >
-                                      <i className="icon">
-                                        <svg
-                                          className="default"
-                                          width={16}
-                                          height={16}
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                        </svg>
-                                        <svg
-                                          className="minimal"
-                                          width={18}
-                                          height={16}
-                                          viewBox="0 0 18 16"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                          />
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                          />
-                                        </svg>
-                                      </i>
-                                    </div>
-                                    <div
-                                      className="next-btn icon-button"
-                                      tabIndex={0}
-                                    >
-                                      <i className="icon">
-                                        <svg
-                                          className="default"
-                                          width={16}
-                                          height={16}
-                                          viewBox="0 0 16 16"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                        </svg>
-                                        <svg
-                                          className="minimal"
-                                          width={18}
-                                          height={16}
-                                          viewBox="0 0 18 16"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                          />
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                          />
-                                        </svg>
-                                      </i>
-                                    </div>
-                                  </div>
-                                  <div className="clb-slider-count">
-                                    <div
-                                      className="clb-slider-count-current"
-                                      style={{
-                                        transform: "translate(0px, -25.5938px)",
-                                      }}
-                                    >
-                                      <div className="clb-slider-count-number">
-                                        <span className="clb-slider-pagination-index">
-                                          3
-                                        </span>
-                                      </div>
-                                      <div className="clb-slider-count-number">
-                                        <span className="clb-slider-pagination-index">
-                                          1
-                                        </span>
-                                      </div>
-                                      <div className="clb-slider-count-number">
-                                        <span className="clb-slider-pagination-index">
-                                          2
-                                        </span>
-                                      </div>
-                                      <div className="clb-slider-count-number">
-                                        <span className="clb-slider-pagination-index">
-                                          3
-                                        </span>
-                                      </div>
-                                      <div className="clb-slider-count-number">
-                                        <span className="clb-slider-pagination-index">
-                                          1
-                                        </span>
-                                      </div>
-                                    </div>
-                                    <div className="clb-slider-count-total">
-                                      3
-                                    </div>
-                                  </div>
-                                </div>
-                                <svg
-                                  className="spinner sk-preloader hidden"
-                                  viewBox="0 0 50 50"
-                                >
-                                  <circle
-                                    className="path"
-                                    cx={25}
-                                    cy={25}
-                                    r={20}
-                                    fill="none"
-                                    strokeWidth={4}
-                                  />
-                                </svg>
-                              </div>
-                              <div
-                                className="vc_empty_space clb__section_spacer"
-                                style={{ height: "12vh" }}
-                              >
-                                <span className="vc_empty_space_inner" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="wpb_column vc_column_container vc_col-sm-2">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper" />
-                          </div>
-                        </div>
-                      </div>
+
                       <div className="vc_row-full-width vc_clearfix" />
                       <div className="vc_row wpb_row vc_row-fluid">
                         <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -3568,357 +2623,6 @@ const Proyects = ({ allProyects }: any) => {
                                     className="vc_sep_line"
                                   />
                                 </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </article>
-              </main>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="content"
-        className="site-content"
-        data-mobile-menu-resolution={768}
-      >
-        <div className="page-headline without-cap -center subheader_excluded headline-with-parallax">
-          <a
-            href="##"
-            className="back-link -unlink vc_hidden-md vc_hidden-sm vc_hidden-xs"
-          >
-            <button
-              className="icon-button"
-              aria-controls="site-navigation"
-              aria-expanded="false"
-            >
-              <i className="icon">
-                <svg
-                  className="default"
-                  width={16}
-                  height={16}
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                </svg>
-                <svg
-                  className="minimal"
-                  width={18}
-                  height={16}
-                  viewBox="0 0 18 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                  />
-                </svg>
-              </i>
-            </button>
-            <span className="caption"> Back </span>
-          </a>
-          <div
-            className="parallax"
-            data-parallax-bg="vertical"
-            data-parallax-speed=".5"
-          >
-            <div
-              className="parallax-bg bg-image"
-              style={{
-                height: "445.953px",
-                transform: "translate3d(0px, -63.1224px, 0px)",
-                transition: "transform 0.1s linear 0s",
-              }}
-            />
-            <div className="parallax-content" />
-          </div>
-          <div className="holder">
-            <div className="page-container">
-              <div className="animated-holder">
-                <div className="headline-meta" />
-                <h1 className="title">My Proyects</h1>
-                <div className="post-meta-holder"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="page-container top-offset bottom-offset">
-          <div id="primary" className="content-area">
-            <div className="page-content">
-              <main id="main" className="site-main">
-                <article
-                  id="post-221785"
-                  className="post-221785 page type-page status-publish hentry"
-                >
-                  <div className="entry-content">
-                    <section className="wpb-content-wrapper">
-                      <div className="vc_row wpb_row vc_row-fluid">
-                        <div className="wpb_column vc_column_container vc_col-sm-12">
-                          <div className="vc_column-inner">
-                            <div className="wpb_wrapper">
-                              <div
-                                className="ohio-widget portfolio-projects -reversed -with-sorting -with-pagination grid_13"
-                                id="ohio-custom-63d2c8b532a86"
-                                data-ohio-portfolio-grid="true"
-                              >
-                                <div
-                                  className="portfolio-filter -center"
-                                  data-filter="portfolio"
-                                  data-filter-paged="true"
-                                >
-                                  <ul className="-unlist">
-                                    <li>Filter by</li>
-                                    <li>
-                                      <a
-                                        className="active"
-                                        href="##portfolio/sticky-metro/#all"
-                                        data-isotope-filter="*"
-                                        data-category-count={10}
-                                      >
-                                        <span className="name">All</span>
-                                        <span className="num">05</span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      /
-                                      <a
-                                        href="##portfolio/sticky-metro/#apps"
-                                        data-isotope-filter=".ohio-filter-project-123ae12c4c011e4cddeae3371b08bac6"
-                                        data-category-count={3}
-                                      >
-                                        <span className="name">Apps</span>
-                                        <span className="num">01</span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      /
-                                      <a
-                                        href="##portfolio/sticky-metro/#branding"
-                                        data-isotope-filter=".ohio-filter-project-5d845f00a32d05fb32beff8daf817d62"
-                                        data-category-count={2}
-                                      >
-                                        <span className="name">Branding</span>
-                                        <span className="num">02</span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      /
-                                      <a
-                                        href="##portfolio/sticky-metro/#creative"
-                                        data-isotope-filter=".ohio-filter-project-6a81d94fbf5dcff590506b4b42e693bd"
-                                        data-category-count={2}
-                                      >
-                                        <span className="name">Creative</span>
-                                        <span className="num">01</span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      /
-                                      <a
-                                        href="##portfolio/sticky-metro/#identity"
-                                        data-isotope-filter=".ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246"
-                                        data-category-count={7}
-                                      >
-                                        <span className="name">Identity</span>
-                                        <span className="num">04</span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      /
-                                      <a
-                                        href="##portfolio/sticky-metro/#mockup"
-                                        data-isotope-filter=".ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
-                                        data-category-count={3}
-                                      >
-                                        <span className="name">Mockup</span>
-                                        <span className="num">01</span>
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div
-                                  className="vc_row portfolio-grid"
-                                  data-isotope-grid="true"
-                                  data-lazy-container="projects"
-                                  data-projects-per-page={12}
-                                  style={{
-                                    position: "relative",
-                                  }}
-                                >
-                                  {allProyects.map((pro: any, index: any) => {
-                                    return (
-                                      <div
-                                        key={index}
-                                        className="portfolio-item-wrap masonry-block grid-item vc_col-lg-12 vc_col-md-12 vc_col-xs-12 ohio-filter-project-2ec9e9be8bed1ffe0ed8144a3f59c246 ohio-filter-project-70012063bf1d91c6d3924d1475e0747a"
-                                        data-lazy-item
-                                        data-lazy-scope="projects"
-                                      >
-                                        <div
-                                          className="portfolio-item card -layout13 -metro -contained"
-                                          data-portfolio-popup="ohio-lightbox-63d2c8b53b2e1"
-                                        >
-                                          <Link
-                                            className="-unlink card-image"
-                                            href={`/proyects/${slugify(
-                                              pro?.properties?.Name?.title[0]
-                                                ?.plain_text
-                                            ).toLowerCase()}`}
-                                            data-cursor-class="cursor-link"
-                                          >
-                                            <div
-                                              className=""
-                                              data-tilt="true"
-                                              data-tilt-perspective={6000}
-                                            >
-                                              <Image
-                                                style={{
-                                                  borderRadius: "12px",
-                                                  border: `1px solid ${
-                                                    !themeGlobal
-                                                      ? "#DADADA"
-                                                      : "#6E6E6E"
-                                                  }`,
-                                                }}
-                                                src={
-                                                  pro?.cover?.file?.url ||
-                                                  pro.cover.external.url
-                                                }
-                                                blurDataURL={
-                                                  pro?.cover?.file?.url ||
-                                                  pro.cover.external.url
-                                                }
-                                                width={1200}
-                                                height={684}
-                                                objectFit="fill"
-                                                placeholder="blur"
-                                                quality={100}
-                                                alt="Stickers Pack"
-                                              />
-                                              <div className="overlay-details -top -fade-down"></div>
-                                            </div>
-                                          </Link>
-                                          <div className="card-details">
-                                            <div className="holder -sticky-block">
-                                              <div className="heading">
-                                                <h4 className="title">
-                                                  {
-                                                    pro.properties.Name
-                                                      ?.title[0]?.plain_text
-                                                  }
-                                                </h4>
-                                              </div>
-                                              <div className="show-project">
-                                                <div className="category-holder">
-                                                  <span className="category">
-                                                    <a href="##portfolio-category/identity/">
-                                                      Identity
-                                                    </a>
-                                                  </span>
-                                                  <span className="category">
-                                                    <a href="##portfolio-category/mockup/">
-                                                      Mockup
-                                                    </a>
-                                                  </span>
-                                                </div>
-                                                <div className="show-project-link -full-w">
-                                                  <Link
-                                                    href={`/proyects/${slugify(
-                                                      pro?.properties?.Name
-                                                        ?.title[0]?.plain_text
-                                                    ).toLowerCase()}`}
-                                                  >
-                                                    Show project
-                                                  </Link>
-                                                </div>
-                                              </div>
-                                              <div className="project-details">
-                                                <p className="">
-                                                  {
-                                                    pro.properties.Description
-                                                      ?.rich_text[0]?.plain_text
-                                                  }
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    );
-                                  })}
-                                </div>
-                                <div
-                                  className="holder"
-                                  id="ohio-custom-63d2c8b532a86"
-                                >
-                                  <ul className="pagination -small -unlist">
-                                    <li className="page-item">
-                                      <a
-                                        href="##portfolio/sticky-metro/"
-                                        className="page-link button -unlink -pagination"
-                                      >
-                                        1
-                                      </a>
-                                    </li>
-                                    <li className="page-item">
-                                      <a
-                                        href="##portfolio/sticky-metro/page/2/"
-                                        className="page-link button -unlink -pagination -flat"
-                                      >
-                                        2
-                                      </a>
-                                    </li>
-                                    <li className="page-item">
-                                      <a
-                                        href="##portfolio/sticky-metro/page/2/"
-                                        className="page-link button -unlink -pagination -flat"
-                                      >
-                                        <i className="icon">
-                                          <svg
-                                            className="default"
-                                            width={16}
-                                            height={16}
-                                            viewBox="0 0 16 16"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" />
-                                          </svg>
-                                          <svg
-                                            className="minimal"
-                                            width={18}
-                                            height={16}
-                                            viewBox="0 0 18 16"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              fillRule="evenodd"
-                                              clipRule="evenodd"
-                                              d="M0 8C0 7.58579 0.335786 7.25 0.75 7.25H17.25C17.6642 7.25 18 7.58579 18 8C18 8.41421 17.6642 8.75 17.25 8.75H0.75C0.335786 8.75 0 8.41421 0 8Z"
-                                            />
-                                            <path
-                                              fillRule="evenodd"
-                                              clipRule="evenodd"
-                                              d="M9.96967 0.71967C10.2626 0.426777 10.7374 0.426777 11.0303 0.71967L17.7803 7.46967C18.0732 7.76256 18.0732 8.23744 17.7803 8.53033L11.0303 15.2803C10.7374 15.5732 10.2626 15.5732 9.96967 15.2803C9.67678 14.9874 9.67678 14.5126 9.96967 14.2197L16.1893 8L9.96967 1.78033C9.67678 1.48744 9.67678 1.01256 9.96967 0.71967Z"
-                                            />
-                                          </svg>{" "}
-                                        </i>
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
                               </div>
                             </div>
                           </div>
