@@ -8,12 +8,15 @@ import Image from "next/image"
 import { useGetArticle, useGetArticles} from "@/hooks/useGetArticles";
 import React, { useEffect, useState } from "react";
 import { PageType } from "@/settings/types";
+import siteMetadata from "@/settings/sitemetdata";
+import { useRouter } from "next/router";
 const BlogSlug = (props: any) => {
   
   const title = props.article.properties.Name?.title[0]?.plain_text
   let cover = props.article?.cover?.file?.url || props.article?.cover?.external?.url;
   let description = props.article.properties?.Summary.rich_text[0]?.plain_text || "Articulo aun no terminado.Intenta mas tarde.";
   const NextPost = props.recentArticles[2];
+  const router = useRouter()
   return (
     <Container
       customAddClases="post-template-default single single-post postid-17953 single-format-standard wp-embed-responsive theme-ohio woocommerce-js ohio-theme-3-1-9 with-switcher with-header-3 with-fixed-search with-headline with-sticky-header with-mobile-switcher links-underline icon-buttons-animation  with-ajax-button wpb-js-composer js-comp-ver-6.10.0 vc_responsive elementor-default elementor-kit-216976 "
@@ -43,8 +46,8 @@ const BlogSlug = (props: any) => {
                   <div className="avatar -large">
                     <Image
                       alt="Gonzalo"
-                      src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
-                      blurDataURL="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
+                      src={siteMetadata.avatarImage}
+                      blurDataURL={siteMetadata.avatarImage}
                       
                       className="avatar avatar-72 photo"
                       height={72}
@@ -57,26 +60,35 @@ const BlogSlug = (props: any) => {
                   </div>
                   <div className="content">
                     <div className="details">
-                      <h6>Gonzalo</h6>
+                      <h6>
+
+                      {siteMetadata.title}
+                      </h6>
                       <span className="site" />
                     </div>
-                    <div className="description">Programador web</div>
+                    <div className="description">
+                    
+                      {siteMetadata.description}
+                      <br />
+                    </div>
                   </div>
                   <div className="social-networks -contained -small">
                     <a
-                      href="/"
+                      href={`${siteMetadata.siteUrl}${router.asPath}`}
                       className="network -unlink"
                     >
                       <i aria-hidden className="fab fa-facebook-f" />
                     </a>
                     <a
-                      href="/"
+                      
+                      href={`${siteMetadata.siteUrl}${router.asPath}`}
                       className="network -unlink"
                     >
                       <i aria-hidden className="fab fa-instagram" />
                     </a>
                     <a
-                      href="/"
+                      
+                      href={`${siteMetadata.siteUrl}${router.asPath}`}
                       className="network -unlink"
                     >
                       <i aria-hidden className="fab fa-pinterest" />

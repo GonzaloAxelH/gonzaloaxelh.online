@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/GonzaloAxelh',
   //   siteLogo: "/static/images/bundle_logo.svg",
   avatarImage:
-    'https://res.cloudinary.com/ddksrkond/image/upload/v1675056154/Blog/logo_bmipn9.png',
+    'https://res.cloudinary.com/ddksrkond/image/upload/v1675734307/Blog/avatar_ifubrx.jpg',
   socialBanner:
     'https://res.cloudinary.com/ddksrkond/image/upload/v1675056242/Blog/cover_coszac.png',
   email: 'gonzaloaxelh@gmail.com',

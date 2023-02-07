@@ -745,7 +745,6 @@ token svg start here
   position: absolute;
   top: 0;
   left: 0;
-  
   display: block;
   box-sizing: border-box;
   content: "¡Nuevo!";

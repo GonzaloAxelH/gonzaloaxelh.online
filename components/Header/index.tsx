@@ -268,18 +268,7 @@ const Header = ({ setIsOpenSidebar }: any) => {
                           <div className="has-submenu-icon"></div>
                         </Link>
                       </li>
-                      <li
-                        id="nav-menu-item-220972-63cc32b1cd622"
-                        className="mega-menu-item nav-item menu-item-depth-0 has-submenu"
-                      >
-                        <Link
-                          href="/about"
-                          className="menu-link -undash main-menu-link item-title"
-                        >
-                          <span>About</span>
-                          <div className="has-submenu-icon"></div>
-                        </Link>
-                      </li>
+                    
                     </ul>
                   </div>
                   <div className="copyright">

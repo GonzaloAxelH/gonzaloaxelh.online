@@ -5,6 +5,7 @@ import React from "react";
 import slugify from "slugify";
 import Image from "next/image";
 import { getTags } from "@/services/notion";
+import siteMetadata from "@/settings/sitemetdata";
 const BlogPage = ({ recentArticles, tags }: any) => {
   const feactureArticle = recentArticles[1];
   const descriptionArticleFeature =
@@ -411,8 +412,8 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                                     <div className="avatar -small">
                                                       <Image
                                                         alt="Gonzalo"
-                                                        src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
-                                                        blurDataURL="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
+                                                        src={siteMetadata.avatarImage}
+                                                        blurDataURL={siteMetadata.avatarImage}
                                                         
                                                         className="avatar avatar-50 photo author-avatar"
                                                         height={50}
@@ -431,7 +432,7 @@ const BlogPage = ({ recentArticles, tags }: any) => {
                                                       Posted by
                                                     </span>
                                                     <span className="author">
-                                                      Gonzalo Axel
+                                                      {siteMetadata.author}
                                                     </span>
                                                   </li>
                                                 </ul>

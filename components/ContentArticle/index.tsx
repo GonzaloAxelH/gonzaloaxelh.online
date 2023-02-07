@@ -5,6 +5,8 @@ import TagsBlog from "../TagsBlog";
 
 import ContentBlock from "./ContentBlock";
 import { getComments } from "@/services/firebase";
+import siteMetadata from "@/settings/sitemetdata";
+import  { useRouter } from "next/router";
 interface Props {
   article: any;
   content: any;
@@ -21,6 +23,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
     const countComments = await getComments(article.id)
     setCountCom(countComments.length || 0)
   }
+  const router = useRouter()
   useEffect(() => {
     
     loadNumberCommments()
@@ -110,7 +113,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                     <div className="avatar -small">
                       <img
                         alt="Gonzalo"
-                        src="https://secure.gravatar.com/avatar/4058fe7404c4f9d88d5d2d6db42320f8?s=50&d=mm&r=g"
+                        src={siteMetadata.avatarImage}
                         className="avatar avatar-96 photo"
                         height={96}
                         width={96}
@@ -120,7 +123,7 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
                   </li>
                   <li className="meta-item">
                     <span className="prefix">Author</span>
-                    <span className="author">Gonzalo Axel</span>
+                    <span className="author">{siteMetadata.author}</span>
                   </li>
                   <li className="meta-item">
                     <span className="prefix">Published</span>
@@ -150,23 +153,25 @@ const ContentArticle: FC<Props> = ({ article, content, author }) => {
           <div className="share-bar -vertical" data-blog-share="true">
             <div className="social-networks -small">
               <a
-                href="/sharer/sharer.php?u=https%3A%2F%2F%2Fstandard%2F"
+              
+                href={`http://www.facebook.com/sharer.php?u=${siteMetadata.siteUrl}${router.asPath}`}
                 target="_blank"
                 className="facebook network"
-              >
+                >
                 <i aria-hidden className="fab fa-facebook-f" />
               </a>
               <a
-                href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2F%2Fstandard%2F&description=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley."
+                href="#"
                 target="_blank"
                 className="pinterest network"
               >
                 <i aria-hidden className="fab fa-pinterest" />
               </a>
               <a
-                href="/intent/tweet?text=The+Highly+Contemporary+UI%2FUX+Design+from+a+Silicon+Valley.,+https%3A%2F%2F%2Fstandard%2F"
-                target="_blank"
-                className="twitter network"
+              
+              target="_blank"
+              className="twitter network"
+              href={`http://twitter.com/home?status=${siteMetadata.siteUrl}${router.asPath}`}
               >
                 <i aria-hidden className="fab fa-twitter" />
               </a>

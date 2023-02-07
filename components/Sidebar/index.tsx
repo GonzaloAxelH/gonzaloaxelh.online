@@ -103,17 +103,7 @@ const Sidebar = ({ visible, setCloseSidebar }: any) => {
               <span>Tutorials</span>
             </Link>
           </li>
-          <li
-            id="nav-menu-item-223707-63cc42ab2395c"
-            className="mega-menu-item nav-item menu-item-depth-0 showed"
-          >
-            <Link
-              href="/about"
-              className="menu-link -undash main-menu-link item-title"
-            >
-              <span>About</span>
-            </Link>
-          </li>
+         
         </ul>{" "}
       </div>
       <div className="hamburger-nav-details">
